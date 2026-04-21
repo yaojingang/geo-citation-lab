@@ -8,6 +8,18 @@
 
 这份仓库不是泛泛而谈的 GEO 观点集，而是一份基于真实问答、真实引用、真实页面抓取结果做出来的研究快照。
 
+## Start Here
+
+仓库首页建议先从这三个成品文件进入：
+
+| 入口 | 文件 | 适合谁 |
+| --- | --- | --- |
+| 长版 HTML 报告 | [04-repet/final_report.html](./04-repet/final_report.html) | 想快速浏览完整内容、适合本地或浏览器阅读 |
+| 长版 Markdown 报告 | [04-repet/final_report.md](./04-repet/final_report.md) | 想在 GitHub 里直接按章节阅读正文 |
+| PDF 版报告 | [04-repet/final_report.pdf](./04-repet/final_report.pdf) | 想下载、分享或打印 |
+
+如果你只想先看 3 分钟摘要，再进长版报告，可以先读 [QUICK_REPORT.md](./QUICK_REPORT.md)。
+
 ## Snapshot
 
 | 项目 | 数字 |
