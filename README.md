@@ -12,6 +12,8 @@
 
 仓库首页建议先从这三个成品文件进入：
 
+Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.github.io/geo-citation-lab/)
+
 | 入口 | 文件 | 适合谁 |
 | --- | --- | --- |
 | 长版 HTML 报告 | [04-repet/final_report.html](./04-repet/final_report.html) | 想快速浏览完整内容、适合本地或浏览器阅读 |

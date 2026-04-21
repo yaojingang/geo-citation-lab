@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>geo-citation-lab</title>
+  <style>
+    :root {
+      --paper: #f6f1e7;
+      --sheet: #fffdfa;
+      --ink: #17202a;
+      --muted: #5c6670;
+      --accent: #1b365d;
+      --accent-soft: #e5edf6;
+      --rule: #d8d0c1;
+      --shadow: rgba(30, 41, 59, 0.1);
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at top, #fbf8f2 0%, var(--paper) 56%, #efe7d7 100%);
+      color: var(--ink);
+      font-family: "Iowan Old Style", "Palatino Linotype", Georgia, "Noto Serif CJK SC", "Source Han Serif SC", serif;
+    }
+    body {
+      min-height: 100vh;
+      line-height: 1.65;
+    }
+    main {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 40px 20px 56px;
+    }
+    .hero {
+      background: rgba(255, 253, 250, 0.88);
+      border: 1px solid rgba(216, 208, 193, 0.9);
+      border-radius: 24px;
+      box-shadow: 0 24px 80px var(--shadow);
+      padding: 40px 42px 34px;
+      backdrop-filter: blur(6px);
+    }
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 12px;
+      padding: 6px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font: 600 13px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0 0 14px;
+      font-size: clamp(2rem, 4vw, 3.3rem);
+      line-height: 1.08;
+      color: var(--accent);
+      letter-spacing: 0.01em;
+    }
+    .sub {
+      max-width: 760px;
+      margin: 0 0 22px;
+      color: var(--muted);
+      font-size: 1.04rem;
+    }
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+      margin: 24px 0 30px;
+    }
+    .stat {
+      padding: 14px 16px;
+      border: 1px solid var(--rule);
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.74);
+    }
+    .stat strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 1.25rem;
+    }
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 10px 0 0;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      text-decoration: none;
+      font: 600 15px/1.2 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      transition: transform 140ms ease, box-shadow 140ms ease, background 140ms ease;
+    }
+    .btn:hover {
+      transform: translateY(-1px);
+    }
+    .btn-primary {
+      background: var(--accent);
+      color: white;
+      box-shadow: 0 12px 28px rgba(27, 54, 93, 0.22);
+    }
+    .btn-secondary {
+      background: white;
+      color: var(--accent);
+      border-color: var(--rule);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 22px;
+    }
+    .card {
+      background: rgba(255, 255, 255, 0.8);
+      border: 1px solid var(--rule);
+      border-radius: 18px;
+      padding: 18px 18px 16px;
+    }
+    .card h2 {
+      margin: 0 0 8px;
+      font-size: 1.05rem;
+      color: var(--accent);
+    }
+    .card p {
+      margin: 0 0 12px;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .card a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+    }
+    .note {
+      margin-top: 24px;
+      padding-top: 18px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+    code {
+      padding: 0.08em 0.32em;
+      border-radius: 4px;
+      background: rgba(27, 54, 93, 0.08);
+      font-family: ui-monospace, "SF Mono", Menlo, monospace;
+      font-size: 0.92em;
+    }
+    @media (max-width: 860px) {
+      .stats, .grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+    @media (max-width: 640px) {
+      main {
+        padding: 16px 14px 28px;
+      }
+      .hero {
+        padding: 24px 18px 20px;
+        border-radius: 18px;
+      }
+      .stats, .grid {
+        grid-template-columns: 1fr;
+      }
+      .actions {
+        flex-direction: column;
+      }
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <span class="eyebrow">geo-citation-lab</span>
+      <h1>AI 引用机制与 GEO 影响力研究资料库</h1>
+      <p class="sub">
+        一个公开的数据集与分析仓库，用来研究 AI 搜索平台如何触发搜索、选择信源，以及如何深度吸收页面内容。
+      </p>
+
+      <div class="stats">
+        <div class="stat"><strong>602</strong><span>实验 Prompt</span></div>
+        <div class="stat"><strong>21,143</strong><span>搜索层有效引用</span></div>
+        <div class="stat"><strong>23,745</strong><span>citation-level 记录</span></div>
+        <div class="stat"><strong>72</strong><span>引用特征维度</span></div>
+      </div>
+
+      <div class="actions">
+        <a class="btn btn-primary" href="./04-repet/final_report.html">打开长版 HTML 报告</a>
+        <a class="btn btn-secondary" href="./04-repet/final_report.pdf">下载 PDF</a>
+        <a class="btn btn-secondary" href="https://github.com/yaojingang/geo-citation-lab/blob/main/04-repet/final_report.md">查看 Markdown 正文</a>
+      </div>
+
+      <div class="grid">
+        <article class="card">
+          <h2>长版 HTML 报告</h2>
+          <p>适合在浏览器里直接阅读完整研究报告，包含重算后的统一口径与完整章节结构。</p>
+          <a href="./04-repet/final_report.html">进入 HTML 版</a>
+        </article>
+        <article class="card">
+          <h2>极简摘要</h2>
+          <p>想先快速判断这份仓库值不值得读，可以先看 3 分钟速读版摘要。</p>
+          <a href="https://github.com/yaojingang/geo-citation-lab/blob/main/QUICK_REPORT.md">查看 QUICK_REPORT</a>
+        </article>
+        <article class="card">
+          <h2>仓库源码与数据</h2>
+          <p>如果你想看 Prompt、CSV、特征提取脚本和分析流水线，可以直接回到 GitHub 仓库。</p>
+          <a href="https://github.com/yaojingang/geo-citation-lab">打开 GitHub 仓库</a>
+        </article>
+      </div>
+
+      <p class="note">
+        说明：GitHub 代码页中直接点击 <code>.html</code> 文件通常只会显示源码。要获得“像网站一样可直接浏览”的体验，使用本仓库的 GitHub Pages 入口更稳妥。
+      </p>
+    </section>
+  </main>
+</body>
+</html>
