@@ -66,6 +66,30 @@
       color: var(--muted);
       font-size: 1.04rem;
     }
+    .meta {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0 0 20px;
+    }
+    .meta-card {
+      padding: 14px 16px;
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.72);
+    }
+    .meta-card strong {
+      display: block;
+      margin-bottom: 6px;
+      color: var(--accent);
+      font-size: 0.98rem;
+    }
+    .meta-card span,
+    .meta-card a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.94rem;
+    }
     .stats {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -161,6 +185,7 @@
       font-size: 0.92em;
     }
     @media (max-width: 860px) {
+      .meta,
       .stats, .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -173,6 +198,7 @@
         padding: 24px 18px 20px;
         border-radius: 18px;
       }
+      .meta,
       .stats, .grid {
         grid-template-columns: 1fr;
       }
@@ -194,6 +220,17 @@
         一个公开的数据集与分析仓库，用来研究 AI 搜索平台如何触发搜索、选择信源，以及如何深度吸收页面内容。
       </p>
 
+      <div class="meta">
+        <div class="meta-card">
+          <strong>原始研究作者</strong>
+          <span>张凯 · 微信号：<code>seermartech</code></span>
+        </div>
+        <div class="meta-card">
+          <strong>二次报告解读与开源整理</strong>
+          <span>姚金刚 · <a href="https://yaojingang.github.io/geo-citation-lab/">Live Site</a></span>
+        </div>
+      </div>
+
       <div class="stats">
         <div class="stat"><strong>602</strong><span>实验 Prompt</span></div>
         <div class="stat"><strong>21,143</strong><span>搜索层有效引用</span></div>
@@ -212,6 +249,16 @@
           <h2>长版 HTML 报告</h2>
           <p>适合在浏览器里直接阅读完整研究报告，包含重算后的统一口径与完整章节结构。</p>
           <a href="./04-repet/final_report.html">进入 HTML 版</a>
+        </article>
+        <article class="card">
+          <h2>长版 Markdown 报告</h2>
+          <p>适合在 GitHub 里直接按章节阅读正文，也方便 fork、引用或继续改写。</p>
+          <a href="https://github.com/yaojingang/geo-citation-lab/blob/main/04-repet/final_report.md">查看 Markdown</a>
+        </article>
+        <article class="card">
+          <h2>PDF 版报告</h2>
+          <p>适合下载、转发或打印，适合对外分享时作为固定版式的正式交付物。</p>
+          <a href="./04-repet/final_report.pdf">打开 PDF</a>
         </article>
         <article class="card">
           <h2>极简摘要</h2>

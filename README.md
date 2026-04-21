@@ -10,17 +10,22 @@
 
 ## Start Here
 
-仓库首页建议先从这三个成品文件进入：
+作者信息：
+
+- 原始研究与作者：张凯
+- 微信号：`seermartech`
+- 二次报告解读与开源整理：姚金刚
 
 Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.github.io/geo-citation-lab/)
+
+仓库首页建议先从这四个入口进入：
 
 | 入口 | 文件 | 适合谁 |
 | --- | --- | --- |
 | 长版 HTML 报告 | [04-repet/final_report.html](./04-repet/final_report.html) | 想快速浏览完整内容、适合本地或浏览器阅读 |
 | 长版 Markdown 报告 | [04-repet/final_report.md](./04-repet/final_report.md) | 想在 GitHub 里直接按章节阅读正文 |
 | PDF 版报告 | [04-repet/final_report.pdf](./04-repet/final_report.pdf) | 想下载、分享或打印 |
-
-如果你只想先看 3 分钟摘要，再进长版报告，可以先读 [QUICK_REPORT.md](./QUICK_REPORT.md)。
+| 3 分钟摘要 | [QUICK_REPORT.md](./QUICK_REPORT.md) | 想先快速判断这份研究讲了什么，再决定是否进入长版 |
 
 ## Snapshot
 
