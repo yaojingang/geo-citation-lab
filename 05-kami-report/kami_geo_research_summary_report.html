@@ -1,0 +1,688 @@
+<!DOCTYPE html>
+<!-- ==================================================================
+     LONG DOCUMENT TEMPLATE · parchment design system
+     多页 A4 白皮书/技术报告/年度总结
+     结构：封面 -> 目录 -> 执行摘要 -> 正文章节 -> 附录
+     ================================================================== -->
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>海外 GEO 研究资料包总结与分析报告</title>
+<style>
+  @font-face {
+    font-family: "TsangerJinKai02";
+    src: url("../fonts/TsangerJinKai02-W04.ttf") format("truetype");
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm 22mm 22mm 22mm;
+    background: #f5f4ed;
+
+    @bottom-center {
+      content: counter(page) "  ·  海外 GEO 研究资料包总结与分析报告";
+      font-family: "Source Han Serif SC", Georgia, serif;
+      font-size: 8.5pt;
+      color: #87867f;
+    }
+  }
+
+  @page:first {
+    @bottom-center { content: ""; }
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --parchment: #f5f4ed;
+    --ivory:     #faf9f5;
+    --near-black:#141413;
+    --dark-warm: #3d3d3a;
+    --charcoal:  #4d4c48;
+    --olive:     #5e5d59;
+    --stone:     #87867f;
+    --brand:     #1B365D;
+    --border:    #e8e6dc;
+    --border-soft:#e5e3d8;
+    --tag-bg:    #E4ECF5;
+  }
+
+  html, body { background: var(--parchment); }
+
+  body {
+    color: var(--near-black);
+    font-family: "TsangerJinKai02", "Source Han Serif SC",
+                 "Noto Serif CJK SC", "Songti SC", Georgia, serif;
+    font-size: 10.5pt;
+    line-height: 1.55;
+  }
+
+  .sans {
+    font-family: "Source Han Sans SC", "Noto Sans CJK SC",
+                 -apple-system, "PingFang SC", Arial, sans-serif;
+  }
+
+  /* ========== COVER ========== */
+  .cover {
+    min-height: 240mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40mm 0 0 0;
+    break-after: page;
+  }
+  .cover-eyebrow {
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 10pt;
+    color: var(--brand);
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    margin-bottom: 18pt;
+  }
+  .cover-title {
+    font-size: 36pt;
+    font-weight: 500;
+    color: var(--near-black);
+    line-height: 1.15;
+    letter-spacing: 0.5pt;
+    margin-bottom: 16pt;
+  }
+  .cover-sub {
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 14pt;
+    color: var(--olive);
+    line-height: 1.5;
+    max-width: 85%;
+    margin-bottom: 30pt;
+  }
+  .cover-meta {
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 10pt;
+    color: var(--stone);
+    line-height: 1.5;
+  }
+  .cover-meta strong {
+    color: var(--dark-warm);
+    font-weight: 500;
+  }
+
+  /* ========== TOC（目录）========== */
+  .toc { break-after: page; }
+  .toc h2 {
+    font-size: 22pt;
+    font-weight: 500;
+    margin-bottom: 14pt;
+    border-left: 2.5pt solid var(--brand);
+    border-radius: 1.5pt;
+    padding-left: 8pt;
+  }
+  .toc-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 6pt 0;
+    border-bottom: 0.3pt dotted var(--border);
+    font-size: 11pt;
+  }
+  .toc-num {
+    color: var(--brand);
+    font-weight: 500;
+    min-width: 30pt;
+  }
+  .toc-title {
+    flex: 1;
+    color: var(--near-black);
+    padding-left: 6pt;
+  }
+  .toc-page {
+    color: var(--stone);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ========== HEADINGS ========== */
+  h1 {
+    font-size: 22pt;
+    font-weight: 500;
+    line-height: 1.2;
+    margin: 0 0 10pt 0;
+    border-left: 2.5pt solid var(--brand);
+    border-radius: 1.5pt;
+    padding-left: 8pt;
+    color: var(--near-black);
+    break-after: avoid;
+  }
+
+  h2 {
+    font-size: 15pt;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 24pt 0 6pt 0;
+    color: var(--near-black);
+    break-after: avoid;
+  }
+
+  h3 {
+    font-size: 12pt;
+    font-weight: 500;
+    line-height: 1.3;
+    margin: 18pt 0 4pt 0;
+    color: var(--dark-warm);
+    break-after: avoid;
+  }
+
+  .chapter-num {
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 10pt;
+    color: var(--brand);
+    letter-spacing: 1pt;
+    text-transform: uppercase;
+    margin-bottom: 6pt;
+  }
+
+  /* ========== PARAGRAPHS ========== */
+  p {
+    margin: 0 0 10pt 0;
+    line-height: 1.55;
+    color: var(--near-black);
+  }
+
+  .lead {
+    font-size: 12pt;
+    line-height: 1.55;
+    color: var(--dark-warm);
+    margin-bottom: 14pt;
+  }
+
+  .hl { color: var(--brand); font-weight: 500; }
+
+  /* ========== LISTS ========== */
+  ul, ol {
+    margin: 6pt 0 10pt 0;
+    padding-left: 20pt;
+    line-height: 1.55;
+  }
+  ul li::marker { color: var(--brand); }
+  ol li::marker { color: var(--brand); font-weight: 500; }
+
+  /* ========== QUOTE ========== */
+  blockquote, .quote {
+    border-left: 2pt solid var(--brand);
+    margin: 12pt 0;
+    padding: 4pt 0 4pt 16pt;
+    color: var(--olive);
+    line-height: 1.55;
+    break-inside: avoid;
+  }
+  blockquote .cite, .quote .cite {
+    display: block;
+    font-size: 9pt;
+    color: var(--stone);
+    margin-top: 4pt;
+  }
+
+  /* ========== CODE ========== */
+  code {
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    font-size: 9pt;
+    background: var(--ivory);
+    padding: 1pt 4pt;
+    border-radius: 2pt;
+    color: var(--dark-warm);
+  }
+  pre {
+    font-family: "JetBrains Mono", "SF Mono", Consolas, monospace;
+    font-size: 8.5pt;
+    line-height: 1.5;
+    background: var(--ivory);
+    border: 0.5pt solid var(--border-soft);
+    border-radius: 4pt;
+    padding: 10pt 14pt;
+    margin: 10pt 0;
+    white-space: pre-wrap;
+    color: var(--near-black);
+    break-inside: avoid;
+  }
+  pre code { background: transparent; padding: 0; font-size: inherit; }
+
+  /* ========== TABLE ========== */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 9.5pt;
+    margin: 12pt 0;
+    break-inside: avoid;
+  }
+  table th {
+    text-align: left;
+    font-weight: 500;
+    color: var(--charcoal);
+    padding: 6pt 8pt;
+    border-bottom: 1pt solid var(--brand);
+    background: var(--ivory);
+  }
+  table td {
+    padding: 5pt 8pt;
+    border-bottom: 0.3pt solid var(--border-soft);
+    vertical-align: top;
+  }
+
+  /* ========== CALLOUT ========== */
+  .callout {
+    background: var(--ivory);
+    border-left: 2pt solid var(--brand);
+    padding: 10pt 14pt;
+    border-radius: 3pt;
+    margin: 12pt 0;
+    line-height: 1.55;
+    break-inside: avoid;
+  }
+
+  .takeaway {
+    background: var(--ivory);
+    border: 0.5pt solid var(--border);
+    border-radius: 4pt;
+    padding: 10pt 14pt;
+    margin: 14pt 0;
+    break-inside: avoid;
+  }
+  .takeaway-label {
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 8pt;
+    color: var(--brand);
+    letter-spacing: 0.5pt;
+    text-transform: uppercase;
+    margin-bottom: 4pt;
+  }
+
+  /* ========== TAG ========== */
+  .tag {
+    display: inline-block;
+    background: var(--tag-bg);
+    color: var(--brand);
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 8pt;
+    font-weight: 500;
+    padding: 1pt 6pt;
+    border-radius: 3pt;
+    margin-right: 4pt;
+  }
+
+  /* ========== FIGURE ========== */
+  figure {
+    margin: 14pt 0;
+    break-inside: avoid;
+  }
+  figure img {
+    max-width: 100%;
+    border-radius: 4pt;
+  }
+  figcaption {
+    font-family: "Source Han Sans SC", sans-serif;
+    font-size: 9pt;
+    color: var(--stone);
+    margin-top: 6pt;
+    text-align: center;
+  }
+
+  /* ========== EXECUTIVE SUMMARY ========== */
+  .exec-summary {
+    background: var(--ivory);
+    border: 0.5pt solid var(--border);
+    border-radius: 6pt;
+    padding: 16pt 20pt;
+    margin: 14pt 0;
+    break-inside: avoid;
+  }
+  .exec-summary h2 {
+    margin-top: 0;
+    font-size: 13pt;
+  }
+
+  /* ========== CHAPTER BREAK ========== */
+  .chapter { break-before: page; }
+</style>
+</head>
+<body>
+<!-- ═════════════ COVER ═════════════ -->
+<section class="cover">
+  <div>
+    <div class="cover-eyebrow">资料审计报告 / GEO 研究复盘</div>
+    <div class="cover-title">海外 GEO 研究资料包<br>总结与分析报告</div>
+    <div class="cover-sub">基于 <span class="hl">60 个文件</span> 的逐项审阅：从 Prompt 设计、联网触发、信源抓取到 <span class="hl">72 维影响力建模</span>，重写这套研究的价值、结论与工程边界。</div>
+  </div>
+  <div class="cover-meta">
+    <strong>Codex / 基于用户提供资料再整理</strong><br>
+    V1.0  ·  2026.04<br>
+    海外 GEO 研究资料目录内部复盘
+  </div>
+</section>
+
+<!-- ═════════════ 目录 ═════════════ -->
+<section class="toc">
+  <h2>目录</h2>
+  <div class="toc-item">
+    <span class="toc-num">01</span>
+    <span class="toc-title">执行摘要</span>
+    <span class="toc-page">03</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">02</span>
+    <span class="toc-title">资料包结构与问题定义</span>
+    <span class="toc-page">04</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">03</span>
+    <span class="toc-title">方法、数据与关键发现</span>
+    <span class="toc-page">05</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">04</span>
+    <span class="toc-title">结论与下一步建议</span>
+    <span class="toc-page">09</span>
+  </div>
+  <div class="toc-item">
+    <span class="toc-num">05</span>
+    <span class="toc-title">附录：文件审计范围</span>
+    <span class="toc-page">10</span>
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 01：执行摘要 ═════════════ -->
+<section>
+  <div class="chapter-num">01 · Executive Summary</div>
+  <h1>执行摘要</h1>
+
+  <p class="lead">
+    这份目录不是一篇孤立的论文，而是一套覆盖 <span class="hl">Prompt 设计</span>、<span class="hl">三平台联网触发</span>、<span class="hl">引用页抓取</span>、<span class="hl">72 维特征提取</span> 与 <span class="hl">成稿发布</span> 的完整研究资产。最重要的判断有两个：第一，三大平台的搜索与引用策略明显分化，<span class="hl">Perplexity 搜得最勤，ChatGPT 引得最少但吃得最深</span>；第二，真正决定 AI 深度吸收的，并不是“像营销稿一样会写”，而是 <span class="hl">长、结构清楚、带数据、语义贴题</span> 的事实型内容。
+  </p>
+
+  <h2>核心 Takeaways</h2>
+  <ul>
+    <li>目录内共含 <span class="hl">60 个文件</span>；其中可直接构成研究证据链的核心资产为 <span class="hl">602 条 prompts</span>、<span class="hl">3 份搜索结果表</span>、<span class="hl">4 份 72 维特征表</span> 和 <span class="hl">16 个 Python 脚本</span>。</li>
+    <li>按结果表的 Prompt 级复核，ChatGPT / Google / Perplexity 的搜索触发率分别约为 <span class="hl">98.64%</span>、<span class="hl">99.67%</span>、<span class="hl">100%</span>；平均每题引用来源分别约为 <span class="hl">6.98</span>、<span class="hl">12.10</span>、<span class="hl">16.35</span>。</li>
+    <li>在抓取成功页面中，影响力 Top 10% 引用页的平均词数约为 <span class="hl">2,096</span>，Bottom 10% 仅 <span class="hl">53</span>；标题匹配度、Embedding 相似度、LLM 相关性评分和段落覆盖率都显著更高。</li>
+    <li>这套资料包适合做 <span class="hl">策略判断</span>，但还不够干净到直接当“可复算的学术资产”：当前特征表中仍有 <span class="hl">5,594</span> 条抓取失败记录、<span class="hl">6,706</span> 条分类缺失，且多份脚本存在 <span class="hl">硬编码路径与密钥</span>。</li>
+  </ul>
+
+  <div class="takeaway">
+    <div class="takeaway-label">本文档回答的问题</div>
+    1. 这套资料包真正沉淀下来的，不只是哪些 GEO 结论，而是怎样一条可追溯的研究链路？<br>
+    2. 哪些发现可以直接转化为内容投放和页面写作策略，哪些地方只是“暂时成立的观察”？<br>
+    3. 如果要把这份资料包升级为长期可维护的研究资产，工程上最先该修哪几件事？
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 02：背景 ═════════════ -->
+<section class="chapter">
+  <div class="chapter-num">02 · Background</div>
+  <h1>资料包结构与问题定义</h1>
+
+  <p class="lead">
+    本章先回答一个基础问题：我究竟在审什么。只有把这套目录当成“<span class="hl">研究输入 + 中间数据 + 执行代码 + 现成输出</span>”的组合资产，而不只是 `final_report.pdf`，后面的结论才有说服力。
+  </p>
+
+  <h2>当前现状</h2>
+  <p>按目录逐项盘点，当前资料包共有 <span class="hl">60 个文件</span>。结构上可以分成五层：`README.md` 解释交付物边界；`01-prompt/` 提供 9 份实验输入文本，总计 <span class="hl">602 条 Prompt</span>；`02-data/` 存放 7 份结果与特征 CSV；`03-pipeline/` 含 15 个研究脚本和 1 份依赖清单；`04-repet/` 则给出 Markdown / HTML / PDF 三种报告形态，以及 22 张配图和一个 HTML 打包脚本。除此之外，还有 1 个 macOS 元数据文件 `.DS_Store`，它不承载研究内容，只是系统痕迹。</p>
+
+  <p>现成输出里，`final_report.md` 是叙事主稿，`final_report.html` 是自包含渲染版，`final_report.pdf` 为 <span class="hl">57 页</span> 的阅读版。图像目录里共有 <span class="hl">22 张</span> 图表，其中 <span class="hl">20 张</span> 被 Markdown 正文实际引用，另外两张 `2.1.b3.png` 与 `2.1.b4.png` 是未入稿的补充表，分别展示 ChatGPT 的 Top10 引用域名和行业评级表。</p>
+
+  <h2>核心问题</h2>
+  <p>这份资料包最有价值的地方，不在于它已经写出一份长报告，而在于它保留了足够多的“前后件”，使我们可以反问：这些结论是否真的站在数据上，还是只停留在可读但不可复算的描述层。换句话说，我这次的目标不是再写一遍原报告，而是把 <span class="hl">证据链、工程质量和策略含义</span> 同时拎出来。</p>
+
+  <blockquote>
+    如果只读 PDF，你得到的是结论；如果把 prompts、CSV、pipeline 和图表一起读，你得到的是结论为什么成立，以及它还能不能被再次算出来。
+    <span class="cite">— 本次文件审计过程，2026.04</span>
+  </blockquote>
+
+  <h2>衡量标准</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>维度</th>
+        <th>当前水平</th>
+        <th>目标水平</th>
+        <th>差距</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>研究覆盖</td>
+        <td>60 文件 / 602 Prompt / 23,745 条引用特征</td>
+        <td>可追溯、可复核、可扩展</td>
+        <td>主体完整，已具备研究资产雏形</td>
+      </tr>
+      <tr>
+        <td>数据可用性</td>
+        <td>`fetch_ok` 成功率约 <span class="hl">76.44%</span></td>
+        <td>抓取成功率 &gt; 90%</td>
+        <td>外站抓取损耗仍偏高</td>
+      </tr>
+      <tr>
+        <td>数据整洁度</td>
+        <td>ChatGPT 结果表含 <span class="hl">16 条重复表头</span>；Perplexity 网站类型列被污染</td>
+        <td>规范命名、无脏行、无混列</td>
+        <td>中度工程清洗缺口</td>
+      </tr>
+      <tr>
+        <td>复现实验性</td>
+        <td>多脚本硬编码本地路径、令牌和 API Key</td>
+        <td>参数化配置 + 密钥外置</td>
+        <td>明显缺口，且带安全风险</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<!-- ═════════════ Chapter 03：方法 ═════════════ -->
+<section class="chapter">
+  <div class="chapter-num">03 · Methodology</div>
+  <h1>方法、数据与关键发现</h1>
+
+  <p class="lead">这一章同时交代“我如何读完这 60 个文件”以及“原研究如何生成核心结论”。没有方法论交代，任何总结都只是转述；有了方法论，结论才是可站住的判断。</p>
+
+  <h2>研究方法：按文件层级交叉核验</h2>
+  <p>本次审阅不是只看 `final_report.md`。我的处理顺序是：先用 `README.md` 建立目录地图；逐个读取 9 份 Prompt 文本确认实验设计；对 7 份 CSV 复核真实行数、字段和关键分布；再回到 16 份脚本里确认 HTML 解析、抓取、特征计算和报告生成逻辑；最后抽检现成的 HTML / PDF / 图像资产，看“叙事版本”和“底层数据版本”是否一致。也就是说，这份新报告既吸收原成稿的结构，也直接站在 raw 表和 pipeline 代码上。</p>
+
+  <figure>
+    <img src="../04-repet/image/3.1.1.png" alt="原研究 pipeline 流程图">
+    <figcaption>原资料包里的 Phase 级流程图：从平台 HTML 到 72 维特征表，再到最终分析报告。</figcaption>
+  </figure>
+
+  <p>从代码实现看，`chatgpt_extract.py`、`google_extract.py` 与 `perplexity_extract.py` 分别针对三平台 HTML 做专用解析；`run_all.py` 负责统一扫描平台结果、去重 URL、共享抓取缓存；`fetch_utils.py` 实现域名级限速、退避重试、JS challenge 探测和浏览器回退；`citation_features.py` 再把每条问答展开成“每个引用一行”的特征表，并叠加本地文本特征、OpenAI Embedding 相似度和 Gemini 语义评分。</p>
+
+  <pre><code>influence_score =
+    0.20 x min(ref_count / 3, 1)
+  + 0.15 x (1 - first_position_ratio)
+  + 0.20 x paragraph_coverage_ratio
+  + 0.25 x tfidf_cosine
+  + 0.20 x (bigram_overlap + trigram_overlap) / 2</code></pre>
+
+  <p>上面这段并不是推测，而是直接来自 `citation_features.py`。它说明这套研究不是模糊地讲“被引用”，而是试图量化 <span class="hl">被用得有多深</span>：引用次数、位置靠前程度、覆盖多少段落，以及回答文本与被引页面在词面上的重叠程度，都被纳入统一打分。</p>
+
+  <h2>发现 1：三平台不是一个引用逻辑，而是三种完全不同的产品策略</h2>
+  <p>从搜索结果表复核，三平台在“是否联网”和“联网后引用多少”上已经明显分化。ChatGPT 在现有有效 Prompt 里约有 <span class="hl">98.64%</span> 会触发搜索，但每题平均只引 <span class="hl">6.98</span> 个来源；Google 的触发率约 <span class="hl">99.67%</span>，平均引用 <span class="hl">12.10</span>；Perplexity 直接达到 <span class="hl">100%</span> 触发，平均引用 <span class="hl">16.35</span>。但如果看 `features_all_platforms_72.csv` 的平均 `influence_score`，顺序反了：ChatGPT 为 <span class="hl">0.2567</span>，明显高于 Google 的 <span class="hl">0.0455</span> 和 Perplexity 的 <span class="hl">0.0548</span>。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>平台</th>
+        <th>结果表有效 Prompt 数</th>
+        <th>搜索触发率</th>
+        <th>平均引用数 / Prompt</th>
+        <th>平均 Final DR</th>
+        <th>平均 influence_score</th>
+        <th>策略判断</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>ChatGPT</td>
+        <td>587</td>
+        <td>98.64%</td>
+        <td>6.88</td>
+        <td>584.6</td>
+        <td>0.2567</td>
+        <td>少量引用，但单条引用被深度吸收</td>
+      </tr>
+      <tr>
+        <td>Google AI Overview</td>
+        <td>602</td>
+        <td>99.67%</td>
+        <td>12.06</td>
+        <td>541.15</td>
+        <td>0.0455</td>
+        <td>广撒网式引用，更像搜索摘要引擎</td>
+      </tr>
+      <tr>
+        <td>Perplexity</td>
+        <td>602</td>
+        <td>100%</td>
+        <td>16.35</td>
+        <td>558.33</td>
+        <td>0.0548</td>
+        <td>搜索最积极，引用最广，但单条利用较浅</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <figure>
+    <img src="../04-repet/image/2.4.a.png" alt="三平台横向对比图">
+    <figcaption>原报告中的三平台横向比较图，和本次从 CSV 复核出的方向一致：Perplexity 引用最多，ChatGPT 单条影响力最高。</figcaption>
+  </figure>
+
+  <p>这个差异意味着，GEO 不是“一套内容打三家”就够了。要打 ChatGPT，需要让单页内容足够完整、足够权威，能被模型在回答中反复借用；要打 Google 和 Perplexity，则更像优化“被纳入候选池”的广度，要求来源覆盖多、匹配快、可被快速拼装。</p>
+
+  <h2>发现 2：高影响力内容不是花哨，而是长、清楚、可抽取</h2>
+  <p>在抓取成功页面中，对 Top 10% 与 Bottom 10% 影响力引用页做对比，差距几乎是一眼就能看出来的：高影响力页平均词数约为 <span class="hl">2,095.96</span>，低影响力页只有 <span class="hl">53.49</span>；标题总数 <span class="hl">11.77 vs 0.38</span>，段落数 <span class="hl">54.92 vs 5.29</span>，标题与问题匹配度 <span class="hl">0.1482 vs 0.0619</span>，Embedding 相似度 <span class="hl">0.6047 vs 0.1498</span>，LLM 相关性评分 <span class="hl">4.02 vs 1.76</span>。这组差值非常直接地说明：AI 偏爱的是能拆、能摘、能搬运的结构化事实页。</p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>指标</th>
+        <th>Top 10% 影响力页</th>
+        <th>Bottom 10% 影响力页</th>
+        <th>判断</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>词数</td>
+        <td>2,095.96</td>
+        <td>53.49</td>
+        <td>篇幅是最强区分项</td>
+      </tr>
+      <tr>
+        <td>标题总数</td>
+        <td>11.77</td>
+        <td>0.38</td>
+        <td>层级越清楚，越容易被引用</td>
+      </tr>
+      <tr>
+        <td>段落数</td>
+        <td>54.92</td>
+        <td>5.29</td>
+        <td>可切分内容更适合模型复用</td>
+      </tr>
+      <tr>
+        <td>标题-问题匹配度</td>
+        <td>0.1482</td>
+        <td>0.0619</td>
+        <td>语义贴题是基础门槛</td>
+      </tr>
+      <tr>
+        <td>Embedding 相似度</td>
+        <td>0.6047</td>
+        <td>0.1498</td>
+        <td>语义对齐直接决定被用深度</td>
+      </tr>
+      <tr>
+        <td>LLM 相关性评分</td>
+        <td>4.02</td>
+        <td>1.76</td>
+        <td>模型主观评分与行为结果一致</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>长度分箱结果也验证了同一趋势：`<=300` 词页面的平均影响力约为 <span class="hl">0.0616</span>，而 `1501-3000` 与 `3000+` 两档分别上升到 <span class="hl">0.1306</span> 和 <span class="hl">0.1457</span>。这和原报告中“1000-3000 词是实践甜点区间”的判断并不矛盾。前者是纯统计值，后者是内容生产 ROI 的经验建议：更长通常更有利，但不是每个场景都值得无限拉长。</p>
+
+  <h2>发现 3：语义角色与来源身份，会改变 AI 的“吸收方式”</h2>
+  <p>如果把被引页面按语义角色和影响类型拆开看，最吃香的并不是观点页，而是定义、比较、证据和事实基础。按 `llm_semantic_role` 的平均影响力，`definition`、`comparison`、`evidence` 的均值分别约为 <span class="hl">0.1531</span>、<span class="hl">0.1524</span>、<span class="hl">0.1235</span>；按 `llm_influence_type` 看，`direct_quote`、`paraphrase`、`factual_basis` 明显高于 `supplementary` 和 `reference`。换成通俗语言就是：AI 最爱拿来“真正写答案”的，是定义清楚、数据明确、结构完整的事实型材料，而不是挂一个出处意思意思。</p>
+
+  <p>来源身份上也有类似结论。`domain_type` 维度里，`encyclopedia` 的平均影响力高达 <span class="hl">0.2144</span>，明显高于 `news_media` 的 <span class="hl">0.0726</span>。这解释了为什么 Wikipedia 一类内容在多平台里都高频出现：它们不一定最“新”，但往往最容易被模型切片、定义化和归纳。与此同时，`commercial` 域的平均影响力也不低，说明只要商业站点能把内容写成结构化知识页，而不只是营销页，它同样有机会被深度吸收。</p>
+
+  <figure>
+    <img src="../04-repet/image/3.4.png" alt="来源网站类型分布图">
+    <figcaption>原报告中的来源类型分布图。分布层面商业域最常见，但平均影响力层面百科、研究、学术出版更强。</figcaption>
+  </figure>
+
+  <h2>发现 4：原研究方向可靠，但这份资料包还有明显工程债</h2>
+  <p>如果只看结论，这套研究已经能指导内容策略；但如果把它当长期研究资产来要求，问题也很明确。第一，特征表中 `fetch_ok` 成功率只有 <span class="hl">76.44%</span>，意味着仍有 <span class="hl">5,594</span> 条引用没有成功抓回正文。第二，`features_all_platforms_72.csv` 里有 <span class="hl">6,706</span> 条 `category` 缺失，说明部分记录的上游命名或类别映射不稳定。第三，`chatgpt_results_with_prompt.csv` 含 <span class="hl">16</span> 条重复表头行；`perplexity_results_with_prompt.csv` 的 `网站类型` 列混入了 `成功`、网页标题、描述文案和数字等脏值。第四，多份脚本直接硬编码了 DataForSEO、Ahrefs、Gemini 和批处理服务的令牌或本地路径，这不仅影响复现，也构成安全风险。</p>
+
+  <div class="callout">
+    这份资料包最值得保留的，是“研究链路”；最需要修掉的，也是“研究链路”里的工程卫生。结论已经能用，但数据资产还没有进入长期维护状态。
+  </div>
+
+  <blockquote>
+    原报告的核心叙事大体成立，但新报告必须把一个额外事实写进去：这是一套 <span class="hl">方向正确、工程仍需收口</span> 的研究资产，而不是已经完全定稿的 canonical dataset。
+    <span class="cite">— 基于 `README.md`、7 份 CSV、16 份脚本与现成报告交叉核验</span>
+  </blockquote>
+</section>
+
+<!-- ═════════════ Chapter 04：结论 ═════════════ -->
+<section class="chapter">
+  <div class="chapter-num">04 · Conclusions</div>
+  <h1>结论与下一步建议</h1>
+
+  <p class="lead">如果你把这份目录当内容策略资料，它已经足够值钱；如果你想把它变成一个可以持续更新、持续复用的研究产品，现在最重要的不是再多写一章，而是先把数据与工程底盘收紧。</p>
+
+  <h2>核心结论</h2>
+  <ol>
+    <li>这套研究最扎实的发现，不是“某个平台更爱搜”，而是 <span class="hl">高影响力内容的形态特征高度稳定</span>：长、分层、带数据、语义贴题、可直接摘取定义或证据。</li>
+    <li>三平台并没有共享同一套引用逻辑。<span class="hl">ChatGPT</span> 更像“少引几条但消化得更深”的知识整合器；<span class="hl">Google</span> 更像“强联网、广引用、快速摘要”的搜索摘要器；<span class="hl">Perplexity</span> 则是最明显的“高频搜索型产品”。</li>
+    <li>这份资料包已经达到 <span class="hl">可用于业务判断</span> 的程度，但尚未达到 <span class="hl">可直接公开发表或长期维护</span> 的工程标准。安全脱敏、命名规范化和脏数据清理，是升级为 v2 研究资产的前提。</li>
+  </ol>
+
+  <h2>下一步建议</h2>
+  <p>建议把动作拆成两条线并行推进。第一条是 <span class="hl">研究资产线</span>：把所有脚本中的密钥与路径外置，统一 `A_news / A_technology` 等命名规范，清掉重复表头和混列值，重跑抓取失败链接，并重新生成一份 canonical CSV 与 canonical report。第二条是 <span class="hl">GEO 内容策略线</span>：优先把内容放在高权威、US / EN 环境更强的平台；在页面结构上明确用 `H2/H3`、列表、定义段、对比段、数据段来写；如果目标平台是 ChatGPT，就优先写能被“深度吸收”的解释型长文，如果目标平台是 Google / Perplexity，则更重视覆盖面、对齐速度和多角度答案拼装能力。</p>
+
+  <p>更具体一点，内容团队可以把页面模板改成以下顺序：一句能直接回答问题的导语、定义或判断段、3-5 个结构化子问题、每段至少一个数字或可验证事实、结尾补 FAQ 或对比表。对外投放上，优先选择 `官网`、高权威 `新闻媒体`、百科式知识页和研究型页面；如果自有站点 DR 不够高，就考虑联名发布、转载或在高权威媒体上做摘要版承接。</p>
+
+  <div class="takeaway">
+    <div class="takeaway-label">Call to Action</div>
+    周一早上最值得做的一件事，不是再写新报告，而是开一个 <span class="hl">research cleanup sprint</span>：1）脱敏密钥；2）清洗 7 份 CSV；3）重跑失败抓取；4）重新导出一份 v2 版 canonical report。把这四步做完，这套资料包的长期价值会比任何一篇单独的解读稿更高。
+  </div>
+</section>
+
+<!-- ═════════════ Chapter 05：附录 ═════════════ -->
+<section class="chapter">
+  <div class="chapter-num">05 · Appendix</div>
+  <h1>附录：文件审计范围</h1>
+
+  <h2>A. 本次实际审阅的文件组</h2>
+  <ul>
+    <li>`README.md`：交付包结构说明，作为整套资料包的索引层。</li>
+    <li>`01-prompt/*.txt`：9 份 Prompt 文本，总计 <span class="hl">602 条</span>；覆盖 A/B/C/D 四层实验设计。</li>
+    <li>`02-data/*.csv`：7 份数据文件；其中 3 份搜索结果表、4 份 72 维特征表。</li>
+    <li>`03-pipeline/*.py` + `requirements.txt`：共 <span class="hl">16 个</span> 可执行 / 配置文件；确认了 HTML 解析、抓取、特征计算、报告生成与补数逻辑。</li>
+    <li>`04-repet/final_report.md` / `.html` / `.pdf`：三种成稿形态；其中 Markdown 为内容源，HTML 与 PDF 为渲染衍生物。</li>
+    <li>`04-repet/image/`：22 张配图，其中 20 张被 Markdown 正文引用，2 张为未入稿的补充图。</li>
+    <li>`.DS_Store`：macOS 系统元数据，已识别但不纳入 substantive analysis。</li>
+  </ul>
+
+  <h2>B. 术语表</h2>
+  <p><strong>GEO</strong>：生成引擎优化。不是传统 SEO 的简单别名，而是面向 LLM / AI Search 的内容可见性与可吸收性优化。</p>
+  <p><strong>influence_score</strong>：本研究自定义的引用影响力分数，综合引用次数、位置、覆盖率和文本重合度，衡量“这条来源被 AI 真正用到了多少”。</p>
+  <p><strong>fetch_ok</strong>：引用页是否抓取成功。它决定某条引用能不能进入后续结构、质量与语义分析。</p>
+
+  <h2>C. 额外备注</h2>
+  <p>本次审阅确认 `2.1.b3.png` 和 `2.1.b4.png` 两张图未在 `final_report.md` 中被引用，但其内容并非噪音：前者是 ChatGPT Top10 引用域名表，后者是 ChatGPT 分行业平均评级表，适合作为补充材料纳入后续 v2 版报告。</p>
+
+  <h2>D. 致谢</h2>
+  <p>本报告基于用户提供的“海外 GEO 研究”目录逐项整理，并使用 `kami` 长文模板重新排版。原资料包已经完成了大量一线采集与分析工作；本次工作主要是在 <span class="hl">材料审计</span>、<span class="hl">方法复核</span> 和 <span class="hl">策略重写</span> 三个层面做二次加工。</p>
+</section>
+
+</body>
+</html>

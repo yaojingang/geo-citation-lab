@@ -1,0 +1,5 @@
+beautifulsoup4
+lxml
+requests
+readability-lxml
+playwright

@@ -1,0 +1,60 @@
+What are the recent developments in AI?
+Summarize recent developments in AI and include sources.
+You are a technology analyst, summarize the most important recent developments in AI and explain their significance.
+What are the differences between ChatGPT and Gemini?
+Compare ChatGPT and Gemini and include sources.
+You are an AI product expert, compare ChatGPT and Gemini and explain which is better in different use cases.
+What is happening in financial markets recently?
+Summarize recent financial market developments with sources.
+You are a financial analyst, explain recent financial market trends and their implications.
+How do stocks and cryptocurrencies differ?
+Compare stocks and cryptocurrencies with sources.
+You are an investment advisor, compare stocks and cryptocurrencies and explain which is more suitable for different investors.
+What are the major global news events recently?
+Summarize major global news events recently and include sources.
+You are a journalist, summarize major global news and explain why they matter.
+Why is a certain news topic trending recently?
+Explain why a recent news topic is trending and include sources.
+You are a news analyst, explain why a recent event is trending and its broader implications.
+What are some good restaurants nearby?
+Recommend good restaurants nearby and include sources or ratings.
+You are a local guide, recommend nearby restaurants and explain why they are worth visiting.
+Which local restaurants are better recently?
+Compare nearby restaurants using recent reviews and include sources.
+You are a food critic, compare local restaurants and recommend the best choices.
+What are popular smartphones right now?
+List popular smartphones and include sources.
+You are a tech reviewer, recommend the best smartphones and explain why.
+How do different smartphone brands compare?
+Compare smartphone brands and include sources.
+You are a product expert, compare smartphone brands and suggest the best option.
+What are common treatments for a disease?
+Summarize treatments for a disease and include sources.
+You are a healthcare advisor, explain treatment options and their effectiveness.
+What are recent developments in healthcare?
+Summarize recent healthcare developments with sources.
+You are a medical analyst, explain recent healthcare trends and their impact.
+Why is AI becoming more popular?
+Explain why AI is becoming more popular and include sources.
+You are an industry expert, analyze why AI is gaining popularity and what it means for the future.
+Why are financial markets changing recently?
+Explain recent changes in financial markets with sources.
+You are a financial strategist, analyze recent market changes and their implications.
+How do different news sources compare?
+Compare major news sources and include references.
+You are a media analyst, compare news sources and evaluate their reliability.
+What local places are trending now?
+List trending local places and include sources.
+You are a city expert, explain why certain local places are trending.
+What products are worth buying recently?
+Recommend products and include sources.
+You are a shopping advisor, recommend products and explain why they are worth buying.
+What are recent technology trends?
+Summarize recent technology trends with sources.
+You are a technology strategist, explain recent trends and their future impact.
+Which AI companies are leading now?
+Identify leading AI companies and include sources.
+You are a market analyst, evaluate leading AI companies and explain why they lead.
+What are major global trends recently?
+Summarize major global trends and include sources.
+You are a global analyst, analyze major trends and explain their significance.

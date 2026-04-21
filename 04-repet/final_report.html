@@ -1,0 +1,1900 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>海外 GEO 研究长版报告（口径重算版）</title>
+  <style>
+    :root {
+      --paper: #f7f3ea;
+      --sheet: #fffdfa;
+      --ink: #1a1d21;
+      --muted: #5c6773;
+      --rule: #d9d2c4;
+      --accent: #1b365d;
+      --accent-soft: #e8eef5;
+      --code-bg: #f1ede5;
+      --quote-bg: #f6f2ea;
+    }
+    @page {
+      size: A4;
+      margin: 18mm 18mm 20mm 18mm;
+    }
+    html {
+      background: var(--paper);
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua",
+        Georgia, "Noto Serif CJK SC", "Source Han Serif SC", "Songti SC", serif;
+      line-height: 1.78;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+    main {
+      width: 100%;
+      max-width: 980px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 32px 20px 56px;
+    }
+    article {
+      width: 100%;
+      max-width: 100%;
+      background: var(--sheet);
+      border: 1px solid rgba(217, 210, 196, 0.9);
+      box-shadow: 0 20px 60px rgba(36, 41, 46, 0.08);
+      border-radius: 18px;
+      padding: 40px 48px 52px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 1.2rem auto;
+      border-radius: 10px;
+    }
+    .table-wrap {
+      margin: 1.2em 0 1.5em;
+      overflow-x: auto;
+      overflow-y: hidden;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid rgba(217, 210, 196, 0.92);
+      border-radius: 12px;
+      background: white;
+      box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.7);
+    }
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 640px;
+      margin: 0;
+      font-size: 0.95em;
+      background: white;
+    }
+    th, td {
+      border: 1px solid var(--rule);
+      padding: 0.58em 0.72em;
+      text-align: left;
+      vertical-align: top;
+    }
+    th {
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 700;
+    }
+    tr:nth-child(even) td {
+      background: rgba(250, 248, 242, 0.85);
+    }
+    pre, code {
+      font-family: ui-monospace, "Cascadia Code", "SF Mono", Menlo, monospace;
+      font-size: 0.88em;
+    }
+    pre {
+      background: var(--code-bg);
+      padding: 1em 1.1em;
+      overflow-x: auto;
+      border-radius: 10px;
+      border: 1px solid var(--rule);
+    }
+    code {
+      background: rgba(27, 54, 93, 0.08);
+      padding: 0.12em 0.32em;
+      border-radius: 4px;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    pre code {
+      background: transparent;
+      padding: 0;
+    }
+    blockquote {
+      margin: 1.2em 0 1.4em;
+      padding: 0.45em 1em 0.45em 1.2em;
+      border-left: 4px solid var(--accent);
+      color: var(--muted);
+      background: var(--quote-bg);
+      border-radius: 0 8px 8px 0;
+    }
+    hr {
+      border: 0;
+      border-top: 1px solid var(--rule);
+      margin: 2rem 0;
+    }
+    h1, h2, h3, h4 {
+      color: var(--ink);
+      line-height: 1.3;
+      page-break-after: avoid;
+    }
+    h1 {
+      font-size: 2rem;
+      color: var(--accent);
+      margin: 0 0 0.9rem;
+      padding-bottom: 0.55rem;
+      border-bottom: 2px solid var(--rule);
+      letter-spacing: 0.01em;
+    }
+    h2 {
+      font-size: 1.42rem;
+      margin-top: 2.1rem;
+      margin-bottom: 0.9rem;
+      padding-left: 0.7rem;
+      border-left: 4px solid var(--accent);
+    }
+    h3 {
+      font-size: 1.12rem;
+      margin-top: 1.5rem;
+      margin-bottom: 0.55rem;
+      color: var(--accent);
+    }
+    h4 {
+      font-size: 1rem;
+      margin-top: 1.2rem;
+      margin-bottom: 0.45rem;
+    }
+    p {
+      margin: 0.75rem 0;
+    }
+    ul, ol {
+      margin: 0.8rem 0 1rem 1.4rem;
+      padding: 0;
+    }
+    li {
+      margin: 0.34rem 0;
+    }
+    strong {
+      color: var(--ink);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid rgba(27, 54, 93, 0.28);
+    }
+    p, li, blockquote, td, th, h1, h2, h3, h4 {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      white-space: normal;
+    }
+    @media (max-width: 900px) {
+      main {
+        padding: 18px 14px 34px;
+      }
+      article {
+        padding: 28px 24px 34px;
+      }
+    }
+    @media (max-width: 640px) {
+      body {
+        font-size: 15.5px;
+        line-height: 1.72;
+      }
+      main {
+        padding: 0;
+      }
+      article {
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 18px 16px 28px;
+      }
+      article > *:not(.table-wrap) {
+        max-width: calc(100vw - 32px);
+      }
+      h1 {
+        font-size: 1.56rem;
+        margin-bottom: 0.75rem;
+        padding-bottom: 0.45rem;
+      }
+      h2 {
+        font-size: 1.18rem;
+        margin-top: 1.7rem;
+        margin-bottom: 0.72rem;
+        padding-left: 0.58rem;
+      }
+      h3 {
+        font-size: 1.02rem;
+        margin-top: 1.25rem;
+      }
+      h4 {
+        font-size: 0.96rem;
+      }
+      pre {
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0.88em 0.92em;
+        border-radius: 8px;
+      }
+      blockquote {
+        margin: 1rem 0 1.1rem;
+        padding: 0.42em 0.88em 0.42em 1em;
+      }
+      ul, ol {
+        margin-left: 1.1rem;
+      }
+      .table-wrap {
+        margin: 1rem -4px 1.2rem;
+        border-radius: 10px;
+      }
+      table {
+        min-width: 560px;
+        font-size: 0.91em;
+      }
+      th, td {
+        padding: 0.52em 0.58em;
+      }
+    }
+    @media print {
+      html, body {
+        background: white;
+      }
+      main {
+        max-width: none;
+        padding: 0;
+      }
+      article {
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        padding: 0;
+      }
+      .table-wrap {
+        overflow: visible;
+        border: 0;
+        box-shadow: none;
+        border-radius: 0;
+        margin: 1.2em 0 1.5em;
+      }
+      table, pre, blockquote, img {
+        break-inside: avoid;
+      }
+      table {
+        min-width: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <article>
+<h1>海外 GEO 研究长版报告（口径重算版）</h1>
+<blockquote>
+<p>版本说明：本版基于 <code>2026-04-21</code> 的目录内容重算，统一使用清洗后的搜索层口径与 <code>features_all_platforms_72.csv</code> 的引用影响力口径。旧版报告中若存在与本版不一致的数字，以本版为准。</p>
+</blockquote>
+<h2>执行摘要</h2>
+<p>这份研究要回答的不是“AI 会不会搜索”，而是更接近实战的问题：</p>
+<ol>
+<li>什么样的 Prompt 更容易触发 AI 联网搜索？</li>
+<li>触发搜索后，AI 会优先相信什么样的来源？</li>
+<li>同样被引用的页面里，什么样的内容会被 AI 深度吸收，而不是只在来源列表里出现一次？</li>
+</ol>
+<p>整套资料的底座是：</p>
+<ul>
+<li><code>602</code> 条实验 Prompt</li>
+<li><code>3</code> 个平台：<code>ChatGPT</code>、<code>Google AI Overview / Gemini</code>、<code>Perplexity</code></li>
+<li>搜索层清洗后 <code>21,181</code> 行结果，其中有效引用 <code>21,143</code> 行</li>
+<li>引用影响力层 <code>23,745</code> 行、<code>72</code> 维特征</li>
+<li>抓取成功的引用页面 <code>18,151</code> 个，成功率 <code>76.44%</code></li>
+</ul>
+<p>本版重算后，最重要的结论是：</p>
+<ul>
+<li>三平台几乎都会触发搜索，但搜索策略差异很大：ChatGPT 平均每条 Prompt 引用 <code>6.88</code> 个来源，Google 为 <code>12.06</code>，Perplexity 为 <code>16.35</code>。</li>
+<li>搜索广度不等于吸收深度。按抓取成功页面计算，ChatGPT 的单条引用平均影响力为 <code>0.2713</code>，显著高于 Google 的 <code>0.0584</code> 与 Perplexity 的 <code>0.0646</code>。</li>
+<li>对 AI 真正有效的，不是“短而精的观点文章”，而是“长、结构化、可抽取、强对题”的证据页。高影响力页面平均 <code>1,943</code> 词，低影响力页面只有 <code>170</code> 词。</li>
+<li>AI 偏好高度集中：<code>官网 + 新闻 + 行业垂类</code> 是绝对主战场；在可识别样本里，<code>US</code> 来源占 <code>82.70% - 86.76%</code>，英文来源占 <code>82.90% - 95.07%</code>。</li>
+</ul>
+<p>如果只看一句话，这份研究的核心判断是：</p>
+<blockquote>
+<p>GEO 的核心不是“让 AI 看见你”，而是“让你的页面足够像一个可被模型拆解、搬运、重组的证据容器”。</p>
+</blockquote>
+<hr>
+<h2>一、研究目标与数据逻辑</h2>
+<h3>1.1 本研究在拆哪条链路</h3>
+<p>这份资料研究的是 AI 搜索时代的完整内容链路：</p>
+<p><code>用户提问 -&gt; 是否触发搜索 -&gt; 选择哪些来源 -&gt; 如何使用这些来源 -&gt; 最终哪些页面真的影响了回答</code></p>
+<p>因此整套分析分成两层：</p>
+<ul>
+<li><code>搜索触发层</code>：观察 Prompt 如何触发联网搜索，以及三平台选了哪些来源站点</li>
+<li><code>引用影响力层</code>：观察被引用页面的结构、语义与体裁，如何影响它在 AI 回答中的真实作用</li>
+</ul>
+<h3>1.2 数据资产清单</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>文件/范围</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Prompt 设计</td>
+<td><code>01-prompt/</code></td>
+<td>602 条实验输入</td>
+</tr>
+<tr>
+<td>搜索触发与信源</td>
+<td><code>02-data/*results_with_prompt.csv</code></td>
+<td>记录是否触发搜索、引用域名、网站类型、DR、国家、语言等</td>
+</tr>
+<tr>
+<td>引用影响力特征</td>
+<td><code>02-data/features_all_platforms_72.csv</code></td>
+<td>每条引用一行，共 72 维特征</td>
+</tr>
+<tr>
+<td>分析脚本</td>
+<td><code>03-pipeline/</code></td>
+<td>解析、抓取、特征提取、统计分析</td>
+</tr>
+<tr>
+<td>长版报告</td>
+<td><code>04-repet/</code></td>
+<td>Markdown / HTML / PDF 导出</td>
+</tr>
+</tbody>
+</table></div>
+<h3>1.3 为什么要重算</h3>
+<p>这次重写不是简单润色，而是做了一次口径统一，主要修正四类问题：</p>
+<ul>
+<li><code>chatgpt_results_with_prompt.csv</code> 混入了 <code>16</code> 行重复表头，需要先清洗</li>
+<li>ChatGPT 搜索层里 <code>A_news</code>、<code>A_technology</code> 被写成 <code>Anews*</code>、<code>Atechnology*</code>，旧脚本会漏统计</li>
+<li>ChatGPT 搜索层只覆盖到 <code>587</code> 个 Prompt，仍缺 <code>15</code> 个 Prompt 输出，不能继续按 <code>602</code> 口径硬写</li>
+<li>影响力分析应基于 <code>fetch_ok = True</code> 的成功抓取页面，否则会把抓取失败页面一起拉低均值</li>
+</ul>
+<p>因此，本版报告明确使用两套口径：</p>
+<ul>
+<li>搜索层：基于清洗后的 <code>21,181</code> 行结果与 <code>587 / 602 / 602</code> 个平台级 Prompt 观测值</li>
+<li>影响力层：基于 <code>23,745</code> 行特征表中的 <code>18,151</code> 条成功抓取记录</li>
+</ul>
+<hr>
+<h2>二、实验设计：602 条 Prompt 如何搭起来</h2>
+<h3>2.1 四层实验架构</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>层级</th>
+<th style="text-align: right;">数量</th>
+<th>目的</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A 层</td>
+<td style="text-align: right;">432</td>
+<td>主实验层，控制任务类型、触发强度、时效性、行业与子任务</td>
+</tr>
+<tr>
+<td>B 层</td>
+<td style="text-align: right;">60</td>
+<td>风格对照层，比较自然提问、要求来源、角色型 Prompt</td>
+</tr>
+<tr>
+<td>C 层</td>
+<td style="text-align: right;">60</td>
+<td>语言对照层，对比英文与中文 Prompt</td>
+</tr>
+<tr>
+<td>D 层</td>
+<td style="text-align: right;">50</td>
+<td>极端与真实场景层，覆盖高风险、模糊、多约束、长决策问题</td>
+</tr>
+</tbody>
+</table></div>
+<h3>2.2 A 层：主实验骨架</h3>
+<p>A 层由以下变量交叉组成：</p>
+<ul>
+<li><code>TaskType</code>：事实、对比、聚合、解释/推理</li>
+<li><code>TriggerLevel</code>：Low / Medium / High</li>
+<li><code>TimeSensitivity</code>：Stable / Recent / Realtime</li>
+<li><code>Industry</code>：Technology / Commerce / Local / Healthcare / Finance / News</li>
+<li><code>SubType</code>：Info / Decision</li>
+</ul>
+<p>它的价值不在于“多”，而在于可以把问题拆成可比较的控制变量。</p>
+<h3>2.3 B/C/D 层：为什么重要</h3>
+<ul>
+<li><code>B 层</code> 用来回答：同一个问题，换一种说法会不会改变搜索强度？</li>
+<li><code>C 层</code> 用来回答：中英文环境会不会改变平台的联网倾向？</li>
+<li><code>D 层</code> 用来回答：遇到真实世界里高风险、模糊、多约束问题时，平台会怎么做？</li>
+</ul>
+<hr>
+<h2>三、处理流程与方法口径</h2>
+<h3>3.1 搜索层处理流程</h3>
+<p>搜索层使用三份 CSV：</p>
+<ul>
+<li><code>chatgpt_results_with_prompt.csv</code></li>
+<li><code>Google_results_with_prompt.csv</code></li>
+<li><code>perplexity_results_with_prompt.csv</code></li>
+</ul>
+<p>每行记录一个被引用域名，并附带如下字段：</p>
+<ul>
+<li><code>是否触发搜索</code></li>
+<li><code>引用域名</code></li>
+<li><code>最终评级(Final_DR)</code></li>
+<li><code>网站类型</code></li>
+<li><code>国家(Country)</code></li>
+<li><code>语言(Language)</code></li>
+</ul>
+<p>在 Prompt 级统计时，本版使用：</p>
+<ul>
+<li>同一 <code>文件名</code> 下任一行 <code>是否触发搜索 = 是</code>，即视为该 Prompt 触发搜索</li>
+<li>同一 <code>文件名</code> 下有效 <code>引用域名</code> 的行数，作为该 Prompt 的引用数</li>
+</ul>
+<h3>3.2 引用影响力层处理流程</h3>
+<p>引用影响力分析的逻辑是：</p>
+<ol>
+<li>从三平台回答页解析引用 URL</li>
+<li>批量抓取引用网页正文</li>
+<li>为每条引用提取 <code>72</code> 维特征</li>
+<li>计算每条引用在 AI 回答中的 <code>influence_score</code></li>
+</ol>
+<p>全量特征表共有 <code>23,745</code> 行，抓取成功 <code>18,151</code> 行，平台分布如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">原始特征行数</th>
+<th style="text-align: right;">抓取成功行数</th>
+<th style="text-align: right;">抓取成功率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">4,494</td>
+<td style="text-align: right;">3,323</td>
+<td style="text-align: right;">73.97%</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">8,476</td>
+<td style="text-align: right;">6,385</td>
+<td style="text-align: right;">75.33%</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">10,775</td>
+<td style="text-align: right;">8,443</td>
+<td style="text-align: right;">78.36%</td>
+</tr>
+<tr>
+<td>合计</td>
+<td style="text-align: right;">23,745</td>
+<td style="text-align: right;">18,151</td>
+<td style="text-align: right;">76.44%</td>
+</tr>
+</tbody>
+</table></div>
+<h3>3.3 72 维特征里最关键的几类</h3>
+<p>虽然表里有 72 个字段，但可以抽象成五类：</p>
+<ul>
+<li><code>页面结构</code>：词数、标题数、段落数、列表密度、表格/图片/链接等</li>
+<li><code>内容质量</code>：信息密度、句长、词汇丰富度、标题与问题匹配度等</li>
+<li><code>内容体裁</code>：是否含数字、定义、对比、how-to、Q&amp;A、代码</li>
+<li><code>语义对齐</code>：Embedding 相似度、LLM 相关性评分、内容质量评分</li>
+<li><code>结果变量</code>：引用次数、首次出现位置、覆盖段落比例、文本重叠度</li>
+</ul>
+<h3>3.4 影响力分数怎么定义</h3>
+<p>本项目使用以下加权分数描述“某条引用对最终回答的真实影响力”：</p>
+<pre><code class="language-text">influence_score =
+    0.20 × min(ref_count / 3, 1)
+  + 0.15 × (1 - first_position_ratio)
+  + 0.20 × paragraph_coverage_ratio
+  + 0.25 × tfidf_cosine
+  + 0.20 × (bigram_overlap + trigram_overlap) / 2
+</code></pre>
+<p>这意味着：</p>
+<ul>
+<li>被引用多次、出现更靠前、覆盖更多回答段落的页面，分数更高</li>
+<li>与回答文本重合度更高、语义更贴近的页面，分数也更高</li>
+</ul>
+<h3>3.5 一个重要的方法论约束</h3>
+<p>由于 <code>ref_count</code>、<code>position</code>、<code>coverage</code>、<code>tfidf</code>、<code>ngram overlap</code> 本身就是 <code>influence_score</code> 的定义组件，因此本版不把它们当“原因变量”来讲发现。真正用来解释影响力的，是：</p>
+<ul>
+<li>页面结构</li>
+<li>内容体裁</li>
+<li>语义对齐</li>
+<li>独立的 LLM 评分</li>
+</ul>
+<hr>
+<h2>四、搜索触发层：三平台到底怎么搜</h2>
+<h3>4.1 平台总览</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">观测 Prompt 数</th>
+<th style="text-align: right;">触发搜索 Prompt 数</th>
+<th style="text-align: right;">触发率</th>
+<th style="text-align: right;">平均引用数</th>
+<th style="text-align: right;">中位引用数</th>
+<th style="text-align: right;">单条 Prompt 最大引用数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">587</td>
+<td style="text-align: right;">579</td>
+<td style="text-align: right;">98.64%</td>
+<td style="text-align: right;">6.88</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">21</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">602</td>
+<td style="text-align: right;">600</td>
+<td style="text-align: right;">99.67%</td>
+<td style="text-align: right;">12.06</td>
+<td style="text-align: right;">12</td>
+<td style="text-align: right;">37</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">602</td>
+<td style="text-align: right;">602</td>
+<td style="text-align: right;">100.00%</td>
+<td style="text-align: right;">16.35</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">27</td>
+</tr>
+</tbody>
+</table></div>
+<p>第一层结论非常明确：</p>
+<ul>
+<li>三平台基本都会触发搜索</li>
+<li>但 Perplexity 和 Google 更像“宽搜型”平台</li>
+<li>ChatGPT 搜得更收敛，平均引用宽度明显更窄</li>
+</ul>
+<p>如果从策略上总结：</p>
+<ul>
+<li><code>ChatGPT</code>：少而精，后续对单条引用使用更深</li>
+<li><code>Google</code>：搜索覆盖广，对来源要求敏感</li>
+<li><code>Perplexity</code>：几乎无条件联网上下文补全，引用最密集</li>
+</ul>
+<h3>4.2 分层看：A/B/C/D 哪一层最能拉高搜索强度</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">A 层</th>
+<th style="text-align: right;">B 层</th>
+<th style="text-align: right;">C 层</th>
+<th style="text-align: right;">D 层</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">6.75</td>
+<td style="text-align: right;">7.13</td>
+<td style="text-align: right;">7.40</td>
+<td style="text-align: right;">7.02</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">12.15</td>
+<td style="text-align: right;">13.45</td>
+<td style="text-align: right;">9.55</td>
+<td style="text-align: right;">12.66</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">16.41</td>
+<td style="text-align: right;">16.52</td>
+<td style="text-align: right;">16.18</td>
+<td style="text-align: right;">15.86</td>
+</tr>
+</tbody>
+</table></div>
+<p>这里有三个值得注意的点：</p>
+<ul>
+<li>Google 对 <code>B 层风格对照</code> 最敏感，说明“怎么提问”对它的联网强度影响很大</li>
+<li>ChatGPT 在 <code>C 层语言对照</code> 上反而略高，意味着中文并未削弱其搜索意愿</li>
+<li>Perplexity 几乎对任何层级都保持高强度联网，说明其默认策略就是“先搜再说”</li>
+</ul>
+<h3>4.3 B 层：换个问法，AI 会不会搜得更多</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">自然提问</th>
+<th style="text-align: right;">要求来源</th>
+<th style="text-align: right;">角色型 Prompt</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">7.30</td>
+<td style="text-align: right;">6.15</td>
+<td style="text-align: right;">7.95</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">14.05</td>
+<td style="text-align: right;">15.90</td>
+<td style="text-align: right;">10.40</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">15.70</td>
+<td style="text-align: right;">17.15</td>
+<td style="text-align: right;">16.70</td>
+</tr>
+</tbody>
+</table></div>
+<p>这部分的结论不是“要求来源一定最强”，而是：</p>
+<ul>
+<li><code>Google</code> 和 <code>Perplexity</code> 明显吃“要求来源”的刺激</li>
+<li><code>ChatGPT</code> 则更偏好角色型 Prompt，对“强行要求来源”没有同样强的提升</li>
+</ul>
+<p>因此，Prompt 包装对搜索强度的影响是平台相关的，不应简单概括为一个统一结论。</p>
+<h3>4.4 C 层：英文与中文，平台反应一样吗</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">中文 Prompt 平均引用数</th>
+<th style="text-align: right;">英文 Prompt 平均引用数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">7.77</td>
+<td style="text-align: right;">7.03</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">7.53</td>
+<td style="text-align: right;">11.57</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">15.93</td>
+<td style="text-align: right;">16.43</td>
+</tr>
+</tbody>
+</table></div>
+<p>这组结果很有价值：</p>
+<ul>
+<li>Google 明显更偏向英文上下文</li>
+<li>Perplexity 也略偏英文，但差距不大</li>
+<li>ChatGPT 在这组样本里反而中文略高</li>
+</ul>
+<p>这说明“英文一定更能触发 AI 搜索”并不严谨。更准确的说法是：</p>
+<blockquote>
+<p>英文对 Google 的加成最大；对 ChatGPT，这种加成在本样本中并不成立。</p>
+</blockquote>
+<h3>4.5 D 层：真实世界问题，平台会怎么处理</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>场景</th>
+<th style="text-align: right;">ChatGPT</th>
+<th style="text-align: right;">Google</th>
+<th style="text-align: right;">Perplexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>高风险</td>
+<td style="text-align: right;">6.0</td>
+<td style="text-align: right;">13.9</td>
+<td style="text-align: right;">16.0</td>
+</tr>
+<tr>
+<td>模糊问题</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">8.9</td>
+<td style="text-align: right;">13.1</td>
+</tr>
+<tr>
+<td>多约束任务</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">12.6</td>
+<td style="text-align: right;">17.7</td>
+</tr>
+<tr>
+<td>长决策问题</td>
+<td style="text-align: right;">9.2</td>
+<td style="text-align: right;">14.5</td>
+<td style="text-align: right;">17.4</td>
+</tr>
+<tr>
+<td>宏观趋势类</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">13.4</td>
+<td style="text-align: right;">15.1</td>
+</tr>
+</tbody>
+</table></div>
+<p>这一组里最反常识的现象是：</p>
+<ul>
+<li>ChatGPT 面对 <code>多约束任务</code> 时平均只引用 <code>3.4</code> 个来源，明显低于其它场景</li>
+<li>Perplexity 在同类问题上达到 <code>17.7</code>，几乎是完全相反的策略</li>
+</ul>
+<p>可以把它理解成：</p>
+<ul>
+<li>ChatGPT 更容易把复杂约束问题压缩成自身推理任务</li>
+<li>Perplexity 更倾向把复杂任务拆成广泛的信息检索与拼装</li>
+</ul>
+<hr>
+<h2>五、来源偏好：AI 更容易选中什么样的网站</h2>
+<h3>5.1 行业维度：不同平台最爱搜哪些领域</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">Commerce</th>
+<th style="text-align: right;">Finance</th>
+<th style="text-align: right;">Healthcare</th>
+<th style="text-align: right;">Local</th>
+<th style="text-align: right;">News</th>
+<th style="text-align: right;">Technology</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">6.88</td>
+<td style="text-align: right;">6.86</td>
+<td style="text-align: right;">7.70</td>
+<td style="text-align: right;">5.40</td>
+<td style="text-align: right;">6.25</td>
+<td style="text-align: right;">7.49</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">11.94</td>
+<td style="text-align: right;">10.51</td>
+<td style="text-align: right;">13.92</td>
+<td style="text-align: right;">12.96</td>
+<td style="text-align: right;">11.71</td>
+<td style="text-align: right;">11.83</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">16.36</td>
+<td style="text-align: right;">17.06</td>
+<td style="text-align: right;">16.24</td>
+<td style="text-align: right;">16.96</td>
+<td style="text-align: right;">15.68</td>
+<td style="text-align: right;">16.17</td>
+</tr>
+</tbody>
+</table></div>
+<p>平台偏好并不完全相同：</p>
+<ul>
+<li>ChatGPT 最强的是 <code>Healthcare</code> 和 <code>Technology</code></li>
+<li>Google 最强的是 <code>Healthcare</code> 和 <code>Local</code></li>
+<li>Perplexity 最强的是 <code>Finance</code> 和 <code>Local</code></li>
+</ul>
+<p>如果从内容策略上理解：</p>
+<ul>
+<li>医疗、科技、金融这类高信息密度领域，更容易触发大范围来源整合</li>
+<li>本地类内容在 ChatGPT 上明显弱，说明缺少明确地理锚点时，它更容易回退到内部知识</li>
+</ul>
+<h3>5.2 网站类型：三平台的候选池高度集中</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">官网</th>
+<th style="text-align: right;">新闻</th>
+<th style="text-align: right;">行业垂类</th>
+<th>其他高频类型</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">34.22%</td>
+<td style="text-align: right;">31.17%</td>
+<td style="text-align: right;">22.13%</td>
+<td>测评类 4.51%、blog 4.04%</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">46.35%</td>
+<td style="text-align: right;">18.99%</td>
+<td style="text-align: right;">22.00%</td>
+<td>blog 5.04%、测评类 2.45%</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">44.07%</td>
+<td style="text-align: right;">16.07%</td>
+<td style="text-align: right;">18.99%</td>
+<td>unknown 4.47%、噪声值“成功”3.86%</td>
+</tr>
+</tbody>
+</table></div>
+<p>把这三类加总后：</p>
+<ul>
+<li>ChatGPT：<code>87.52%</code></li>
+<li>Google：<code>87.34%</code></li>
+<li>Perplexity：<code>79.12%</code></li>
+</ul>
+<p>结论非常直接：</p>
+<blockquote>
+<p>官网、新闻、行业垂类不是“会被引用的一类来源”，而是几乎定义了 AI 搜索的默认候选池。</p>
+</blockquote>
+<h3>5.3 地区与语言：谁在被优先看见</h3>
+<p>在排除 <code>unknown</code> 和 <code>WW</code> 后，三平台在可识别国家样本中的 <code>US</code> 占比如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">US 占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">85.89%</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">86.76%</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">82.70%</td>
+</tr>
+</tbody>
+</table></div>
+<p>在排除 <code>unknown</code> 后，三平台在可识别语言样本中的英文占比如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">英文占比</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">95.07%</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">91.98%</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">82.90%</td>
+</tr>
+</tbody>
+</table></div>
+<p>因此，对希望“先进入 AI 候选池”的内容团队来说，最稳妥的现实结论是：</p>
+<ul>
+<li>首发环境优先英文</li>
+<li>分发环境优先美国或强全球化域名</li>
+<li>非英文、非美区内容不是没有机会，但竞争门槛更高</li>
+</ul>
+<h3>5.4 域名权威度：高 DR 仍是硬门槛</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">平均 Final_DR</th>
+<th style="text-align: right;">中位 Final_DR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">584.60</td>
+<td style="text-align: right;">592</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">541.15</td>
+<td style="text-align: right;">526</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">558.33</td>
+<td style="text-align: right;">542</td>
+</tr>
+</tbody>
+</table></div>
+<p>这说明一件很现实的事：</p>
+<blockquote>
+<p>在“能不能先被选中”这一层，域名权威度仍然非常重要。</p>
+</blockquote>
+<p>它不是决定引用深度的唯一因素，但明显决定了内容是否有资格进入第一轮候选。</p>
+<h3>5.5 高频域名：AI 到底在重复看谁</h3>
+<p>搜索层合并后的 Top 15 域名如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>排名</th>
+<th>域名</th>
+<th style="text-align: right;">次数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>youtube.com</td>
+<td style="text-align: right;">560</td>
+</tr>
+<tr>
+<td>2</td>
+<td>en.wikipedia.org</td>
+<td style="text-align: right;">352</td>
+</tr>
+<tr>
+<td>3</td>
+<td>reddit.com</td>
+<td style="text-align: right;">315</td>
+</tr>
+<tr>
+<td>4</td>
+<td>reuters.com</td>
+<td style="text-align: right;">287</td>
+</tr>
+<tr>
+<td>5</td>
+<td>linkedin.com</td>
+<td style="text-align: right;">187</td>
+</tr>
+<tr>
+<td>6</td>
+<td>nytimes.com</td>
+<td style="text-align: right;">174</td>
+</tr>
+<tr>
+<td>7</td>
+<td>pmc.ncbi.nlm.nih.gov</td>
+<td style="text-align: right;">167</td>
+</tr>
+<tr>
+<td>8</td>
+<td>facebook.com</td>
+<td style="text-align: right;">151</td>
+</tr>
+<tr>
+<td>9</td>
+<td>forbes.com</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr>
+<td>10</td>
+<td>finance.yahoo.com</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr>
+<td>11</td>
+<td>deloitte.com</td>
+<td style="text-align: right;">134</td>
+</tr>
+<tr>
+<td>12</td>
+<td>theguardian.com</td>
+<td style="text-align: right;">124</td>
+</tr>
+<tr>
+<td>13</td>
+<td>wsj.com</td>
+<td style="text-align: right;">122</td>
+</tr>
+<tr>
+<td>14</td>
+<td>investopedia.com</td>
+<td style="text-align: right;">121</td>
+</tr>
+<tr>
+<td>15</td>
+<td>weforum.org</td>
+<td style="text-align: right;">121</td>
+</tr>
+</tbody>
+</table></div>
+<p>这个结果反映出三类典型来源：</p>
+<ul>
+<li><code>解释型/百科型来源</code>：如 Wikipedia</li>
+<li><code>新闻型来源</code>：如 Reuters、NYT、WSJ</li>
+<li><code>平台型/聚合型来源</code>：如 YouTube、Reddit、LinkedIn</li>
+</ul>
+<p>需要强调的是：高频出现不等于高影响力。它更像是在说，这些来源经常能进入候选池。</p>
+<hr>
+<h2>六、引用影响力层：什么页面会被 AI 深度吸收</h2>
+<h3>6.1 平台层面的“引用深度”差异</h3>
+<p>以下分析仅基于抓取成功页面：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>平台</th>
+<th style="text-align: right;">抓取成功引用数</th>
+<th style="text-align: right;">平均影响力</th>
+<th style="text-align: right;">中位影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ChatGPT</td>
+<td style="text-align: right;">3,323</td>
+<td style="text-align: right;">0.2713</td>
+<td style="text-align: right;">0.2611</td>
+</tr>
+<tr>
+<td>Google</td>
+<td style="text-align: right;">6,385</td>
+<td style="text-align: right;">0.0584</td>
+<td style="text-align: right;">0.0515</td>
+</tr>
+<tr>
+<td>Perplexity</td>
+<td style="text-align: right;">8,443</td>
+<td style="text-align: right;">0.0646</td>
+<td style="text-align: right;">0.0333</td>
+</tr>
+</tbody>
+</table></div>
+<p>这是本研究最重要的一张表之一。</p>
+<p>它说明：</p>
+<ul>
+<li>ChatGPT 虽然引用少，但会更集中地使用少数来源</li>
+<li>Google 与 Perplexity 更像“广引薄用”</li>
+<li>对 GEO 来说，“被 ChatGPT 引一次”和“被 Google 引一次”不能被视为等价事件</li>
+</ul>
+<h3>6.2 长度与结构：高影响力页面长什么样</h3>
+<p>按 <code>influence_score</code> 的 Top 25% 与 Bottom 25% 对比：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>指标</th>
+<th style="text-align: right;">Top 25%</th>
+<th style="text-align: right;">Bottom 25%</th>
+<th style="text-align: right;">倍数</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>词数</td>
+<td style="text-align: right;">1,943.30</td>
+<td style="text-align: right;">169.82</td>
+<td style="text-align: right;">11.44x</td>
+</tr>
+<tr>
+<td>标题总数</td>
+<td style="text-align: right;">10.59</td>
+<td style="text-align: right;">0.85</td>
+<td style="text-align: right;">12.50x</td>
+</tr>
+<tr>
+<td>段落数</td>
+<td style="text-align: right;">47.49</td>
+<td style="text-align: right;">8.34</td>
+<td style="text-align: right;">5.69x</td>
+</tr>
+<tr>
+<td>列表密度</td>
+<td style="text-align: right;">0.428</td>
+<td style="text-align: right;">0.048</td>
+<td style="text-align: right;">8.94x</td>
+</tr>
+<tr>
+<td>回答-引用语义相似度</td>
+<td style="text-align: right;">0.570</td>
+<td style="text-align: right;">0.247</td>
+<td style="text-align: right;">2.31x</td>
+</tr>
+<tr>
+<td>LLM 相关性评分</td>
+<td style="text-align: right;">3.535</td>
+<td style="text-align: right;">1.856</td>
+<td style="text-align: right;">1.90x</td>
+</tr>
+<tr>
+<td>LLM 内容质量评分</td>
+<td style="text-align: right;">3.404</td>
+<td style="text-align: right;">2.289</td>
+<td style="text-align: right;">1.49x</td>
+</tr>
+</tbody>
+</table></div>
+<p>这张表说明高影响力页面并非只是“更长”，而是更像一个可拆解的信息容器：</p>
+<ul>
+<li>标题分层更清楚</li>
+<li>段落更多</li>
+<li>列表更密</li>
+<li>与问题和回答的语义贴合更高</li>
+</ul>
+<h3>6.3 多长最合适：不是越短越好</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>页面词数区间</th>
+<th style="text-align: right;">样本数</th>
+<th style="text-align: right;">平均影响力</th>
+<th style="text-align: right;">中位影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>&lt;=100</code></td>
+<td style="text-align: right;">5,281</td>
+<td style="text-align: right;">0.0546</td>
+<td style="text-align: right;">0.0055</td>
+</tr>
+<tr>
+<td><code>101-300</code></td>
+<td style="text-align: right;">1,597</td>
+<td style="text-align: right;">0.0846</td>
+<td style="text-align: right;">0.0360</td>
+</tr>
+<tr>
+<td><code>301-600</code></td>
+<td style="text-align: right;">2,130</td>
+<td style="text-align: right;">0.1129</td>
+<td style="text-align: right;">0.0590</td>
+</tr>
+<tr>
+<td><code>601-1000</code></td>
+<td style="text-align: right;">2,417</td>
+<td style="text-align: right;">0.1117</td>
+<td style="text-align: right;">0.0674</td>
+</tr>
+<tr>
+<td><code>1001-3000</code></td>
+<td style="text-align: right;">4,742</td>
+<td style="text-align: right;">0.1258</td>
+<td style="text-align: right;">0.0838</td>
+</tr>
+<tr>
+<td><code>&gt;3000</code></td>
+<td style="text-align: right;">1,984</td>
+<td style="text-align: right;">0.1457</td>
+<td style="text-align: right;">0.0990</td>
+</tr>
+</tbody>
+</table></div>
+<p>这组结果回答了一个常见误解：</p>
+<blockquote>
+<p>AI 并不偏爱“短小摘要页”，它更偏爱“信息足够充分、可以切出多个可复用片段”的长内容页。</p>
+</blockquote>
+<p>如果从制作成本与收益平衡来看：</p>
+<ul>
+<li><code>1000-3000</code> 词是最稳妥的实操区间</li>
+<li><code>&gt;3000</code> 词仍然更强，但维护成本明显更高</li>
+</ul>
+<h3>6.4 哪些特征最能预测高影响力</h3>
+<p>在成功抓取页面中，与影响力相关性最高的独立特征包括：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>特征</th>
+<th style="text-align: right;">与影响力的相关系数 r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LLM 相关性评分</td>
+<td style="text-align: right;">0.4322</td>
+</tr>
+<tr>
+<td>回答-引用 Embedding 相似度</td>
+<td style="text-align: right;">0.3561</td>
+</tr>
+<tr>
+<td>LLM 内容质量评分</td>
+<td style="text-align: right;">0.2917</td>
+</tr>
+<tr>
+<td>问题-引用 Embedding 相似度</td>
+<td style="text-align: right;">0.2548</td>
+</tr>
+<tr>
+<td>页面词数</td>
+<td style="text-align: right;">0.1995</td>
+</tr>
+<tr>
+<td>含定义句式</td>
+<td style="text-align: right;">0.1934</td>
+</tr>
+<tr>
+<td>含数字/统计</td>
+<td style="text-align: right;">0.1842</td>
+</tr>
+<tr>
+<td>标题总数</td>
+<td style="text-align: right;">0.1751</td>
+</tr>
+<tr>
+<td>含对比内容</td>
+<td style="text-align: right;">0.1741</td>
+</tr>
+</tbody>
+</table></div>
+<p>这表明真正强的不是单个机械 SEO 指标，而是两类能力叠加：</p>
+<ul>
+<li><code>强语义对齐</code></li>
+<li><code>强结构化表达</code></li>
+</ul>
+<h3>6.5 布尔体裁特征：AI 明显更爱什么</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>特征</th>
+<th style="text-align: right;">True 平均影响力</th>
+<th style="text-align: right;">False 平均影响力</th>
+<th style="text-align: right;">提升</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>含代码</td>
+<td style="text-align: right;">0.1747</td>
+<td style="text-align: right;">0.0988</td>
+<td style="text-align: right;">+76.88%</td>
+</tr>
+<tr>
+<td>含数字/统计</td>
+<td style="text-align: right;">0.1171</td>
+<td style="text-align: right;">0.0725</td>
+<td style="text-align: right;">+61.55%</td>
+</tr>
+<tr>
+<td>含定义句式</td>
+<td style="text-align: right;">0.1252</td>
+<td style="text-align: right;">0.0795</td>
+<td style="text-align: right;">+57.33%</td>
+</tr>
+<tr>
+<td>含对比内容</td>
+<td style="text-align: right;">0.1389</td>
+<td style="text-align: right;">0.0894</td>
+<td style="text-align: right;">+55.28%</td>
+</tr>
+<tr>
+<td>含 how-to</td>
+<td style="text-align: right;">0.1296</td>
+<td style="text-align: right;">0.0918</td>
+<td style="text-align: right;">+41.20%</td>
+</tr>
+<tr>
+<td>含 Q&amp;A 格式</td>
+<td style="text-align: right;">0.0947</td>
+<td style="text-align: right;">0.1005</td>
+<td style="text-align: right;">-5.74%</td>
+</tr>
+</tbody>
+</table></div>
+<p>这一节非常适合直接指导内容生产：</p>
+<ul>
+<li><code>定义</code></li>
+<li><code>数字</code></li>
+<li><code>对比</code></li>
+<li><code>步骤</code></li>
+</ul>
+<p>这四类内容，不是“看起来更像干货”，而是客观上更容易进入 AI 的搬运与重组流程。</p>
+<p>而纯粹的 <code>Q&amp;A 页面</code> 没有天然优势，这本身就是一个反常识发现。</p>
+<hr>
+<h2>七、AI 在“怎么用引用”这件事上的偏好</h2>
+<h3>7.1 语义角色：什么角色的内容最值钱</h3>
+<p>先看高频语义角色及其平均影响力：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>语义角色</th>
+<th style="text-align: right;">样本数</th>
+<th style="text-align: right;">平均影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>evidence</td>
+<td style="text-align: right;">6,190</td>
+<td style="text-align: right;">0.1235</td>
+</tr>
+<tr>
+<td>reference</td>
+<td style="text-align: right;">4,094</td>
+<td style="text-align: right;">0.0529</td>
+</tr>
+<tr>
+<td>background</td>
+<td style="text-align: right;">2,464</td>
+<td style="text-align: right;">0.0801</td>
+</tr>
+<tr>
+<td>example</td>
+<td style="text-align: right;">1,291</td>
+<td style="text-align: right;">0.1047</td>
+</tr>
+<tr>
+<td>definition</td>
+<td style="text-align: right;">1,099</td>
+<td style="text-align: right;">0.1531</td>
+</tr>
+<tr>
+<td>statistical_data</td>
+<td style="text-align: right;">1,048</td>
+<td style="text-align: right;">0.1120</td>
+</tr>
+<tr>
+<td>opinion</td>
+<td style="text-align: right;">799</td>
+<td style="text-align: right;">0.0938</td>
+</tr>
+<tr>
+<td>comparison</td>
+<td style="text-align: right;">778</td>
+<td style="text-align: right;">0.1524</td>
+</tr>
+<tr>
+<td>procedure</td>
+<td style="text-align: right;">121</td>
+<td style="text-align: right;">0.0717</td>
+</tr>
+</tbody>
+</table></div>
+<p>如果只看主流角色，可以得出一个很清楚的排序：</p>
+<ul>
+<li><code>definition</code>、<code>comparison</code> 最强</li>
+<li><code>evidence</code>、<code>statistical_data</code> 次之</li>
+<li><code>reference</code> 很弱，说明很多页面只是被列在来源里，并没有被深度消化</li>
+</ul>
+<h3>7.2 AI 对引用的使用方式</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>使用方式</th>
+<th style="text-align: right;">样本数</th>
+<th style="text-align: right;">平均影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>factual_basis</td>
+<td style="text-align: right;">9,511</td>
+<td style="text-align: right;">0.1224</td>
+</tr>
+<tr>
+<td>supplementary</td>
+<td style="text-align: right;">5,673</td>
+<td style="text-align: right;">0.0678</td>
+</tr>
+<tr>
+<td>paraphrase</td>
+<td style="text-align: right;">1,245</td>
+<td style="text-align: right;">0.1443</td>
+</tr>
+<tr>
+<td>reference</td>
+<td style="text-align: right;">1,037</td>
+<td style="text-align: right;">0.0444</td>
+</tr>
+<tr>
+<td>structural_guide</td>
+<td style="text-align: right;">193</td>
+<td style="text-align: right;">0.0618</td>
+</tr>
+<tr>
+<td>background</td>
+<td style="text-align: right;">119</td>
+<td style="text-align: right;">0.0697</td>
+</tr>
+<tr>
+<td>example</td>
+<td style="text-align: right;">41</td>
+<td style="text-align: right;">0.1294</td>
+</tr>
+<tr>
+<td>direct_quote</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">0.1633</td>
+</tr>
+</tbody>
+</table></div>
+<p>需要注意：</p>
+<ul>
+<li><code>direct_quote</code> 虽然均值高，但样本只有 <code>19</code>，不应过度解读</li>
+<li>样本量最大且最稳定的高价值方式是 <code>factual_basis</code> 和 <code>paraphrase</code></li>
+<li><code>reference</code> 的均值只有 <code>0.0444</code>，说明很多来源只是“被点到”，并没有实质作用</li>
+</ul>
+<h3>7.3 站点身份与深度吸收并不是一回事</h3>
+<p>按 <code>domain_type</code> 看平均影响力，样本量较有代表性的几类如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>站点类型</th>
+<th style="text-align: right;">样本数</th>
+<th style="text-align: right;">平均影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>encyclopedia</td>
+<td style="text-align: right;">527</td>
+<td style="text-align: right;">0.2144</td>
+</tr>
+<tr>
+<td>commercial</td>
+<td style="text-align: right;">11,779</td>
+<td style="text-align: right;">0.1028</td>
+</tr>
+<tr>
+<td>nonprofit</td>
+<td style="text-align: right;">2,009</td>
+<td style="text-align: right;">0.0971</td>
+</tr>
+<tr>
+<td>academic_publishing</td>
+<td style="text-align: right;">86</td>
+<td style="text-align: right;">0.1118</td>
+</tr>
+<tr>
+<td>academic</td>
+<td style="text-align: right;">1,024</td>
+<td style="text-align: right;">0.0815</td>
+</tr>
+<tr>
+<td>government</td>
+<td style="text-align: right;">892</td>
+<td style="text-align: right;">0.0769</td>
+</tr>
+<tr>
+<td>news_media</td>
+<td style="text-align: right;">1,546</td>
+<td style="text-align: right;">0.0726</td>
+</tr>
+</tbody>
+</table></div>
+<p>这个结果很值得讲清楚：</p>
+<ul>
+<li>新闻媒体很容易进入候选池</li>
+<li>但平均影响力未必最高</li>
+<li>百科型、结构化解释型来源虽然频次不一定第一，却更容易被深度吸收</li>
+</ul>
+<p>这意味着：</p>
+<blockquote>
+<p>“先发到高权威新闻站”解决的是进入候选池的问题；“把页面写成定义清楚、结构清楚的解释页”解决的是被深度吸收的问题。</p>
+</blockquote>
+<hr>
+<h2>八、平台差异：三大 AI 搜索不是一套玩法</h2>
+<h3>8.1 各平台最强驱动因素不同</h3>
+<p>按平台分别看主要驱动因素，与影响力相关性最高的特征如下：</p>
+<h4>ChatGPT</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>特征</th>
+<th style="text-align: right;">r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>llm_relevance_score</td>
+<td style="text-align: right;">0.5370</td>
+</tr>
+<tr>
+<td>emb_answer_cit_cosine</td>
+<td style="text-align: right;">0.4210</td>
+</tr>
+<tr>
+<td>emb_question_cit_cosine</td>
+<td style="text-align: right;">0.3664</td>
+</tr>
+<tr>
+<td>llm_content_quality</td>
+<td style="text-align: right;">0.3354</td>
+</tr>
+<tr>
+<td>cit_has_definition</td>
+<td style="text-align: right;">0.2271</td>
+</tr>
+<tr>
+<td>cit_heading_total</td>
+<td style="text-align: right;">0.1940</td>
+</tr>
+</tbody>
+</table></div>
+<p>ChatGPT 最像“深读型平台”：</p>
+<ul>
+<li>极重视内容是否真的对题</li>
+<li>也重视页面能否作为定义与证据来源被复用</li>
+</ul>
+<h4>Google</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>特征</th>
+<th style="text-align: right;">r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>emb_answer_cit_cosine</td>
+<td style="text-align: right;">0.5789</td>
+</tr>
+<tr>
+<td>emb_question_cit_cosine</td>
+<td style="text-align: right;">0.5516</td>
+</tr>
+<tr>
+<td>cit_has_definition</td>
+<td style="text-align: right;">0.4027</td>
+</tr>
+<tr>
+<td>cit_word_count</td>
+<td style="text-align: right;">0.3503</td>
+</tr>
+<tr>
+<td>llm_relevance_score</td>
+<td style="text-align: right;">0.3486</td>
+</tr>
+<tr>
+<td>cit_heading_total</td>
+<td style="text-align: right;">0.3172</td>
+</tr>
+</tbody>
+</table></div>
+<p>Google 的信号最像“强语义对齐 + 清晰定义页”：</p>
+<ul>
+<li>对问题与答案的语义匹配特别敏感</li>
+<li>标题、词数、定义结构都更重要</li>
+</ul>
+<h4>Perplexity</h4>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>特征</th>
+<th style="text-align: right;">r</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>llm_relevance_score</td>
+<td style="text-align: right;">0.3884</td>
+</tr>
+<tr>
+<td>emb_answer_cit_cosine</td>
+<td style="text-align: right;">0.3288</td>
+</tr>
+<tr>
+<td>cit_heading_total</td>
+<td style="text-align: right;">0.2577</td>
+</tr>
+<tr>
+<td>emb_question_cit_cosine</td>
+<td style="text-align: right;">0.2416</td>
+</tr>
+<tr>
+<td>cit_word_count</td>
+<td style="text-align: right;">0.2245</td>
+</tr>
+<tr>
+<td>llm_content_quality</td>
+<td style="text-align: right;">0.2191</td>
+</tr>
+</tbody>
+</table></div>
+<p>Perplexity 仍然重视相关性，但更强调页面的“可拆解性”：</p>
+<ul>
+<li>标题数</li>
+<li>页面长度</li>
+<li>能否覆盖更多子问题</li>
+</ul>
+<h3>8.2 对内容策略的直接含义</h3>
+<p>如果必须把三平台区别开来，可以用一句话概括：</p>
+<ul>
+<li><code>ChatGPT</code>：重“深度吸收”，适合做定义、证据、背景整合型页面</li>
+<li><code>Google</code>：重“对题与定义”，适合做标题-关键词-正文强对齐页面</li>
+<li><code>Perplexity</code>：重“覆盖广度”，适合做综合型、模块化、可拼装页面</li>
+</ul>
+<hr>
+<h2>九、分行业与分问题类型：哪些题更值得做</h2>
+<h3>9.1 行业维度</h3>
+<p>按成功抓取样本计算，六大行业的平均影响力如下：</p>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>行业</th>
+<th style="text-align: right;">样本数</th>
+<th style="text-align: right;">平均影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A_technology</td>
+<td style="text-align: right;">2,252</td>
+<td style="text-align: right;">0.1272</td>
+</tr>
+<tr>
+<td>A_healthcare</td>
+<td style="text-align: right;">2,379</td>
+<td style="text-align: right;">0.1021</td>
+</tr>
+<tr>
+<td>A_commerce</td>
+<td style="text-align: right;">2,243</td>
+<td style="text-align: right;">0.0994</td>
+</tr>
+<tr>
+<td>A_finance</td>
+<td style="text-align: right;">1,831</td>
+<td style="text-align: right;">0.0965</td>
+</tr>
+<tr>
+<td>A_news</td>
+<td style="text-align: right;">2,204</td>
+<td style="text-align: right;">0.0948</td>
+</tr>
+<tr>
+<td>A_local</td>
+<td style="text-align: right;">2,223</td>
+<td style="text-align: right;">0.0916</td>
+</tr>
+</tbody>
+</table></div>
+<p>科技、医疗、商业内容更容易出现高影响力引用，原因通常是：</p>
+<ul>
+<li>定义与术语密度高</li>
+<li>可验证数据多</li>
+<li>结构化比较更常见</li>
+</ul>
+<h3>9.2 问题类型维度</h3>
+<div class="table-wrap"><table>
+<thead>
+<tr>
+<th>问题类型</th>
+<th style="text-align: right;">样本数</th>
+<th style="text-align: right;">平均影响力</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>comparison</td>
+<td style="text-align: right;">1,711</td>
+<td style="text-align: right;">0.1093</td>
+</tr>
+<tr>
+<td>list</td>
+<td style="text-align: right;">289</td>
+<td style="text-align: right;">0.1081</td>
+</tr>
+<tr>
+<td>how_to</td>
+<td style="text-align: right;">563</td>
+<td style="text-align: right;">0.1016</td>
+</tr>
+<tr>
+<td>other</td>
+<td style="text-align: right;">6,024</td>
+<td style="text-align: right;">0.1015</td>
+</tr>
+<tr>
+<td>what_is</td>
+<td style="text-align: right;">3,594</td>
+<td style="text-align: right;">0.0987</td>
+</tr>
+<tr>
+<td>why</td>
+<td style="text-align: right;">3,712</td>
+<td style="text-align: right;">0.0986</td>
+</tr>
+<tr>
+<td>which</td>
+<td style="text-align: right;">2,070</td>
+<td style="text-align: right;">0.0946</td>
+</tr>
+<tr>
+<td>opinion</td>
+<td style="text-align: right;">188</td>
+<td style="text-align: right;">0.0854</td>
+</tr>
+</tbody>
+</table></div>
+<p>这张表说明：</p>
+<ul>
+<li><code>comparison</code> 型问题最适合让页面吃到高影响力引用</li>
+<li><code>opinion</code> 型问题最弱</li>
+</ul>
+<p>原因也很直观：</p>
+<ul>
+<li>对比类问题天然需要结构化差异、指标和证据</li>
+<li>观点类问题更容易被 AI 自己总结，页面的“搬运价值”反而下降</li>
+</ul>
+<hr>
+<h2>十、16 条最值得对外讲的核心洞察</h2>
+<ol>
+<li>研究底座为 <code>602</code> 条 Prompt、<code>21,143</code> 条有效搜索层引用、<code>23,745</code> 条 citation-level 记录、<code>72</code> 维特征。</li>
+<li>三平台几乎都会搜索：ChatGPT <code>98.64%</code>、Google <code>99.67%</code>、Perplexity <code>100%</code>。</li>
+<li>搜索宽度差很大：平均每条 Prompt 引用数分别为 <code>6.88</code>、<code>12.06</code>、<code>16.35</code>。</li>
+<li>搜索广度不等于引用深度：ChatGPT 平均影响力 <code>0.2713</code>，分别是 Google 的 <code>4.64x</code>、Perplexity 的 <code>4.20x</code>。</li>
+<li>Google 最吃“要求来源”的 Prompt，B 层中该类平均引用数达到 <code>15.90</code>。</li>
+<li>ChatGPT 在 B 层里更吃角色型 Prompt，平均引用数 <code>7.95</code>。</li>
+<li>英文对 Google 的提升最明显：<code>11.57 vs 7.53</code>。</li>
+<li>ChatGPT 在 C 层里中文略高于英文：<code>7.77 vs 7.03</code>。</li>
+<li>模糊问题不会逼平台更努力搜索，D 层里模糊问题整体均值只有 <code>9.97</code>。</li>
+<li>ChatGPT 面对多约束任务最保守，平均只引用 <code>3.4</code> 个来源。</li>
+<li><code>官网 + 新闻 + 行业垂类</code> 占三平台来源的 <code>79.12% - 87.52%</code>。</li>
+<li>可识别国家中，US 来源占 <code>82.70% - 86.76%</code>；可识别语言中英文占 <code>82.90% - 95.07%</code>。</li>
+<li>被引用来源的中位 <code>Final_DR</code> 在 <code>526 - 592</code> 之间，说明高权威域名仍是候选池门槛。</li>
+<li>高影响力页面平均 <code>1,943</code> 词，低影响力页面仅 <code>170</code> 词。</li>
+<li>含数字、定义、对比、how-to 的页面平均影响力提升分别为 <code>+61.55%</code>、<code>+57.33%</code>、<code>+55.28%</code>、<code>+41.20%</code>。</li>
+<li>纯 Q&amp;A 页面没有加成，平均影响力反而下降 <code>5.74%</code>。</li>
+</ol>
+<hr>
+<h2>十一、方法归因复盘：这些模式为什么成立</h2>
+<h3>11.1 为什么长内容更强</h3>
+<p>不是因为 AI 天生偏爱长文，而是因为长页面能提供更多可切片的信息单元：</p>
+<ul>
+<li>更多标题</li>
+<li>更多段落</li>
+<li>更多列表</li>
+<li>更多子主题</li>
+</ul>
+<p>这让模型可以在不同回答段落中重复使用同一来源的不同片段。</p>
+<h3>11.2 为什么“定义 + 数字 + 对比 + 步骤”最有效</h3>
+<p>这四类内容之所以强，并不是形式主义，而是因为它们最符合模型的搬运需求：</p>
+<ul>
+<li><code>定义</code> 解决概念锚定</li>
+<li><code>数字</code> 提供可验证事实</li>
+<li><code>对比</code> 提供结构化判断框架</li>
+<li><code>步骤</code> 提供直接可复用的操作顺序</li>
+</ul>
+<h3>11.3 为什么新闻高频但未必最深</h3>
+<p>新闻网站容易成为“发生了什么”的初始来源，因此很容易被列入候选池；但 AI 在真正组织答案时，往往还需要：</p>
+<ul>
+<li>定义型页面</li>
+<li>百科型解释页</li>
+<li>结构化对比页</li>
+</ul>
+<p>因此新闻频率高，不代表它对最终答案的贡献也最高。</p>
+<h3>11.4 为什么 Q&amp;A 页面没占到便宜</h3>
+<p>很多团队会误以为“把内容写成问答”就天然适合 AI。数据说明并非如此。</p>
+<p>Q&amp;A 格式本身不构成优势，因为 AI 真正需要的是：</p>
+<ul>
+<li>信息块清晰</li>
+<li>证据密度高</li>
+<li>结构化强</li>
+<li>与问题高度相关</li>
+</ul>
+<p>如果问答页没有这些东西，它只是“看起来像 AI 内容”，但不是真正高价值的 AI 引用页。</p>
+<hr>
+<h2>十二、面向 GEO 的实操建议</h2>
+<h3>12.1 内容生产</h3>
+<p>优先写以下类型的页面：</p>
+<ul>
+<li>定义清晰的解释页</li>
+<li>含数字与证据的分析页</li>
+<li>含对比结构的选择页</li>
+<li>含步骤的 how-to 页</li>
+</ul>
+<p>更实用的页面骨架通常长这样：</p>
+<ol>
+<li>开头直接定义主题</li>
+<li>给出 <code>3-5</code> 个关键数字或事实</li>
+<li>做一个结构化对比</li>
+<li>给出步骤或判断框架</li>
+<li>补充边界条件与适用场景</li>
+</ol>
+<h3>12.2 篇幅与结构</h3>
+<p>最稳妥的建议不是“越长越好”，而是：</p>
+<ul>
+<li>目标篇幅至少 <code>1000+</code> 词</li>
+<li>至少 <code>6-10</code> 个清晰小节</li>
+<li>小节标题尽量贴近用户可能会问的子问题</li>
+<li>重点信息尽量列表化</li>
+</ul>
+<h3>12.3 分发环境</h3>
+<p>如果目标是先进入候选池：</p>
+<ul>
+<li>优先权威域名或强垂类站点</li>
+<li>优先英文与美区环境</li>
+<li>优先官网、新闻媒体、行业垂类</li>
+</ul>
+<p>如果目标是被深度吸收：</p>
+<ul>
+<li>页面本身要有定义、数字、对比、步骤</li>
+<li>标题与正文必须强对题</li>
+<li>不要把所有信息压缩成一段“短总结”</li>
+</ul>
+<h3>12.4 平台化打法</h3>
+<ul>
+<li>面向 <code>ChatGPT</code>：写深度解释与证据整合页</li>
+<li>面向 <code>Google</code>：强化标题关键词对齐与定义结构</li>
+<li>面向 <code>Perplexity</code>：覆盖更多子问题，让页面适合被拆成多个答案片段</li>
+</ul>
+<hr>
+<h2>十三、开源时必须写清楚的 caveats</h2>
+<p>为了避免外部用户误读，这些 caveats 必须保留：</p>
+<ol>
+<li>ChatGPT 搜索层只覆盖 <code>587</code> 个 Prompt，缺少 <code>15</code> 个 Prompt 输出。</li>
+<li><code>chatgpt_results_with_prompt.csv</code> 有 <code>16</code> 行重复表头，统计前必须清洗。</li>
+<li><code>A_news</code> 与 <code>A_technology</code> 在 ChatGPT 搜索层里原始命名为 <code>Anews*</code>、<code>Atechnology*</code>，需要归一化。</li>
+<li><code>国家(Country)</code> 和 <code>语言(Language)</code> 存在大量 <code>unknown</code> / <code>WW</code>，所以地区与语言结论要注明“可识别样本口径”。</li>
+<li><code>网站类型</code> 中存在少量噪声值，如 <code>成功</code>，公开仓库里应视为待进一步标准化的脏值。</li>
+<li><code>llm_semantic_role</code> 与 <code>llm_influence_type</code> 有少量超出预设 taxonomy 的长尾标签，应视为模型输出漂移，而不是正式标签体系的一部分。</li>
+<li>本仓库更适合作为一次静态研究快照，而不是实时监测系统，因为未在公开数据层保留统一采集时间戳。</li>
+</ol>
+<hr>
+<h2>十四、复现与导出</h2>
+<h3>14.1 环境变量</h3>
+<p>公开版脚本已改为读取环境变量：</p>
+<pre><code class="language-bash">export OPENAI_API_KEY=...
+export GEMINI_API_KEY=...
+export DATAFORSEO_BASE64_AUTH=...
+export AHREFS_API_KEY=...
+export BATCH_API_TOKEN=...
+export BATCH_API_BASE_URL=http://188.166.211.11:9000
+</code></pre>
+<h3>14.2 常见重跑方式</h3>
+<p>重算影响力报告：</p>
+<pre><code class="language-bash">cd 03-pipeline
+python3 analyze_influence.py \
+  --input ../02-data/features_all_platforms_72.csv \
+  --output ../04-repet/citation_influence_report.md
+</code></pre>
+<p>重导出长版 HTML：</p>
+<pre><code class="language-bash">cd 04-repet
+python3 build_self_contained_html.py
+</code></pre>
+<h3>14.3 本次长版报告的导出方式</h3>
+<p>本次长版文档导出链路为：</p>
+<pre><code class="language-text">final_report.md
+  -&gt; build_self_contained_html.py
+  -&gt; final_report.html
+  -&gt; chromium --headless --print-to-pdf
+  -&gt; final_report.pdf
+</code></pre>
+<hr>
+<h2>结论</h2>
+<p>如果把整份研究压缩成一句最终结论，那就是：</p>
+<blockquote>
+<p>在 AI 搜索时代，最有价值的内容不是“最会写观点的内容”，而是“最容易被模型拆成定义、数字、对比、步骤并重组成答案的内容”。</p>
+</blockquote>
+<p>从进入候选池到被深度吸收，这条链路至少由四件事共同决定：</p>
+<ul>
+<li>站点是否足够强，能先被选中</li>
+<li>页面是否足够对题，能通过语义筛选</li>
+<li>结构是否足够清晰，能被模型抽取</li>
+<li>内容是否足够像证据，而不只是观点</li>
+</ul>
+<p>这也是本研究对 GEO 最实用的启发：</p>
+<ul>
+<li>先解决“看得见”</li>
+<li>再解决“用得深”</li>
+<li>不要把 SEO for AI 理解成写一堆 AI 口吻内容</li>
+<li>真正有效的是把页面做成高质量、强结构、强对题的证据容器</li>
+</ul>
+  </article>
+</main>
+</body>
+</html>
