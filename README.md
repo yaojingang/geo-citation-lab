@@ -16,7 +16,7 @@
 - 何新月：负责源代码实现、数据采集与清洗、初稿撰写；清华大学本科，清华大学与华盛顿大学 `GIX` 项目的双学位硕士生；GitHub 主页：[shirley-goose](https://github.com/shirley-goose)
 - 姚金刚：负责开源整理、二次报告解读与应用场景梳理；Live Site：[https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.github.io/geo-citation-lab/)
 
-仓库首页建议先从这四个入口进入：
+仓库首页建议先从这五个入口进入：
 
 | 入口 | 文件 | 适合谁 |
 | --- | --- | --- |
@@ -24,6 +24,7 @@
 | 长版 Markdown 报告 | [04-repet/final_report.md](./04-repet/final_report.md) | 想在 GitHub 里直接按章节阅读正文 |
 | PDF 版报告 | [04-repet/final_report.pdf](./04-repet/final_report.pdf) | 想下载、分享或打印 |
 | 3 分钟摘要 | [QUICK_REPORT.md](./QUICK_REPORT.md) | 想先快速判断这份研究讲了什么，再决定是否进入长版 |
+| arXiv 论文 | [Abstract](https://arxiv.org/abs/2604.25707) / [PDF Paper](https://arxiv.org/pdf/2604.25707) | 想直接查看论文原文、引用学术版本或下载论文 PDF |
 
 ## Snapshot
 
