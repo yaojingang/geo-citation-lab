@@ -10,13 +10,11 @@
 
 ## Start Here
 
-作者信息：
+作者与贡献：
 
-- 原始研究与作者：张凯
-- 微信号：`seermartech`
-- 二次报告解读与开源整理：姚金刚
-
-Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.github.io/geo-citation-lab/)
+- 张凯：提出研究想法与需求，定义分析目标与相关规则；微信号：`seermartech`
+- 何新月：负责源代码实现、数据采集与清洗、初稿撰写；清华大学本科，清华大学与华盛顿大学 `GIX` 项目的双学位硕士生；GitHub 主页：[shirley-goose](https://github.com/shirley-goose)
+- 姚金刚：负责开源整理、二次报告解读与应用场景梳理；Live Site：[https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.github.io/geo-citation-lab/)
 
 仓库首页建议先从这四个入口进入：
 

@@ -68,7 +68,7 @@
     }
     .meta {
       display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 12px;
       margin: 0 0 20px;
     }
@@ -84,11 +84,18 @@
       color: var(--accent);
       font-size: 0.98rem;
     }
+    .meta-card p,
     .meta-card span,
     .meta-card a {
       color: var(--muted);
       text-decoration: none;
       font-size: 0.94rem;
+    }
+    .meta-card p {
+      margin: 0;
+    }
+    .meta-card a {
+      color: var(--accent);
     }
     .stats {
       display: grid;
@@ -222,12 +229,20 @@
 
       <div class="meta">
         <div class="meta-card">
-          <strong>原始研究作者</strong>
-          <span>张凯 · 微信号：<code>seermartech</code></span>
+          <strong>张凯</strong>
+          <p>提出研究想法与需求，定义分析目标与相关规则。</p>
+          <p>微信号：<code>seermartech</code></p>
         </div>
         <div class="meta-card">
-          <strong>二次报告解读与开源整理</strong>
-          <span>姚金刚 · <a href="https://yaojingang.github.io/geo-citation-lab/">Live Site</a></span>
+          <strong>何新月</strong>
+          <p>负责源代码实现、数据采集与清洗、初稿撰写。</p>
+          <p>清华大学本科，清华大学与华盛顿大学 <code>GIX</code> 项目的双学位硕士生。</p>
+          <p><a href="https://github.com/shirley-goose">GitHub 主页</a></p>
+        </div>
+        <div class="meta-card">
+          <strong>姚金刚</strong>
+          <p>负责开源整理、二次报告解读与应用场景梳理。</p>
+          <p><a href="https://yaojingang.github.io/geo-citation-lab/">Live Site</a></p>
         </div>
       </div>
 
