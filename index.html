@@ -66,37 +66,6 @@
       color: var(--muted);
       font-size: 1.04rem;
     }
-    .meta {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 12px;
-      margin: 0 0 20px;
-    }
-    .meta-card {
-      padding: 14px 16px;
-      border: 1px solid var(--rule);
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.72);
-    }
-    .meta-card strong {
-      display: block;
-      margin-bottom: 6px;
-      color: var(--accent);
-      font-size: 0.98rem;
-    }
-    .meta-card p,
-    .meta-card span,
-    .meta-card a {
-      color: var(--muted);
-      text-decoration: none;
-      font-size: 0.94rem;
-    }
-    .meta-card p {
-      margin: 0;
-    }
-    .meta-card a {
-      color: var(--accent);
-    }
     .stats {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -192,7 +161,6 @@
       font-size: 0.92em;
     }
     @media (max-width: 860px) {
-      .meta,
       .stats, .grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
@@ -205,7 +173,6 @@
         padding: 24px 18px 20px;
         border-radius: 18px;
       }
-      .meta,
       .stats, .grid {
         grid-template-columns: 1fr;
       }
@@ -226,25 +193,6 @@
       <p class="sub">
         一个公开资料仓库，用来沉淀 AI 搜索引用机制实验数据、GEO 研究报告，以及 GEO / AEO / AI Search 相关论文 PDF。
       </p>
-
-      <div class="meta">
-        <div class="meta-card">
-          <strong>张凯</strong>
-          <p>提出研究想法与需求，定义分析目标与相关规则。</p>
-          <p>微信号：<code>seermartech</code></p>
-        </div>
-        <div class="meta-card">
-          <strong>贺欣悦</strong>
-          <p>负责源代码实现、数据采集与清洗、初稿撰写。</p>
-          <p>清华大学本科，清华大学与华盛顿大学 <code>GIX</code> 项目的双学位硕士生。</p>
-          <p><a href="https://github.com/shirley-goose">GitHub 主页</a></p>
-        </div>
-        <div class="meta-card">
-          <strong>姚金刚</strong>
-          <p>负责开源整理、二次报告解读与应用场景梳理。</p>
-          <p><a href="https://yaojingang.github.io/geo-citation-lab/">Live Site</a></p>
-        </div>
-      </div>
 
       <div class="stats">
         <div class="stat"><strong>602</strong><span>实验 Prompt</span></div>

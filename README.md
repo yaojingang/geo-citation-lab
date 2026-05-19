@@ -98,9 +98,3 @@ python3 analyze_influence.py \
 cd 01-geo-experiment-data-report/04-repet
 python3 build_self_contained_html.py
 ```
-
-## 作者与贡献
-
-- 张凯：提出研究想法与需求，定义分析目标与相关规则；微信号：`seermartech`
-- 贺欣悦：负责源代码实现、数据采集与清洗、初稿撰写；清华大学本科，清华大学与华盛顿大学 `GIX` 项目的双学位硕士生；GitHub 主页：[shirley-goose](https://github.com/shirley-goose)
-- 姚金刚：负责开源整理、二次报告解读、应用场景梳理与论文合集归档
