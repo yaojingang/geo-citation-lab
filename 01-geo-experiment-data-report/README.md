@@ -2,6 +2,12 @@
 
 本目录是 `geo-citation-lab` 中专门存放 GEO 引用机制实验数据、处理脚本与研究报告的资料区。它对应一次面向 `ChatGPT`、`Google AI Overview / Gemini`、`Perplexity` 的数据研究，目标是把 AI 搜索中的 `触发搜索 -> 选择信源 -> 吸收引用内容` 这条链路拆成可以复查的数据、代码和报告。
 
+## 对应论文
+
+- 论文名称：[From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707)
+- arXiv 页面：[https://arxiv.org/abs/2604.25707](https://arxiv.org/abs/2604.25707)
+- PDF：[https://arxiv.org/pdf/2604.25707](https://arxiv.org/pdf/2604.25707)
+
 ## 研究目标
 
 这次数据研究主要回答三个问题：

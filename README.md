@@ -7,10 +7,13 @@ GEO Citation Lab 是一个面向 GEO 研究的公开资料仓库，后续定位�
 
 仓库不只保存观点文章，而是把可复查的数据、脚本、报告和论文资料放在同一个入口下，方便做二次分析、引用和后续扩展。
 
+本仓库实验数据、特征抽取与分析管线对应 arXiv 论文：[From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707)，PDF 版见 [arXiv PDF](https://arxiv.org/pdf/2604.25707)。
+
 ## Start Here
 
 | 入口 | 路径 | 适合谁 |
 | --- | --- | --- |
+| 对应 arXiv 论文 | [From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707) / [PDF](https://arxiv.org/pdf/2604.25707) | 想引用或阅读本实验对应的正式论文 |
 | GEO 实验数据报告 | [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) | 想看 AI 搜索平台如何触发搜索、选择信源、吸收引用内容 |
 | 论文合集 | [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 想按主题查找 GEO / AEO / AI Search 论文 PDF 与清单 |
 | 长版 HTML 报告 | [`01-geo-experiment-data-report/04-repet/final_report.html`](./01-geo-experiment-data-report/04-repet/final_report.html) | 想快速浏览完整实验报告 |
