@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GEO / AEO / AI Search 论文导航</title>
+<meta name="description" content="GEO Citation Lab 的 GEO、AEO、AI Search 论文导航页，按主题浏览 53 篇论文 PDF。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5f4ed'/%3E%3Cpath d='M18 14h28v36H18z' fill='%23faf9f5' stroke='%231B365D' stroke-width='3'/%3E%3Cpath d='M24 24h16M24 32h16M24 40h10' stroke='%231B365D' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+@font-face {
+  font-family: "TsangerJinKai02";
+  src: url("../01-geo-experiment-data-report/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "TsangerJinKai02";
+  src: url("../01-geo-experiment-data-report/fonts/TsangerJinKai02-W04.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --parchment: #f5f4ed;
+  --ivory: #faf9f5;
+  --warm-sand: #e8e6dc;
+  --brand: #1B365D;
+  --brand-light: #2D5A8A;
+  --brand-tint: #EEF2F7;
+  --near-black: #141413;
+  --dark-warm: #3d3d3a;
+  --olive: #504e49;
+  --stone: #6b6a64;
+  --border: #e8e6dc;
+  --border-soft: #e5e3d8;
+  --line: #d8d5c8;
+  --serif: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+  --mono: "JetBrains Mono", "SF Mono", Consolas, "TsangerJinKai02", "Source Han Serif SC", monospace;
+  --ui: "TsangerJinKai02", "Source Han Serif SC", "Noto Serif CJK SC", "Songti SC", "STSong", Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background:
+    linear-gradient(90deg, #edeadf 1px, transparent 1px) 0 0 / 46px 46px,
+    linear-gradient(#edeadf 1px, transparent 1px) 0 0 / 46px 46px,
+    var(--parchment);
+  color: var(--near-black);
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.58;
+  letter-spacing: 0.2px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a { color: var(--brand); text-decoration: none; }
+a:hover { color: var(--brand-light); }
+button, input, select { font: inherit; }
+button { touch-action: manipulation; }
+:focus-visible {
+  outline: 2px solid var(--brand);
+  outline-offset: 3px;
+}
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 18px;
+  top: -48px;
+  z-index: 20;
+  padding: 10px 14px;
+  background: var(--brand);
+  color: var(--ivory);
+  border-radius: 6px;
+}
+.skip-link:focus { top: 18px; }
+
+.page {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+  padding: 64px 0 96px;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 18px;
+  margin-bottom: 34px;
+  color: var(--stone);
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.topbar nav {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.topbar a {
+  color: var(--stone);
+}
+.topbar a:hover { color: var(--brand); }
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+  gap: 54px;
+  padding: 0 0 42px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 38px;
+}
+.hero-copy h1 {
+  margin: 0 0 18px;
+  max-width: 760px;
+  color: var(--near-black);
+  font-family: var(--serif);
+  font-size: clamp(48px, 8vw, 92px);
+  font-weight: 500;
+  line-height: 1.03;
+  letter-spacing: -0.018em;
+  text-wrap: balance;
+  opacity: 0;
+  transform: translateY(10px);
+  filter: blur(5px);
+  animation: rise 820ms cubic-bezier(0.16,1,0.3,1) 90ms forwards;
+}
+.hero-copy p {
+  max-width: 700px;
+  margin: 0 0 24px;
+  color: var(--olive);
+  font-size: 19px;
+  line-height: 1.62;
+  text-wrap: pretty;
+}
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.btn {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 1.5px solid var(--brand);
+  border-radius: 999px;
+  padding: 10px 20px;
+  color: var(--brand);
+  background: transparent;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+.btn:hover {
+  background: var(--brand-tint);
+  color: var(--brand);
+  transform: translateY(-1px);
+}
+.btn:active { transform: scale(0.97); }
+.btn.primary {
+  background: var(--brand);
+  color: var(--ivory);
+}
+.btn.primary:hover {
+  background: var(--brand-light);
+  color: var(--ivory);
+}
+
+.atlas {
+  min-height: 420px;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  gap: 18px;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 16px 52px rgba(20, 19, 19, 0.07);
+}
+.atlas-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  color: var(--stone);
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.atlas-figure {
+  position: relative;
+  min-height: 230px;
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  overflow: hidden;
+}
+.atlas-figure canvas {
+  width: 100%;
+  height: 100%;
+  min-height: 230px;
+  display: block;
+}
+.atlas-foot {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 14px;
+}
+.metric {
+  padding-left: 12px;
+  border-left: 2px solid var(--brand);
+}
+.metric strong {
+  display: block;
+  color: var(--near-black);
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.metric span {
+  display: block;
+  margin-top: 6px;
+  color: var(--stone);
+  font-family: var(--ui);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.controls {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: grid;
+  grid-template-columns: minmax(280px, 1fr) auto auto;
+  gap: 12px;
+  align-items: center;
+  padding: 16px 0;
+  margin-bottom: 32px;
+  background: linear-gradient(var(--parchment) 0%, var(--parchment) 78%, transparent 100%);
+}
+.search {
+  position: relative;
+}
+.search input {
+  width: 100%;
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--ivory);
+  color: var(--near-black);
+  padding: 0 18px 0 46px;
+  box-shadow: 0 1px 3px rgba(20, 19, 19, 0.05);
+}
+.search::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  width: 12px;
+  height: 12px;
+  border: 1.6px solid var(--brand);
+  border-radius: 50%;
+  transform: translateY(-58%);
+}
+.search::after {
+  content: "";
+  position: absolute;
+  left: 31px;
+  top: 27px;
+  width: 7px;
+  height: 1.6px;
+  background: var(--brand);
+  transform: rotate(43deg);
+  border-radius: 2px;
+}
+.select-wrap select {
+  min-height: 46px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--ivory);
+  color: var(--dark-warm);
+  padding: 0 42px 0 16px;
+  cursor: pointer;
+}
+
+.summary-line {
+  color: var(--olive);
+  font-size: 15px;
+  margin: -12px 0 28px;
+}
+.summary-line b {
+  color: var(--brand);
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 270px minmax(0, 1fr);
+  gap: 42px;
+  align-items: start;
+  min-width: 0;
+}
+.layout > * {
+  min-width: 0;
+}
+.sidebar {
+  position: sticky;
+  top: 94px;
+  padding-top: 4px;
+  min-width: 0;
+}
+.section-kicker {
+  margin: 0 0 12px;
+  color: var(--brand);
+  font-family: var(--ui);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.category-list {
+  display: grid;
+  gap: 8px;
+}
+.cat-button {
+  min-height: 40px;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--olive);
+  padding: 8px 10px;
+  text-align: left;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+.cat-button:hover {
+  background: var(--brand-tint);
+  color: var(--brand);
+}
+.cat-button.is-active {
+  background: var(--ivory);
+  color: var(--brand);
+  border-color: var(--line);
+}
+.cat-button .count {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--stone);
+  font-variant-numeric: tabular-nums;
+}
+.note {
+  margin: 24px 0 0;
+  padding: 14px 0 0;
+  border-top: 1px solid var(--border-soft);
+  color: var(--stone);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.content {
+  min-width: 0;
+}
+.topic {
+  margin-bottom: 48px;
+  scroll-margin-top: 104px;
+  min-width: 0;
+}
+.topic-head {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 18px;
+  align-items: end;
+  padding-bottom: 14px;
+  border-bottom: 1px solid var(--line);
+  margin-bottom: 14px;
+}
+.topic-title {
+  margin: 0;
+  color: var(--near-black);
+  font-size: 28px;
+  font-weight: 500;
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+}
+.topic-desc {
+  margin: 8px 0 0;
+  color: var(--olive);
+  font-size: 14px;
+}
+.topic-count {
+  color: var(--brand);
+  font-family: var(--mono);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+}
+.paper-list {
+  display: grid;
+  gap: 10px;
+  min-width: 0;
+}
+.paper-row {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 118px;
+  gap: 18px;
+  align-items: center;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 16px 18px;
+  min-width: 0;
+  transition: box-shadow 180ms ease, transform 180ms ease, border-color 180ms ease;
+}
+.paper-row:hover {
+  border-color: var(--line);
+  box-shadow: 0 4px 24px rgba(20, 19, 19, 0.05);
+  transform: translateY(-1px);
+}
+.paper-main {
+  min-width: 0;
+}
+.paper-title {
+  margin: 0 0 8px;
+  color: var(--near-black);
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.38;
+  letter-spacing: 0;
+  text-wrap: pretty;
+  overflow-wrap: anywhere;
+}
+.paper-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+  align-items: center;
+  color: var(--stone);
+  font-size: 12px;
+}
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 23px;
+  border-radius: 4px;
+  background: var(--brand-tint);
+  color: var(--brand);
+  padding: 2px 7px;
+  font-family: var(--ui);
+  font-size: 11px;
+  letter-spacing: 0.04em;
+}
+.tag.new {
+  background: #E4ECF5;
+}
+.paper-note {
+  margin: 8px 0 0;
+  color: var(--olive);
+  font-size: 13px;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.paper-action {
+  display: flex;
+  justify-content: flex-end;
+}
+.pdf-link {
+  min-width: 96px;
+  min-height: 38px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--brand);
+  border-radius: 999px;
+  color: var(--brand);
+  background: transparent;
+  transition: background 160ms ease, color 160ms ease, transform 160ms ease;
+}
+.pdf-link:hover {
+  background: var(--brand);
+  color: var(--ivory);
+  transform: translateY(-1px);
+}
+
+.empty {
+  display: none;
+  padding: 44px 24px;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--olive);
+  text-align: center;
+}
+.empty.is-visible { display: block; }
+
+.foot {
+  margin-top: 72px;
+  padding-top: 34px;
+  border-top: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  gap: 28px;
+  color: var(--stone);
+  font-size: 13px;
+}
+.foot a { color: var(--dark-warm); }
+.foot a:hover { color: var(--brand); }
+
+@keyframes rise {
+  to { opacity: 1; transform: translateY(0); filter: blur(0); }
+}
+
+@media (max-width: 960px) {
+  .page { width: min(100% - 32px, 760px); padding-top: 38px; }
+  .hero { grid-template-columns: 1fr; gap: 28px; }
+  .atlas { min-height: auto; }
+  .layout { grid-template-columns: 1fr; gap: 28px; }
+  .sidebar { position: static; }
+  .category-list {
+    display: flex;
+    overflow-x: auto;
+    padding-bottom: 4px;
+    scrollbar-width: thin;
+  }
+  .cat-button {
+    min-width: 220px;
+  }
+  .controls {
+    grid-template-columns: 1fr;
+    position: static;
+    background: transparent;
+  }
+}
+@media (max-width: 640px) {
+  .page { width: min(100% - 24px, 560px); padding-bottom: 64px; }
+  .topbar { align-items: flex-start; flex-direction: column; }
+  .topbar nav { justify-content: flex-start; }
+  .hero-copy h1 { font-size: 46px; }
+  .hero-copy p { font-size: 16px; }
+  .hero-actions { flex-direction: column; }
+  .btn { width: 100%; }
+  .atlas-foot { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .paper-row { grid-template-columns: 1fr; }
+  .paper-action { justify-content: flex-start; }
+  .pdf-link { width: 100%; }
+  .topic-head { grid-template-columns: 1fr; align-items: start; }
+  .topic-title { font-size: 24px; }
+  .foot { flex-direction: column; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .hero-copy h1 { animation: none; opacity: 1; transform: none; filter: none; }
+  *, *::before, *::after {
+    transition-duration: 0.001ms !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main-content">跳到论文列表</a>
+<div class="page">
+  <header class="topbar">
+    <span>GEO Citation Lab · Paper Index</span>
+    <nav aria-label="页面导航">
+      <a href="../">仓库首页</a>
+      <a href="./README.md">Markdown 清单</a>
+      <a href="./00_资料说明/论文清单.csv">CSV</a>
+      <a href="https://github.com/yaojingang/geo-citation-lab/tree/main/02-geo-aeo-ai-search-papers">GitHub</a>
+    </nav>
+  </header>
+
+  <section class="hero" aria-labelledby="page-title">
+    <div class="hero-copy">
+      <h1 id="page-title">GEO / AEO / AI Search 论文导航</h1>
+      <p>这不是一页下载列表，而是一张可检索的研究地图：按 GEO 测量、AI 搜索架构、Agentic Search、RAG 检索、搜索评估与风险操纵组织 53 篇论文。</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#main-content">浏览论文</a>
+        <a class="btn" href="./00_资料说明/论文清单.csv">查看 CSV</a>
+      </div>
+    </div>
+
+    <aside class="atlas" aria-label="论文集合概览">
+      <div class="atlas-head">
+        <span>2026-06-20 update</span>
+        <span>10 topics</span>
+      </div>
+      <figure class="atlas-figure">
+        <canvas id="topic-map" width="640" height="300" aria-label="按主题规模生成的论文地图"></canvas>
+      </figure>
+      <div class="atlas-foot">
+        <div class="metric"><strong id="metric-total">53</strong><span>论文 PDF</span></div>
+        <div class="metric"><strong id="metric-topics">10</strong><span>主题目录</span></div>
+        <div class="metric"><strong id="metric-new">12</strong><span>新增论文</span></div>
+        <div class="metric"><strong id="metric-years">2023-2026</strong><span>年份跨度</span></div>
+      </div>
+    </aside>
+  </section>
+
+  <section class="controls" aria-label="论文筛选">
+    <label class="search">
+      <span class="sr-only">搜索论文</span>
+      <input id="search" type="search" placeholder="搜索标题、来源、年份、备注..." autocomplete="off">
+    </label>
+    <label class="select-wrap">
+      <span class="sr-only">排序方式</span>
+      <select id="sort">
+        <option value="category">按主题顺序</option>
+        <option value="year-desc">按年份新到旧</option>
+        <option value="title">按标题 A-Z</option>
+      </select>
+    </label>
+    <button class="btn" type="button" id="clear">清除筛选</button>
+  </section>
+
+  <p class="summary-line" id="summary">正在读取论文清单...</p>
+
+  <main class="layout" id="main-content">
+    <aside class="sidebar" aria-label="主题筛选">
+      <p class="section-kicker">Topics</p>
+      <div class="category-list" id="categories"></div>
+      <p class="note">新增批次来自 2026-06-20 近 30 天论文调研。已在原 41 篇中的论文不会重复出现。</p>
+    </aside>
+
+    <section class="content" aria-live="polite">
+      <div id="papers"></div>
+      <div class="empty" id="empty">没有匹配的论文。可以换一个关键词，或清除主题筛选。</div>
+    </section>
+  </main>
+
+  <footer class="foot">
+    <span>GEO Citation Lab · static HTML generated from <code>论文清单.csv</code></span>
+    <span><a href="./00_资料说明/checksums.sha256">SHA-256</a> · <a href="./">返回目录</a></span>
+  </footer>
+</div>
+
+<script>
+const CSV_PATH = "./00_资料说明/论文清单.csv";
+const NEW_URLS = new Set([
+  "https://arxiv.org/pdf/2606.04362",
+  "https://arxiv.org/pdf/2606.20065",
+  "https://arxiv.org/pdf/2510.11560",
+  "https://arxiv.org/pdf/2606.18947",
+  "https://arxiv.org/pdf/2606.20235",
+  "https://arxiv.org/pdf/2606.17209",
+  "https://arxiv.org/pdf/2606.20113",
+  "https://arxiv.org/pdf/2606.18508",
+  "https://arxiv.org/pdf/2606.18381",
+  "https://arxiv.org/pdf/2606.16661",
+  "https://arxiv.org/pdf/2602.07840",
+  "https://arxiv.org/pdf/2602.23234"
+]);
+const TOPIC_COPY = {
+  "01_GEO基础框架": "GEO 概念、生成式搜索优化框架和基础比较。",
+  "02_GEO方法优化": "内容特征、角色意图、白帽优化和多查询融合。",
+  "03_GEO测量评估": "可见性、引用行为、Source Influence 与重复采样。",
+  "04_AI搜索实证": "生成式搜索产品、AI Overviews 和证据偏好。",
+  "05_AEO理论整合": "AEO、GEO、SEO 和 AIO 的理论整合。",
+  "06_风险操纵": "排名操纵、投毒、知识冲突和搜索攻击。",
+  "07_垂直多模态": "电商、Pinterest、VLM 排名器与多模态场景。",
+  "08_AI搜索架构与AgenticSearch": "搜索接地架构、多步检索代理和学术搜索基准。",
+  "09_RAG检索优化": "段落检索、长文档树搜索和上下文扩展。",
+  "10_搜索评估治理": "LLM judge、生产标签和搜索治理。"
+};
+
+let allPapers = [];
+let activeCategory = "all";
+let query = "";
+
+const els = {
+  search: document.getElementById("search"),
+  sort: document.getElementById("sort"),
+  clear: document.getElementById("clear"),
+  categories: document.getElementById("categories"),
+  papers: document.getElementById("papers"),
+  summary: document.getElementById("summary"),
+  empty: document.getElementById("empty"),
+  total: document.getElementById("metric-total"),
+  topics: document.getElementById("metric-topics"),
+  fresh: document.getElementById("metric-new"),
+  years: document.getElementById("metric-years")
+};
+
+function parseCsv(text) {
+  const rows = [];
+  let row = [];
+  let cell = "";
+  let quoted = false;
+  const normalized = text.replace(/^\uFEFF/, "");
+  for (let i = 0; i < normalized.length; i += 1) {
+    const ch = normalized[i];
+    const next = normalized[i + 1];
+    if (quoted) {
+      if (ch === '"' && next === '"') {
+        cell += '"';
+        i += 1;
+      } else if (ch === '"') {
+        quoted = false;
+      } else {
+        cell += ch;
+      }
+    } else if (ch === '"') {
+      quoted = true;
+    } else if (ch === ",") {
+      row.push(cell);
+      cell = "";
+    } else if (ch === "\n") {
+      row.push(cell.replace(/\r$/, ""));
+      rows.push(row);
+      row = [];
+      cell = "";
+    } else {
+      cell += ch;
+    }
+  }
+  if (cell || row.length) {
+    row.push(cell);
+    rows.push(row);
+  }
+  const headers = rows.shift();
+  return rows.filter(r => r.length === headers.length).map((r, index) => {
+    const item = {};
+    headers.forEach((h, i) => { item[h] = r[i] || ""; });
+    item.index = index;
+    item.isNew = NEW_URLS.has(item.URL);
+    item.filePath = `./${item["分类"]}/${item["文件名"]}`;
+    item.yearSort = parseInt((item["年份"].match(/\d{4}/) || ["0"])[0], 10);
+    item.searchText = `${item["分类"]} ${item["论文题名"]} ${item["年份"]} ${item["来源"]} ${item["备注"]}`.toLowerCase();
+    return item;
+  });
+}
+
+function groupByCategory(papers) {
+  return papers.reduce((acc, paper) => {
+    if (!acc.has(paper["分类"])) acc.set(paper["分类"], []);
+    acc.get(paper["分类"]).push(paper);
+    return acc;
+  }, new Map());
+}
+
+function categoryName(category) {
+  return category.replace(/^\d+_/, "").replace("AgenticSearch", "Agentic Search");
+}
+
+function escapeHtml(value) {
+  return String(value).replace(/[&<>"']/g, ch => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#39;"
+  }[ch]));
+}
+
+function getFiltered() {
+  let papers = allPapers.slice();
+  if (activeCategory !== "all") {
+    papers = papers.filter(p => p["分类"] === activeCategory);
+  }
+  if (query) {
+    const q = query.toLowerCase().trim();
+    papers = papers.filter(p => p.searchText.includes(q));
+  }
+  const mode = els.sort.value;
+  if (mode === "year-desc") {
+    papers.sort((a, b) => b.yearSort - a.yearSort || a["论文题名"].localeCompare(b["论文题名"]));
+  } else if (mode === "title") {
+    papers.sort((a, b) => a["论文题名"].localeCompare(b["论文题名"]));
+  } else {
+    papers.sort((a, b) => a.index - b.index);
+  }
+  return papers;
+}
+
+function renderCategories() {
+  const grouped = groupByCategory(allPapers);
+  const totalButton = `<button class="cat-button ${activeCategory === "all" ? "is-active" : ""}" data-category="all" type="button"><span>全部论文</span><span class="count">${allPapers.length}</span></button>`;
+  const buttons = Array.from(grouped.entries()).map(([category, rows]) => (
+    `<button class="cat-button ${activeCategory === category ? "is-active" : ""}" data-category="${escapeHtml(category)}" type="button">
+      <span>${escapeHtml(categoryName(category))}</span>
+      <span class="count">${rows.length}</span>
+    </button>`
+  )).join("");
+  els.categories.innerHTML = totalButton + buttons;
+  els.categories.querySelectorAll("button").forEach(button => {
+    button.addEventListener("click", () => {
+      activeCategory = button.dataset.category;
+      render();
+    });
+  });
+}
+
+function renderPaper(paper) {
+  const newTag = paper.isNew ? `<span class="tag new">2026-06 新增</span>` : "";
+  return `<article class="paper-row">
+    <div class="paper-main">
+      <h3 class="paper-title">${escapeHtml(paper["论文题名"])}</h3>
+      <div class="paper-meta">
+        <span class="tag">${escapeHtml(paper["年份"])}</span>
+        <span>${escapeHtml(paper["来源"])}</span>
+        ${newTag}
+      </div>
+      <p class="paper-note">${escapeHtml(paper["备注"])}</p>
+    </div>
+    <div class="paper-action">
+      <a class="pdf-link" href="${encodeURI(paper.filePath)}">打开 PDF</a>
+    </div>
+  </article>`;
+}
+
+function renderPapers(papers) {
+  if (!papers.length) {
+    els.papers.innerHTML = "";
+    els.empty.classList.add("is-visible");
+    return;
+  }
+  els.empty.classList.remove("is-visible");
+  const grouped = groupByCategory(papers);
+  els.papers.innerHTML = Array.from(grouped.entries()).map(([category, rows]) => `
+    <section class="topic" id="${encodeURIComponent(category)}">
+      <header class="topic-head">
+        <div>
+          <h2 class="topic-title">${escapeHtml(categoryName(category))}</h2>
+          <p class="topic-desc">${escapeHtml(TOPIC_COPY[category] || "该主题下的论文。")}</p>
+        </div>
+        <span class="topic-count">${rows.length} papers</span>
+      </header>
+      <div class="paper-list">${rows.map(renderPaper).join("")}</div>
+    </section>
+  `).join("");
+}
+
+function renderSummary(papers) {
+  const label = activeCategory === "all" ? "全部主题" : categoryName(activeCategory);
+  els.summary.innerHTML = `当前显示 <b>${papers.length}</b> / ${allPapers.length} 篇，筛选范围：<b>${escapeHtml(label)}</b>`;
+}
+
+function renderMetrics() {
+  const categories = new Set(allPapers.map(p => p["分类"]));
+  const newCount = allPapers.filter(p => p.isNew).length;
+  const years = allPapers
+    .flatMap(p => p["年份"].match(/\d{4}/g) || [])
+    .map(Number)
+    .filter(Boolean);
+  els.total.textContent = String(allPapers.length);
+  els.topics.textContent = String(categories.size);
+  els.fresh.textContent = String(newCount);
+  els.years.textContent = `${Math.min(...years)}-${Math.max(...years)}`;
+}
+
+function render() {
+  renderCategories();
+  const papers = getFiltered();
+  renderSummary(papers);
+  renderPapers(papers);
+}
+
+function drawTopicMap() {
+  const canvas = document.getElementById("topic-map");
+  const ctx = canvas.getContext("2d");
+  const grouped = Array.from(groupByCategory(allPapers).entries());
+  const width = canvas.width;
+  const height = canvas.height;
+  ctx.clearRect(0, 0, width, height);
+  ctx.fillStyle = "#faf9f5";
+  ctx.fillRect(0, 0, width, height);
+  ctx.strokeStyle = "#e5e3d8";
+  ctx.lineWidth = 1;
+  for (let x = 40; x < width; x += 80) {
+    ctx.beginPath();
+    ctx.moveTo(x, 0);
+    ctx.lineTo(x, height);
+    ctx.stroke();
+  }
+  for (let y = 38; y < height; y += 58) {
+    ctx.beginPath();
+    ctx.moveTo(0, y);
+    ctx.lineTo(width, y);
+    ctx.stroke();
+  }
+  const centerX = width * 0.5;
+  const centerY = height * 0.5;
+  const radius = Math.min(width, height) * 0.34;
+  const points = grouped.map(([category, rows], i) => {
+    const angle = -Math.PI / 2 + (i / grouped.length) * Math.PI * 2;
+    const size = 8 + rows.length * 2.4;
+    return {
+      category,
+      count: rows.length,
+      x: centerX + Math.cos(angle) * radius,
+      y: centerY + Math.sin(angle) * radius,
+      size
+    };
+  });
+  ctx.strokeStyle = "#d8d5c8";
+  points.forEach(point => {
+    ctx.beginPath();
+    ctx.moveTo(centerX, centerY);
+    ctx.lineTo(point.x, point.y);
+    ctx.stroke();
+  });
+  points.forEach(point => {
+    ctx.beginPath();
+    ctx.fillStyle = point.category.startsWith("03") || point.category.startsWith("08") ? "#1B365D" : "#2D5A8A";
+    ctx.globalAlpha = 0.94;
+    ctx.arc(point.x, point.y, point.size, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1;
+    ctx.fillStyle = "#faf9f5";
+    ctx.font = "500 12px Georgia, serif";
+    ctx.textAlign = "center";
+    ctx.textBaseline = "middle";
+    ctx.fillText(String(point.count), point.x, point.y + 0.5);
+  });
+  ctx.fillStyle = "#141413";
+  ctx.font = "500 18px Georgia, serif";
+  ctx.textAlign = "center";
+  ctx.fillText("53", centerX, centerY - 2);
+  ctx.fillStyle = "#6b6a64";
+  ctx.font = "12px Georgia, serif";
+  ctx.fillText("papers", centerX, centerY + 18);
+}
+
+async function init() {
+  try {
+    const response = await fetch(CSV_PATH);
+    if (!response.ok) throw new Error(`HTTP ${response.status}`);
+    const csv = await response.text();
+    allPapers = parseCsv(csv);
+    renderMetrics();
+    render();
+    drawTopicMap();
+  } catch (error) {
+    els.summary.innerHTML = "读取 CSV 失败。请通过本地 HTTP 服务或 GitHub Pages 预览本页。";
+    els.empty.textContent = "如果直接双击打开 HTML，浏览器可能会拦截本地 CSV 读取。";
+    els.empty.classList.add("is-visible");
+  }
+}
+
+els.search.addEventListener("input", event => {
+  query = event.target.value;
+  render();
+});
+els.sort.addEventListener("change", render);
+els.clear.addEventListener("click", () => {
+  activeCategory = "all";
+  query = "";
+  els.search.value = "";
+  els.sort.value = "category";
+  render();
+});
+
+init();
+</script>
+</body>
+</html>

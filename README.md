@@ -15,7 +15,8 @@ GEO Citation Lab 是一个面向 GEO 研究的公开资料仓库，后续定位�
 | --- | --- | --- |
 | 对应 arXiv 论文 | [From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707) / [PDF](https://arxiv.org/pdf/2604.25707) | 想引用或阅读本实验对应的正式论文 |
 | GEO 实验数据报告 | [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) | 想看 AI 搜索平台如何触发搜索、选择信源、吸收引用内容 |
-| 论文合集 | [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 想按主题查找 GEO / AEO / AI Search 论文 PDF 与清单 |
+| 论文 HTML 导航 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) / [`index.html`](./02-geo-aeo-ai-search-papers/index.html) | 想按主题搜索、筛选和打开 53 篇 GEO / AEO / AI Search 论文 |
+| 论文合集目录 | [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 想查看论文 PDF、CSV 清单与校验文件 |
 | 长版 HTML 报告 | [`01-geo-experiment-data-report/04-repet/final_report.html`](./01-geo-experiment-data-report/04-repet/final_report.html) | 想快速浏览完整实验报告 |
 | 长版 Markdown 报告 | [`01-geo-experiment-data-report/04-repet/final_report.md`](./01-geo-experiment-data-report/04-repet/final_report.md) | 想在 GitHub 里直接按章节阅读正文 |
 | PDF 版实验报告 | [`01-geo-experiment-data-report/04-repet/final_report.pdf`](./01-geo-experiment-data-report/04-repet/final_report.pdf) | 想下载、分享或打印实验报告 |
@@ -73,14 +74,14 @@ Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.g
 | [`09_RAG检索优化`](./02-geo-aeo-ai-search-papers/09_RAG检索优化/) | RAG 检索优化 | 3 |
 | [`10_搜索评估治理`](./02-geo-aeo-ai-search-papers/10_搜索评估治理/) | 搜索评估与治理 | 2 |
 
-论文合集的完整清单见 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)。源目录中两份 `GEO_AI搜索_AEO_论文整理说明.docx` 内容相同，本仓库按 SHA-256 去重保留一份，并保留 [`论文清单.csv`](./02-geo-aeo-ai-search-papers/00_资料说明/论文清单.csv) 与 [`checksums.sha256`](./02-geo-aeo-ai-search-papers/00_资料说明/checksums.sha256) 方便复核。
+论文合集可通过 [HTML 导航页](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) 搜索和筛选，完整 Markdown 清单见 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)。源目录中两份 `GEO_AI搜索_AEO_论文整理说明.docx` 内容相同，本仓库按 SHA-256 去重保留一份，并保留 [`论文清单.csv`](./02-geo-aeo-ai-search-papers/00_资料说明/论文清单.csv) 与 [`checksums.sha256`](./02-geo-aeo-ai-search-papers/00_资料说明/checksums.sha256) 方便复核。
 
 ## 如何阅读
 
 1. 先读 [`01-geo-experiment-data-report/QUICK_REPORT.md`](./01-geo-experiment-data-report/QUICK_REPORT.md)，快速理解实验结论。
 2. 再读 [`01-geo-experiment-data-report/04-repet/final_report.md`](./01-geo-experiment-data-report/04-repet/final_report.md)，查看完整方法、图表和章节论证。
 3. 打开 [`01-geo-experiment-data-report/02-data/features_all_platforms_72.csv`](./01-geo-experiment-data-report/02-data/features_all_platforms_72.csv)，筛选你关心的字段。
-4. 阅读 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)，按主题进入论文 PDF。
+4. 打开 [论文 HTML 导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) 或阅读 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)，按主题进入论文 PDF。
 
 ## 公开仓库运行方式
 
