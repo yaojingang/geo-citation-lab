@@ -33,7 +33,7 @@ Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.g
 | [`01-geo-experiment-data-report/03-pipeline/`](./01-geo-experiment-data-report/03-pipeline/) | 解析、抓取、特征提取、统计分析脚本 |
 | [`01-geo-experiment-data-report/04-repet/`](./01-geo-experiment-data-report/04-repet/) | 完整研究报告、HTML/PDF 导出与图表 |
 | [`01-geo-experiment-data-report/05-kami-report/`](./01-geo-experiment-data-report/05-kami-report/) | 更适合展示/分享的摘要报告 |
-| [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 新增论文合集，按 7 个主题目录合并原始批次文件 |
+| [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 论文合集，按 10 个主题目录收纳 GEO / AEO / AI Search 相关论文 |
 
 ## 实验数据报告 Snapshot
 
@@ -58,19 +58,22 @@ Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.g
 
 ## 论文合集 Snapshot
 
-新增论文合集来自 `GEO_AI搜索_AEO_论文合集`，原始批次目录已按分类合并为 7 个主题目录，共 `41` 篇 PDF：
+论文合集来自 `GEO_AI搜索_AEO_论文合集` 及 2026-06-20 近 30 天新增论文调研，当前按分类合并为 10 个主题目录，共 `53` 篇 PDF：
 
 | 分类 | 主题 | PDF 数量 |
 | --- | --- | ---: |
 | [`01_GEO基础框架`](./02-geo-aeo-ai-search-papers/01_GEO基础框架/) | GEO 基础框架 | 4 |
 | [`02_GEO方法优化`](./02-geo-aeo-ai-search-papers/02_GEO方法优化/) | GEO 方法优化 | 7 |
-| [`03_GEO测量评估`](./02-geo-aeo-ai-search-papers/03_GEO测量评估/) | GEO 测量评估 | 6 |
-| [`04_AI搜索实证`](./02-geo-aeo-ai-search-papers/04_AI搜索实证/) | AI 搜索实证 | 4 |
+| [`03_GEO测量评估`](./02-geo-aeo-ai-search-papers/03_GEO测量评估/) | GEO 测量评估 | 8 |
+| [`04_AI搜索实证`](./02-geo-aeo-ai-search-papers/04_AI搜索实证/) | AI 搜索实证 | 5 |
 | [`05_AEO理论整合`](./02-geo-aeo-ai-search-papers/05_AEO理论整合/) | AEO 理论整合 | 5 |
 | [`06_风险操纵`](./02-geo-aeo-ai-search-papers/06_风险操纵/) | 风险、操纵与对抗 | 10 |
 | [`07_垂直多模态`](./02-geo-aeo-ai-search-papers/07_垂直多模态/) | 垂直场景与多模态 | 5 |
+| [`08_AI搜索架构与AgenticSearch`](./02-geo-aeo-ai-search-papers/08_AI搜索架构与AgenticSearch/) | AI 搜索架构与 Agentic Search | 4 |
+| [`09_RAG检索优化`](./02-geo-aeo-ai-search-papers/09_RAG检索优化/) | RAG 检索优化 | 3 |
+| [`10_搜索评估治理`](./02-geo-aeo-ai-search-papers/10_搜索评估治理/) | 搜索评估与治理 | 2 |
 
-论文合集的完整清单见 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)。源目录中两份 `GEO_AI搜索_AEO_论文整理说明.docx` 内容相同，本仓库按 SHA-256 去重保留一份，并保留原始 [`论文清单.csv`](./02-geo-aeo-ai-search-papers/00_资料说明/论文清单.csv)。
+论文合集的完整清单见 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)。源目录中两份 `GEO_AI搜索_AEO_论文整理说明.docx` 内容相同，本仓库按 SHA-256 去重保留一份，并保留 [`论文清单.csv`](./02-geo-aeo-ai-search-papers/00_资料说明/论文清单.csv) 与 [`checksums.sha256`](./02-geo-aeo-ai-search-papers/00_资料说明/checksums.sha256) 方便复核。
 
 ## 如何阅读
 

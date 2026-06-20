@@ -1,6 +1,6 @@
 # GEO / AEO / AI Search 论文合集
 
-本目录收纳 GEO、AEO、AI Search、生成式搜索引擎优化与引用操纵相关论文资料。源资料来自 `GEO_AI搜索_AEO_论文合集`，原始批次目录已按论文清单中的分类字段合并为 7 个主题目录。
+本目录收纳 GEO、AEO、AI Search、生成式搜索引擎优化与引用操纵相关论文资料。源资料来自 `GEO_AI搜索_AEO_论文合集` 及 2026-06-20 近 30 天新增论文调研，当前按主题合并为 10 个目录。
 
 ## 分类概览
 
@@ -8,18 +8,22 @@
 | --- | --- | ---: |
 | [01_GEO基础框架](./01_GEO基础框架/) | GEO 基础框架 | 4 |
 | [02_GEO方法优化](./02_GEO方法优化/) | GEO 方法优化 | 7 |
-| [03_GEO测量评估](./03_GEO测量评估/) | GEO 测量评估 | 6 |
-| [04_AI搜索实证](./04_AI搜索实证/) | AI 搜索实证 | 4 |
+| [03_GEO测量评估](./03_GEO测量评估/) | GEO 测量评估 | 8 |
+| [04_AI搜索实证](./04_AI搜索实证/) | AI 搜索实证 | 5 |
 | [05_AEO理论整合](./05_AEO理论整合/) | AEO 理论整合 | 5 |
 | [06_风险操纵](./06_风险操纵/) | 风险、操纵与对抗 | 10 |
 | [07_垂直多模态](./07_垂直多模态/) | 垂直场景与多模态 | 5 |
-| 合计 |  | 41 |
+| [08_AI搜索架构与AgenticSearch](./08_AI搜索架构与AgenticSearch/) | AI 搜索架构与 Agentic Search | 4 |
+| [09_RAG检索优化](./09_RAG检索优化/) | RAG 检索优化 | 3 |
+| [10_搜索评估治理](./10_搜索评估治理/) | 搜索评估与治理 | 2 |
+| 合计 |  | 53 |
 
 ## 资料说明
 
-- [`00_资料说明/论文清单.csv`](./00_资料说明/论文清单.csv)：原始论文清单，包含论文题名、年份、页数、文件大小、来源 URL 和备注。
+- [`00_资料说明/论文清单.csv`](./00_资料说明/论文清单.csv)：论文清单，包含论文题名、年份、页数、文件大小、来源 URL 和备注。
 - [`00_资料说明/GEO_AI搜索_AEO_论文整理说明.docx`](./00_资料说明/GEO_AI搜索_AEO_论文整理说明.docx)：原始整理说明。源目录中存在两份相同内容的说明文件，本仓库按 SHA-256 去重保留一份。
 - [`00_资料说明/checksums.sha256`](./00_资料说明/checksums.sha256)：本目录导入文件的 SHA-256 校验清单。
+- 2026-06-20 新增批次：从近 30 天调研报告中核对 13 篇主表论文和 1 篇延伸阅读，其中 `Dynamics of Adversarial Attacks on Large Language Model-Based Search Engines`、`Don’t Measure Once: Reliable AI Search Visibility Requires Repeated Trials and Structure-Aware Metrics` 已在原 41 篇中，实际新增 12 篇 PDF。
 
 ## 论文目录
 
@@ -51,7 +55,9 @@
 | [03_GEO测量评估_AI_Answer_Engine_Citation_Behavior_GEO16.pdf](./03_GEO测量评估/03_GEO测量评估_AI_Answer_Engine_Citation_Behavior_GEO16.pdf) | AI Answer Engine Citation Behavior: A Longitudinal Study of GEO in 16 Generative Engines | 2025 | arXiv |
 | [03_GEO测量评估_C_SEO_Bench_Does_Conversational_SEO_Work.pdf](./03_GEO测量评估/03_GEO测量评估_C_SEO_Bench_Does_Conversational_SEO_Work.pdf) | C-SEO Bench: Does Conversational SEO Work? | 2025 | arXiv, NeurIPS Datasets and Benchmarks |
 | [03_GEO测量评估_Dont_Measure_Once_AI_Search_Visibility.pdf](./03_GEO测量评估/03_GEO测量评估_Dont_Measure_Once_AI_Search_Visibility.pdf) | Don’t Measure Once: Reliable AI Search Visibility Requires Repeated Trials and Structure-Aware Metrics | 2026 | arXiv |
+| [03_GEO测量评估_AEO_Natural_Experiment_ChatGPT_Referral_Traffic.pdf](./03_GEO测量评估/03_GEO测量评估_AEO_Natural_Experiment_ChatGPT_Referral_Traffic.pdf) | Disentangling Answer Engine Optimization from Platform Growth: A Log-Based Natural Experiment on ChatGPT Referral Traffic | 2026 | arXiv |
 | [03_GEO测量评估_From_Citation_Selection_to_Citation_Absorption.pdf](./03_GEO测量评估/03_GEO测量评估_From_Citation_Selection_to_Citation_Absorption.pdf) | From Citation Selection to Citation Absorption: Understanding Source Influence in LLM-Generated Answers | 2026 | arXiv |
+| [03_GEO测量评估_GEO_at_Scale_Brand_Visibility_AI_Search_Engines.pdf](./03_GEO测量评估/03_GEO测量评估_GEO_at_Scale_Brand_Visibility_AI_Search_Engines.pdf) | Generative Engine Optimization at Scale: Measuring Brand Visibility Across AI Search Engines | 2026 | arXiv |
 | [03_GEO测量评估_SAGEO_Arena_Realistic_Environment.pdf](./03_GEO测量评估/03_GEO测量评估_SAGEO_Arena_Realistic_Environment.pdf) | SAGEO: A Search Arena for Generative Engine Optimization in a Realistic Environment | 2026 | arXiv |
 | [03_GEO测量评估_Structural_Feature_Engineering_for_GEO.pdf](./03_GEO测量评估/03_GEO测量评估_Structural_Feature_Engineering_for_GEO.pdf) | Structural Feature Engineering for Generative Engine Optimization | 2026 | arXiv |
 
@@ -60,6 +66,7 @@
 | 文件 | 论文题名 | 年份 | 来源 |
 | --- | --- | --- | --- |
 | [04_AI搜索实证_A_Survey_of_Generative_Search_and_Recommendation.pdf](./04_AI搜索实证/04_AI搜索实证_A_Survey_of_Generative_Search_and_Recommendation.pdf) | A Survey of Generative Search and Recommendation in the Era of Large Language Models | 2024/2025 | Generative Search and Recommendation |
+| [04_AI搜索实证_Characterizing_Web_Search_in_Generative_AI_Age.pdf](./04_AI搜索实证/04_AI搜索实证_Characterizing_Web_Search_in_Generative_AI_Age.pdf) | Characterizing Web Search in the Age of Generative AI | 2026 | arXiv |
 | [04_AI搜索实证_How_Generative_AI_Disrupts_Search_Google_AI_Overviews.pdf](./04_AI搜索实证/04_AI搜索实证_How_Generative_AI_Disrupts_Search_Google_AI_Overviews.pdf) | How Generative AI Disrupts Search: Consumer Behavior, Website Traffic, and the Impact of Google AI Overviews | 2026 | ACM SIGIR 2026 author PDF |
 | [04_AI搜索实证_NExT_Search_User_Feedback_Ecosystem.pdf](./04_AI搜索实证/04_AI搜索实证_NExT_Search_User_Feedback_Ecosystem.pdf) | NExT-Search: Rebuilding User Feedback Ecosystem for Generative AI Search | 2025 | arXiv |
 | [04_AI搜索实证_What_Evidence_Do_Language_Models_Find_Convincing.pdf](./04_AI搜索实证/04_AI搜索实证_What_Evidence_Do_Language_Models_Find_Convincing.pdf) | What Evidence Do Language Models Find Convincing? | 2024 | arXiv |
@@ -98,3 +105,27 @@
 | [07_垂直多模态_Multimodal_GEO_VLM_Rankers.pdf](./07_垂直多模态/07_垂直多模态_Multimodal_GEO_VLM_Rankers.pdf) | Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers | 2026 | ResearchGate paper PDF |
 | [07_垂直多模态_Pinterest_GEO_VLM_Agent_Framework.pdf](./07_垂直多模态/07_垂直多模态_Pinterest_GEO_VLM_Agent_Framework.pdf) | Generative Engine Optimization: A VLM and Agent Framework for Pinterest Acquisition Growth | 2026 | arXiv |
 | [07_垂直多模态_Style_and_Semantic_Effects_Generative_Search_Engine.pdf](./07_垂直多模态/07_垂直多模态_Style_and_Semantic_Effects_Generative_Search_Engine.pdf) | When Content is Goliath and Algorithm is David: The Style and Semantic Effects of Generative Search Engine | 2025 | ResearchGate paper PDF |
+
+### 08_AI搜索架构与AgenticSearch AI 搜索架构与 Agentic Search
+
+| 文件 | 论文题名 | 年份 | 来源 |
+| --- | --- | --- | --- |
+| [08_AI搜索架构与AgenticSearch_Decoupled_Search_Grounding_LLM_Agents.pdf](./08_AI搜索架构与AgenticSearch/08_AI搜索架构与AgenticSearch_Decoupled_Search_Grounding_LLM_Agents.pdf) | Decoupling Search from Reasoning: A Vendor-Agnostic Grounding Architecture for LLM Agents | 2026 | arXiv |
+| [08_AI搜索架构与AgenticSearch_Diverse_Query_Initialization_Agentic_Search.pdf](./08_AI搜索架构与AgenticSearch/08_AI搜索架构与AgenticSearch_Diverse_Query_Initialization_Agentic_Search.pdf) | Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search | 2026 | arXiv |
+| [08_AI搜索架构与AgenticSearch_ScholarQuest_Agentic_Academic_Paper_Search.pdf](./08_AI搜索架构与AgenticSearch/08_AI搜索架构与AgenticSearch_ScholarQuest_Agentic_Academic_Paper_Search.pdf) | ScholarQuest: A Taxonomy-Guided Benchmark for Agentic Academic Paper Search in Open Literature Environments | 2026 | arXiv |
+| [08_AI搜索架构与AgenticSearch_Streaming_Tool_Use_in_RAG.pdf](./08_AI搜索架构与AgenticSearch/08_AI搜索架构与AgenticSearch_Streaming_Tool_Use_in_RAG.pdf) | When Does Streaming Tool Use Help? Characterizing Tool-Intent Stabilization in Streaming Retrieval-Augmented Generation | 2026 | arXiv |
+
+### 09_RAG检索优化 RAG 检索优化
+
+| 文件 | 论文题名 | 年份 | 来源 |
+| --- | --- | --- | --- |
+| [09_RAG检索优化_MCompassRAG_Topic_Metadata_Semantic_Compass.pdf](./09_RAG检索优化/09_RAG检索优化_MCompassRAG_Topic_Metadata_Semantic_Compass.pdf) | MCompassRAG: Topic Metadata as a Semantic Compass for Paragraph-Level Retrieval | 2026 | arXiv |
+| [09_RAG检索优化_SCAR_Semantic_Continuity_Aware_Retrieval.pdf](./09_RAG检索优化/09_RAG检索优化_SCAR_Semantic_Continuity_Aware_Retrieval.pdf) | SCAR: Semantic Continuity-Aware Retrieval for Efficient Context Expansion in RAG | 2026 | arXiv |
+| [09_RAG检索优化_SproutRAG_Attention_Guided_Tree_Search.pdf](./09_RAG检索优化/09_RAG检索优化_SproutRAG_Attention_Guided_Tree_Search.pdf) | SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG | 2026 | arXiv |
+
+### 10_搜索评估治理 搜索评估与治理
+
+| 文件 | 论文题名 | 年份 | 来源 |
+| --- | --- | --- | --- |
+| [10_搜索评估治理_App_Store_Ranking_LLM_Generated_Judgments.pdf](./10_搜索评估治理/10_搜索评估治理_App_Store_Ranking_LLM_Generated_Judgments.pdf) | Scaling Search Relevance: Augmenting App Store Ranking with LLM-Generated Judgments | 2026 | arXiv |
+| [10_搜索评估治理_SAGE_Scalable_AI_Governance_Evaluation.pdf](./10_搜索评估治理/10_搜索评估治理_SAGE_Scalable_AI_Governance_Evaluation.pdf) | SAGE: Scalable AI Governance & Evaluation | 2026 | arXiv |
