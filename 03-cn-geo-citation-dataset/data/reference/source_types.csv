@@ -1,0 +1,556 @@
+domain,source_category_l1,source_category_l1_cn,source_type,source_type_cn,ecosystem,classification_status,classification_method,classification_confidence,classification_evidence
+baidu.com,platform_community,平台与社区,content_platform,内容平台,百度,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+iesdouyin.com,platform_community,平台与社区,social_content_platform,社交内容平台,字节跳动,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+qq.com,platform_community,平台与社区,content_platform,内容平台,腾讯,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+toutiao.com,platform_community,平台与社区,content_platform,内容平台,字节跳动,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+sohu.com,news_media,新闻与媒体,news_media,综合新闻媒体,搜狐,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+maigoo.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,买购网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+smzdm.com,platform_community,平台与社区,interest_community,兴趣与生活社区,什么值得买,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+sm.cn,search_page_proxy,搜索与页面代理,search_proxy,搜索与页面代理,阿里巴巴,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+163.com,news_media,新闻与媒体,news_media,综合新闻媒体,网易,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+chinapp.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,品牌网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+cnpp.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,CNPP,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+ctrip.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,携程,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+sina.cn,news_media,新闻与媒体,news_media,综合新闻媒体,新浪,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+dianping.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,美团,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+sina.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,新浪,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+taobao.com,business_services,商业信息与服务,ecommerce,电商平台,阿里巴巴,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+cnblogs.com,platform_community,平台与社区,professional_community,专业技术社区,博客园,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+xnnews.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,咸宁日报,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+bendibao.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,本地宝,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+zol.com.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,中关村在线,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+zhihu.com,platform_community,平台与社区,knowledge_community,知识社区,知乎,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+36kr.com,news_media,新闻与媒体,business_media,商业财经媒体,36氪,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+cofool.com,platform_community,平台与社区,finance_community,财经社区,叩富,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+autohome.com.cn,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,汽车之家,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+jd.com,business_services,商业信息与服务,ecommerce,电商平台,京东,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+book118.com,research_documentation,研究与文档,document_platform,文档平台,原创力文档,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+bilibili.com,platform_community,平台与社区,video_community,视频社区,哔哩哔哩,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+pcauto.com.cn,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,太平洋汽车,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+cnpp100.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,品牌100网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+chinabgao.com,research_documentation,研究与文档,industry_research,行业研究与数据,中国报告大厅,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+thepaper.cn,news_media,新闻与媒体,news_media,综合新闻媒体,澎湃新闻,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+bjnews.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,新京报,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+ithome.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,IT之家,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+trip.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,Trip.com,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+jiemian.com,news_media,新闻与媒体,business_media,商业财经媒体,界面新闻,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+ifeng.com,news_media,新闻与媒体,news_media,综合新闻媒体,凤凰网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+pconline.com.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,太平洋科技,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+eastmoney.com,news_media,新闻与媒体,business_media,商业财经媒体,东方财富,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+docin.com,research_documentation,研究与文档,document_platform,文档平台,豆丁网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+jinritemai.com,business_services,商业信息与服务,ecommerce,电商平台,抖音电商,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+baike.com,research_documentation,研究与文档,knowledge_base,专业知识库,抖音百科,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+gelonghui.com,news_media,新闻与媒体,business_media,商业财经媒体,格隆汇,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+dongchedi.com,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,懂车帝,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+uc.cn,platform_community,平台与社区,content_platform,内容平台,UC,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+39.net,vertical_professional,垂直专业内容,health_content,医疗健康内容,39健康网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+phb123.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,排行榜123网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+to8to.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,土巴兔,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+china.com,news_media,新闻与媒体,news_media,综合新闻媒体,中华网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+iimedia.cn,research_documentation,研究与文档,industry_research,行业研究与数据,艾媒咨询,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+canyin88.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,红餐网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+china.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+sogou.com,search_page_proxy,搜索与页面代理,search_proxy,搜索与页面代理,搜狗,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+hunliji.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,婚礼纪,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+dzwww.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,大众网,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+askci.com,research_documentation,研究与文档,industry_research,行业研究与数据,中商产业研究院,curated,legacy_curated,high,原有高频域名人工映射，经本轮一级分类体系复核
+anxjm.com,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,安心加盟网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“安心加盟网”；标题样本“【表】名创优品百货加盟费用多少钱-加盟费用明细-安心加盟网 || 名创优品加盟条件-加盟费用要求(5-10万元)-安心加盟网 || 婚庆加盟_婚庆加盟店_婚庆连锁加盟_婚庆公司加盟”
+cityhui.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,城市惠,reviewed,manual_review,high,主站关于页说明其提供注册用户信息存储与商家入驻服务：https://www.cityhui.com/about/contact.html
+xtrb.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,邢台日报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“邢台日报”；标题样本“2025-2026年北京婚纱摄影机构推荐:五家产品评测高性价比选择户外拍摄应对天气突变注意事项-邢台网-邢台日报社 || 2026年深圳注册公司全流程及费用行业观察：深圳ai代账与”
+ijia.city,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,,reviewed,manual_review,medium,"人工复核域名、站点名与标题样本：站点名“ijia.city”；标题样本“2026年实力之选:青岛酸奶玉米披萨,重磅榴莲披萨点五家企业用户力荐 || 2026性价比之选:杭州热门的月子中心哪家靠谱五家企业多人种草 || 2026杭州有实力的月子中心,优秀”"
+shangyexinzhi.com,business_services,商业信息与服务,business_content_platform,商业内容平台,商业新知,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“商业新知”；标题样本“2026包子连锁加盟优质品牌推荐榜_优质品牌商家-商业新知 || 2026年创意的食品年货礼盒牌子推荐，看看排名前十都有谁_工业品牌-商业新知 || 2026年婚纱照品牌哪家好，行”
+csdn.net,platform_community,平台与社区,professional_community,专业技术社区,CSDN博客,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“CSDN博客”；标题样本“2025年度国内5大涉外民商事诉讼律所排行榜揭晓:多维度综合评测 || 2026年最新专业深圳离婚律师优选推荐与盘点 || 深圳注册公司流程-CSDN博客”
+99.com.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,99健康网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“99健康网”；标题样本“2026年北京试管助孕私立医院排行榜放出前十机构名单看这里 || 北京私立试管医院权威排名前十_2026新名单出炉_热门机构排名汇总”
+ruli.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,如丽消费医疗,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“如丽消费医疗”；标题样本“2025成都权威体检机构前十强排名揭晓及详细推荐指南-如丽消费医疗 || 成都市权威三甲公立医院体检中心综合排名及专业推荐-如丽消费医疗”
+renrendoc.com,research_documentation,研究与文档,document_platform,文档平台,人人文库,reviewed,manual_review,high,主站首页说明采用文档 C2C 交易模式并提供文档存储与下载：https://www.renrendoc.com/
+visitbeijing.com.cn,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,北京旅游网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“北京旅游网”；标题样本“2024河北十大温泉排行榜揭晓!龙源温泉旅游度假村排名首位! || 北京土著妈妈的“书香一日游”路线!一路京味儿拉满,眼睛和胃都吃饱了 || 北京最适合一日游的免费景点,各区都有哦”"
+cet.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国经济新闻网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“中国经济新闻网”；标题样本“2026值得关注的保险服务平台,奶爸保核心优势突出 || 广州早茶品牌推荐,禄运茶居表现突出 || 稳健型理财推荐什么银行 2026 年头部稳健型理财银行产品竞争力市场现状最新观察”"
+zbnews.net,news_media,新闻与媒体,regional_news_media,地方新闻媒体,淄博新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“淄博新闻网”；标题样本“2026最新选择策略：专业的推拉窗/欧式阳光房厂家：行业参数与产能配置解析 --淄博新闻网 || 2026最热选择策略：专业的法式复古窗/极窄推拉门源头厂家：行业深度解析与参考指南”
+meituan.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,美团酒店,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“美团酒店”；标题样本“【张家口维也纳婚纱摄影婚纱摄影团购详情】维也纳婚纱摄影价格_人均消费(图)_张家口美团网 || 美团规则中心”
+xueqiu.com,platform_community,平台与社区,finance_community,财经社区,雪球,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“雪球”；标题样本“两会后的2026年,站在世界的拐点上 || 基金新手交易软件大PK:新浪财经APP等三家平台值得推荐”"
+jia.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,齐家网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“齐家网”；标题样本“鞍山婚庆公司哪家好 选择婚庆公司要点 || 齐家银川装修,银川装修公司,银川建材,银川家居家具-齐家网手机版”"
+weibo.cn,platform_community,平台与社区,social_content_platform,社交内容平台,微博,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“微博”；标题样本“四川微博房产 || 孝义发布 || 绝版丫头的秘密”
+ldqxn.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,亮点黔西南,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“亮点黔西南”；标题样本“2026年5月网红民宿厂家推荐榜，观景型/亲子型/经济型/智能型/收藏榜民宿厂家选择指南_亮点黔西南 || 2026指南:专业的家政/家政公司公司热门推荐解读-家净源 || 202”
+cnpinpai.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,武汉金波网络科技有限公司品牌网,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“武汉金波网络科技有限公司品牌网”；标题样本“2026年厨房大电十大品牌排行榜-厨房大电什么牌子好-品牌排行网 || 2026年核桃十大品牌排行榜-核桃什么牌子好-品牌排行网”
+beijing.gov.cn,government_public,政府与公共机构,government_public,政府机构,北京市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北京市人民政府”；标题样本“2026年北京市积分落户申报将于4月16日启动_政策解读_首都之窗_北京市人民政府门户网站 || 北京市2026年版积分落户申报服务手册 || 北京市政务服务网”
+fh21.com.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,复禾健康,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“复禾健康”；标题样本“瑜伽费用一年多少钱 || 瑜伽费用一年多少钱合适”
+news.cn,news_media,新闻与媒体,news_media,综合新闻媒体,新华网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“新华网”；标题样本“2026年北京积分落户申报将启动 落户规模6000人 || “大病保险办法”出台 2026年1月1日起施行-新华网天津 || 数字赋能为营商环境持续改善按下“快进键”-新华网”
+bohe.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,博禾医生,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“博禾医生”；标题样本“下去做的核酸检测几点出结果？下去做的核酸检测多久出结果-肺炎-博禾医生 || 无锡五大男科医院排行榜 无锡靠谱的男科医院 || 有哪些美味的食物”
+hezegd.com,news_media,新闻与媒体,news_media,综合新闻媒体,菏泽广电网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“菏泽广电网”；标题样本“2026年上半年口碑好的儿童乐园,儿童机公司品质推荐_菏泽广电网 || 2026年实力之选:东莞带私汤温泉度假村哪家值得去口碑推荐-逸海驰温泉酒店 || 2026年焕新:热门的活动”"
+redsh.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,红商网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“红商网”；标题样本“2025国货祛痘品牌TOP10推荐，平价也有大牌效果 - 红商网 || 2026全国医学美容TOP10!四川成都等地医美机构专业靠谱口碑佳 - 红商网 || 2026全国正规医美机”
+hepan.com,platform_community,平台与社区,interest_community,兴趣与生活社区,蓝色河畔,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“蓝色河畔”；标题样本“2026年6月市面上评价好的月子中心品牌推荐，产妇月子护理/月子中心/连锁月子中心/分阶 ... - 品牌推荐 - 资讯 - 蓝色河畔 - 手机版 || 2026年婚纱摄影服务商推”
+apple.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,Apple,reviewed,manual_review,high,域名主体核验为 Apple；引用集中在 apps.apple.com/cn 与 apps.apple.com/tw 的 App Store 页面，餐厅名称来自应用页面样本
+douyin.com,platform_community,平台与社区,social_content_platform,社交内容平台,抖音视频,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“抖音视频”；标题样本“家电排行榜 || 春节旅游十大热门目的地出炉 || 青岛美食地图之20家啤酒屋。🔥🦀🍺🍻 啤酒屋是青岛 - 抖音”
+jiehun.com.cn,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,婚芭莎,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“婚芭莎”；标题样本“苏州纽约纽约高端婚纱摄影”
+echinagov.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,国脉电子政务网,reviewed,manual_review,high,主站关于页说明其为电子政务一站式综合服务平台：https://www.echinagov.com/about/gov/
+yiche.com,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,易车,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“易车”；标题样本“2026年13万纯电SUV:四款热门车第一名揭晓 || 2026年纯电车排行榜与厂商深度测评”
+people.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,人民网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“人民网”；标题样本““住房有保障、就业有支持、创业有底气” 厦门为高校毕业生留“厦”送出新年“见面礼” || 您的定制“体检地图”来了”
+redhongan.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,红安网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“红安网”；标题样本“2026年中国性价比高的黄庄月饼品牌排行榜 || 2026年口碑好的财务外包服务公司推荐,湖北怡辰财税上榜 || 即买即用!2026电商卖家必备:四大商标转让平台实测,哪家代理机构”"
+xiuxianshipin.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,火爆餐饮网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“火爆餐饮网”；标题样本“全网热门特色烧烤加盟品牌排行榜-火爆餐饮网 || 烧烤加盟店10大品牌热门排行榜-火爆餐饮网 || 烧烤十大品牌加盟店排行榜:全国连锁加盟品牌-火爆餐饮网”
+xinhuanet.com,news_media,新闻与媒体,news_media,综合新闻媒体,新华网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“新华网”；标题样本“北京2026年共有超9万人申请积分落户 || 厦门出台租房落户新政-新华网”
+10jqka.com.cn,vertical_professional,垂直专业内容,finance_content,财经专业内容,同花顺,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“同花顺”；标题样本“2025年年报开始啦!@各位老板,年报攻略已备好,别漏报、不逾期! || 2026年5月25日收评 || 2026年6月6日恰逢周六 网友热议“六六大顺”迎好运”"
+zhengzhou.gov.cn,government_public,政府与公共机构,government_public,政府机构,郑州市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“郑州市人民政府”；标题样本“2026年公租房政策调整及选房流程 || 公租房如何申请?对小区物业服务不满意?郑州市住房保障和房地产管理局回应这些问题 || 郑州市住房保障和房地产管理局”
+ce.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国经济网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国经济网”；标题样本“厦门户籍新政11月1日起实施 || 厦门户籍新政11月1日起实施_中国经济网——国家经济门户 || 国美旗下4家P2P平台合规待考 被指涉嫌为关联企业融资”
+chinadaily.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国日报网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“中国日报网”；标题样本“2025年12月企业管理咨询公司推荐榜:基于实效与规模数据的十大专业机构深度横评 || 蓝犀牛搬家入选朝阳区第四届“凤鸣计划”,荣获高成长企业称号”"
+stcn.com,news_media,新闻与媒体,news_media,综合新闻媒体,证券时报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“证券时报”；标题样本“6月金股出炉!这些板块受到券商一致热捧! || 重磅!海通证券发布最新权益类基金绝对收益排行榜”
+21jingji.com,news_media,新闻与媒体,news_media,综合新闻媒体,21财经,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“21财经”；标题样本“深圳上线“AI注手”， 用手机“聊”出营业执照 || 西安公布落户新政 涉及8类人员”
+66law.cn,vertical_professional,垂直专业内容,legal_content,法律专业内容,华律网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华律网”；标题样本“北京处理工伤期间工资纠纷口碑不错的律师有哪些 || 外地户口怎么迁入武汉户口 || 迁入厦门户口办理流程”
+lieju.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,北京列举网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北京列举网”；标题样本“2026 上海智能锁店铺深度测评:执钥智能锁领衔 - 上海嘉定江桥新城其他生活服务 - 上海列举网 || 上海跨省搬家公司长途搬家平台物流推荐!哪个平台划算靠谱?上海 - 上海黄浦”
+lfnews.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,廊坊新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“廊坊新闻网”；标题样本“2026厦门婚纱摄影推荐汇总 高性价比品牌+实用旅拍攻略分享 - 时尚 - 廊坊新闻网 - 权威媒体 廊坊门户 || 2026大理婚纱照哪家好?28天实测6家热门品牌，帮你避开隐形”
+ly.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,同程酒店,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“同程酒店”；标题样本“来自同程的参考资料 || 霸州茗汤温泉度假村.”
+chasyi.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,查生意,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“查生意”；标题样本“2026年中国包子加盟十大品牌权威排名与行业趋势深度解读-查生意 || 2026餐饮加盟市场十大品牌盘点:从蜜雪冰城到老乡鸡的创业指南-查生意”
+zhipin.com,business_services,商业信息与服务,job_service,招聘与职业服务,BOSS直聘,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“BOSS直聘”；标题样本“杭州巾帼西丽家政服务集团有限公司 || 湖北维思德(荆门)律师事务所 || 荆门佐德法律咨询服务有限公司”
+jinan.gov.cn,government_public,政府与公共机构,government_public,政府机构,济南市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“济南市人民政府”；标题样本“办事指南 || 单位招新不用愁，“参保一件事”助您一次全办成! || 问:如何办理社会保险增员?”
+stockstar.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,证券之星,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“证券之星”；标题样本“2026年正规买基金平台有哪些?投资者如何选用基金平台?_基金要闻_基金_证券之星 || 【行业深度】洞察2026：中国新式茶饮行业竞争格局及市场份额（附市场集中度、市场份额等）-”
+yoojia.com,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,有驾,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“有驾”；标题样本“2026全球新能源汽车趋势预测 || 2026新能源品牌实力榜揭晓!选车避坑指南助你轻松锁定优质车型-有驾 || 中国品牌在新能源汽车市场的份额超过80%,比亚迪、蔚来、理想、小鹏”"
+cnr.cn,news_media,新闻与媒体,news_media,综合新闻媒体,央广网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“央广网”；标题样本“厦门户籍新政11月1日起实施_央广网”
+chinairn.com,research_documentation,研究与文档,industry_research,行业研究与数据,中研网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中研网”；标题样本“新手入门咖啡机品牌推荐 TOP10，美的成小白首选_中研网头条”
+jiaoyubao.cn,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,教育宝,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“教育宝”；标题样本“2026上海早教幼教机构大盘点-教育宝资料库 || 上海乐游宝宝亲子游泳:无脖圈亲子水育-上海乐游宝宝亲子游泳-教育宝 || 全国儿童游泳培训排名_全国十大儿童游泳机构排行-教育宝”
+lcxw.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,聊城新闻网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“聊城新闻网”；标题样本“2026年 苏州婚纱摄影推荐榜单:匠心光影与浪漫叙事,定格专属爱情诗篇的摄影品牌精选”"
+suzhou.gov.cn,government_public,政府与公共机构,government_public,政府机构,苏州市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“苏州市人民政府”；标题样本“关于《苏州市区义务教育阶段流动人口随迁子女积分入学管理办法》相关政策解读 - 招生政策 - 苏州市教育局 || 关于印发《苏州市区义务教育阶段流动人口随迁子女积分入学管理办法》的通”
+wandoujia.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,豌豆荚,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“豌豆荚”；标题样本“比较靠谱的软件app免费 || 比较靠谱的软件app免费推荐 || 靠谱又真实的约会软件推荐:2024年值得尝试的几款高口碑社交应用”
+liebiao.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,列表网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“列表网”；标题样本“合肥商标注册怎申请/商标注册800元官费/在哪办理-合肥商标专利-合肥列表网”
+douban.com,platform_community,平台与社区,interest_community,兴趣与生活社区,豆瓣,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“豆瓣”；标题样本“十三家适合胖子的大码男装品牌店,穿衣搭配再也不愁”"
+findlaw.cn,vertical_professional,垂直专业内容,legal_content,法律专业内容,找法网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“找法网”；标题样本“北京户口能迁到哥哥家吗 || 妻子户口落户条件有哪些 || 我这是北京夫妻投靠落户的事，”
+64365.com,vertical_professional,垂直专业内容,legal_content,法律专业内容,律图,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“律图”；标题样本“北京本市户口迁移手续是什么? || 夫妻随迁北京户口的法律规定是什么？”
+voc.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,华声在线,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华声在线”；标题样本“公积金条例大修！湖南抢先落地，买房、装修全减负｜卜房者说 || 长株潭都市圈“好房子”推介会布展完毕 明日如期开展”
+gz.gov.cn,government_public,政府与公共机构,government_public,政府机构,广州市人民政府门户网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“广州市人民政府门户网站”；标题样本“太惬意!“食在广州”解锁广式早茶的魅力→ || 经营主体登记提交材料规范(2026年版)”
+chinanews.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国新闻网”；标题样本“四家AMC股改完成 AMC系信托能否迎来春天?”
+12365auto.com,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,车质网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“车质网”；标题样本“新能源车投诉排行榜 - 车质网”
+ccn.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国消费者报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国消费者报”；标题样本“20款冰箱比较试验结果出炉:样品保鲜性能差异显著-比较试验•抽检-中国消费网 || 扫码验真 医美行业监督自律平台帮你消费避坑-食品•健康-中国消费网 || 江苏省南京市消协提醒:”
+gov.cn,government_public,政府与公共机构,government_public,政府机构,中国政府网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国政府网”；标题样本“北京：五项户政业务实现“跨省通办”-中国政府网”
+weibo.com,platform_community,平台与社区,social_content_platform,社交内容平台,微博,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“微博”；标题样本“2024年度三亚市十大酒店排名: || 「小白」2026年618什么手机值得买?全价位购机指南! || 过年送护肤品当礼物,哪些品牌套装最值?”"
+nfnews.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,南方+,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“南方+”；标题样本“首推AI智能 申报系统“深小注”_第43114版：深圳观察_2025-07-30_南方日报数字报_南方网 || 首推“深小注” 营业执照“聊天办”_第46283版：《红色引擎 先锋”
+wuhan.gov.cn,government_public,政府与公共机构,government_public,政府机构,武汉市公安局,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“武汉市公安局”；标题样本“市人民政府关于进一步推进户籍制度改革的实施意见 || 市人民政府办公厅关于进一步做好高校毕业生留汉就业创业工作的通知 || 问:连续两年参保本市企业职工基本养老保险,能否在本市开发”"
+donews.com,news_media,新闻与媒体,news_media,综合新闻媒体,DoNews,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“DoNews”；标题样本“2026年货消费呈现兴趣驱动新趋势- DoNews”
+investorscn.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,投资家网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“投资家网”；标题样本“2026银行理财稳赚指南:收益稳+性价比高的5大银行理财盘点-投资家网 || 以AI科技重构生活场景，京东“闪电新品季”千款家电家居新品首发”
+jianshu.com,platform_community,平台与社区,knowledge_community,知识社区,简书,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“简书”；标题样本“2026年高口碑日月湾民宿排行TOP8推荐 || 全网热议!2026年高口碑民宿排行榜:日月湾服务好响应快的选择”
+sh.gov.cn,government_public,政府与公共机构,government_public,政府机构,上海市卫生健康委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“上海市卫生健康委员会”；标题样本“【法家云】法律文书代写 || 专业服务 代写法律文书 || 专业服务 法律事务顾问——法务外包”
+chinabidding.com.cn,business_services,商业信息与服务,business_information_service,商业信息与企业服务,中国采购与招标网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“中国采购与招标网”；标题样本“2026上新:太原市小店区家庭管道疏通公司5家公司深度评测 || 2026年性价比之选:太原管道疏通费用多少五家公司深度解析 || 2026推荐:河北劳务合同法律咨询,起诉咨询平台”"
+shenlanbao.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,深蓝保,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“深蓝保”；标题样本“中国保险公司规模排名_保险问答 || 中国全部保险公司排名_保险问答 || 寿险分哪些类别和种类 定期寿险哪里买的好及选购攻略 - 投保攻略 - 深蓝保”
+cqn.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国质量新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国质量新闻网”；标题样本“千万条汽车维修数据告诉你谁家生产的车靠谱? || 品牌评价国家标准与第三方认证 || 豪华、合资、自主品牌车型谁的质量更靠谱?363万多条有效故障数据告诉你”
+kafei.com.cn,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,kafei,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“kafei”；标题样本“6款全自动咖啡机超全实测，到底哪款值得买？ || 如何选购咖啡机？一文看懂类型、参数与品牌推荐 || 小敏家的咖啡时光：家用咖啡机选购与使用全攻略”
+qianlong.com,news_media,新闻与媒体,news_media,综合新闻媒体,千龙网·中国首都网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“千龙网·中国首都网”；标题样本“2026年10大空调品牌：从新贵到巨头，这些知名品牌值得关注 -千龙网·中国首都网 || 京东生鲜618吃喝玩乐惊喜日来袭！爆款小龙虾买一斤送一斤，1元抢120斤大西瓜 || 美的”
+csrc.gov.cn,government_public,政府与公共机构,government_public,政府机构,中国证券监督管理委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国证券监督管理委员会”；标题样本“【行政许可事项服务指南】从事公募基金销售的机构注册_中国证券监督管理委员会 || 公开募集证券投资基金销售机构监督管理办法_中国证券监督管理委员会 || 期货公司名录(2026年4”
+nio.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,蔚来汽车官方网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“蔚来汽车官方网站”；标题样本“一直换电最精明 - 口碑精选_NIO蔚来官网 || 开上蔚来ES8，我才懂什么叫“被误解的旗舰智能 - 口碑精选_NIO蔚来官网 || 第一次体验换电，我被这3个瞬间颠覆认知 - ”
+spb.gov.cn,government_public,政府与公共机构,government_public,政府机构,福建省邮政管理局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“福建省邮政管理局”；标题样本“关于公布邮政、快递企业投诉电话号码的提示 || 南京全面启动快递员专用电动摩托车驾考工作 || 转发关于停用广东省12305邮政业消费者申诉热线的公告”
+tianyancha.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,天眼查,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“天眼查”；标题样本“2026太原法务外包公司推荐TOP 5:中小企业“外部法务部”这样选! || 2026年当下江苏合同审查律所全攻略:五大品牌深度测评与选购-其他_ 天眼查新闻 || 合同审查工具哪”
+dzng.com,news_media,新闻与媒体,news_media,综合新闻媒体,Dzng,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Dzng”；标题样本“济南灵活就业人员社保办理全攻略 || 社保在线│灵活就业参保，线上就能办!_大众新闻_大众新媒体大平台”
+gmw.cn,news_media,新闻与媒体,news_media,综合新闻媒体,光明网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“光明网”；标题样本“2026年北京市积分落户申报将于4月16日启动 || 2026年北京市积分落户申报将于4月16日启动 落户规模保持6000人 || 今起执行！厦门放宽落户条件”
+cctv.com,news_media,新闻与媒体,news_media,综合新闻媒体,央视网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“央视网”；标题样本“2026年北京市積分落戶申報將於4月16日啟動 落戶規模保持6000人”
+zgswcn.com,news_media,新闻与媒体,news_media,综合新闻媒体,中国商报网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“中国商报网”；标题样本“2026年武侯区麻辣火锅推荐:探寻地道川味的终极指南 || 2026年第二季度,探寻行业知名的中山电商合规服务商选择之道 || 2026年至今,宽窄巷子本地人常去的火锅店推荐这几家”"
+jiantou8.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,叩富问财(同城理财),reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“叩富问财(同城理财)”；标题样本“长沙公积金信用贷怎么办?利率多少?放款快吗?_叩富网 || 长沙消费贷怎么办？银行利率？放款快吗？-叩富网”
+quark.cn,search_page_proxy,搜索与页面代理,search_proxy,搜索与页面代理,阿里巴巴,reviewed,manual_review,high,引用 URL 集中在 doc.quark.cn/preview 文档预览与 p.quark.cn 页面代理路径，按页面承载入口归为搜索与页面代理
+sz.gov.cn,government_public,政府与公共机构,government_public,政府机构,深圳政府在线,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“深圳政府在线”；标题样本“opc开办操作指南 || “开办企业一窗通”办事指南 || 交通法规(科目一)预约、考试”
+yesky.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,天极网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“天极网”；标题样本“2026年度养生壶实用好评排行榜:真实用户公认高性价比款闭眼入_天极网 || 净水器什么品牌的好？2026年净水器十款品牌评测排行榜揭晓-天极资讯频道（天极网） || 盘点2025”
+miaoshou.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,Miaoshou,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Miaoshou”；标题样本“十大茯苓膏品牌推荐:综合行业数据与成分实力甄选_安心买好药就上妙手商城 || 聚焦婴儿奶粉十大品牌排行榜，多款标杆产品优势解读”
+qunar.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,去哪儿,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“去哪儿”；标题样本“三亚拥有专属沙滩的酒店 || 三亚海景酒店推荐 || 三亚湾住宿指南”
+yhresearch.cn,research_documentation,研究与文档,industry_research,行业研究与数据,恒州诚思,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“恒州诚思”；标题样本“2025年全球及中国共享民宿行业头部企业市场占有率及排名调研报告 || 2025年全球及中国酒店、度假村和游轮行业头部企业市场占有率及排名调研报告 || 2026年全球及中国婚纱摄”
+aidigong.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,爱帝宫,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“爱帝宫”；标题样本“2025年中国十大月子中心排行榜_中国十大月子品牌排名榜单 || 月子中心怎么选_选月子中心主要看什么”
+cngold.org,vertical_professional,垂直专业内容,finance_content,财经专业内容,金投网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“金投网”；标题样本“2026年06月05日经济指标数据_经济数据公布-财经日历-金投网 || 2026年06月05日重要经济指标数据_重要经济数据公布-财经日历-金投网”
+11467.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,顺企网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“顺企网”；标题样本“深圳注册公司需要哪些材料?Zui新清单一次备齐 || 湖南潇湘普惠信息咨询有限公司 || 自己办理营业执照的流程是什么?”
+nhc.gov.cn,government_public,政府与公共机构,government_public,政府机构,中华人民共和国国家卫生健康委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中华人民共和国国家卫生健康委员会”；标题样本“医生执业注册信息查询 || 医疗美容服务管理办法 - 中华人民共和国国家卫生健康委员会 || 国家卫生健康委办公厅关于印发婴幼儿早期发展服务指南(试行)的通知”
+zhongbiaowu.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,邓星宇,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“邓星宇”；标题样本“2025年抗皱护肤品十大品牌排行榜 || 婴儿游泳馆十大品牌排行榜_婴儿游泳馆品牌排名_婴儿游泳馆品牌排行榜 || 度假酒店十大品牌排行榜_度假酒店品牌排名_度假酒店品牌排行榜”
+58.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,58同城,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“58同城”；标题样本“永州写真 || 永州婚纱礼服 || 盘点银川装修公司 教你选择不后悔”
+bozhou.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,亳州新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“亳州新闻网”；标题样本“2026 主流亲子乐园 8 大品牌深度对比_亳州新闻网 || 2026杭州婚纱摄影推荐TOP5 口碑实测+性价比排行 新手备婚必看(丽摄影领衔)”
+xgimi.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,极米科技官方网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“极米科技官方网站”；标题样本“售后政策 || 极米科技官方网站”
+cq.gov.cn,government_public,政府与公共机构,government_public,政府机构,重庆市规划和自然资源局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“重庆市规划和自然资源局”；标题样本“不动产登记办事要件 || 公司登记管理实施办法 || 重庆市不动产登记“一问一答”_重庆市规划和自然资源局”
+hexun.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,和讯网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“和讯网”；标题样本“如何操作成都公积金业务？成都公积金操作有哪些流程和要点？ || 银行私人银行业务的客户准入标准 || 银行私人银行客户有什么要求?”
+moj.gov.cn,government_public,政府与公共机构,government_public,政府机构,中华人民共和国司法部,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中华人民共和国司法部”；标题样本“山东修订法律援助年度评价标准 || 浙江温州:打造“应援优援”法律援助温州品牌”
+vobao.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,沃保保险网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“沃保保险网”；标题样本“2025天津医保报销标准，2025天津医保报销比例及限额 || 定期寿险2025哪个保险公司比较好?定期寿险哪家性价比高又可靠?_沃保保险网 || 定期寿险哪家保险公司最好?202”
+jdzol.com,news_media,新闻与媒体,news_media,综合新闻媒体,景德镇在线,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“景德镇在线”；标题样本“2026升级:口碑好的保洁/保洁公司公司信赖之选-家净源 || 2026年高性价比纪实婚纱照,性价比婚纱照哪家专业避坑推荐-克拉恋人 || 2026焕新:深圳温泉度假村怎么选五家企”"
+samr.gov.cn,government_public,政府与公共机构,government_public,政府机构,国家市场监督管理总局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“国家市场监督管理总局”；标题样本“Untitled || 个体工商户登记管理规定 || 个体户营业执照网上申请入口官网”
+zhinanshi.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,指南师,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“指南师”；标题样本“海信Vidda C3天猫买还是京东买? - 海信Vidda C3购买指南 || 美的洗碗机有什么优缺点? || 西门子洗碗机体验怎么样?有劝退吗?”
+lawtime.cn,vertical_professional,垂直专业内容,legal_content,法律专业内容,法律快车,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“法律快车”；标题样本“针对问题北京户口有什么好处,我想进一步了解外地户口转为北京户口的条件是什么件是什么? || 针对问题北京户口有什么好处，我想进一步了解外地户口转为北京户口的条件是什么件是什么? -”"
+woshipm.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,人人都是产品经理,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“人人都是产品经理”；标题样本“体验日常:“场景化”在客户旅程中的重要性 | 人人都是产品经理 || 增长案例分析 | “宝宝玩英语”为用户设下的“圈套” | 人人都是产品经理”
+12348.gov.cn,government_public,政府与公共机构,government_public,政府机构,12348上海法网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“12348上海法网”；标题样本“12348四川法网 || 中国法律服务网 || 欢迎访问 上海12348公共法律服务平台”
+b2b168.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,八方资源网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“八方资源网”；标题样本“2026年省心的成人孩童爱吃正宗烤鸭门店挑选全攻略 || 八方资源网-赢造自由的网上贸易 || 磨街文创园附近适合家庭小聚的海鲜烧烤,口碑店铺大盘点”"
+xa.gov.cn,government_public,政府与公共机构,government_public,政府机构,西安市人力资源和社会保障局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“西安市人力资源和社会保障局”；标题样本“个体工商户设立登记--陕西政务服务网(西安市-莲湖区) || 公司设立登记--陕西政务服务网(西安市)”
+jiusongjiankang.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,九松健康,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“九松健康”；标题样本“天津医保中心报销在哪 || 天津医保在外地门诊如何带回报销 || 天津职工医保住院报销流程”
+winshang.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,赢商网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“赢商网”；标题样本“泰式奶茶又火了!10大品牌拓店狂飙… || 泰式奶茶又火了！10大品牌拓店狂飙…-手机赢商网”
+ly-rm.cn,news_media,新闻与媒体,news_media,综合新闻媒体,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“ly-rm.cn”；标题样本“别再乱买乳胶枕了!2026年十大乳胶枕排名实测，这十款口碑纯天然护颈防螨枕-耒阳新闻网 || 祛痘护肤品哪个牌子口碑最好?2026年成分党严选榜单，效果碾压不踩雷!-耒阳新闻网 |”
+tj.gov.cn,government_public,政府与公共机构,government_public,政府机构,天津市医疗保障局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“天津市医疗保障局”；标题样本“_天津市医疗保障局 || 天津市基本医疗保险条例_天津市医疗保障局”
+xinminweekly.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,新民周刊,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“新民周刊”；标题样本“2026上海装修公司优选指南:十家业主真实好评超千条、能匹配轻奢/极简/现代的本土装企 || 2026上海黄浦区装修公司怎么选?真实口碑+不增项双验证,10家靠谱装企实力榜公布”"
+chengdu.gov.cn,government_public,政府与公共机构,government_public,政府机构,成都住房公积金管理中心,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“成都住房公积金管理中心”；标题样本“企业职工未休年假,工资该如何支付?最新回应 || 成都住房公积金手机 APP 提取业务操作指引 || 成都住房公积金管理委员会关于印发《成都住房公积金提取管理办法》的通知”"
+mfk.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,民福康,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“民福康”；标题样本“什么冻伤膏好用?”
+360.cn,search_page_proxy,搜索与页面代理,map_page_proxy,地图与页面代理,360地图,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“360地图”；标题样本“TS天使造型(前海大新高品质店) || 【无锡市人民医院核酸检测预约】地址，电话，路线，周边设施_360地图 || 新娘百分百婚纱摄影”
+gkket.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,Gkket,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Gkket”；标题样本“2026年5月市面上评分高的火锅品牌推荐，火锅/火锅店，火锅品牌哪家靠谱 || 2026年6月做得好的烧菜火锅品牌推荐，特色美食/烧菜火锅/美食/社区火锅/火锅，烧菜火锅品牌推荐 ”
+so.com,search_page_proxy,搜索与页面代理,search_proxy,搜索与页面代理,360百科,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“360百科”；标题样本“厦门 户口迁入政策 落户条件 流程 手续全指南 || 厦门户口迁入办理指南- 厦门本地宝 || 福状元”
+zjurl.cn,search_page_proxy,搜索与页面代理,content_aggregation_proxy,内容聚合与页面代理,weitoutiao.zjurl.cn,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“weitoutiao.zjurl.cn”；标题样本“#厦门落户方式分享# || #厦门落户流程# || #毕业生落户厦门#”
+bbnews.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,蚌埠新闻网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“蚌埠新闻网”；标题样本“2026 新能源汽车充电桩厂家哪家好? 技术实力与服务能力双维度测评 || 2026年5月北京劳动律师推荐:五大口碑评测违法解除赔偿特点适用场景 || 2026相亲软件:告别套路,”"
+hzxkctk.cn,government_public,政府与公共机构,public_institution,公共机构,杭州市小客车总量调控管理信息系统,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“杭州市小客车总量调控管理信息系统”；标题样本“办事指南 || 如何申请新能源指标？ || 杭州市小客车总量调控管理信息系统”
+zgui.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,康掌柜体检网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“康掌柜体检网”；标题样本“怎么帮父母选对体检机构? || 爱康国宾和美年大健康哪个好?-康掌柜体检网 || 高端体检套餐都有哪些附加项目?”
+ailibang.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,爱丽帮,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“爱丽帮”；标题样本“北京和颜一美医疗美容诊所_地址/电话/网上挂号-爱丽帮 || 深圳婳美医疗美容医院评价-深圳婳美医疗美容医院口碑怎么样-整形医院-爱丽帮 || 深圳约丽医疗美容诊所评价-深圳约丽医”
+chinanews.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国新闻网”；标题样本“2026中国连锁餐饮品牌TOP300发布 覆盖超52万家门店-中新社上海 || 2026，世界七大悬念 || 俱乐部逐鹿线下:新喜剧的基石”
+huixiaoer.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,会小二,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“会小二”；标题样本“HR选人不如选场:高参与度团建场地测评标准-【会小二问答】 || V9尼斯酒店(武汉湖大店) || 年会一般在什么地方举行?6大类场地选择指南与避坑技巧-【会小二问答】”
+huodong.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“huodong.com”；标题样本“PS普拉提连锁(张江店) - 上海户外场地 - 活动网 || 一水·瑜伽普拉提(金桥国际商场店) - 上海户外场地 - 活动网 || 哈瑞瑜伽健身中心(金桥路店) - 上海户外场地”
+php.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“php.cn”；标题样本“公积金怎么提取线上办理_最新支付宝微信操作流程【教程】-常见问题-PHP中文网 || 护照和港澳通行证怎么网上预约 公安出入境在线预约办理指南 || 美团如何进行团购-手机软件-P”
+suofeiya.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,索菲亚,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“索菲亚”；标题样本“索菲亚全屋定制门店地址,索菲亚全国门店列表,索菲亚全屋定制实体店,索菲亚门店地址导航 || 索菲亚衣柜门店地址,索菲亚全屋定制专卖店,索菲亚实体店电话,索菲亚整家定制实体门店 ||”"
+trfsz.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,泰然健康网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“泰然健康网”；标题样本“2025年中国减肥机构权威测评榜:国内TOP10减脂瘦身机构深度解析与选择指南 || 2026减肥机构深度测评与供应商排名:科学代谢管理成主流 || 北京三家体检机构对比:哪家最靠”
+bjd.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,北京日报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北京日报”；标题样本“2026马年新年全品类年货综合测评排行榜—春节送礼与过年采购必选指南_京报网 || 专注民商刑事案件:北京恒略律师事务所好口碑高质量服务法治建设纪实”
+deppon.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,deppon,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“deppon”；标题样本“全国德邦快递网点查询，全国德邦物流网点电话、地址、营业时间-德邦快递官网 || 德邦快递官方网站-物流快递一站式服务 || 联系德邦-德邦快递|物流官方网站”
+pulanbx.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,谱蓝保,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“谱蓝保”；标题样本“2026年体检机构选错直接拒保?公立vs民营体检报告认可度排名大揭秘! | 谱蓝保 || 2026年同一天体检结果差30%?核保员私下最买账的体检机构排名，选错直接拒保! | 谱蓝”
+pingwest.com,news_media,新闻与媒体,news_media,综合新闻媒体,品玩,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“品玩”；标题样本“2026高性能高性价比按摩椅十大品牌优秀机型深度评测榜单-品玩 || ​学习桌椅推荐:2026年选购指南(含品牌对比)-品玩 || 实测对比:真正适合久坐的人体工学椅推荐-品玩”
+kepuchina.cn,government_public,政府与公共机构,public_institution,公共机构,科普中国,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“科普中国”；标题样本“图文详情 || 图文详情——科普中国资源服务”
+my-best.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,my-best,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“my-best”；标题样本“10 大月饼推荐排行榜 | mybest || 专家监制10 大养生壶推荐排行榜【2026最新】 | mybest || 专家监制10 大咖啡机品牌推荐排行榜【2026最新】 | ”
+youlai.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,有来医生,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“有来医生”；标题样本“孕期用什么牙膏比较好 || 无锡哪家医院比较好 || 无锡市人民医院中心实验室-科室简介及擅长”
+qcc.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,企查查,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“企查查”；标题样本“2025年国内体检机构推荐榜单出炉!爱康国宾凭借精准个性化服务引领健康管理-企查查 || 600亿市场腰斩，降压“药王”跌落神坛!高血压用药TOP10榜单出炉-企查查 || 巴奴毛”
+sqxww.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,商丘新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“商丘新闻网”；标题样本“2026南京婚纱照新人实测报告｜1200对新人真实反馈+10大品牌推荐 || 2026郑州婚纱照测评：五大热门品牌多维实力分析 || 同程旅行发布《2026暑期非遗目的地指南》，非”
+xm.gov.cn,government_public,政府与公共机构,government_public,政府机构,厦门市政府网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“厦门市政府网站”；标题样本“《厦门市人民政府关于完善优化落户条件的通知》政策解读--中国厦门 || 人才补贴服务-厦门市人民政府门户网站 || 厦门市-政府公报-厦府规〔2022〕6号”
+yilantop.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,壹览商业,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“壹览商业”；标题样本““翻红”的泰奶，还能火多久？ || 「找茶」首店开业，三天GMV30万 || 美团大众点评开放“品质外卖”新入口”
+chinabaogao.com,research_documentation,研究与文档,industry_research,行业研究与数据,观研报告网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“观研报告网”；标题样本“中国宠物医疗行业发展深度分析与投资前景研究报告(2024-2031年) || 中国火锅行业发展趋势分析与未来前景研究报告（2025-2032年） || 我国水光针行业分析:合规化发”
+jiameng.com,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,全球加盟网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“全球加盟网”；标题样本“三亚天域度假酒店 || 采耳培训加盟 采耳培训加盟十大品牌 采耳培训加盟费多少钱-全球加盟网”
+hunan.gov.cn,government_public,政府与公共机构,government_public,政府机构,湖南省市场监督管理局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“湖南省市场监督管理局”；标题样本“中华人民共和国市场主体登记管理条例实施细则 || 湖南政务服务网”
+viptijian.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,中康体检网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中康体检网”；标题样本“【北京常规公立医院体检医院哪家好|北京常规公立医院体检中心排名】- 中康体检网 || 上海交通大学医学院附属仁济医院西院体检中心介绍简介_图片_体检环境 - 中康体检网 || 商丘”
+foodaily.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,Foodaily每日食品,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Foodaily每日食品”；标题样本“9897.3亿背后的“冰与火”:2026春节消费图谱 | Foodaily每日食品 || 年味翻新：2026年货消费8大趋势”
+jobui.com,business_services,商业信息与服务,job_service,招聘与职业服务,职友集,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“职友集”；标题样本“中国私募基金公司排名 || 中国私募基金公司排名(创业公司) || 信阳商标注册公司排名Top2”
+meipian.cn,platform_community,平台与社区,knowledge_community,知识社区,美篇,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“美篇”；标题样本“2026家用洗衣液全品牌测评:安全去污性价比分场景推荐指南 || 哪款祛痘产品效果好?祛痘效果最好的排名第一，根源控油祛痘，改善油痘肌肤 || 德、英、澳、国行爱他美白金版有什么区”
+dfcfw.com,research_documentation,研究与文档,document_platform,文档平台,东方财富,reviewed,manual_review,high,引用 URL 集中在 pdf.dfcfw.com/pdf 与 dfscdn.dfcfw.com/download，标题为行业研究报告，按承载内容归为文档平台
+dingxinwen.com,news_media,新闻与媒体,news_media,综合新闻媒体,顶端新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“顶端新闻”；标题样本“2026年斯里兰卡商标注册申请材料清单保姆级整理：照着准备就行—顶端新闻 || 婚姻财产保护与专业法律服务并重——权威解析与优质律师事务所推荐榜单—顶端新闻 || 第四届中原餐饮品”
+dutenews.com,news_media,新闻与媒体,news_media,综合新闻媒体,读特,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“读特”；标题样本“企业开办全流程压缩至半天，网办率超99.5% 深圳良好营商环境激发经营主体活力 || 新茶饮巨头押注高端化！喜茶、奈雪纷纷开出首店，行业分化加剧”
+imlaw.cn,vertical_professional,垂直专业内容,legal_content,法律专业内容,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“imlaw.cn”；标题样本“2026工伤事故好口碑律师十大排行榜_工伤事故金牌律师哪个评价比较好? - 法临网 || 2026工伤事故律师排行榜_工伤事故律师排名前十哪个律师好 - 法临网”
+kanghuwang.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,康护网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“康护网”；标题样本“入职体检(一) || 商丘市第四人民医院体检中心网上预约体检平台 || 商丘美年大健康体检中心”
+wingontravel.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,Wing On Travel,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Wing On Travel”；标题样本“南京維景國際酒店 (Grand Metropark Nanjing) || 瀾庭酒店(深圳東門曬布地鐵站店)|2026年酒店推介深圳人氣酒店-永安旅遊 || 重慶雅辰悦居酒店自由行”
+xyzc.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,兴义之窗,reviewed,manual_review,medium,"人工复核域名、站点名与标题样本：站点名“兴义之窗”；标题样本“2026年上半年热门的活动场地租赁,户外草坪婚宴怎么选择五家企业深度评测-VTD宴会艺术中心 || 2026年正规的活动场地租赁,户外草坪婚宴电话多人种草推荐-VTD宴会艺术中心”"
+55haitao.com,business_services,商业信息与服务,shopping_information_service,购物信息与服务,55海淘,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“55海淘”；标题样本“2025黑五海淘折扣汇总!附2026年黑五大促时间 || 2026黑五海淘,Grow Gorgeous的洗发水好用吗?值得囤吗?_55海淘 || 2026黑五海淘,Michael ”"
+cfsn.cn,vertical_professional,垂直专业内容,industry_content,行业专业内容,中国食品安全网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国食品安全网”；标题样本“京城餐饮刮起怀旧市井风 || 奈雪「霸气一桶瓜」爆卖刷屏 1000cc超大桶引爆清凉经济 || 果蔬茶哪个品牌好喝?2026年主流品牌横向测评”
+cheari.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,环球家电网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“环球家电网”；标题样本“618京东销量榜杀疯了!这3款家电闭眼入全是品类第一-环球家电网 || 618选购指南｜家用空调推荐按居住场景精准匹配 || 企业动态-环球家电网-最权威的专业家电网站-中国家用电”
+jieqinwang.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,接亲网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“接亲网”；标题样本“婚庆的十大品牌排行 婚庆公司套餐价目表【接亲网】 || 租婚车哪个平台最好 国内知名的婚礼婚车租赁平台一览【接亲网】”
+mxbc.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,蜜雪冰城,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“蜜雪冰城”；标题样本“蜜雪冰城-产品实力 || 蜜雪冰城-加盟门店”
+sf-express.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,顺丰速运,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“顺丰速运”；标题样本“Customer Service Hotline || 客户服务热线”
+ycwb.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,羊城晚报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“羊城晚报”；标题样本“美团旅行:深圳、广州跻身春节热门旅游目的地前十”
+zharong.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,秀珍网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“秀珍网”；标题样本“2026年北京高端及涉外口碑医院指南:和睦家、明德等知名机构服务深度解析与选择建议 || 天津种睫毛专业机构盘点:2026年本地口碑与技术俱佳的美睫医院与工作室精选指南”
+bhwang.cn,platform_community,平台与社区,interest_community,兴趣与生活社区,滨海论坛,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“滨海论坛”；标题样本“2026年热门分期上面借钱,盘点5个适合征信花的网贷! || 2026年热门正规的网贷平台15家,这几家平台,惊艳到我了! || 正规放款平台哪个好2026年精选,盘点5个征信宽松”"
+enorth.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,津云,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“津云”；标题样本“【民生詞典】醫保住院登記及報銷-民生頻道-北方網 || 医保住院登记及报销”
+jfdaily.com,news_media,新闻与媒体,news_media,综合新闻媒体,上观新闻,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“上观新闻”；标题样本“上海健身房价格地图:从一天1元到年费3400元,市民如何选择? || 低价畅享多元运动,2300㎡宝藏健身空间等你打卡 || 手慢无!家门口的全嘉·邻里健身夜校(第一期)报名开启”"
+banu.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,banu,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“banu”；标题样本“巴奴毛肚火锅 || 巴奴毛肚火锅采购平台”
+canon.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,佳能（中国）,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“佳能（中国）”；标题样本“EOS R6 Mark II - EOS专微相机 - 佳能(中国) || 官方旗舰店 - 购买指南 - 佳能(中国)”
+pcpop.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,泡泡網,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“泡泡網”；标题样本“2026游戏本推荐必入 联想拯救者Y9000P旗舰电竞本实力封神 || 双十二投影仪品牌推荐，预算3000元内首选大眼橙投影 || 家庭必备小家电清单:2026新家采购指南，好用不”
+hangzhou.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,杭州网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“杭州网”；标题样本“新车上牌“一件事”在杭上线_每日商报 || 杭州幼升小、小升初招生日程安排发布_杭州网教育频道 || 茶饮品牌扎堆上新 开启“荔枝争夺战”-杭州网”
+qm120.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,全民健康网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“全民健康网”；标题样本“2026北京民营医院推荐,附比较新北京试管医院排名”"
+rednet.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,红网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“红网”；标题样本“北京银行长沙分行：金融活水“贷”动美好生活_银行_财富频道 || 民生银行长沙分行响应政策，消贷贴息促消费升级 || 装修能否提取住房公积金？申请公积金贷款是否有次数限制？”
+xfrb.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,消费日报网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“消费日报网”；标题样本“《2026中国春节食品消费趋势报告》发布 || 《2026中国春节食品消费趋势报告》发布-消费日报网”
+xinchufang.com,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,新厨房,reviewed,manual_review,medium,引用 URL 集中在 xinchufang.com/shipu，标题为餐饮、食谱与消费生活编辑内容；站点主体信息与品牌官网分类缺少一致性
+linkshop.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,联商网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“联商网”；标题样本“30城热门火锅店PK，力压“姐”们一头的是哪些大神?_联商网 || 从榜单看双11:三年发生了什么?_联商网”
+tynews.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,太原新闻网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“太原新闻网”；标题样本“2026全场景送礼品牌TOP榜:覆盖全人群+多节日,实用主义送礼指南 || 今日聚焦 || 央媒看太原|山西文创产品受青睐——“旅游搭子”拿捏流量密码”"
+gafei.com,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,咖啡网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“咖啡网”；标题样本“入口比命苦？霸王茶姬推出百香果奶茶！ || 国际咖啡连锁品牌介绍_世界十大咖啡连锁店排名榜你知道吗 中国咖啡网”
+suning.com,business_services,商业信息与服务,ecommerce,电商平台,苏宁易购,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“苏宁易购”；标题样本“代写文书服务”
+cs.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中证网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中证网”；标题样本“天猫618开门红数据公布 平台成交破亿品牌数量同比增长40%”
+hgdaily.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,黄冈新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“黄冈新闻网”；标题样本“2026慕叁山蛋糕工艺说明:恪守行业标准，透明合规经营 黄冈新闻网 || 端午走亲带什么礼物好?2026 年十款好物优选榜单，闭眼入不出错 黄冈新闻网_黄冈新闻网 || 订酒店民宿”
+chambers.com,vertical_professional,垂直专业内容,legal_content,法律专业内容,Chambers and Partners,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“Chambers and Partners”；标题样本“Arbitration (International), Global Market Leaders, Global | Chambers Rankings || Chambers”"
+cnstock.com,news_media,新闻与媒体,news_media,综合新闻媒体,上海证券报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“上海证券报”；标题样本“千余款科技新品2026AWE首秀 天猫发布“未来家”五大趋势空间 || 格力携多款AI新品亮相AWE2026 硬核科技彰显“真智能”实力”
+mofcom.gov.cn,government_public,政府与公共机构,government_public,政府机构,中华人民共和国商务部,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中华人民共和国商务部”；标题样本“中华老字号信息管理 || 经贸新闻”
+eol.cn,vertical_professional,垂直专业内容,education_content,教育专业内容,中国教育在线,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国教育在线”；标题样本“2026年自考本科可以在武汉落户吗？ || 成人高考学历可以落户武汉吗？ || 自考大专毕业能去武汉落户吗？”
+wabei.cn,vertical_professional,垂直专业内容,finance_content,财经专业内容,挖贝网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“挖贝网”；标题样本“2025-2026年美国投资移民中介推荐:TOP5榜评测项目安全市场份额注意事项 || 哪家美国移民律师专业?2025-2026年推荐TOP5对比身份转换案例评测选择指南”
+xhby.net,news_media,新闻与媒体,news_media,综合新闻媒体,新华报业网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“新华报业网”；标题样本“券商6月“金股”出炉 || 无锡市疫情防控第90号通告_新华报业网 || 益禾堂亮相博鳌品牌峰会，以品牌势能助推中国茶饮全球化”
+yslw.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,牙舒丽网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“牙舒丽网”；标题样本“2026十大世界种植体品牌及价格全公开:高端选ITI/诺贝尔，性价比选韩系，便宜选国产_“牙舒丽网发布”的资讯案例 || 2026年国内种植牙品牌排名前十及价格表:创英/百康特领衔”
+dingxinwen.cn,news_media,新闻与媒体,news_media,综合新闻媒体,顶端新闻,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“顶端新闻”；标题样本“2025年中国文旅集团品牌传播力100强榜单-顶端新闻 || 单店月收176万、排队1小时,2026高端泰奶翻红, || 拒绝家装消费套路有妙招——顶端新闻”"
+fujian.gov.cn,government_public,政府与公共机构,government_public,政府机构,福建省人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“福建省人民政府”；标题样本“厦门市就业居住户口迁移审批事项 || 厦门市稳定住所落户事项 || 福建省网上办事大厅-福建政务服务网-马上就办 · 全程网办 · 一网通办”
+huazhu.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,华住会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华住会”；标题样本“全季酒店预订_价格_电话_地址【华住酒店官网】”
+xdjd.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,现代家电网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“现代家电网”；标题样本“以科技臻造品质厨居 全新智慧厨电发布 || 无人家务更进一步 ， 海尔行业首发最高L4级智能体套系Seeker || 海尔智家亮相2026印尼雅加达博览会”
+bbtnews.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,北京商报,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“北京商报”；标题样本“2026年外卖必点榜发布 地方老字号、本地特色等门店占比提升至七成 || 永辉超市发布2026新年礼盒矩阵 定制礼盒占比达40% || 选用98%高浓度真可可,喜茶全国上新茶坊苦巧”"
+booking.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Booking.com”；标题样本“Jun Bo Xuan Boutique Hotel (民宿)（中国）优惠 || Somerset Yangtze River Chongqing (公寓)（中国）优惠 || 网络”
+cnipa.gov.cn,government_public,政府与公共机构,government_public,政府机构,国家知识产权局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“国家知识产权局”；标题样本“2026年3月审批设立的专利代理机构 || 2026年4月审批设立的专利代理机构 || 成立商标代理机构需要什么条件?流程是怎样的?”
+wuxi.gov.cn,government_public,政府与公共机构,government_public,政府机构,无锡市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“无锡市人民政府”；标题样本“无锡市开展基因检测的医疗机构名单 || 无锡市提供健康人群新冠病毒核酸检测医疗机构名单公示 || 无锡市核酸检测报告(出具双语)采样点名单”
+chyxx.com,research_documentation,研究与文档,industry_research,行业研究与数据,智研咨询,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“智研咨询”；标题样本“研判2025!中国卡丁车俱乐部行业发展背景、产业链、市场规模、重点品牌及前景展望:消费观念转变推动新兴运动发展，卡丁车俱乐部规模达44.3亿元[图]_智研咨询 || 研判2025!”
+goodhousekeeping.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,Good Housekeeping,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“Good Housekeeping”；标题样本“35 Most Popular Gifts of 2026, According to a Pro Gift Giver || The Best Espresso Machines”"
+cqcb.com,news_media,新闻与媒体,news_media,综合新闻媒体,上游新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“上游新闻”；标题样本“大渡口老字号“沈家仁”品牌创始人任喜凤:三十年成就街坊邻居心里的“头牌牛肉面” || 武汉调整优化落户政策公开征集意见 放宽买房落户条件-上游新闻 汇聚向上的力量”
+jdpower.com,research_documentation,研究与文档,industry_research,行业研究与数据,J.D. Power,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“J.D. Power”；标题样本“2025中国汽车品牌口碑指数NPS | JD Power || j.d.power2026中国新能源汽车产品魅力指数研究（nev-apeal）”
+mafengwo.cn,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,马蜂窝,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“马蜂窝”；标题样本“曲靖酒店预订 - 马蜂窝 || 正宗粤菜好好味 || 涟源美食推荐 - 马蜂窝”
+cjn.cn,government_public,政府与公共机构,public_institution,公共机构,武汉城市留言板,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“武汉城市留言板”；标题样本“市公安局-政府部门-武汉城市留言板 || 武汉开发区-各区(功能区)-武汉城市留言板 || 江岸区-各区(功能区)-武汉城市留言板”
+cheaa.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,中国家电网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“中国家电网”；标题样本“AWE2026闭幕:AI科技集中亮相,产业创新动能持续释放 || 格力“真AI爱”引爆AWE2026 || 美的携手华为：全球首台鸿蒙智选美的智能空调上市”"
+naibabao.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,奶爸保,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“奶爸保”；标题样本“【测评】热销定期寿险深度测评 - 奶爸保 || 定期寿险保什么适合谁?2026普通人怎么选更划算?”
+yohohongkong.com,business_services,商业信息与服务,ecommerce,电商平台,yohohongkong,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“yohohongkong”；标题样本“中秋月餅推薦2026！10+半島/望月/皇玥/流心奶黃/榴槤冰皮 ... || 蒸焗炉选购指南2026!8款人气蒸焗炉推介及优惠+消委会评测比较 | 友和 YOHO”
+mydrivers.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,快科技,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“快科技”；标题样本“2025年家用投影仪年终盘点:全价位标杆机型选购指南-快科技-科技改变生活 || Mini LED只要2499元起！小米REDMI电视X55/65/75 2026开售 || 全球首”
+qdxw.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“qdxw.com.cn”；标题样本“2026年京东淘宝618活动全面开启!618活动哪天·最便宜优惠力度最大?附618大促时间表,手机家电国补入口领取方法一览!”"
+shobserver.com,news_media,新闻与媒体,news_media,综合新闻媒体,上观新闻,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“上观新闻”；标题样本“万花筒主题+限定新品，喜茶迪士尼小镇店焕新回归 || 上海首店2,普陀首店2!上海环球港连开4家人气新店”"
+dayi.org.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,中国医药信息查询平台,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国医药信息查询平台”；标题样本“过敏性鼻炎 || 退烧药”
+hupu.com,platform_community,平台与社区,interest_community,兴趣与生活社区,虎扑,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“虎扑”；标题样本“蜜雪冰城_奶茶品牌_虎扑评分 || 蜜雪冰城必喝榜_虎扑评分”
+hznet.tv,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“hznet.tv”；标题样本“2026优选:广州平价温泉度假村哪家值得去五家企业多人种草-逸海驰温泉酒店 || 2026年资深新手快餐店、餐饮网红品牌哪家好吃指南:数据驱动的五家优选品牌深度评测与避坑参考-小禾”
+bang.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,榜中榜,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“榜中榜”；标题样本“中国十大好喝奶茶榜中榜 || 广州十大著名茶楼排名 广州早茶哪里好 老广州必去的早茶餐厅推荐→榜中榜”
+pchouse.com.cn,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,太平洋家居网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“太平洋家居网”；标题样本“新帝豪门窗 (NEHOW) 品牌专区_太平洋家居网产品库 || 耀世启幕｜伊盾门窗4000㎡一站式采购中心开业盛典圆满收官”
+w10.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“w10.cn”；标题样本“2025年11月国内滑雪场地Top10推荐榜单：专业评测与避坑指南 || 帐篷：从功能分类到使用维护的全方位专业解析 || 现今市面上口碑好的采耳服务商家排行top10”
+mama.cn,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,妈妈网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“妈妈网”；标题样本“产后康复到底做不做?社区医院VS月子中心花钱避坑指南_妈妈网孕育”
+xiyuege.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,禧月阁月子中心,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“禧月阁月子中心”；标题样本“北京禧月阁和圣贝拉哪个好 || 禧月阁月子中心”
+xttv.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,邢台广播电视台,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“邢台广播电视台”；标题样本“2026年新手友好烧烤加盟品牌TOP5推荐:全国知名餐饮加盟/全程扶持的餐饮加盟/十大餐饮加盟品牌/周边烧烤加盟/选择指南 || 杭州月子中心推荐:淇米乐疗愈月子会所领衔五大品质之”
+huize.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,慧择保险网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“慧择保险网”；标题样本“定寿险咨询 定寿险应该咨询哪些问题?_慧择保险网 || 定期寿险榜单更新!2026年大公司的定寿，我只推荐这5款!(含投保入口)_慧择保险网 || 接受不了这3个“缺点”，劝你别买”
+iflytek.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,iFLYTEK,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“iFLYTEK”；标题样本“科大讯飞智慧教育售后服务网点【广东省】 || 联系我们 - 科大讯飞”
+youth.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国青年网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国青年网”；标题样本“京东生鲜618吃喝玩乐惊喜日来袭！爆款小龙虾买一斤送一斤，1元抢120斤大西瓜_发现频道_中国青年网 || 别再只送粽子了！京东生鲜超600款硬核好礼上新，双节送礼、聚餐两相宜_发”
+1688.com,business_services,商业信息与服务,ecommerce,电商平台,1688买家百科,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“1688买家百科”；标题样本“味热干面 || 正品保障保健品-1688批发网 || 武汉特产热干面”
+bloomagebiotech.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,华熙生物科技股份有限公司,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华熙生物科技股份有限公司”；标题样本“华熙生物 || 联系我们”
+dahe.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,大河网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“大河网”；标题样本“44天变1天！郑州公租房申请开启“加速模式””
+hangzhou.gov.cn,government_public,政府与公共机构,government_public,政府机构,杭州市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“杭州市人民政府”；标题样本“关于《杭州市交通运输局 杭州市公安局关于发布优化我市小客车调控政策若干措施的通告》的政策解读 || 小客车调控政策完善优化 详细政策解读来了 || 市交通运输局窗口小客车调控办事事”
+qiyoutuo.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,qiyoutuo,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“qiyoutuo”；标题样本“2026上海月子中心排行 孕期情绪调理优选”
+sznews.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,深圳新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“深圳新闻网”；标题样本““深圳医美查”上线 一键可查医美机构多项关键信息 地址、许可证有效期、三年内行政处罚情况一目了然_深圳新闻网 || 市消委会等部门联合发布美容机构口碑指数排行榜 前三是这几家 _深”
+vodjk.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,健康一线,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“健康一线”；标题样本“2026北京市比较好私人医院排名公布,2026上榜机构成功率与费用参考 || 2026北京最出名私立试管医院排名前七 || 北京十大私立试管医院排名更新,哪些榜上有名?”"
+3000.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,3000,reviewed,manual_review,medium,引用 URL 集中在 3000.cn/brand 与 /brand-column，标题为品牌 TOP、口碑推荐与厂家选择内容
+ncwb.cn,news_media,新闻与媒体,news_media,综合新闻媒体,邢台网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“邢台网”；标题样本“2026年中国新式米线连锁加盟品牌深度评测与排行 || 郑州婚纱照推荐:高分甄选5大品牌+避坑指南-邢台网-邢台日报社”
+peopleapp.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,人民日报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“人民日报”；标题样本“九毛九开放加盟业务 验资需300万元现金或2000万元资产”
+scol.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,Scol,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Scol”；标题样本“10月8日起，成都公积金提取有变|川观新闻”
+haoshunjia.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,好顺佳集团,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“好顺佳集团”；标题样本“个人怎样注册有限公司_个人注册有限公司步骤指南 - 好顺佳 || 怎么注册个体和公司-个体与公司注册全流程指南”
+lenovo.com.cn,platform_community,平台与社区,professional_community,专业技术社区,联想商城,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“联想商城”；标题样本“【新品来袭】拯救者创世2026，个人AI移动工作站 - 拯救者圈 - 联想社区 || 社区中心 || 美团到店通用券20元-联想乐享知识库”
+360doc.com,platform_community,平台与社区,knowledge_community,知识社区,360doc个人图书馆,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“360doc个人图书馆”；标题样本“上海性价比较高的装修公司：预算与品质的平衡之选 || 武汉不是只有热干面，武汉好吃的20家面馆，你打卡过几家？ || 贵阳贵阳！必吃的10家老字号美食，出发了小伙伴们~”
+dealmoon.com,business_services,商业信息与服务,shopping_information_service,购物信息与服务,北美省钱快报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北美省钱快报”；标题样本“奈雪终于来布鲁克林啦～ || 芝加哥远程办公实测:这几家咖啡馆是我的“第二办公室” | 社区校园生活精选 || 茶百道也来湾区了！！！”
+hangyeob.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,hangyeob,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“hangyeob”；标题样本“2026全国优质月子会所推荐榜 || 2026南昌正宗夜宵热门榜 地道风味商家推荐 || 2026南昌食材新鲜大排档美食推荐榜”
+itbear.com.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,IB资讯网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“IB资讯网”；标题样本“2026 学生手机优选清单，华为 nova 16 系列颜值实力双在线，适配青春全场景-热点资讯-ITBear科技资讯 || 2026冰箱横评十强：从参数到体验，这篇说透了-热点资讯”
+manmanbuy.com,business_services,商业信息与服务,shopping_information_service,购物信息与服务,百度,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“百度”；标题样本“【筋膜枪什么牌子好】筋膜枪怎么选购_慢慢买 || 【耳机什么牌子好】耳机怎么选购_慢慢买”
+zhuxiaobang.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,住小帮,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“住小帮”；标题样本“「2023双11家电十大好物推荐」榜单揭晓，双十一家电合集!-住小帮 || 「2023双11家电十大好物推荐」榜单新鲜出炉，精选家电好物-住小帮 || 养生壶好物安利:小熊/美的/”
+bacaoo.com,business_services,商业信息与服务,shopping_information_service,购物信息与服务,拔草哦,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“拔草哦”；标题样本“2026黑五护肤品海淘网站推荐 || Farfetch || Nautica诺帝卡”
+jmtv.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,荆彩网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“荆彩网”；标题样本“2026年热门的生态民宿设计/民宿设计哪家强品牌厂家推荐 || 2026年质量好的内蒙古隔音系统门窗/内蒙古保温系统门窗高口碑品牌推荐”
+cnjjwb.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,经济晚报网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“经济晚报网”；标题样本“2026年头部高收益银行理财产品全维度评测口碑榜TOP5出炉， 高收益银行理财产品推荐购买指南-消费/科技/健康专题-经济晚报网 || 温和养肤修护敏感肌，多款品牌实用参考-消费/”
+dxy.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,医院汇,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“医院汇”；标题样本“一文掌握:五类降压药的特点，怎样联合使用? - 丁香园 || 美中宜和再上榜!荣获 2023 年度「最佳品牌传播医疗机构」奖 - 医院汇 - 丁香园 || 降压药物天天用，千万别栽”
+elecfans.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,电子发烧友网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“电子发烧友网”；标题样本“智能家居全屋智能系统品牌 - 电子发烧友网 || 电子产品哪个网站好 - 电子发烧友网 || 西安监控器材 - 电子发烧友网”
+huanqiu.com,news_media,新闻与媒体,news_media,综合新闻媒体,环球网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“环球网”；标题样本““2021知乎高赞好物100”榜单揭晓 犀利回答解锁生活好物 || 郑州将推出公租房 租金标准为市场价一半左右 || 重磅!武汉市积分入户细则公布!新城区门槛低于中心城区”
+jjckb.cn,news_media,新闻与媒体,news_media,综合新闻媒体,经济参考报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“经济参考报”；标题样本“十大婚礼策划、婚礼堂品牌评测，高颜值婚礼首选! _ 经济参考网 _ 新华社《经济参考报》官方网站”
+miniso.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,名创优品MINISO,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“名创优品MINISO”；标题样本“投资政策 - 名创优品”
+traveldaily.cn,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,环球旅讯,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“环球旅讯”；标题样本“中国饭店集团60强，最新出炉! - 环球旅讯 || 会员规模突破2.2亿!首旅如家“如LIFE俱乐部”会员体系再度重磅升级 - 环球旅讯(TravelDaily) || 民宿遇上连”
+chimelong.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,长隆旅游度假区,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“长隆旅游度假区”；标题样本“关于长隆 || 常见问题|长隆旅游度假区”
+cnfol.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,中金在线财经频道,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中金在线财经频道”；标题样本“2026年券商资产配置产品推荐排行榜:哪些服务值得关注 || “2025年度烧烤十大品牌”榜单隆重揭晓!_中金在线财经号”
+dayoo.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,广州日报大洋网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“广州日报大洋网”；标题样本“6月1日外卖新规施行，美团外卖“放心外卖”十大举措全面落地_广州日报大洋网 || 深圳美发店推荐榜:从头部连锁到隐匿匠铺_广州日报大洋网”
+dianhua.cn,business_services,商业信息与服务,business_information_service,商业信息与企业服务,电话邦,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“电话邦”；标题样本“吕记兴烤全羊(鹤洲公馆店)湖南怀化电话 || 极米科技四川成都武侯区4009218996”
+guozunlaw.com,vertical_professional,垂直专业内容,legal_content,法律专业内容,国樽律师事务所,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“国樽律师事务所”；标题样本“【国樽律所】创业必备攻略：教你如何在各地轻松办理营业执照 || 【国樽律所】工商营业执照具体需要什么材料和手续 || 【国樽律所】详细解读：营业执照办理流程全攻略及各类企业特别要求”
+haidilao.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,海底捞,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“海底捞”；标题样本“Haidilao || 成为海底捞会员 || 锅底”
+huaon.com,research_documentation,研究与文档,industry_research,行业研究与数据,华经情报网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华经情报网”；标题样本“2025年中国剧本杀行业规模现状及趋势分析（附产业链、市场规模及重点企业）「图」 || 2026-2032年中国健身器材行业发展前景展望及投资战略咨询报告 || 2026-2032”
+nanshasheraton.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,仕顿酒店资讯网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“仕顿酒店资讯网”；标题样本“2026年订酒店还在手动比价？飞猪千问价AI订房到底能省多少？ || “酒店 + 公寓” 双品牌模式：号称 “长短租通吃”，真能如愿吗？ || 连锁酒店排行榜2025年发布，中国饭”
+nespresso.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,Nespresso奈斯派索官网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Nespresso奈斯派索官网”；标题样本“Where can I buy Nespresso  machine and capsules?”
+vogue.com.tw,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,Vogue Taiwan,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Vogue Taiwan”；标题样本“旅宿新選｜在東京銀座泡熱海溫泉！日本最仙精品旅宿「馥府 東京 銀座」打造都心療癒棲所，傳統與現代交織的日式度假魅力 || 旅宿精選｜比爾蓋茲、大勢韓星指定入住！「峴港洲際度假村」以”
+zidonghua.com.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,自动化网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“自动化网”；标题样本“全自动咖啡机哪家比较靠谱?2026国产全自动咖啡机品牌推荐 - 供应展示厅 - 自动化网 ZiDongHua.com.cn ，自动化科技展示平台、“自动化者”人文交流平台。 || ”
+chinaz.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,CHINAZ,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“CHINAZ”；标题样本“京东618巅峰28小时：61.8元的爆款生鲜盲盒将限时返场 || 生鲜618最新资讯_生鲜618最新动态_618”
+hnqnw.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,hnqnw,reviewed,manual_review,medium,"人工复核域名、站点名与标题样本：站点名“hnqnw”；标题样本“2026全国出名的植发医院排行榜新发布,碧莲盛、大麦、雍禾等前十强连锁机构技术口碑双优 || 国内植发10强医院排行榜2026:碧莲盛、雍禾私立及协和公办技术揭秘 || 国内正规整”"
+iyiou.com,news_media,新闻与媒体,business_media,商业财经媒体,亿欧网,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“亿欧网”；标题样本“全国首家独立门店！京东家居馆携sômthin‘else 另有奇物共创沉浸式消费场景 || 花西子_杭州花凝香生物科技有限公司_亿欧数据 || 讯飞AI录音笔旗舰新品S8离线版:硬件”
+nzxww.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,南漳县融媒体中心,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“南漳县融媒体中心”；标题样本“【热点关注】江城大幅放宽落户条件 夫妻登记结婚一年即可申办随迁落户 || 抗老修复选哪个牌子的护肤品好?2026高口碑温和有效修护护肤品TOP10实测榜”
+oeeee.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,Oeeee,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Oeeee”；标题样本“春假叠加清明，各地发放“大礼包”，这些景区对“娃”免票 || 湾区婚庆消费指引来了!76家企业/个人入选金玺奖榜单推荐”
+tidenews.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,潮新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“潮新闻”；标题样本““螺吸粉”奶茶、酸汤柠檬水爆火！新茶饮靠“地域怪味”打破内卷 || 十年再调整，关于杭州小客车指标获取，这些要注意”
+xywy.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,寻医问药,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“寻医问药”；标题样本“北京十大私立眼科医院排名哪家好?热门推荐10家医院资料”
+zjol.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,桐乡新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“桐乡新闻网”；标题样本“十年再调整 关于杭州小客车指标获取这些要注意 || 桐乡新闻”
+chinapp.net.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,商业品牌网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“商业品牌网”；标题样本“2026年至今西安奶茶原料市场:实力品牌深度解析与选型指南-商业品牌网 || 2026年近期成都本地人常去的火锅探店指南:哪家好吃一目了然-商业品牌网”
+city8.com,search_page_proxy,搜索与页面代理,map_page_proxy,地图与页面代理,城市吧,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“城市吧”；标题样本“丝情发艺私人定制预约式发型屋”
+fjsen.com,news_media,新闻与媒体,news_media,综合新闻媒体,东南网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“东南网”；标题样本“厦门市户籍新政11月1日起正式实施 || 厦门市户籍新政11月1日起正式实施 - 民生 - 东南网厦门频道 || 真金白银+真情实意 诚邀青年人才“留厦来””
+rich-healthcare.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,瑞慈集团,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“瑞慈集团”；标题样本“瑞慈集团官方网站-集团简介”
+shanghai.gov.cn,government_public,政府与公共机构,government_public,政府机构,上海市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“上海市人民政府”；标题样本“c4ca4238a0b923820dcc509a6f7... || 上海个人居住用房买卖税费全梳理!2026最新政策一文读懂 || 关于进一步优化调整本市房地产政策的通知”
+cbndata.com,research_documentation,研究与文档,industry_research,行业研究与数据,CBNData,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“CBNData”；标题样本“2亿年轻人追捧的脱口秀，为何难“复制”李诞和笑果文化? | CBNData || CBNData-第一财经商业数据中心 || 蜜雪领跑、奈雪掉队，“茶饮六小龙”打响“淘汰赛” | ”
+fmw.com.cn,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,蜂蜜网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“蜂蜜网”；标题样本“体检中心品牌排行榜前十名_体检中心品牌哪个好-全球品牌网 || 采耳品牌排行榜前十名_采耳品牌哪个好-全球品牌网”
+foodtalks.cn,vertical_professional,垂直专业内容,industry_content,行业专业内容,FoodTalks,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“FoodTalks”；标题样本“2026中国连锁餐饮品牌TOP300发布，覆盖超52万家门店 || 2026全球餐饮品牌价值25强，蜜雪冰城、海底捞、瑞幸上榜 || 奶茶加鱼子酱你敢信?喜茶新品直接把网友看呆:米”
+mct.gov.cn,government_public,政府与公共机构,government_public,政府机构,中华人民共和国文化和旅游部,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中华人民共和国文化和旅游部”；标题样本“中华人民共和国文化和旅游部 || 跟著品牌去旅行!首批体验地推荐名单发布”
+nbd.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,每日经济新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“每日经济新闻”；标题样本““手里全套认购材料没出过问题”，但如今网上预约始终卡在“待审核”，宸嘉发展上海新盘认购惹争议，回应“不存在超越权限的问题” || 取消面积、金额限制 武汉宣布买房即可落户 || 每”
+shangpu-china.com,research_documentation,研究与文档,industry_research,行业研究与数据,尚普咨询,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“尚普咨询”；标题样本“2025年1月~10月儿童奶粉市场洞察报告 || 2025年1月~10月筋膜枪市场洞察报告 || Untitled”
+southcn.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,南方+,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“南方+”；标题样本“全市最多!顺德6家粤菜标准化示范店高分通过验收!_南方plus_南方+ || 明日10时开抢！2026“请到广东过端午”文旅消费惠民补贴正式发放 || 点外卖当好“云监工”，美团外”
+cmrnn.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国市场监管新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国市场监管新闻网”；标题样本“个体工商户如何便捷申报年报 || 个体工商户如何便捷申报年报 - 中国市场监管报 移动端”
+czt.cc,news_media,新闻与媒体,news_media,综合新闻媒体,草根长株潭网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“草根长株潭网”；标题样本“买电器是京东好还是天猫好_长株潭网 || 十一去哪旅游 || 十大早教品牌排行榜新出炉_长株潭网”
+e23.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,舜网-济南市唯一新闻网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“舜网-济南市唯一新闻网站”；标题样本“2026年度济南市居民基本养老保险参保缴费一文全知道 || 人社小课堂｜灵活就业人员应该了解的社会保险知识 - 焦点新闻”
+health-100.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,美年大健康,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“美年大健康”；标题样本“美年大健康官网-美年体检中心官网-美年大健康体检预约-美年大健康体检报告查询”
+mapbar.com,search_page_proxy,搜索与页面代理,map_page_proxy,地图与页面代理,Mapbar,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Mapbar”；标题样本“Snow美甲彩妆 || 巴奴毛肚火锅 || 郭靖烤全羊(私人订制丰台丰体店)”
+tom.com,news_media,新闻与媒体,news_media,综合新闻媒体,TOM网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“TOM网”；标题样本“2025-2026年婴儿配方奶粉十大品牌榜推荐:科学评测夜间喂养防便秘选对配方 _TOM母婴 || 开婴儿游泳馆需要办哪些证件?需要做什么准备工作?都在这里了!_TOM母婴 || ”
+xingyujia.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,星瑜家瑜伽,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“星瑜家瑜伽”；标题样本“2025年「瑜伽加盟」厂家评测报告:聚焦初学者市场的高性价比连锁品牌选型指南 - 新闻 || 星瑜家瑜伽连锁_初学者瑜伽课程_按次付费双师教学 - 上海星瑜伽健身管理有限公司”
+gz-cmc.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,广州日报新花城,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“广州日报新花城”；标题样本““什么值得买”发布2026年货消费趋势 || 外卖平台新规则：商家“门店验真”“后厨环境核验”不通过，食安将得零分”
+pedaily.cn,news_media,新闻与媒体,business_media,商业财经媒体,投资界,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“投资界”；标题样本“排队狂潮再起：奈雪新加坡店三日破20.9万，美国新店开业爆火”
+qichamao.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,企查猫,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“企查猫”；标题样本“2026年体检中心10大知名品牌排行 || 2026年信用卡10大知名品牌排行 || 2026年民宿10大知名品牌排行”
+360kuai.com,business_services,商业信息与服务,business_content_platform,商业内容平台,快资讯,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“快资讯”；标题样本“上海新房摇号积分制政策调整 购房流程再优化 || 外卖口碑好的有哪些？外卖必点榜帮你筛选高口碑外卖商家”
+csai.cn,vertical_professional,垂直专业内容,finance_content,财经专业内容,希财网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“希财网”；标题样本“建行装修贷申请条件及需要资料 || 快来收藏！长沙装修贷款申请攻略-希财网”
+fang.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,房天下,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“房天下”；标题样本“厦门调整房产落户，房产落户如何申请？ || 如何根据厦门调整房产落户政策规定来申请不动产权属证书？ || 武汉楼市新政重磅发布：公积金贷款额度提升至150万，购房落户更便捷”
+haier.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,Haier,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“Haier”；标题样本“海尔空调让风懂AI:四面控风,风避人吹 || 高端创牌升级!海尔Horizon冰箱登陆印尼 - 海尔集团官网”"
+jdgyys.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,经道国医,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“经道国医”；标题样本“【行业】2025艾灸养生馆加盟品牌前十名排行榜有哪些?掘金健康产业新蓝海项目推荐!-经道国医品牌连锁加盟官网 || 【行业】全国十大中医养生馆加盟品牌排行榜有哪些?-经道国医品牌连”
+pharnexcloud.com,research_documentation,研究与文档,industry_research,行业研究与数据,摩熵医药,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“摩熵医药”；标题样本“江苏奇天基因生物科技有限公司”
+caixin.com,research_documentation,研究与文档,industry_research,行业研究与数据,财新数据库,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“财新数据库”；标题样本“【数据图解】年轻人爱“上墙” 攀岩馆赛道悄然崛起 || 个人征信牌照 || 第四家个人征信公司落地上海 如何探索新模式”
+familydoctor.com.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,家庭医生在线,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“家庭医生在线”；标题样本“五大类降压药全面一览表:特点、适用人群与注意事项-绝经相关资讯-家庭医生在线 || 常规体检项目全解析:你知道都检查什么吗?-体检相关资讯-家庭医生在线 || 牙齿种植体十大排名，”
+fmcgchina.com,business_services,商业信息与服务,business_content_platform,商业内容平台,快消品网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“快消品网”；标题样本“【独家】年味藏在好物里,马年万事皆可期——【蛇辞马至】快消品年货好物榜 || 【独家】年味藏在好物里，马年万事皆可期——【蛇辞马至】快消品年货好物榜 || 【饮品】2026年春节现”"
+hktijian.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,汇康体检网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“汇康体检网”；标题样本“全国体检中心排名_体检中心排行榜TOP100 - 汇康体检网”
+iqilu.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,闪电新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“闪电新闻”；标题样本“西安市2026年第一批高层次人才申请确认工作启动”
+nih.gov,government_public,政府与公共机构,public_institution,公共机构,National Institutes of Health (NIH) | (.gov),reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“National Institutes of Health (NIH) | (.gov)”；标题样本“Additional Effect of Exercise to Intermittent Fasting on Body Composition and Cardiometabo”
+p5w.net,vertical_professional,垂直专业内容,finance_content,财经专业内容,全景网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“全景网”；标题样本“华熙生物(688363)_投资者关系活动_全景网 || 年终放榜！2025年度品牌影响力总榜发布！ || 济安金信发布一季度公募基金公司评级报告： 73家次斩获五星评级”
+verybeaut.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,非常完美网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“非常完美网”；标题样本“杭州的月子中心一般多少钱一个月?推荐三家性价比较高的!-非常完美 || 看杭州市月子中心哪个比较好怎么收费！-社区义工”
+wxrb.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,无锡日报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“无锡日报”；标题样本“不用下车一分钟就能完成采样 || 核酸检测医疗机构名单来了! || 梁溪区：高温天，有“凉” 策”
+xunfei.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,科大讯飞,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“科大讯飞”；标题样本“科大讯飞线下门店查询—科大讯飞、讯飞商城(xunfei.cn) || 讯飞AI学习机售后服务-科大讯飞AI学习机-讯飞学生平板电脑”
+ayijob.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,阿姨JOB,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“阿姨JOB”；标题样本“全国保姆家政公司排名前十名-阿姨JOB家政服务平台 || 杭州我爱我妻家政公司 - 与知名三甲医院和月子中心合作，资深孕产期专家级月嫂团队，负责25项妈妈护理+30项宝宝护理+11”
+byxx.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,百业网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“百业网”；标题样本“2026年6月评价高的小火锅加盟品牌推荐，小火锅/旋转小火锅，小火锅加盟品牌选哪家 || 2026年目前服务好的火锅品牌找哪家，成都火锅/火锅/老火锅/美食/附近火锅/社区火锅/牛”
+eeo.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,经济观察网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“经济观察网”；标题样本““我的长沙”可直通中邮消金 政务平台成消费金融新入口 || 酸菜鱼不香了?太二“爆改”闯川菜红海”
+flyert.com.cn,platform_community,平台与社区,interest_community,兴趣与生活社区,飞客,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“飞客”；标题样本“2026春季出境游封神!免签国大整理，说走就走太香了-行程游记-FLYERT - 手机版 || 一篇看懂锦江WeHotel——2025锦江酒店集团入门攻略-锦江荟-FLYERT -”
+fuzhou.gov.cn,government_public,政府与公共机构,government_public,政府机构,福州市人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“福州市人民政府”；标题样本“http://sfj.fuzhou.gov.cn/xxgk/dtxx/jcdt/202401/t20240119_4764300.htm || 企业如何进行年度报告公示？ || 福”
+nikon.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,尼康（中国）,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“尼康（中国）”；标题样本“尼康(中国) || 尼康(中国) - 经销商”
+qianzhan.com,research_documentation,研究与文档,industry_research,行业研究与数据,前瞻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“前瞻网”；标题样本“2024年中国玻尿酸医美注射产品市场分析之“水光针”:国产替代程度高，行业利好政策有助于合规销售资质厂商_资讯_前瞻经济学人 || 2025中国火锅领跑企业排名TOP10 - 前瞻”
+qlwb.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,齐鲁晚报,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“齐鲁晚报”；标题样本“济南社保在线│社会保险参保登记办理指南 || 社保在线灵活就业参保,线上就能办!”"
+qyresearch.com.cn,research_documentation,研究与文档,industry_research,行业研究与数据,恒州博智（QYResearch）,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“恒州博智（QYResearch）”；标题样本“2025-2031全球及中国心脏支架行业研究及十五五规划分析报告--QYResearch(恒州博智) || 2026年全球信用卡行业总体规模、主要企业国内外市场占有率及排名--QY”
+zqrb.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,证券日报网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“证券日报网”；标题样本“618电视热销榜单：海信全渠道量额双冠RGB-Mini LED成换代首选 || PDF || 百胜中国宣布收购必胜客品牌在中国大陆的所有权 彰显对中国市场长期信心-证券日报网”
+cqmmgo.com,platform_community,平台与社区,interest_community,兴趣与生活社区,重庆购物狂,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“重庆购物狂”；标题样本“挑嘴的重庆人，都来说说你心目中第一梯队的重庆小面吧 || 重庆老火锅攻略|6 家神级老店-美食俱乐部-重庆购物狂手机版 || 飞到大青岛，吃了再走 【周末去哪】”
+jia400.com,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,慧亚招商网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“慧亚招商网”；标题样本“富奥斯门窗海南三亚运营中心盛大开工｜金锤破浪，闪耀三亚 || 盛大启幕｜罗普斯金因诺门窗吴中运营中心正式开业！ || 邦维斯门窗竞争力怎么样？加盟有哪些支持”
+mi.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,小米官网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“小米官网”；标题样本“木鸟民宿-订民宿公寓和旅游住宿 - 小米应用商店”
+poucen.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,佳美网整形平台,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“佳美网整形平台”；标题样本“2026深圳光电医美与再生填充前十机构指南:协和、美莱领衔,附王牌医生技术特色 || 南昌仁爱月子中心套餐价格大公开!2万到9万,4档套餐怎么选?附真实体验分享 || 郑州隐形矫正”"
+rongdie.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,容蝶网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“容蝶网”；标题样本“2025年全国连锁整形医院前十强真实口碑调查:美莱、艺星、联合丽格价格与技术全解析 || 2025年国内主流玻尿酸品牌解析:乔雅登、瑞蓝、润百颜、海薇区别与价格参考,附正规机构查询”"
+sjzdaily.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,燕赵晚报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“燕赵晚报”；标题样本“2026年珍珠奶茶十大品牌排行榜:健康化与精细化成破局关键_石家庄新闻网 || 选对好公司实现一站式无忧家居装修——看资质看口碑看工地看合同这些攻略一样不能少”
+spxww.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“spxww.com”；标题样本“基于2147家企业实地调研：2026年度上海装修行业综合实力十强榜单正式发布 - 社会 || 控油洗发水哪款价格实惠？2026 年 5 款高性价比实测推荐，学生党闭眼入 - 社会 ”
+verym.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,非常爱美网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“非常爱美网”；标题样本“网评深圳整形美容医院排名前十位:美莱/艺星/八大处/阳光/非凡等连锁机构实力强-非常爱美 || 网选2026热门深圳美容院排名前十名:艺星/阳光/鹏程等从眼鼻胸脂到抗衰特色项目+医”
+vip.com,business_services,商业信息与服务,ecommerce,电商平台,唯品会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“唯品会”；标题样本“AirPods - 唯品会 || 薇诺娜 - 唯品会 || 追觅洗地机 - 唯品会”
+xiachufang.com,platform_community,平台与社区,interest_community,兴趣与生活社区,下厨房,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“下厨房”；标题样本“【步骤图】烘焙小白福利🎉入门工具必备清单‼️的做法_烘焙小白福利🎉入门工具必备清单‼️的做法步骤_早餐_下厨房 || 好喝又低卡,这个奶茶界的“新晋网红”有点料!”"
+zhengguannews.cn,news_media,新闻与媒体,news_media,综合新闻媒体,正观新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“正观新闻”；标题样本“曾卷入“李佳琦风波”的花西子，又“翻车”了? 正观新闻 || 被嘲笑过时的经济型酒店，为何还能霸榜? 正观新闻”
+zyjjw.cn,news_media,新闻与媒体,business_media,商业财经媒体,中原经济网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中原经济网”；标题样本“足疗修脚行业格局生变:解析2026年头部品牌前三甲，千亿蓝海谁主沉浮?-中原经济网”
+cctv.cn,news_media,新闻与媒体,news_media,综合新闻媒体,央视网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“央视网”；标题样本“2026年启程!收好这份新闻日历_新闻频道_央视网(cctv.com) || 中消协发布消费提示:家电以旧换新 利国惠民_新闻频道_央视网(cctv.com) || 如何避免落入室”
+chinatax.gov.cn,government_public,政府与公共机构,government_public,政府机构,国家税务总局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“国家税务总局”；标题样本“[PDF] 山东省灵活就业人员社会保险费缴费事项清单(济南适用) || 山东省企业和机关事业单位社会保险费缴费操作指南（济南适用）”
+cinic.org.cn,news_media,新闻与媒体,industry_news_media,行业新闻媒体,中国产业经济信息网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国产业经济信息网”；标题样本“更体面 更吉祥 更健康 更有趣 休闲食品品牌多维创新抢占年货市场”
+lanjinger.com,news_media,新闻与媒体,business_media,商业财经媒体,蓝鲸财经,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“蓝鲸财经”；标题样本“2026年最先凉掉的是民宿生意？_资讯-蓝鲸财经 || AWE26观察:电视卷体验,清洁电器卷场景,AI眼镜卷入口”"
+pku.edu.cn,government_public,政府与公共机构,public_institution,公共机构,北京大学国家发展研究院,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北京大学国家发展研究院”；标题样本“关于2026年劳动合同制职工申报积分落户的通知”
+tujia.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,途家网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“途家网”；标题样本“途家民宿商家入驻标准”
+weddingvogue.cn,vertical_professional,垂直专业内容,industry_content,行业专业内容,婚礼风尚网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“婚礼风尚网”；标题样本“TopBridal国际婚纱奢品荟:独家荟集近20个世界一线正品婚纱礼服品牌的时尚奢品店! - 行业快报 - 婚礼风尚 || 人物观点 | 新创立、老资历，这个发展迅猛的主持团队“只”
+xcar.com.cn,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,爱咖号,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“爱咖号”；标题样本“实测对比5款纯电SUV 谁能兼顾快充速度与超长续航?-爱卡汽车爱咖号 || 小米SU7/极氪007/Model 3/小鹏P7+续航实测:谁把“续航王”拉下马-爱卡汽车爱咖号”
+xfb315.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,消费保,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“消费保”；标题样本“吃出虫卵、发霉变质……良品铺子、三只松鼠、百草味居零食品牌投诉Top3!-避坑指南-消费保 || 戴森(自有商城)品牌主页-消费保 || 花西子(天猫)客服售后投诉维权中心-消费保”
+zbj.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,zbj,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“zbj”；标题样本“咖啡馆连锁品牌排行榜_上海猪八戒网 || 微信小程序店铺怎么打开_江西猪八戒网 || 微信小程序怎么使用酒店订房_浙江猪八戒网”
+100ec.cn,vertical_professional,垂直专业内容,industry_content,行业专业内容,网经社,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“网经社”；标题样本“""什么值得买""发布2026年货趋势报告 || ""什么值得买""发布2026年货趋势报告 网经社 电子商务研究中心 电商门户 互联网智库”"
+91jm.com,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,就要加盟网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“就要加盟网”；标题样本“密室逃脱加盟排行榜_就要加盟网 || 桌游加盟费用 桌游加盟多少钱_就要加盟网”
+consumer.gov.mo,government_public,政府与公共机构,public_institution,公共机构,澳门消费者委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“澳门消费者委员会”；标题样本“揭秘婚纱照6大陷阱：隐形消费不断 || 消费提示：家电以旧换新利国惠民 || 選擇醫美，您該知道的這些事兒”
+cqjiuque.cn,unclassified_long_tail,未分类长尾,unclassified,未分类,,reviewed_unclassified,manual_review,low,引用 URL 集中在 cqjiuque.cn/news，标题多为久雀棋牌加盟推广；站点主体、品牌归属与独立内容属性仍缺少交叉证据，保留未分类
+ctdsb.net,news_media,新闻与媒体,news_media,综合新闻媒体,极目新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“极目新闻”；标题样本“上新啦！昭君原野三店同步开业！夏日旅居幸福感爆棚 || 美食博主扎堆测评，外地游客直奔打卡 武汉野生小街成为年轻人的“面包目的地” || 首批50家餐饮门店获2025年度湖北省“放”
+dianzhangzhipin.com,business_services,商业信息与服务,job_service,招聘与职业服务,店长直聘,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“店长直聘”；标题样本“「文和友投资管理(深圳)有限公司招聘」-店长直聘 || 「杭州嘉一文化创意有限公司招聘」-店长直聘”
+ebrun.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,亿邦动力,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“亿邦动力”；标题样本“年货清单悄悄变天 健康消费取代白酒坚果成新宠 - 电商数据 - 亿邦动力 || 霸王茶姬一周动向：海外GMV暴涨139% 茶拉朵冰淇淋引爆五城 - 品牌 - 亿邦动力”
+guangzhou315.com,government_public,政府与公共机构,public_institution,公共机构,广州市消费者委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“广州市消费者委员会”；标题样本“京津冀消协组织发布智能门锁比较试验结果：青稞、博克、幻侣3款样品可被平面照片解锁 || 年末大扫除好帮手——洗地机该怎么选？穗佛消委会联合比较试验告诉您 || 老人助听器怎么选？闽”
+jsyks.com,vertical_professional,垂直专业内容,education_content,教育专业内容,驾驶员考试网,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“驾驶员考试网”；标题样本“南京石佛寺驾校考试预约_石佛寺驾校网上预约考试-南京石佛寺驾校网 || 南京科目二考试预约_南京科目二网上预约考试-驾驶员考试网”
+mp17.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,美评网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“美评网”；标题样本“国内整形医院前十名单有哪些:广州联合丽格、北京伊美尔、成都美莱上榜,技术优口碑好选它没错 || 国内靠谱的医美前十名:揭秘安全合规、技术精湛且口碑爆表的医美宝藏机构! || 深圳美”"
+bloomagebioactive.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,华熙生物,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华熙生物”；标题样本“用户协议-华熙生物 || 隐私政策-华熙生物”
+cls.cn,news_media,新闻与媒体,news_media,综合新闻媒体,财联社,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“财联社”；标题样本“6月4日周六《新闻联播》要闻汇总 || TCL、格力、华帝、长虹等家电企业将在AWE2026集中展示AI成果-财联社 || 【金牌纪要库·风口会议】五一黄金周将至！数据显示今年游客”
+cn-witmed.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,智慧医疗网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“智慧医疗网”；标题样本“民营体检行业迈入“AI加速度”时代，将最大化发挥预防医疗的价值-财经-智慧医疗网”
+cnpharm.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,中国食品药品网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国食品药品网”；标题样本“儿童安全用药 || 合理用药 | 如何合理选用小儿退热药？ || 选对产品 温和护肤”
+ctnews.com.cn,vertical_professional,垂直专业内容,travel_content,旅游专业内容,中国旅游新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国旅游新闻网”；标题样本“PDF || Untitled || 民宿的价值重构与宿村共生”
+fh.gov.cn,government_public,政府与公共机构,government_public,政府机构,宁波市奉化区人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“宁波市奉化区人民政府”；标题样本“体检季来临，面对五花八门的体检中心，你的“选择困难症”犯了吗?”
+futunn.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,富途牛牛,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“富途牛牛”；标题样本“「樂天旅行」發佈2026年黃金週旅遊趨勢 || 美的与华为终端深化战略合作，发布首款鸿蒙智选美的智能空调”
+mingdiao.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,名雕装饰,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“名雕装饰”；标题样本“装修公司怎么选才不会踩坑？选装修公司看哪些方面？-名雕装饰股份 || 装修干货 | 新手小白必看！家装四大核心工艺全解析-名雕装饰股份 || 装修干货｜ 如何选择装修公司？怎样避开”
+tantuw.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,坦途网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“坦途网”；标题样本“福州杨梅红艺术中心 || 福州爱乐祺早教 || 超值!凯狮英语推出免费试听课预约活动_安徽凯狮教育”
+ttbz.org.cn,government_public,政府与公共机构,public_institution,公共机构,全国团体标准信息平台,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“全国团体标准信息平台”；标题样本“现代家政服务业优质服务品牌评价规范（征求意见稿） || 福建省厦门市团体标准tb3502/txxxx—2025家政服务企业等级划分与评定规范”
+tuniu.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,途牛旅游网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“途牛旅游网”；标题样本“广州早茶老字号排行榜”
+znds.com,vertical_professional,垂直专业内容,technology_content,科技专业内容,智能电视网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“智能电视网”；标题样本“AirPods Pro 2和华为FreeBuds Pro 3对比?_耳机社区 || 投影仪选购水太深?这份“保姆级”避坑指南请收好!_综合投影交流区_ZNDS - 手机版”
+33cy.cn,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,33餐饮网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“33餐饮网”；标题样本“2026年蜜雪冰城奶茶加盟费用多少钱,蜜雪冰城一般怎么样加盟的 || 2026蜜雪冰城开店费用价目表,加盟蜜雪冰城需要多少钱 || 蜜雪冰城加盟费用大概是多少,蜜雪冰城加盟条件和费”"
+cfen.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国财经报网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国财经报网”；标题样本“2026内控合规、风险管理咨询公司榜单:国际巨头与本土头部机构解析”
+changsha.gov.cn,government_public,政府与公共机构,government_public,政府机构,长沙市商务局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“长沙市商务局”；标题样本“国家级望城经济技术开发区-互动交流 || 奶茶“圈粉” 城市“出圈” | 长沙新消费“五小虎”系列报道”
+chinadevelopment.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国发展网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“中国发展网”；标题样本“蓝犀牛搬家入选朝阳区第四届“凤鸣计划”,荣获高成长企业称号”"
+foshan.gov.cn,government_public,政府与公共机构,government_public,政府机构,Foshan,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Foshan”；标题样本“关于对区属开展医疗美容服务医疗机构信息的公示”
+guizhou.gov.cn,government_public,政府与公共机构,government_public,政府机构,贵州省卫生健康委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“贵州省卫生健康委员会”；标题样本“企业年报公示具体应该怎样操作呢？ || 谭坤”
+haoyunbang.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,好孕帮,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“好孕帮”；标题样本“北京市十大私立医院2025年权威排名揭晓!顶尖医疗选择不容错过--好孕帮 || 北京市妇科比较好的私立医院有哪些?附妇产私立医院-医生推荐-好孕帮 || 北京高端私立产检医院哪家好”
+ikang.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,ikang,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“ikang”；标题样本“爱康国宾体检预约_爱康国宾体检报告查询 - 爱康国宾健康管理机构 || 获得荣誉- 爱康国宾健康管理机构 || 详情页-爱康”
+jiamengfei.com,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,加盟费查询网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“加盟费查询网”；标题样本“好利来蛋糕店加盟_好利来蛋糕店加盟条件是什么?加盟电话多少? - 加盟费查询网 || 开一家桌游连锁需要多少钱?加盟桌游连锁需要多少资金? - 加盟费查询网 || 开一家皇派门窗需”
+nerdwallet.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,NerdWallet,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“NerdWallet”；标题样本“NerdWallet Best-of-Awards 2026: Investing”
+winona.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,winona,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“winona”；标题样本“敏肌水乳套装_敏感肌肤护肤品-薇诺娜 || 薇诺娜-敏感皮肤护肤品官方网站,国货敏感肌护肤品品牌,针对敏感肌肤保养/护理”"
+xiuxiandou.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,休闲君评测,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“休闲君评测”；标题样本“喜糖十大品牌排行榜 - 2026年最新推荐 - 休闲君评测 || 敏感修护护肤品十大品牌排行榜 - 2026年最新推荐 || 敏感肌肤护肤品十大品牌排行榜 - 2026年最新推荐”
+zj.gov.cn,government_public,政府与公共机构,government_public,政府机构,浙江省人民政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“浙江省人民政府”；标题样本“个体工商户营业执照办理问答 || 中华人民共和国市场主体登记管理条例实施细则”
+alibaba.com,business_services,商业信息与服务,ecommerce,电商平台,SmartBuy,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“SmartBuy”；标题样本“AirPods Best Guide: How to Choose the Right Model in 2026 || Best Air Fryer Brands 2025: E”
+caijing.com.cn,vertical_professional,垂直专业内容,finance_content,财经专业内容,财经网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“财经网”；标题样本““付款前没有看过样板间”，单价近13万元/平方米的豪宅陷维权困境，开发商这样回应 || 今年暑期出游风向标：北欧领跑，南京厦门长白山“出圈”_财经网”
+consumerreports.org,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,Consumer Reports,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“Consumer Reports”；标题样本“8 Best Coffee Makers of 2026, Lab Tested and Reviewed || Most Reliable Kitchen Appliance B”"
+gd.gov.cn,government_public,政府与公共机构,government_public,政府机构,广东省人民政府,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“广东省人民政府”；标题样本““粤式新潮流”广东文旅消费热门场景 春节体验游线路正式发布 || 三年两次全省第一,云浮法律援助案件质量何以“领跑” || 广州市场主体总量突破400万户 跃居全国第三”"
+harpersbazaar.com,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,Harper's BAZAAR,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“Harper's BAZAAR”；标题样本“The 12 best wedding dress brands, as worn by the most stylish brides of all time || 全台10间「”"
+ilife.cn,vertical_professional,垂直专业内容,health_content,医疗健康内容,美容美体网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“美容美体网”；标题样本“中国10大名牌血压计，测得准才是硬道理_知识百科-美容美体网 || 国产十大化妆品排行榜 国产十大化妆品排行榜前十名_知识百科-美容美体网”
+mygymchina.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,mygymchina,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“mygymchina”；标题样本“美吉姆国际早教中心_亲子幼儿早教加盟_专业早 教课程--美吉姆早教中心 || 课程体系-美吉姆国际早教中心_亲子幼儿早教加盟_专业早 教课程--美吉姆早教中心”
+news18a.com,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,网通社汽车,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“网通社汽车”；标题样本“2026最可靠汽车品牌排名：雷克萨斯、斯巴鲁、丰田包揽前三 || 5月新能源销量榜：零跑“一骑绝尘”，新势力集体站上“3万+”台阶 || 5月新能源销量榜：零跑“一骑绝尘”，比亚迪”
+peopledailyhealth.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,人民日报健康客户端,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“人民日报健康客户端”；标题样本“我国现批准人类精子库29家，辅助生殖机构633家”
+snqa.com.cn,unclassified_long_tail,未分类长尾,unclassified,未分类,SNQA,reviewed_unclassified,manual_review,low,引用 URL 使用 snqa.com.cn 根路径模板参数，标题主题跨度大且站点名称不一致，站点主体与内容属性证据不足，保留未分类
+stbj.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,四通搬家公司,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“四通搬家公司”；标题样本“口碑好的搬家公司哪里找?六大正规渠道一站式查找-搬家百科-四通搬家 || 如何联系搬家公司预约搬家服务-搬家百科-四通搬家”
+yzwb.net,news_media,新闻与媒体,news_media,综合新闻媒体,紫牛新闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“紫牛新闻”；标题样本“2025年苏州市中小学幼儿园入学入园招生政策发布 || 云朵盐水鸭奶茶，吉伊卡哇联名爆单，粉耀闪闪杯子出圈……立秋日多家新茶饮店销量涨超5倍-扬子晚报网 || 视频 ▏南京江宁驾考”
+zhaopin.com,business_services,商业信息与服务,job_service,招聘与职业服务,智联招聘,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“智联招聘”；标题样本“易法通 || 瑞幸咖啡招聘信息”
+bitauto.com,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,BitAuto,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“BitAuto”；标题样本“2025年纯电动车续航排行榜(轿车/SUV/MPV) | BitAuto || 比亚迪汉碰撞测试 | BitAuto || 比亚迪销服系统入口 | BitAuto”
+court.gov.cn,government_public,政府与公共机构,government_public,政府机构,国际商事法庭（CICC）,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“国际商事法庭（CICC）”；标题样本“中华人民共和国公证法 - 中华人民共和国最高人民法院公报 || 中国司法大数据服务网 || 国际商事法庭 | CICC - 第三方仲裁机构名录”
+cyzone.cn,news_media,新闻与媒体,business_media,商业财经媒体,创业邦,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“创业邦”；标题样本“2026年，头部茶咖品牌还要继续比拼开店？ || 不推销、不办卡，李开复曾看好的快剪店，如今都走下坡路了? || 名创优品还有多少增长空间?”
+dnjbh.cn,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,婚博会资讯网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“婚博会资讯网”；标题样本“婚纱摄影排行榜前十名榜单出炉 || 婚纱照风格有哪几种 现在流行哪些风格”
+fangchan.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,中房网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中房网”；标题样本“武汉落户政策拟进一步放宽 || 武汉落户政策拟进一步放宽_中房网_中国房地产业协会官方网站”
+gdzwfw.gov.cn,government_public,政府与公共机构,government_public,政府机构,广东政务服务网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“广东政务服务网”；标题样本“企业开办一件事 || 公司设立登记-广东政务服务网 || 广东政务服务网”
+glo.com.cn,vertical_professional,垂直专业内容,legal_content,法律专业内容,北京市环球律师事务所,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北京市环球律师事务所”；标题样本“环球律师事务所”
+hrbicesnow.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,哈尔滨冰雪大世界,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“哈尔滨冰雪大世界”；标题样本“冰雪大世界股份有限公司 || 哈尔滨冰雪大世界”
+pchome.net,vertical_professional,垂直专业内容,technology_content,科技专业内容,Pchome电脑之家,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Pchome电脑之家”；标题样本“从百元到6000元 618上榜高性价比手机推荐”
+shihuo.cn,business_services,商业信息与服务,shopping_information_service,购物信息与服务,识货,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“识货”；标题样本“SUPOR/苏泊尔 SP530 破壁机 1.75L 自动保温 触控大屏 搅拌辅食 宝宝营养粥 家用 智能预约加热 免过滤 非静音 五谷杂粮 豆浆料理 冷热双打 SUPOR/苏泊尔 ”
+workercn.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中工网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中工网”；标题样本“2024年中国超市TOP100揭晓 沃尔玛、盒马、永辉、物美等居前10位 - 财经 - 中工网 || 銆愬尰淇濇湇鍔″彴銆戝煄闀囪亴宸ュ熀鏈尰鐤椾繚闄棬璇婂ぇ棰濆尰鐤楄垂鍏ㄩ鍨粯鎶”
+yunucms.com,business_services,商业信息与服务,business_content_platform,商业内容平台,云优资讯门户,reviewed,manual_review,medium,引用 URL 集中在 news.yunucms.com/brand，标题为品牌推荐、行业优选榜单与选择指南
+choco.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,CHOCO启蔻婚礼,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“CHOCO启蔻婚礼”；标题样本“盘点: 广州婚礼定制甜品台知道这8家，结婚现场_广州婚庆公司 || 盘点排行: 遍寻深圳婚礼甜品台商家，挑了9家很_深圳婚庆公司”
+cietac.org,government_public,政府与公共机构,public_institution,公共机构,中国国际经济贸易仲裁委员会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国国际经济贸易仲裁委员会”；标题样本“贸仲简介-中国国际经济贸易仲裁委员会”
+cnfin.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,中国金融信息网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国金融信息网”；标题样本“海信发布全球首创6合1热泵洗护站 棉花糖U7S开启分区洗护新范式 || 海尔全屋用水多款AI新品破解用水难题”
+hunantoday.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,新湖南,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“新湖南”；标题样本“消费贷“国补”上线，长沙多家银行线上线下开放办理 - 经济 || 消费贷让消费市场更热闹-----湖南日报数字报刊”
+lifetimes.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,生命时报,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“生命时报”；标题样本“很多养生馆以医谋财 || 选乳胶枕头，看、闻、按”
+simuwang.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,私募排排网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“私募排排网”；标题样本“私募排名”
+tojoyun.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,Tojoyun,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Tojoyun”；标题样本“2025年11月现制茶饮行业门店动态:新开3190家，关店2692家 || 挪瓦咖啡门店数量突破万家 跻身全球咖啡品牌门店数前五 || 烤鱼市场规模稳步增长，区域特色品牌蓬勃兴起”
+xiaomawang.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,小码王,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“小码王”；标题样本“小码王体验课怎么约?手把手教你预约+试听前必做的3件事-小码王 || 少儿编程机构排行榜|2026权威发布:十大品牌综合实力榜+家长选课指南-小码王”
+10100.com,business_services,商业信息与服务,business_content_platform,商业内容平台,大数跨境,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“大数跨境”；标题样本“六大行装修贷产品大纲汇总合集，容易批款的银行家装分期申请流程攻略- 大数跨境 || 超全深圳注册公司网上办理保姆级指南:详细操作流程及准备资料，最快三天拿证!- 大数跨境”
+amap.com,search_page_proxy,搜索与页面代理,map_page_proxy,地图与页面代理,高德地图,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“高德地图”；标题样本“长沙市奶茶店(老年人)推荐 - 高德地图”
+cpic.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,中国太平洋保险,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国太平洋保险”；标题样本“冒名就医办理虚假门特登记 千人违规医保卡叫停 || 如何选择定期寿险，定期寿险的理赔流程解析——中国太平洋保险(集团)股份有限公司官网 || 定期寿险怎么买?要注意哪些?——中国太”
+eastday.com,news_media,新闻与媒体,news_media,综合新闻媒体,东方天气,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“东方天气”；标题样本“铁岭40天天气 || 铁岭天气预报铁岭铁岭2026年06月07日天气 || 银州区天气预报铁岭银州区2026年06月06日天气”
+globalgrowthinsights.com,research_documentation,研究与文档,industry_research,行业研究与数据,Global Growth Insights,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“Global Growth Insights”；标题样本“Escape Room Market Size, Share, Growth, and Industry Analysis, By Types (Small Theme Room ”"
+harison.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,HARISON,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“HARISON”；标题样本“2026健身器材品牌排行榜 - HARISON健身器材官网 || 家用& 商用& 康复通用|2026国际健身器材品牌指南 - HARISON健身器材官网”
+jiaheu.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,家核优居,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“家核优居”；标题样本“家用小型咖啡机哪种好?4类咖啡机的使用体验对比,一文搞懂怎么选! || 按摩椅3D机芯和4D机芯的区别:6个方面差异大,看完再买不踩坑!”"
+makepolo.com,business_services,商业信息与服务,business_information_service,商业信息与企业服务,马可波罗网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“马可波罗网”；标题样本“【保健中心品牌排行榜】保健中心十大品牌-马可波罗 || 【温泉品牌排行榜】温泉十大品牌-马可波罗 || 云南旅游民宿价格查询及排名:民宿价格表”
+matrixfitnesszh.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,Matrix健身器材,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Matrix健身器材”；标题样本“商用专业健身器械如何选购?哪些品牌更适合高端健身房? | 答疑解惑 || 商用健身器材品牌排行前十有哪些?如何选择适合健身房的高性价比品牌? | 答疑解惑 || 商用健身房跑步机如”
+mingyihui.net,vertical_professional,垂直专业内容,health_content,医疗健康内容,名医汇,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“名医汇”；标题样本“无锡12家靠谱亲子鉴定机构列表(附2025年鉴定机构推荐) || 无锡靠谱亲子鉴定机构一览(附2025年亲子鉴定机构汇总)”
+sfeshow.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,SFE上海国际连锁加盟展览会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“SFE上海国际连锁加盟展览会”；标题样本“SFE连锁加盟展-餐饮加盟:掘金路上的智慧之选(下) - % SFE上海国际连锁加盟展览会 || 【参展品牌】菟竹集——全国首创黄精奶茶系列，专注现制茶饮赛道，零添加！ - 品牌动”
+yunnan.cn,news_media,新闻与媒体,news_media,综合新闻媒体,云南网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“云南网”；标题样本“2026年中国连锁百强发布 门店总数达28.9万个_国内_新闻频道_云南网 || 多地推行“买房即可落户”政策 引“人才”到聚“人口””
+0515yc.cn,news_media,新闻与媒体,news_media,综合新闻媒体,盐城网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“盐城网”；标题样本“2026北京定制婚礼公司深度调查报告:五大品牌实测排名与新人的""避坑决策手册""”"
+35jk.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,35健康,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“35健康”；标题样本“做植发哪家权威-35健康 || 哪家植发最权威-35健康 || 如何选择靠谱的产后修复机构-35健康”
+9kd.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,凯迪网,reviewed,manual_review,medium,"人工复核域名、站点名与标题样本：站点名“凯迪网”；标题样本“[原创] 剖析唱吧麦颂KTV价格贵不贵,装修风格和实力究竟如何 || [原创] 抗皱紧致赛道再掀风潮,九大高端精华领衔“冻龄”新范式 || [原创] 深圳市代理记账服务商排名前十”"
+c2cc.cn,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,C2cc,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“C2cc”；标题样本“C2CC传媒 || 数据|12月淘宝数据:节后多品牌透支 国货仍占据天猫绝对优势 - C2CC传媒”
+cn-healthcare.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,健康界,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“健康界”；标题样本“争第一创唯一|便捷、体验双升级 江南大学附属医院开设市内首个“自驾车核酸检测点”|大学|检测|江南|医院|核酸|-健康界 || 产后康复医疗服务”
+consumer.org.hk,government_public,政府与公共机构,public_institution,公共机构,消費者委員會,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“消費者委員會”；标题样本“实试24小时健身室 睇清收费细节 留意无人当值时段支援 || 实试6大外卖平台 送餐最多相差近1小时 - 消费者委员会 || 用家评分：最少毛病的冷气机/洗衣机/电视机品牌 - 消”
+cqrb.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,重庆日报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“重庆日报”；标题样本“TCL发布SQD-Mini LED电视新品 推动显示技术全民普及-重庆日报 || 省时省事省心 “数字重庆”深度融入市民生活·重庆日报数字报”
+crd.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,CRD钻戒,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“CRD钻戒”；标题样本“钻戒定制哪家最好2026年，钻戒定制哪家有实力性价比最高? - CRD克徕帝珠宝官网 || 黄金铂金K金的区别详解，黄金铂金K金哪个更保值? - CRD克徕帝珠宝官网”
+csc100.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,乡村基官网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“乡村基官网”；标题样本“品牌介绍 - 乡村基官网”
+dg.gov.cn,government_public,政府与公共机构,government_public,政府机构,东莞市卫生健康局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“东莞市卫生健康局”；标题样本“健康体检知多D——从医疗机构监管角度谈健康体检”
+guancha.cn,platform_community,平台与社区,knowledge_community,知识社区,风闻,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“风闻”；标题样本“2025火锅最具增长力品牌TOP榜出炉! || 618直播电商数据战报出炉!各大平台和主播谁才是真赢家? || 一年卖3亿，新品接连走红，最近它家 “拉丝奶茶” 又刷屏了”
+legaldaily.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,法治网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“法治网”；标题样本“中国法律援助基金会第五届理事会首次签约仪式签约单位笔谈 || 无故闭店退费困难强制转课校外培训机构跑路，钱都去哪了？ || 汇聚慈善之力 共创美好生活”
+maimai.cn,platform_community,平台与社区,professional_community,专业技术社区,脉脉,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“脉脉”；标题样本“内控合规咨询标杆,行业头部机构集结 || 十大最好申请信用卡,信用卡屡次被拒也可下卡你有吗”"
+nespressochina.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,nespressochina,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“nespressochina”；标题样本“Nespresso奈斯派索官网 | 胶囊咖啡-胶囊咖啡机-意式浓缩咖啡 || 高级餐饮商用咖啡解决方案 | Nespresso 中国 | 专业商用咖啡”
+southmoney.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,社保网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“社保网”；标题样本“别再发愁！教你如何顺利完成济南社保线上缴费（5月16日）-社保网 || 天津医保报销范围有哪些?哪些不能报?(6月16日) || 快速上手！济南社保线上缴费，这些方法缺一不可（1-”
+sse.com.cn,government_public,政府与公共机构,public_institution,公共机构,上海证券交易所,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“上海证券交易所”；标题样本“2025年度良品铺子股份有限公司社会责任报告 || 华熙生物科技股份有限公司2025年半年度报告 || 珀莱雅化妆品股份有限公司2025年年度报告摘要”
+szlh.gov.cn,government_public,政府与公共机构,government_public,政府机构,深圳市罗湖区政府,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“深圳市罗湖区政府”；标题样本“企业开办-深圳市罗湖区人民政府门户网站 || 如何开办企业？”
+tmtpost.com,news_media,新闻与媒体,news_media,综合新闻媒体,钛媒体,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“钛媒体”；标题样本“2026年外卖必点榜出炉，老字号、本地特色店占七成 || 地方茶饮出省，能否跑出下一个霸王茶姬？ || 护肤十年:国货三次登顶-钛媒体官方网站”
+yicai.com,news_media,新闻与媒体,news_media,综合新闻媒体,一财网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“一财网”；标题样本“持续打造以专业为核心的医美消费决策体系 美团发布2025北极星医美榜 || 格力电器发布多款新品，并表示未来将深度构建人-家-车生态”
+8158.com,business_services,商业信息与服务,business_franchise,商业信息与加盟服务,8158加盟网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“8158加盟网”；标题样本“2026年十大空气净化器高性价比高口碑双维度实测推荐 || 嘴滋味麻辣烫加盟 || 好利来蛋糕店加盟费用需要多少?投资24.4万元即可开店赚大钱!-8158加盟网”
+chinafit.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,ChinaFit,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“ChinaFit”；标题样本“CHINAFIT健身网”
+cinn.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中国工业新闻网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国工业新闻网”；标题样本“「夏 • 畅玩」上海艾迪逊酒店发布夏日城市玩乐指南 || 中国工业新闻网 || 益普索2025中国品牌全球信任指数（GTI）发布”
+cnhubei.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,荆楚网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“荆楚网”；标题样本“外来“阿嬷”遇本地“爷爷” ，知名茶饮品牌在武汉打擂 || 很多人都去过!武汉这家影院内地第一，全球排名26!”
+dehenglaw.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,北京德恒律师事务所,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“北京德恒律师事务所”；标题样本“关于德恒 - 德恒律师事务所 || 新加坡商标注册与维护全攻略（上篇）——商标申请周期、费用、公告异议、驳回救济、不使用撤销等，一文讲清 - 德恒探索 - 德恒律师事务所”
+eepw.com.cn,vertical_professional,垂直专业内容,technology_content,科技专业内容,EEPW 电子产品世界,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“EEPW 电子产品世界”；标题样本“2026全屋智能家居定制品牌解析:引领高端智能家居生活新范式-电子产品世界手机版 || 2026年智能锁十大品牌推荐，深度解析安全耐用实力派-电子产品世界手机版”
+elle.com,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,ELLE,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“ELLE”；标题样本“12 Best High-Street Wedding Dresses for 2026 || 2025母亲节保养组合攻略一次看!无痛入手超值精华液、乳霜还送脸部按摩滚轮 || 2”
+henan.gov.cn,government_public,政府与公共机构,government_public,政府机构,河南省人民政府门户网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“河南省人民政府门户网站”；标题样本“《郑州市人民政府办公厅关于调整公共租赁住房申请条件和审核程序等有关问题的通知》政策解读_地方_河南省人民政府门户网站 || 郑州市调整公租房申请条件和保障方式 3月1日起实施”
+nckkk.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,奶茶网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“奶茶网”；标题样本“中国十大品牌奶茶排名背后:2026年门店数据、口碑与配料真相-奶茶网 || 果茶品牌排行榜前十名:2026新茶饮老炮儿的真心推荐与避坑指南-奶茶网”
+wine-world.com,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,红酒世界网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“红酒世界网”；标题样本“2025年 WS 百大榜单公布-红酒世界网 || Domaine Leroy Clos de Vougeot Grand Cru, Cote de Nuits, France-勒桦”"
+zhiguf.com,vertical_professional,垂直专业内容,finance_content,财经专业内容,指股网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“指股网”；标题样本“FTG外汇平台口碑如何?用户真实评价揭秘 || Star Trader外汇口碑如何?国外投资者怎么说”
+zhonglun.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,中伦律师事务所,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中伦律师事务所”；标题样本“中伦律师事务所官方网站”
+120ask.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,快速问医生,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“快速问医生”；标题样本“中老年人养生吃什么药好_养生频道-快速问医生 || 北京私密整形医院排行榜 北京私密整形专科医院排名名单 || 注射玻尿酸和外用玻尿酸的区别-快速问医生”
+apple.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,Apple (中国大陆),reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Apple (中国大陆)”；标题样本“AirPods - 机型比较 - Apple (中国大陆) || Apple (中国大陆)”
+bthhotels.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,首旅如家酒店集团,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“首旅如家酒店集团”；标题样本“会员协议 || 如家旗下-武汉理工大学马房山驿禾酒店 || 首旅如家”
+byd.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,BYD,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“BYD”；标题样本“电动化上半场完美收官:比亚迪发布第二代刀片电池及闪充技术 || 隐私条款”
+gdlsyzs.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,两手硬装饰,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“两手硬装饰”；标题样本“如何系统性地鉴别一家靠谱的装修公司?一份资深专家的评估逻辑与实战指南-装修问答 - 两手硬装饰 || 装修公司哪家靠谱?7大黄金判断标准，教您避开广州装修90%的坑!-装修问答 -”
+hbsztv.com,news_media,新闻与媒体,news_media,综合新闻媒体,华网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“华网”；标题样本“2026年1月可靠的河南法律咨询律所 || 2026年如何挑选顶尖知识产权团队？这份推荐请收好 || 2026年武汉移民签证机构精选：五家值得信赖的品牌解析”
+hubeidaily.net,news_media,新闻与媒体,regional_news_media,地方新闻媒体,湖北日报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“湖北日报”；标题样本“2026春节文旅消费新趋势:年俗、冰雪、县域游三足鼎立 - 湖北日报新闻客户端 || 浠水县中医院皮肤美容科 | 女神节专属宠爱，春日焕颜计划开启! - 湖北日报新闻客户端”
+jingzhou.gov.cn,government_public,政府与公共机构,government_public,政府机构,荆州市市场监督管理局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“荆州市市场监督管理局”；标题样本“2024年6月15日《行风热线》节选 || 不动产登记 || 购买二手房”
+jrj.com.cn,vertical_professional,垂直专业内容,finance_content,财经专业内容,金融界,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“金融界”；标题样本“从市场份额看发展:五大寿险公司占据半壁江山,中小公司破局进入关键期 || 银行理财产品风险等级如何划分?-手机金融界”"
+kanyaji.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“kanyaji.com”；标题样本“全国口腔医院十大品牌排行榜前十名单2026版 || 全国口腔器械十大品牌排行榜前十名单2026版”
+meadin.com,vertical_professional,垂直专业内容,industry_content,行业专业内容,迈点网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“迈点网”；标题样本“今年618，酒店都在悄悄卷 || 全球酒店集团205强排名出炉，本土14家排名上升!_迈点网 || 加盟旅悦不到一年，即获评2025全国甲级民宿，这家花筑・云卷云舒海景花园民宿火了”
+merach.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,麦瑞克,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“麦瑞克”；标题样本“2025跑步机品牌排行榜，让客厅变身米兰私人健身会所-麦瑞克 || 2026专业跑步机选购看这篇!从入门到专业，一站式选对家用款-麦瑞克 || 2026长期耐用、不容易坏的跑步机品”
+ruchuai.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,ruchuai,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“ruchuai”；标题样本“2026年郑州隐形矫正医院排名前十出炉!雅美口腔口碑医生名单及价格参考 || 北京普华门诊部综合解析:正规性、真实口碑与医疗服务体验深度评述 || 呼和浩特市治疗红血丝修复角质屏障”
+xmnn.cn,news_media,新闻与媒体,news_media,综合新闻媒体,厦门网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“厦门网”；标题样本“为毕业生提供留厦生活指南 《厦门市毕业生人才政策》手册推出 _新闻频道_厦门网 || 厦门户籍新政下月实施 三部门联合解读办理流程 _新闻频道_厦门网 || 厦门：真金白银+真情实”
+ah.gov.cn,government_public,政府与公共机构,government_public,政府机构,安徽省市场监督管理局,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“安徽省市场监督管理局”；标题样本“政府信息公开_安徽省市场监督管理局 || 省知识产权保护中心获批设立国家知识产权局商标业务受理窗口_安徽省市场监督管理局”
+ailandwedding.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,Ailand Wedding 艾岚目的地婚礼,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Ailand Wedding 艾岚目的地婚礼”；标题样本“艾岚目的地婚礼 | 关于我们”
+baojicdc.cn,government_public,政府与公共机构,public_institution,公共机构,,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“baojicdc.cn”；标题样本“《医疗美容服务管理办法》解读_宝鸡市疾病预防控制中心(宝鸡市卫生监督所) || 【卫监科普】远离非法美丽陷阱！“五看” 正确选择医美机构”
+cb.com.cn,news_media,新闻与媒体,news_media,综合新闻媒体,中国经营网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国经营网”；标题样本“湖北武汉出台“汉八条”楼市新政 购买新建商业办公用房可申请落户”
+ccfa.org.cn,government_public,政府与公共机构,public_institution,公共机构,中国连锁经营协会,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国连锁经营协会”；标题样本“2026中国餐饮/新茶饮出海品牌TOP50，等您上榜！-中国连锁经营协会 || 中国连锁经营协会”
+dahecube.com,news_media,新闻与媒体,news_media,综合新闻媒体,大河财立方,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“大河财立方”；标题样本“2026中国连锁百强榜单发布,河南两家头部零售企业位次相邻_大河财立方 || 外卖平台“大战”，消费者真能薅到羊毛?记者亲测”"
+eyecbest.com,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,慧行饰家网,reviewed,manual_review,medium,人工复核域名、站点名与标题样本：站点名“慧行饰家网”；标题样本“【装修公司避坑指南】如何选到靠谱的装修公司?这7个关键点必须看!(附合同模板) || 如何选择装修公司并签订完美合同:10大避坑指南与注意事项(附合同模板) || 装修公司选择全攻”
+gonyn.com,research_documentation,研究与文档,industry_research,行业研究与数据,共研网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“共研网”；标题样本“2026-2032年中国民宿行业全景调查与投资前景评估报告 || 2026年中国专业体检市场供需分析：早诊率提升至65%以上，人均消费金额442.40元/人次[图] || 2026”
+gwpp.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,各物品牌网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“各物品牌网”；标题样本“【筋膜枪优惠】哪里买筋膜枪便宜,性价比高的筋膜枪推荐_各物品牌_ || 密室逃脱品牌排行榜 || 福州市旅游景点排行榜”"
+hunzha.com,business_services,商业信息与服务,local_service_platform,本地服务与用户内容,婚庆网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“婚庆网”；标题样本“国内婚纱品牌大全排名前十名_新人造型 - 婚庆网 || 拍婚纱照选哪家前十名排名 中国十大名牌婚纱照 || 附近合适办结婚宴会的酒店(十大结婚宴会酒店)”
+ihg.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,IHG,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“IHG”；标题样本“三亚半山半岛洲际度假酒店”
+mbalib.com,research_documentation,研究与文档,knowledge_base,专业知识库,MBA智库,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“MBA智库”；标题样本“企业法人营业执照 || 快消品企业在产品质量监控方面有哪些重要举措? - MBA智库问答 || 红圈所 - MBA智库百科”
+philips.com.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,飞利浦官方网站,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“飞利浦官方网站”；标题样本“Elite+ 充电式声波震动牙刷 HX3734/03 | Sonicare -飞利浦 || 飞利浦电动牙刷产品介绍 - 电动牙刷专题 | Philips -飞利浦”
+pp918.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,品牌之家,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“品牌之家”；标题样本“好利来品牌资料介绍_好利来蛋糕怎么样 - 品牌之家 || 婚纱照哪家好?婚纱照品牌前十名都有哪些呢?”
+qyer.com,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,穷游网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“穷游网”；标题样本“南昌旅游攻略，南昌美食｜日料自助天花板？到底怎么样？--穷游网 || 超级文和友(海信广场店)的点评”
+sayweee.com,business_services,商业信息与服务,ecommerce,电商平台,Weee!,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Weee!”；标题样本“YAMAN 雅萌 家用脸部美容仪器 M22YL1 /MAX二代 多效SPA美容仪 美颜器 多功能射频脸部提亮提拉紧致 1 份 || 文和友 麻辣小龍蝦片 40 克 || 花西子陶瓷”
+tsrb.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,新天水,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“新天水”；标题样本“新天水-CMA认证实测!控油蓬松洗发水测评榜单 去屑止痒洗发水 百元内性价比高 || 新天水-【买前必看】618京东淘宝 近期别急下单!盘点 2026 年大促低价节点，找准时机入手”
+vogue.com.cn,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,VOGUE时尚网,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“VOGUE时尚网”；标题样本““磨皮”级底妆 高遮瑕 超持久,全新LANCÔME兰蔻持妆粉底棒粉底液,7月震撼上市 || 在十个城市绿洲SPA中，焕发活力与生机 || 闪光前行 耐克冬季跑步装备抵御恶劣天气影响”"
+xudoodoo.com,business_services,商业信息与服务,commercial_recommendation,商业推荐与榜单内容,xudoodoo,reviewed,manual_review,medium,引用 URL 为 xudoodoo.com/detail 与 /Article 页面，标题为品牌排名、选购指南与量化评估内容
+zhongyinlawyer.com,vertical_professional,垂直专业内容,legal_content,法律专业内容,Zhong Yin Law Firm,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Zhong Yin Law Firm”；标题样本“[About] - 中银律师事务所”
+airbnb.cn,business_services,商业信息与服务,travel_service,旅行与酒店信息服务,爱彼迎,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“爱彼迎”；标题样本“在爱彼迎上认证身份 - 爱彼迎帮助中心 || 如何成为爱彼迎Plus房源? - 爱彼迎帮助中心 || 谁能加入爱彼迎社区 - 爱彼迎帮助中心”
+anan.gov.cn,government_public,政府与公共机构,government_public,政府机构,安安网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“安安网”；标题样本“家用血糖仪准不准？这3个使用误区要避开 || 春日“花”式护肤，你的皮肤吃得消吗？ || 洗发水你真的选对了吗？科学攻略助你搞懂洗护奥秘”
+b2b168.org,business_services,商业信息与服务,business_information_service,商业信息与企业服务,免费黄页网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“免费黄页网”；标题样本“2026年广受信赖的快餐连锁品牌的优势靠谱商家测评排名 - 免费黄页网 || 2026年省心的本地菜馆筛选名录 - 免费黄页网 || 如何评估团建场地套餐?靠谱品牌选择攻略 - 免”
+ccb.com,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,中国建设银行,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中国建设银行”；标题样本“建行私人银行品牌介绍 || 欢迎访问中国建设银行网站”
+chooseauto.com.cn,vertical_professional,垂直专业内容,automotive_content,汽车专业内容,选车网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“选车网”；标题样本“2026第19周选车网口碑榜:用户用体验选出的真实答案 || 从用户视角读榜单:2026年第22周新能源口碑榜的真实信号”
+cndzys.com,search_page_proxy,搜索与页面代理,content_aggregation_proxy,内容聚合与页面代理,医疗搜索结果聚合,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“医疗搜索结果聚合”；标题样本“产后恢复中心排名 || 北京东城前三瑜伽馆评选静泓瑜伽专注瑜伽 9 年,凭安全体态矫正与身心疗愈稳居前列 || 飞鹤奶粉怎么样”"
+dyson.cn,brand_corporate,品牌与企业官网,brand_corporate,品牌与企业官网,dyson,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“dyson”；标题样本“Dyson V12n Detect Slim Nautik™ Absolute 洗地吸尘器 || 戴森发布全新旗舰无绳吸尘器:全新第五代马达重塑深度清洁”
+hainan.gov.cn,government_public,政府与公共机构,government_public,政府机构,乐东黎族自治县人民政府网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“乐东黎族自治县人民政府网”；标题样本“乐东黎族自治县民政局关于乐东黎族自治县中心敬老院等7家敬老院等级评定结果的公示 || 端午小长假拉动周边游 三亚品牌酒店实现“人财两旺””
+hanfeiyl.com,vertical_professional,垂直专业内容,health_content,医疗健康内容,涵飞医疗,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“涵飞医疗”；标题样本“2025年康复器械公司排名，康复器械公司排名TOP10! || 医院一般建议买哪种雾化器?拒绝“智商税”! || 康复科设备大全|主流品牌推荐|涵飞医疗器械平台”
+icswb.com,news_media,新闻与媒体,regional_news_media,地方新闻媒体,长沙晚报,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“长沙晚报”；标题样本“建行湖南省分行以金融活水助力安居 || 最高授信100万元！建行“建易贷”助安居”
+iresearch.cn,research_documentation,研究与文档,industry_research,行业研究与数据,艾瑞网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“艾瑞网”；标题样本“2026春节年货消费趋势:要高性价比，还要“爱你老己”_互联网_艾瑞网 || “什么值得买”发布2026年货消费趋势:生活有热爱，年货更对味_互联网_艾瑞网 || 年货迭代，“忙坏”
+jiangsu.gov.cn,government_public,政府与公共机构,government_public,政府机构,江苏省司法厅,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“江苏省司法厅”；标题样本“江苏省公安厅 政策文件”
+jschina.com.cn,news_media,新闻与媒体,regional_news_media,地方新闻媒体,中江网,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“中江网”；标题样本“无锡全面降低新型冠状病毒相关检测项目价格_中国江苏网 || 无锡新安：一份核酸检测报告背后的“24小时”_中国江苏网”
+legalband.com,research_documentation,研究与文档,industry_research,行业研究与数据,legalband,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“legalband”；标题样本“LEGALBAND - Your Trusted Guide to the Legal World || Untitled || aclient'sguide:toprankedl”
+marieclaire.com.tw,vertical_professional,垂直专业内容,consumer_lifestyle_content,消费与生活内容,Marie Claire 美麗佳人,reviewed,manual_review,high,人工复核域名、站点名与标题样本：站点名“Marie Claire 美麗佳人”；标题样本“2026情人节礼物推荐图辑!Cartier、Chanel、VCA、万宝龙对表等经典& 收藏款 || 2026過年禮盒推薦｜盤點20+新年春節禮盒、過年春節伴手禮，企業早鳥優惠不踩雷”
+miaoshou.net,vertical_professional,垂直专业内容,health_content,医疗健康内容,妙手医生,reviewed,manual_review,high,"人工复核域名、站点名与标题样本：站点名“妙手医生”；标题样本“北京私立医院试管机构排名前十,附详细介绍 || 北京私立试管婴儿最好医院有几家?”"

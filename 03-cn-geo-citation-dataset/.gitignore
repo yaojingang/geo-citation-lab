@@ -1,0 +1,7 @@
+.DS_Store
+.venv/
+__pycache__/
+*.pyc
+data/.warehouse_build_*/
+data/.warehouse_backup_*/
+data/.warehouse_build.lock

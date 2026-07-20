@@ -1,0 +1,230 @@
+{
+  "dataset": "CN-GEO Citation Dataset",
+  "version": "2.0.1",
+  "summary": {
+    "records": 214119,
+    "prompt_ids": 609,
+    "platforms": 12,
+    "layers": 7,
+    "category_pairs": 32,
+    "exact_duplicate_records": 24274,
+    "valid_urls": 211248,
+    "invalid_nonempty_urls": 1738,
+    "empty_urls": 1133
+  },
+  "missing_values": {
+    "domain": 2802,
+    "prompt_id": 4433,
+    "published_at": 74509,
+    "quote_index": 3545,
+    "quote_title": 1981,
+    "quote_url": 1133,
+    "site_name": 3573,
+    "snippet": 7816
+  },
+  "platform_distribution": [
+    {
+      "platform_code": "TYQW",
+      "records": 37320
+    },
+    {
+      "platform_code": "DB",
+      "records": 32115
+    },
+    {
+      "platform_code": "DOUBA",
+      "records": 29477
+    },
+    {
+      "platform_code": "TXYB",
+      "records": 25138
+    },
+    {
+      "platform_code": "TXYBA",
+      "records": 24622
+    },
+    {
+      "platform_code": "DP",
+      "records": 18712
+    },
+    {
+      "platform_code": "DPA",
+      "records": 16055
+    },
+    {
+      "platform_code": "TYQWA",
+      "records": 11314
+    },
+    {
+      "platform_code": "BDAI",
+      "records": 9588
+    },
+    {
+      "platform_code": "KIMI",
+      "records": 4819
+    },
+    {
+      "platform_code": "WXYY",
+      "records": 4689
+    },
+    {
+      "platform_code": "DYAI",
+      "records": 270
+    }
+  ],
+  "layer_distribution": [
+    {
+      "layer": "极端与真实场景",
+      "slug": "edge-real-world",
+      "records": 68089
+    },
+    {
+      "layer": "提问属性",
+      "slug": "query-intent",
+      "records": 51201
+    },
+    {
+      "layer": "行业维度",
+      "slug": "industry",
+      "records": 37528
+    },
+    {
+      "layer": "提示风格",
+      "slug": "prompt-style",
+      "records": 19996
+    },
+    {
+      "layer": "时间敏感度",
+      "slug": "time-sensitivity",
+      "records": 18653
+    },
+    {
+      "layer": "触发强度",
+      "slug": "trigger-intensity",
+      "records": 14219
+    },
+    {
+      "layer": "未分类",
+      "slug": "uncategorized",
+      "records": 4433
+    }
+  ],
+  "subcategory_distribution": [
+    {
+      "subcat": "高",
+      "records": 12312
+    },
+    {
+      "subcat": "中",
+      "records": 12194
+    },
+    {
+      "subcat": "金融",
+      "records": 10237
+    },
+    {
+      "subcat": "法律",
+      "records": 10148
+    },
+    {
+      "subcat": "地域限定",
+      "records": 9787
+    },
+    {
+      "subcat": "多约束真实任务",
+      "records": 9350
+    },
+    {
+      "subcat": "低",
+      "records": 8366
+    },
+    {
+      "subcat": "操作步骤",
+      "records": 7904
+    },
+    {
+      "subcat": "极度模糊",
+      "records": 7209
+    },
+    {
+      "subcat": "要求来源",
+      "records": 7069
+    },
+    {
+      "subcat": "专家角色",
+      "records": 6857
+    },
+    {
+      "subcat": "时间敏感",
+      "records": 6816
+    },
+    {
+      "subcat": "事实类",
+      "records": 6771
+    },
+    {
+      "subcat": "对比类",
+      "records": 6720
+    },
+    {
+      "subcat": "口碑类",
+      "records": 6664
+    },
+    {
+      "subcat": "医疗",
+      "records": 6638
+    },
+    {
+      "subcat": "购买类-电商",
+      "records": 6618
+    },
+    {
+      "subcat": "场景类",
+      "records": 6446
+    },
+    {
+      "subcat": "保健养生",
+      "records": 6354
+    },
+    {
+      "subcat": "汇总类",
+      "records": 6326
+    },
+    {
+      "subcat": "婚庆摄影",
+      "records": 6298
+    },
+    {
+      "subcat": "休闲娱乐",
+      "records": 6286
+    },
+    {
+      "subcat": "美容美发",
+      "records": 6261
+    },
+    {
+      "subcat": "餐饮",
+      "records": 6256
+    },
+    {
+      "subcat": "购买类-本地生活",
+      "records": 6229
+    },
+    {
+      "subcat": "酒店民宿",
+      "records": 6073
+    },
+    {
+      "subcat": "自然提问",
+      "records": 6070
+    },
+    {
+      "subcat": "品牌类",
+      "records": 5427
+    },
+    {
+      "subcat": "未分类",
+      "records": 4433
+    }
+  ]
+}

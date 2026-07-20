@@ -1,0 +1,13 @@
+platform_code,platform_name_cn,product_family,terminal,company_ecosystem,mapping_status,mapping_note
+TYQW,千问网页版,千问,web,阿里巴巴,confirmed,公开平台配置已确认
+TYQWA,千问手机版,千问,mobile,阿里巴巴,inferred,根据同产品代码配对及A后缀规则推定
+DB,豆包网页版,豆包,web,字节跳动,confirmed,公开平台配置已确认
+DOUBA,豆包手机版,豆包,mobile,字节跳动,confirmed,公开平台配置已确认
+TXYB,腾讯元宝网页版,腾讯元宝,web,腾讯,confirmed,公开平台配置已确认
+TXYBA,腾讯元宝手机版,腾讯元宝,mobile,腾讯,inferred,根据同产品代码配对及A后缀规则推定
+DP,DeepSeek网页版,DeepSeek,web,深度求索,confirmed,公开平台配置已确认
+DPA,DeepSeek手机版,DeepSeek,mobile,深度求索,confirmed,公开平台配置已确认
+BDAI,百度AI网页版,百度AI,web,百度,confirmed,公开平台配置已确认
+KIMI,Kimi网页版,Kimi,web,月之暗面,confirmed,公开平台配置已确认
+WXYY,文心网页版,文心,web,百度,confirmed,公开平台配置已确认
+DYAI,AI抖音网页版,AI抖音,web,字节跳动,confirmed,公开平台配置已确认

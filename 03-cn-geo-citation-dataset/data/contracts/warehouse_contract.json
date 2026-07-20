@@ -1,0 +1,141 @@
+{
+  "contract_version": "1.1.0",
+  "dataset_version": "2.0.1",
+  "canonical_storage": "Parquet with Zstandard compression",
+  "raw_layer": {
+    "path": "data/records/**/*.jsonl",
+    "mutable": false,
+    "schema": "schema/record.schema.json"
+  },
+  "identity_rules": {
+    "question_id": "prompt_id 存在时使用固定格式编号；缺失时使用规范化问题文本的 SHA-256 前缀",
+    "source_id": "规范域名的 SHA-256",
+    "page_id": "规范 URL 的 SHA-256",
+    "response_id": "旧数据无法恢复回答边界，保持为空"
+  },
+  "tables": {
+    "questions": {"grain_cn": "每个规范问题一行", "primary_key": ["question_id"]},
+    "question_labels": {"grain_cn": "每个问题与标签一行", "primary_key": ["question_id", "label_dimension", "label_value"]},
+    "ai_platforms": {"grain_cn": "每个 AI 平台代码一行", "primary_key": ["platform_code"]},
+    "sources": {
+      "grain_cn": "每个规范主域名一行",
+      "primary_key": ["source_id"],
+      "classification_fields": [
+        "source_category_l1",
+        "source_category_l1_cn",
+        "source_type",
+        "source_type_cn",
+        "classification_status",
+        "classification_method",
+        "classification_confidence",
+        "classification_evidence"
+      ]
+    },
+    "pages": {"grain_cn": "每个规范 URL 一行", "primary_key": ["page_id"]},
+    "responses": {"grain_cn": "每次完整 AI 回答一行；当前版本为空表", "primary_key": ["response_id"]},
+    "citation_observations": {"grain_cn": "每条原始引用观察一行", "primary_key": ["citation_id"]}
+  },
+  "source_classification": {
+    "reference_path": "data/reference/source_types.csv",
+    "reference_selection_cn": "manual_review 必须精确覆盖排除 legacy_curated 后按 unique_citation_count 降序、domain 升序选出的前 500 个域名。",
+    "level_1_and_level_2_enum": {
+      "platform_community": {
+        "cn": "平台与社区",
+        "source_types": {
+          "content_platform": "内容平台",
+          "social_content_platform": "社交内容平台",
+          "professional_community": "专业技术社区",
+          "knowledge_community": "知识社区",
+          "finance_community": "财经社区",
+          "interest_community": "兴趣与生活社区",
+          "video_community": "视频社区"
+        }
+      },
+      "news_media": {
+        "cn": "新闻与媒体",
+        "source_types": {
+          "news_media": "综合新闻媒体",
+          "regional_news_media": "地方新闻媒体",
+          "business_media": "商业财经媒体",
+          "industry_news_media": "行业新闻媒体"
+        }
+      },
+      "vertical_professional": {
+        "cn": "垂直专业内容",
+        "source_types": {
+          "health_content": "医疗健康内容",
+          "legal_content": "法律专业内容",
+          "finance_content": "财经专业内容",
+          "technology_content": "科技专业内容",
+          "automotive_content": "汽车专业内容",
+          "consumer_lifestyle_content": "消费与生活内容",
+          "industry_content": "行业专业内容",
+          "education_content": "教育专业内容",
+          "travel_content": "旅游专业内容"
+        }
+      },
+      "business_services": {
+        "cn": "商业信息与服务",
+        "source_types": {
+          "commercial_recommendation": "商业推荐与榜单内容",
+          "local_service_platform": "本地服务与用户内容",
+          "business_information_service": "商业信息与企业服务",
+          "business_content_platform": "商业内容平台",
+          "business_franchise": "商业信息与加盟服务",
+          "ecommerce": "电商平台",
+          "job_service": "招聘与职业服务",
+          "shopping_information_service": "购物信息与服务",
+          "travel_service": "旅行与酒店信息服务"
+        }
+      },
+      "research_documentation": {
+        "cn": "研究与文档",
+        "source_types": {
+          "document_platform": "文档平台",
+          "knowledge_base": "专业知识库",
+          "industry_research": "行业研究与数据"
+        }
+      },
+      "government_public": {
+        "cn": "政府与公共机构",
+        "source_types": {
+          "government_public": "政府机构",
+          "public_institution": "公共机构"
+        }
+      },
+      "brand_corporate": {
+        "cn": "品牌与企业官网",
+        "source_types": {"brand_corporate": "品牌与企业官网"}
+      },
+      "search_page_proxy": {
+        "cn": "搜索与页面代理",
+        "source_types": {
+          "search_proxy": "搜索与页面代理",
+          "map_page_proxy": "地图与页面代理",
+          "content_aggregation_proxy": "内容聚合与页面代理"
+        }
+      },
+      "unclassified_long_tail": {
+        "cn": "未分类长尾",
+        "source_types": {"unclassified": "未分类"}
+      }
+    },
+    "reference_governance": {
+      "approved_combinations": [
+        {"classification_method": "legacy_curated", "classification_status": "curated", "classification_confidence": "high"},
+        {"classification_method": "manual_review", "classification_status": "reviewed", "classification_confidence": "high"},
+        {"classification_method": "manual_review", "classification_status": "reviewed", "classification_confidence": "medium"},
+        {"classification_method": "manual_review", "classification_status": "reviewed_unclassified", "classification_confidence": "low"}
+      ],
+      "preflight_cn": "构建开始时校验字段完整性、规范域名唯一性、一级与二级配对、中文标签、治理组合、未分类状态语义及非空证据；任一失败即终止构建。"
+    },
+    "fallback_rules": [
+      "精确域名映射优先。",
+      "未命中精确映射的 gov.cn 或 .gov.cn 域名使用 domain_suffix_rule 归入 government_public/government_public。",
+      "其余域名使用 default_unclassified 归入 unclassified_long_tail/unclassified。"
+    ]
+  },
+  "representative_aggregate_policy_cn": "所有众数代表值在频数并列时按字段值升序选择；所有输出查询使用完整稳定排序键。该规则覆盖问题、信源、页面、页面特征和分析集市。",
+  "null_policy_cn": "可选元数据未提供时保持为空，并通过解析状态与 availability_flags 说明字段可用性。记录继续用于不依赖该字段的分析。quality_flags 仅标记需要清洗或复核的异常与重复状态。清洗过程不猜测发布时间、回答边界和模型版本。",
+  "deduplication_policy_cn": "事实表保留所有原始观察；is_preferred_exact_record 标记每组 record_hash 的首条记录；分析集市使用该标记去除精确重复。"
+}
