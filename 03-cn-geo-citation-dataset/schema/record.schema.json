@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/cn-geo/record.schema.json",
+  "title": "CN-GEO 原始引用记录",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "record_id", "prompt", "platform_code", "quote_url", "quote_title",
+    "site_name", "quote_index", "published_at", "domain", "snippet",
+    "prompt_id", "layer", "subcat", "record_hash"
+  ],
+  "properties": {
+    "record_id": {"type": "string", "description": "记录唯一编号"},
+    "prompt": {"type": "string", "description": "用户问题原文"},
+    "platform_code": {"type": "string", "description": "AI 回答平台代码"},
+    "quote_url": {"type": "string", "description": "引用链接原值，可能为空或为异常占位符"},
+    "quote_title": {"type": "string", "description": "引用网页标题；平台未提供时为空字符串"},
+    "site_name": {"type": "string", "description": "信源名称或内容发布者名称；平台未提供时为空字符串"},
+    "quote_index": {
+      "description": "引用序号原值",
+      "oneOf": [{"type": "integer"}, {"type": "string"}, {"type": "null"}]
+    },
+    "published_at": {"type": "string", "description": "发布时间原值，可能包含多种格式；平台未提供时为空字符串或零占位"},
+    "domain": {"type": "string", "description": "信源主域名原值；未提供时可从有效链接派生"},
+    "snippet": {"type": "string", "description": "引用摘要或正文片段；平台未提供时为空字符串"},
+    "prompt_id": {"oneOf": [{"type": "integer"}, {"type": "null"}], "description": "原始问题编号"},
+    "layer": {"type": "string", "description": "原始分类层中文名"},
+    "subcat": {"type": "string", "description": "原始子分类中文名"},
+    "record_hash": {"type": "string", "pattern": "^[0-9a-f]{64}$", "description": "记录内容哈希"}
+  }
+}

@@ -1,0 +1,82 @@
+{
+  "dataset": "CN-GEO Citation Dataset",
+  "dataset_version": "2.0.1",
+  "release_date": "2026-07-14",
+  "built_at_utc": "2026-07-20T08:23:30.936875+00:00",
+  "pipeline_version": "1.0.1",
+  "status": "passed",
+  "raw_layer": {
+    "verified_shards": 64,
+    "records": 214119,
+    "immutability_check": "all manifest SHA-256 checksums verified before and after build"
+  },
+  "curated_summary": {
+    "citation_observations": 214119,
+    "unique_record_ids": 214119,
+    "unique_record_hashes": 189845,
+    "extra_exact_duplicates": 24274,
+    "unmapped_platform_codes": 0,
+    "unmapped_taxonomy_pairs": 0,
+    "legacy_prompt_id_conflicts": 0,
+    "source_type_reference": {
+      "rows": 555,
+      "unique_domains": 555,
+      "legacy_curated": 55,
+      "manual_review": 500
+    }
+  },
+  "parse_status": {
+    "url": {
+      "expired": 1630,
+      "invalid": 107,
+      "invalid_scheme": 1,
+      "missing": 1133,
+      "valid_http": 211248
+    },
+    "published_at": {
+      "missing": 74509,
+      "parsed_chinese_date": 27079,
+      "parsed_date": 4689,
+      "parsed_iso_datetime": 42198,
+      "parsed_unix_seconds": 56843,
+      "partial_year": 1,
+      "placeholder_zero": 8800
+    },
+    "quote_index": {
+      "missing": 3545,
+      "numeric": 205780,
+      "web_search": 4794
+    }
+  },
+  "table_rows": {
+    "citation_observations": 214119,
+    "questions": 620,
+    "question_labels": 620,
+    "ai_platforms": 12,
+    "sources": 9878,
+    "pages": 107659,
+    "responses": 0,
+    "page_features": 107659,
+    "source_visibility": 19190,
+    "platform_overlap": 66,
+    "content_performance": 107659,
+    "data_quality": 13
+  },
+  "checks": {
+    "source_type_reference_passed_preflight": true,
+    "raw_shard_checksums_match_manifest": true,
+    "raw_and_curated_row_counts_match": true,
+    "citation_ids_are_unique": true,
+    "exact_duplicate_count_matches_manifest": true,
+    "all_platform_codes_are_mapped": true,
+    "all_legacy_category_pairs_are_mapped": true,
+    "each_legacy_prompt_id_maps_to_one_question": true,
+    "all_nonempty_publication_values_are_classified": true,
+    "responses_table_is_intentionally_empty": true
+  },
+  "known_limitations_cn": [
+    "旧数据缺少可靠的回答批次边界，responses 当前保留空表结构，citation_observations.response_id 保持为空。",
+    "source_types.csv 保留逐域人工复核证据，政府域名使用确定性后缀规则，其余长尾信源继续标记为未分类。",
+    "页面特征来自可复现的确定性规则，当前未生成向量、品牌实体和情感特征。"
+  ]
+}

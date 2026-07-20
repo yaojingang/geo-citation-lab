@@ -1,0 +1,427 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>国内生成式 AI 引用生态全景报告</title>
+<meta name="author" content="CN-GEO 数据研究项目">
+<meta name="description" content="基于 214,119 条引用观察，对国内 12 个生成式 AI 平台的信源、问题、页面特征与机会空间进行多维分析。">
+<meta name="keywords" content="GEO,生成式AI,引用生态,信源分析,内容策略">
+<meta name="generator" content="Kami">
+<style>
+:root{
+  --white:#fff;--ink:#141413;--warm:#3d3d3a;--olive:#504e49;--stone:#6b6a64;
+  --brand:#1b365d;--brand-2:#2d5a8a;--brand-pale:#eef2f7;--brand-mid:#d6e1ee;
+  --border:#e8e6dc;--line:#d8d5c8;--soft:#faf9f5;--warn:#b46b45;--ok:#65745b;
+  --serif:"TsangerJinKai02","Source Han Serif SC","Noto Serif CJK SC","Songti SC","STSong",Georgia,serif;
+  --ui:"PingFang SC","Microsoft YaHei",system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  --mono:"SFMono-Regular",Consolas,"Liberation Mono",monospace;
+  --nav-h:58px;--content:1240px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:#fff}
+body{margin:0;background:#fff;color:var(--ink);font-family:var(--serif);font-size:16px;line-height:1.65;letter-spacing:.2px;-webkit-font-smoothing:antialiased}
+button,select,input{font:inherit}
+a{color:var(--brand);text-decoration:none}
+a:focus-visible,button:focus-visible,select:focus-visible{outline:3px solid var(--brand-mid);outline-offset:2px}
+.skip-link{position:fixed;left:16px;top:-80px;z-index:2000;background:var(--brand);color:#fff;padding:10px 16px;border-radius:4px;font-family:var(--ui)}
+.skip-link:focus{top:12px}
+.progress{position:fixed;top:0;left:0;z-index:1200;width:0;height:2px;background:var(--brand);transition:width .08s linear}
+.topbar{position:sticky;top:0;z-index:1100;height:var(--nav-h);background:#fff;border-bottom:1px solid var(--border)}
+.topbar-inner{height:100%;max-width:var(--content);margin:0 auto;padding:0 28px;display:flex;align-items:center;gap:24px}
+.wordmark{display:flex;align-items:baseline;gap:8px;flex:0 0 auto;color:var(--ink);white-space:nowrap}
+.wordmark strong{font-family:Georgia,var(--serif);font-weight:500;font-size:19px;letter-spacing:-.3px}
+.wordmark span{font-family:var(--ui);font-size:11px;color:var(--stone);letter-spacing:.4px}
+.nav-scroll{overflow-x:auto;overflow-y:hidden;scrollbar-width:none;flex:1;mask-image:linear-gradient(90deg,transparent,#000 12px,#000 calc(100% - 12px),transparent)}
+.nav-scroll::-webkit-scrollbar{display:none}
+.nav{display:flex;align-items:center;justify-content:flex-end;gap:2px;min-width:max-content;padding:0 12px}
+.nav a{position:relative;padding:17px 9px 16px;color:var(--stone);font-family:var(--ui);font-size:12px;line-height:1;white-space:nowrap}
+.nav a:hover,.nav a[aria-current="true"]{color:var(--brand)}
+.nav a[aria-current="true"]::after{content:"";position:absolute;left:9px;right:9px;bottom:0;height:2px;background:var(--brand)}
+.page{max-width:var(--content);margin:0 auto;padding:0 28px 120px}
+.hero{padding:82px 0 56px;border-bottom:1px solid var(--border)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(280px,.75fr);gap:72px;align-items:end}
+.eyebrow{margin:0 0 22px;font-family:var(--ui);font-size:12px;font-weight:600;letter-spacing:1.6px;color:var(--brand);text-transform:uppercase}
+h1,h2,h3,p{margin-top:0}
+.hero h1{max-width:880px;margin:0 0 22px;font-size:clamp(48px,6.6vw,86px);line-height:1.08;font-weight:500;letter-spacing:-1.8px}
+.hero-lede{max-width:850px;margin:0;color:var(--olive);font-size:clamp(18px,2vw,23px);line-height:1.55}
+.hero-note{padding-left:22px;border-left:2px solid var(--brand)}
+.hero-note-label{font-family:var(--ui);font-size:11px;font-weight:600;color:var(--brand);letter-spacing:1.2px;text-transform:uppercase}
+.hero-note p{margin:8px 0 0;color:var(--warm);font-size:15px}
+.hero-meta{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:34px;color:var(--stone);font-family:var(--ui);font-size:12px}
+.hero-meta b{color:var(--warm);font-weight:600}
+.kpi-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));margin:42px 0 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.kpi{min-width:0;padding:22px 20px 20px;border-right:1px solid var(--border)}
+.kpi:first-child{padding-left:0}.kpi:last-child{border-right:0}
+.kpi-value{display:block;color:var(--brand);font-family:Georgia,var(--serif);font-size:31px;line-height:1.1;font-variant-numeric:tabular-nums;white-space:nowrap}
+.kpi-label{display:block;margin-top:7px;color:var(--stone);font-family:var(--ui);font-size:12px;line-height:1.4}
+.filter-shell{margin:42px 0 12px;padding:20px 22px;border:1px solid var(--border);background:#fff}
+.filter-head{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:16px}
+.filter-head h2{font-size:20px;font-weight:500;margin:0}
+.filter-help{margin:2px 0 0;color:var(--stone);font-family:var(--ui);font-size:12px}
+.filter-grid{display:grid;grid-template-columns:repeat(6,minmax(120px,1fr));gap:12px}
+.field{display:flex;flex-direction:column;gap:6px;min-width:0}
+.field label{font-family:var(--ui);font-size:11px;color:var(--stone);font-weight:600}
+.field select{width:100%;height:38px;padding:0 42px 0 11px;border:1px solid var(--line);border-radius:3px;background-color:#fff;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1.25 6 6.25 11 1.25' fill='none' stroke='%233f454b' stroke-width='1.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;background-size:12px 8px;color:var(--ink);font-family:var(--ui);font-size:13px;appearance:none;-webkit-appearance:none}
+.reset{height:38px;flex:0 0 auto;padding:0 18px;border:1px solid var(--brand);border-radius:3px;background:#fff;color:var(--brand);cursor:pointer;font-family:var(--ui);font-size:13px;white-space:nowrap}
+.reset:hover{background:var(--brand-pale)}
+.scope-summary{display:flex;align-items:center;gap:9px;margin:14px 0 0;color:var(--olive);font-family:var(--ui);font-size:12px}
+.scope-dot{width:7px;height:7px;border-radius:50%;background:var(--brand);flex:0 0 auto}
+.rate-overview{margin:30px 0 0;padding:22px 0 0}.rate-overview-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:12px}.rate-overview-head h2{margin:0;font-size:22px;font-weight:500}.rate-overview-head p{margin:0;color:var(--stone);font-family:var(--ui);font-size:11px}
+.rate-overview-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.rate-kpi{min-width:0;padding:16px 15px;border-right:1px solid var(--border);color:inherit}.rate-kpi:last-child{border-right:0}.rate-kpi b{display:block;color:var(--brand);font-family:Georgia,var(--serif);font-size:23px;font-weight:500;line-height:1.15;font-variant-numeric:tabular-nums}.rate-kpi span{display:block;margin-top:5px;color:var(--stone);font-family:var(--ui);font-size:10px;line-height:1.45}.rate-kpi:focus-visible{position:relative;z-index:1}
+.report-section{scroll-margin-top:calc(var(--nav-h) + 20px);padding:88px 0 0}
+.chapter-head{margin-bottom:34px;padding-bottom:24px;border-bottom:1px solid var(--border)}
+.chapter-title{display:flex;align-items:baseline;gap:16px;margin:0;font-size:clamp(34px,4vw,52px);line-height:1.15;font-weight:500;letter-spacing:-.6px}
+.chapter-no{flex:0 0 auto;min-width:2.05ch;font-family:Georgia,var(--serif);font-size:.86em;line-height:1;color:var(--brand);font-variant-numeric:tabular-nums;letter-spacing:-.4px}
+.chapter-lede{max-width:940px;margin:13px 0 0;color:var(--olive);font-size:17px;line-height:1.62}
+.takeaway{margin:20px 0 0;padding:12px 16px;border-left:2px solid var(--brand);background:#fff;color:var(--warm);font-size:14px}
+.takeaway b{color:var(--brand);font-weight:500}
+.grid-2,.grid-3{display:grid;gap:22px;margin:22px 0}
+.grid-2{grid-template-columns:repeat(2,minmax(0,1fr))}.grid-3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.wide{grid-column:1/-1}
+.chart-card,.text-card{min-width:0;background:#fff;border:1px solid var(--border);padding:20px 20px 18px}
+.card-top{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:6px}
+.card-index{font-family:var(--ui);font-size:10px;color:var(--brand);letter-spacing:1px;text-transform:uppercase}
+.link-badge{flex:0 0 auto;padding:3px 7px;background:var(--brand-pale);color:var(--brand);border-radius:2px;font-family:var(--ui);font-size:10px}
+.card-actions{display:flex;align-items:center;justify-content:flex-end;gap:8px;flex-wrap:wrap}.metric-switch{display:flex;align-items:center;gap:4px;font-family:var(--ui)}.metric-toggle{min-width:54px;min-height:40px;padding:6px 10px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--warm);cursor:pointer;font-family:var(--ui);font-size:11px;touch-action:manipulation;transition-property:transform,background-color,color,border-color;transition-duration:150ms}.metric-toggle:active{transform:scale(.96)}.metric-toggle[aria-pressed="true"]{border-color:var(--brand);background:var(--brand);color:#fff}
+.chart-card h3,.text-card h3{margin:0 0 6px;font-size:20px;line-height:1.36;font-weight:500;color:var(--ink)}
+.purpose{min-height:38px;margin:0;color:var(--olive);font-size:13px;line-height:1.58}
+.purpose b{color:var(--brand);font-weight:500}
+.wide .purpose{min-height:0}
+.chart{width:100%;height:360px;margin-top:10px}
+.chart.tall{height:440px}.chart.short{height:300px}.chart.x-tall{height:520px}
+.ecosystem-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin:16px 0 4px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.ecosystem-stat{padding:13px 16px;border-right:1px solid var(--border)}.ecosystem-stat:last-child{border-right:0}
+.ecosystem-stat b{display:block;color:var(--brand);font-family:Georgia,var(--serif);font-size:24px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+.ecosystem-stat span{display:block;margin-top:4px;color:var(--stone);font-family:var(--ui);font-size:11px;line-height:1.45}
+.ecosystem-visuals{display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.92fr);gap:18px;margin-top:14px}
+.ecosystem-panel{min-width:0}.ecosystem-panel h4{margin:0;color:var(--warm);font-family:var(--ui);font-size:12px;font-weight:600}
+.ecosystem-panel .chart{height:410px;margin-top:4px}
+.processing-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));margin:16px 0 4px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.processing-item{min-width:0;padding:16px 18px;border-right:1px solid var(--border)}.processing-item:last-child{border-right:0}
+.processing-item b{display:block;color:var(--brand);font-family:Georgia,var(--serif);font-size:24px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+.processing-item strong{display:block;margin-top:7px;color:var(--ink);font-size:14px;font-weight:500}.processing-item span{display:block;margin-top:4px;color:var(--stone);font-family:var(--ui);font-size:11px;line-height:1.5}
+.terminal-rate-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin:10px 0 2px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}.rate-detail{min-width:0;padding:11px 13px;border-right:1px solid var(--border);border-bottom:1px solid var(--border);font-family:var(--ui)}.rate-detail:nth-child(2n){border-right:0}.rate-detail:nth-last-child(-n+2){border-bottom:0}.rate-detail strong{display:block;color:var(--warm);font-size:11px;font-weight:600}.rate-detail b{display:block;margin-top:3px;color:var(--brand);font-family:Georgia,var(--serif);font-size:20px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}.rate-detail span,.rate-detail small{display:block;margin-top:3px;color:var(--stone);font-size:9px;line-height:1.45}.rate-detail small{color:var(--olive)}
+.preference-toolbar{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin:0 0 20px;padding:16px 18px;background:var(--soft);border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.preference-toolbar .field{width:230px;flex:0 0 auto}.preference-toolbar select{height:40px;touch-action:manipulation}
+.preference-scope{max-width:760px;margin:0;color:var(--olive);font-family:var(--ui);font-size:12px;line-height:1.6;text-align:right}
+.preference-stats,.preference-pair-stats{display:grid;margin:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.preference-stats{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:22px}.preference-pair-stats{grid-template-columns:repeat(4,minmax(0,1fr));margin:14px 0 2px}
+.preference-stat{min-width:0;padding:16px 18px;border-right:1px solid var(--border)}.preference-stat:last-child{border-right:0}
+.preference-stat b{display:block;color:var(--brand);font-family:Georgia,var(--serif);font-size:25px;font-weight:500;line-height:1.1;font-variant-numeric:tabular-nums}
+.preference-stat span{display:block;margin-top:5px;color:var(--stone);font-family:var(--ui);font-size:11px;line-height:1.45}
+.chart.preference-matrix{height:610px}.chart.preference-anchor{height:590px}.chart.preference-tilt{height:540px}.chart.preference-types{height:520px}
+.preference-table table{min-width:980px}.preference-table td.preference-tag{color:var(--brand);font-weight:600}.preference-table tr.is-selected td{background:var(--brand-pale)}
+.preference-chart-scroll{overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch}
+.anchor-groups{display:grid;grid-template-columns:1fr 1fr;margin:16px 18px -4px 238px;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-family:var(--ui);font-size:11px;line-height:1.3}
+.anchor-groups span{padding:8px 10px;color:var(--brand);text-align:center}.anchor-groups span:first-child{background:var(--brand-pale);border-right:1px solid var(--line)}.anchor-groups span:last-child{color:var(--warm);background:var(--soft)}
+.anchor-carryover{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));margin:14px 0 2px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.anchor-carryover-item{min-width:0;padding:11px 9px;border-right:1px solid var(--border);font-family:var(--ui);text-align:center}.anchor-carryover-item:last-child{border-right:0}.anchor-carryover-item[data-anchor="true"]{background:var(--brand-pale)}
+.anchor-carryover-item b{display:block;color:var(--brand);font-size:18px;font-weight:600;line-height:1.1;font-variant-numeric:tabular-nums}.anchor-carryover-item span{display:block;margin-top:4px;color:var(--stone);font-size:10px;line-height:1.35}
+.rank-toolbar{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:18px 0 12px;padding:12px 0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);font-family:var(--ui)}
+.rank-controls{display:flex;align-items:center;gap:18px;flex-wrap:wrap}.rank-control{display:flex;align-items:center;gap:6px}.rank-control-label{margin-right:3px;color:var(--stone);font-size:11px;font-weight:600}
+.rank-toggle{min-width:44px;min-height:40px;padding:7px 12px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--warm);cursor:pointer;font-family:var(--ui);font-size:12px;touch-action:manipulation;transition-property:transform,background-color,color,border-color;transition-duration:150ms}.rank-toggle:active{transform:scale(.96)}.rank-toggle[aria-pressed="true"]{border-color:var(--brand);background:var(--brand);color:#fff}
+.rank-scope-note{max-width:520px;margin:0;color:var(--olive);font-size:11px;line-height:1.55;text-align:right}
+.preference-rank-scroll{overflow-x:auto;overscroll-behavior-inline:contain;-webkit-overflow-scrolling:touch;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.preference-rank-scroll:focus-visible{outline:3px solid var(--brand-mid);outline-offset:2px}
+.preference-rank-table{width:100%;min-width:1088px;border-collapse:separate;border-spacing:0;table-layout:fixed;font-family:var(--ui);font-size:11px}
+.preference-rank-sticky{display:none;position:sticky;top:var(--nav-h);z-index:20;overflow:hidden;background:#fff;border-bottom:1px solid var(--line)}.preference-rank-sticky .preference-rank-table{margin:0}.preference-rank-sticky th{position:static!important}
+.preference-rank-table th,.preference-rank-table td{padding:0;border-right:1px solid var(--border);border-bottom:1px solid var(--border);vertical-align:top}.preference-rank-table tr:last-child td{border-bottom:0}.preference-rank-table th:last-child,.preference-rank-table td:last-child{border-right:0}
+.preference-rank-table thead th{position:sticky;top:0;z-index:3;height:62px;padding:10px 9px;background:var(--soft);color:var(--warm);text-align:left;line-height:1.35}.preference-rank-table thead th[data-anchor="true"]{background:var(--brand-pale);color:var(--brand)}.preference-rank-table thead th.is-dimmed{color:var(--stone);opacity:.48}
+.preference-rank-table thead th strong,.preference-rank-table thead th span{display:block}.preference-rank-table thead th strong{font-size:12px;font-weight:600}.preference-rank-table thead th span{margin-top:3px;color:var(--stone);font-size:10px}.preference-rank-table [data-pair-start="true"]{box-shadow:inset 2px 0 0 var(--line)}.preference-rank-table [data-pair-end="true"]{border-right:2px solid var(--line)}
+.preference-rank-table .rank-number{position:sticky;left:0;z-index:2;width:48px;background:#fff;color:var(--brand);font-family:Georgia,var(--serif);font-size:16px;text-align:center;font-variant-numeric:tabular-nums}.preference-rank-table thead .rank-number{z-index:4;background:var(--soft);font-family:var(--ui);font-size:10px;color:var(--stone)}
+.rank-source-button{display:block;width:100%;min-height:70px;padding:9px 10px;border:0;background:#fff;color:var(--ink);cursor:pointer;text-align:left;touch-action:manipulation;transition-property:transform,background-color,opacity;transition-duration:150ms}.rank-source-button:active{transform:scale(.98)}.rank-source-button.is-dimmed{opacity:.42}.rank-source-button[aria-pressed="true"]{background:var(--brand-pale)}
+.rank-source-name{display:block;overflow:hidden;color:var(--ink);font-size:12px;font-weight:600;line-height:1.35;text-overflow:ellipsis;white-space:nowrap}.rank-source-meta{display:flex;align-items:center;justify-content:space-between;gap:7px;margin-top:4px;color:var(--stone);font-size:10px;font-variant-numeric:tabular-nums}.rank-source-domain{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.rank-source-share{flex:0 0 auto;color:var(--brand);font-weight:600}.rank-source-type{display:inline-block;max-width:100%;margin-top:5px;padding:1px 5px;border-radius:2px;background:var(--soft);color:var(--olive);font-size:9px;line-height:1.45;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.classification-coverage{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));margin:16px 0 2px;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+.preference-source-picker{display:flex;align-items:center;gap:10px;margin:14px 0 0;font-family:var(--ui)}.preference-source-picker label{color:var(--stone);font-size:11px;font-weight:600}.preference-source-picker select{min-width:280px;height:40px;padding:0 34px 0 10px;border:1px solid var(--line);border-radius:3px;background:#fff;color:var(--ink);font-family:var(--ui);font-size:12px}
+.classification-item{min-width:0;padding:14px 16px;border-right:1px solid var(--border)}.classification-item:last-child{border-right:0}.classification-item b{display:block;color:var(--brand);font-family:Georgia,var(--serif);font-size:23px;font-weight:500;line-height:1.15;font-variant-numeric:tabular-nums}.classification-item span{display:block;margin-top:5px;color:var(--stone);font-family:var(--ui);font-size:10px;line-height:1.45}
+.chart[aria-busy="true"]{background:linear-gradient(90deg,#fff,#faf9f5,#fff);background-size:200% 100%;animation:loading 1.2s ease infinite}
+@keyframes loading{to{background-position:-200% 0}}
+.metric-note{margin:10px 0 0;padding-top:10px;border-top:1px solid var(--border);color:var(--stone);font-family:var(--ui);font-size:10px;line-height:1.55}
+.pipeline{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin-top:22px}
+.pipe-step{position:relative;padding:25px 24px 24px;border-right:1px solid var(--border)}
+.pipe-step:last-child{border-right:0}
+.pipe-step:not(:last-child)::after{content:"→";position:absolute;right:-10px;top:26px;z-index:2;width:20px;text-align:center;background:#fff;color:var(--brand);font-family:Georgia,serif}
+.pipe-num{font-family:Georgia,serif;font-size:29px;color:var(--brand);font-variant-numeric:tabular-nums}
+.pipe-label{margin-top:5px;font-family:var(--ui);font-size:12px;color:var(--stone)}
+.pipe-delta{margin-top:8px;font-size:12px;color:var(--warm)}
+.insight-strip{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--border);border-bottom:1px solid var(--border);margin:22px 0}
+.insight{padding:20px 24px;border-right:1px solid var(--border)}.insight:last-child{border-right:0}
+.insight b{display:block;color:var(--brand);font-size:26px;font-weight:500;font-family:Georgia,var(--serif)}
+.insight span{display:block;margin-top:4px;color:var(--olive);font-size:13px}
+.table-wrap{overflow:auto;margin-top:18px;border-top:1px solid var(--border)}
+table{width:100%;border-collapse:collapse;font-family:var(--ui);font-size:12px}
+th{text-align:left;color:var(--stone);font-weight:600;white-space:nowrap;padding:10px 12px;border-bottom:1px solid var(--border)}
+th.num{text-align:right;font-variant-numeric:tabular-nums}
+td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--warm);vertical-align:top}
+td.num{text-align:right;font-variant-numeric:tabular-nums}.nowrap{white-space:nowrap}.truncate{max-width:390px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.finding-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0;border-top:1px solid var(--border);margin:22px 0 0;padding:0;list-style:none}
+.finding-list li{display:grid;grid-template-columns:38px 1fr;gap:12px;padding:21px 24px 21px 0;border-bottom:1px solid var(--border)}
+.finding-list li:nth-child(odd){padding-right:28px;border-right:1px solid var(--border)}
+.finding-list li:nth-child(even){padding-left:28px}
+.finding-n{color:var(--brand);font-family:Georgia,serif;font-size:20px}
+.finding-body b{display:block;margin-bottom:5px;font-size:16px;font-weight:500}
+.finding-body span{color:var(--olive);font-size:13px;line-height:1.6}
+.action-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:26px}
+.action{padding:20px 20px 18px;border-top:2px solid var(--brand);background:#fff}
+.action small{display:block;color:var(--stone);font-family:var(--ui);font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.action h3{margin:8px 0 8px;font-size:19px;font-weight:500}.action p{margin:0;color:var(--olive);font-size:13px}
+.method{margin-top:42px;padding-top:30px;border-top:1px solid var(--border)}
+.method h3{font-size:22px;font-weight:500}.method p,.method li{color:var(--olive);font-size:13px}
+.method-grid{display:grid;grid-template-columns:1fr 1fr;gap:34px}
+.definition-list{display:grid;grid-template-columns:140px 1fr;margin:0;border-top:1px solid var(--border)}
+.definition-list dt,.definition-list dd{margin:0;padding:10px 0;border-bottom:1px solid var(--border);font-size:12px}
+.definition-list dt{font-family:var(--mono);color:var(--brand)}.definition-list dd{color:var(--olive)}
+.footer{margin-top:90px;padding:30px 0;border-top:1px solid var(--border);display:flex;justify-content:space-between;gap:24px;color:var(--stone);font-family:var(--ui);font-size:11px}
+.noscript{margin:20px auto;max-width:800px;padding:18px;border:1px solid var(--warn);font-family:var(--ui)}
+@media(max-width:1040px){
+  .kpi-grid{grid-template-columns:repeat(3,1fr)}.kpi:nth-child(3){border-right:0}.kpi:nth-child(-n+3){border-bottom:1px solid var(--border)}
+  .filter-grid{grid-template-columns:repeat(3,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}.action-grid{grid-template-columns:repeat(2,1fr)}.processing-grid{grid-template-columns:repeat(2,1fr)}.processing-item:nth-child(2){border-right:0}.processing-item:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .hero-grid{gap:40px}.chapter-title{gap:14px}
+  .rate-overview-grid{grid-template-columns:repeat(3,1fr)}.rate-kpi:nth-child(3n){border-right:0}.rate-kpi:nth-child(-n+3){border-bottom:1px solid var(--border)}
+  .preference-stats,.preference-pair-stats,.classification-coverage{grid-template-columns:repeat(2,1fr)}.preference-stat:nth-child(2){border-right:0}.preference-stat:nth-child(-n+2){border-bottom:1px solid var(--border)}
+  .classification-item:nth-child(2n){border-right:0}.classification-item:nth-child(-n+4){border-bottom:1px solid var(--border)}.classification-item:nth-child(5){grid-column:1/-1;border-right:0}.anchor-carryover{grid-template-columns:repeat(4,1fr)}.anchor-carryover-item:nth-child(4){border-right:0}.anchor-carryover-item:nth-child(-n+4){border-bottom:1px solid var(--border)}
+}
+@media(max-width:760px){
+  :root{--nav-h:54px}.topbar-inner{padding:0 16px;gap:10px}.wordmark span{display:none}.nav{justify-content:flex-start}
+  .page{padding:0 16px 80px}.hero{padding:50px 0 38px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:46px;letter-spacing:-.8px}.hero-note{max-width:560px}
+  .kpi-grid{grid-template-columns:repeat(2,1fr)}.kpi{padding:17px 14px}.kpi:nth-child(2n){border-right:0}.kpi:nth-child(-n+4){border-bottom:1px solid var(--border)}.kpi:nth-child(3){border-right:1px solid var(--border)}.kpi-value{font-size:27px}
+  .filter-shell{padding:17px 16px}.filter-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .rate-overview-head{align-items:flex-start;flex-direction:column;gap:5px}.rate-overview-grid{grid-template-columns:repeat(2,1fr)}.rate-kpi:nth-child(3n){border-right:1px solid var(--border)}.rate-kpi:nth-child(2n){border-right:0}.rate-kpi:nth-child(-n+4){border-bottom:1px solid var(--border)}
+  .report-section{padding-top:66px}.chapter-head{margin-bottom:28px}.chapter-title{gap:12px;font-size:36px}.chapter-lede{font-size:16px}
+  .grid-2,.grid-3{grid-template-columns:1fr}.chart-card,.text-card{padding:18px 15px 15px}.purpose{min-height:0}.chart{height:340px}.chart.tall,.chart.x-tall{height:410px}
+  .ecosystem-visuals{grid-template-columns:1fr}.ecosystem-panel .chart{height:390px}
+  .preference-toolbar{align-items:stretch;flex-direction:column;gap:10px}.preference-toolbar .field{width:100%}.preference-scope{text-align:left}.chart.preference-matrix{height:560px}.chart.preference-anchor{height:540px}.chart.preference-tilt{height:500px}.chart.preference-types{height:460px}
+  .preference-table table{min-width:0}.preference-table .preference-optional{display:none}
+  .preference-chart-scroll{padding-bottom:8px}.preference-chart-scroll .preference-matrix,.preference-chart-scroll .preference-anchor{min-width:760px}.anchor-groups{min-width:522px;margin-left:238px;margin-right:0}.rank-toolbar{align-items:stretch;flex-direction:column;gap:9px}.rank-scope-note{text-align:left}.classification-coverage{grid-template-columns:repeat(2,1fr)}
+  .preference-rank-sticky{display:block}.preference-rank-scroll thead{opacity:0}.preference-source-picker{align-items:stretch;flex-direction:column}.preference-source-picker select{width:100%;min-width:0}
+  .pipeline{grid-template-columns:repeat(2,1fr)}.pipe-step:nth-child(2){border-right:0}.pipe-step:nth-child(-n+2){border-bottom:1px solid var(--border)}.pipe-step:nth-child(2)::after{display:none}
+  .insight-strip{grid-template-columns:1fr}.insight{border-right:0;border-bottom:1px solid var(--border)}.insight:last-child{border-bottom:0}
+  .finding-list{grid-template-columns:1fr}.finding-list li:nth-child(odd),.finding-list li:nth-child(even){padding:18px 0;border-right:0}.method-grid{grid-template-columns:1fr}.definition-list{grid-template-columns:110px 1fr}.footer{flex-direction:column}
+}
+@media(max-width:430px){
+  .hero h1{font-size:40px}.hero-lede{font-size:17px}.hero-meta{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .filter-head{display:block}.filter-help{margin-top:7px}.filter-grid{grid-template-columns:1fr 1fr;gap:10px}.field label{font-size:10px}.field select{font-size:12px}.reset{width:100%;margin-top:12px}
+  .kpi-value{font-size:24px}.kpi-label{font-size:11px}.chart{height:320px}.chart.tall,.chart.x-tall{height:390px}
+  .pipeline{grid-template-columns:1fr}.pipe-step{border-right:0;border-bottom:1px solid var(--border)}.pipe-step:last-child{border-bottom:0}.pipe-step::after{display:none}
+  .action-grid{grid-template-columns:1fr}.chapter-title{gap:10px;font-size:32px;letter-spacing:-.3px}.card-top{display:block}.card-actions{justify-content:flex-start;margin-top:7px}.link-badge{display:inline-block;margin-top:5px}
+  .ecosystem-stats{grid-template-columns:1fr}.ecosystem-stat{border-right:0;border-bottom:1px solid var(--border)}.ecosystem-stat:last-child{border-bottom:0}
+  .processing-grid{grid-template-columns:1fr}.processing-item{border-right:0;border-bottom:1px solid var(--border)}.processing-item:last-child{border-bottom:0}
+  .preference-pair-stats{grid-template-columns:1fr}.preference-pair-stats .preference-stat{border-right:0;border-bottom:1px solid var(--border)}.preference-pair-stats .preference-stat:last-child{border-bottom:0}
+  .classification-coverage{grid-template-columns:1fr}.classification-item{border-right:0;border-bottom:1px solid var(--border)}.classification-item:last-child{border-bottom:0}.anchor-carryover{grid-template-columns:repeat(2,1fr)}.anchor-carryover-item:nth-child(2n){border-right:0}.anchor-carryover-item:nth-child(-n+6){border-bottom:1px solid var(--border)}
+}
+@media(max-width:340px){.page{padding-left:12px;padding-right:12px}.topbar-inner{padding-left:12px;padding-right:12px}.filter-grid{grid-template-columns:1fr}.hero h1{font-size:35px}.kpi-grid{grid-template-columns:1fr}.kpi{border-right:0!important;border-bottom:1px solid var(--border)!important}.kpi:last-child{border-bottom:0!important}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}}
+@media print{.topbar,.progress,.filter-shell,.preference-toolbar,.rank-toolbar,.metric-switch,.skip-link{display:none}.page{max-width:none;padding:0}.report-section{break-before:page;padding-top:30px}.chart-card,.text-card{break-inside:avoid}.chart{height:290px!important}.preference-rank-scroll{overflow:visible}.preference-rank-table{min-width:0;font-size:8px}.rank-source-button{min-height:44px;padding:5px}.hero{padding-top:30px}body{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+</style>
+</head>
+<body>
+<a class="skip-link" href="#main">跳到报告正文</a>
+<div class="progress" id="progress" aria-hidden="true"></div>
+<header class="topbar">
+  <div class="topbar-inner">
+    <a class="wordmark" href="#top"><strong>CN-GEO</strong><span>引用生态报告</span></a>
+    <div class="nav-scroll">
+      <nav class="nav" aria-label="报告章节">
+        <a href="#chapter-1">数据底座</a><a href="#chapter-2">平台全景</a><a href="#chapter-3">信源生态</a>
+        <a href="#chapter-4">信源偏好</a><a href="#chapter-5">跨平台</a><a href="#chapter-6">问题分类</a><a href="#chapter-7">内容特征</a>
+        <a href="#chapter-8">时间新鲜度</a><a href="#chapter-9">机会地图</a><a href="#chapter-10">结论方法</a>
+      </nav>
+    </div>
+  </div>
+</header>
+<main class="page" id="main">
+  <section class="hero" id="top">
+    <div class="hero-grid">
+      <div>
+        <p class="eyebrow">Data Research · Release 2026.07</p>
+        <h1>国内生成式 AI<br>引用生态全景报告</h1>
+        <p class="hero-lede">从平台规模、信源结构、问题类型、页面特征与时间新鲜度五个层面，拆解国内生成式 AI 的可观察引用模式，并形成可执行的 GEO 数据挖掘路线。</p>
+      </div>
+      <aside class="hero-note">
+        <span class="hero-note-label">阅读口径</span>
+        <p>样本覆盖反映本数据集内的引用分布。报告用于比较平台与内容特征，不能直接外推为市场份额或用户规模。</p>
+      </aside>
+    </div>
+    <div class="hero-meta">
+      <span>数据版本 <b id="releaseDate">…</b></span><span>默认口径 <b>精确去重</b></span>
+      <span>报告形式 <b>离线单文件 HTML</b></span><span>更新时间 <b id="generatedAt">…</b></span>
+    </div>
+    <div class="kpi-grid" aria-label="数据集核心规模">
+      <div class="kpi"><span class="kpi-value" id="kpiCitations">…</span><span class="kpi-label">原始引用观察</span></div>
+      <div class="kpi"><span class="kpi-value" id="kpiDedup">…</span><span class="kpi-label">精确去重引用</span></div>
+      <div class="kpi"><span class="kpi-value" id="kpiQuestions">…</span><span class="kpi-label">标准问题</span></div>
+      <div class="kpi"><span class="kpi-value" id="kpiPlatforms">…</span><span class="kpi-label">AI 平台</span></div>
+      <div class="kpi"><span class="kpi-value" id="kpiSources">…</span><span class="kpi-label">规范信源</span></div>
+      <div class="kpi"><span class="kpi-value" id="kpiPages">…</span><span class="kpi-label">规范页面</span></div>
+    </div>
+  </section>
+
+  <section class="rate-overview" id="rateOverview" aria-labelledby="rateOverviewTitle">
+    <div class="rate-overview-head"><h2 id="rateOverviewTitle">关键率指标</h2><p>所有比例仅描述当前报告样本，点击可查看对应分析模块与分母说明。</p></div>
+    <div class="rate-overview-grid">
+      <a class="rate-kpi" href="#chapter-1"><b id="rateDedupRetention">…</b><span>精确去重保留率，分母为原始引用观察</span></a>
+      <a class="rate-kpi" href="#chapter-4"><b id="rateClassificationCoverage">…</b><span>八端共同问题等权分类覆盖率</span></a>
+      <a class="rate-kpi" href="#chapter-4"><b id="rateCommonQuestionCoverage">…</b><span>八端共同问题覆盖率，分母为 620 个标准问题</span></a>
+      <a class="rate-kpi" href="#chapter-3"><b id="rateTop10Share">…</b><span>全局 Top 10 信源去重引用集中度</span></a>
+      <a class="rate-kpi" href="#chapter-4"><b id="rateDoubaoAnchor">…</b><span>豆包双端锚点进入各端 Top 20 的继承率</span></a>
+      <a class="rate-kpi" href="#chapter-4"><b id="rateDeepSeekAnchor">…</b><span>DeepSeek 双端锚点进入各端 Top 20 的继承率</span></a>
+    </div>
+  </section>
+
+  <section class="filter-shell" aria-labelledby="filterTitle">
+    <div class="filter-head"><div><h2 id="filterTitle">全局分析口径</h2><p class="filter-help">筛选会联动带有“联动”标记的图表；平台总览类图表始终保留全量比较。</p></div><button class="reset" id="resetFilters" type="button">恢复默认</button></div>
+    <div class="filter-grid">
+      <div class="field"><label for="scopeFilter">记录口径</label><select id="scopeFilter"><option value="dedup">精确去重</option><option value="raw">原始记录</option></select></div>
+      <div class="field"><label for="platformFilter">AI 平台</label><select id="platformFilter"><option value="ALL">全部平台</option></select></div>
+      <div class="field"><label for="sourceTypeFilter">信源类型</label><select id="sourceTypeFilter"><option value="ALL">全部类型</option></select></div>
+      <div class="field"><label for="dimensionFilter">问题维度</label><select id="dimensionFilter"></select></div>
+      <div class="field"><label for="labelFilter">问题标签</label><select id="labelFilter"><option value="ALL">全部标签</option></select></div>
+      <div class="field"><label for="freshnessFilter">发布时间</label><select id="freshnessFilter"><option value="ALL">全部发布时间状态</option><option value="2026">2026</option><option value="2025">2025</option><option value="2023 至 2024">2023 至 2024</option><option value="2022 及以前">2022 及以前</option><option value="发布时间未知">发布时间未知</option><option value="发布时间冲突">发布时间冲突</option></select></div>
+    </div>
+    <p class="scope-summary"><span class="scope-dot"></span><span id="scopeSummary">正在载入分析口径…</span></p>
+  </section>
+
+  <section class="report-section" id="chapter-1">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">01</span><span>数据底座与分析适用性</span></h2><p class="chapter-lede">先确认样本规模、字段可用性、链接可解析性和处理状态。每类分析按照所需字段确定样本边界。</p><p class="takeaway"><b>本章用途：</b>区分可继续参与统计的正常记录、限定用途的字段状态，以及需要清洗或人工复核的异常。</p></header>
+    <div class="text-card wide"><div class="card-top"><span class="card-index">01.1 · Processing funnel</span></div><h3>214,119 条原始观察经过精确去重后保留 189,845 条唯一记录</h3><p class="purpose">展示原始记录、去重记录、有效 URL 与规范页面之间的数量关系。让读者理解每一层数据粒度。</p><div class="pipeline" id="pipeline"></div><p class="metric-note">有效 URL 以 HTTP(S) 且完成规范化为准；规范页面按 canonical_url 汇总。重复观察在原始层保留，汇总层默认去重。</p></div>
+    <div class="grid-2">
+      <article class="chart-card"><div class="card-top"><span class="card-index">01.2 · Field availability</span></div><h3>核心标识完整，内容与时间元数据按平台选择性提供</h3><p class="purpose">比较关键字段的有效值覆盖率。字段未知只限定依赖该字段的分析。</p><div class="chart" id="chartFieldAvailability" role="img" aria-label="关键字段可用率横向条形图"></div><p class="metric-note">分母为 214,119 条原始引用观察；发布时间可用表示已成功规范化为日期。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">01.3 · Analysis applicability</span></div><h3>不同分析任务拥有各自的可用样本边界</h3><p class="purpose">按照分析所需字段计算可用比例。说明每类结论覆盖了多少记录。</p><div class="chart" id="chartApplicability" role="img" aria-label="不同分析任务的样本可用率条形图"></div><p class="metric-note">引用观察统计可使用全部记录；页面、域名、标题、摘要、位置和时间分析分别应用对应字段条件。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">01.4 · Platform availability</span></div><h3>平台提供的引用元数据具有稳定的结构差异</h3><p class="purpose">对照 12 个平台的六类字段可用率。平台差异反映采集接口与展示能力边界。</p><div class="chart tall" id="chartPlatformAvailability" role="img" aria-label="平台与引用元数据可用率热力图"></div><p class="metric-note">深色表示该平台字段可用率更高。字段未知记录继续用于不依赖该字段的统计。</p></article>
+      <article class="text-card wide"><div class="card-top"><span class="card-index">01.5 · Processing status</span></div><h3>采集状态、清洗状态和页面冲突采用不同处理方式</h3><p class="purpose">将常见状态映射到明确的保留、排除或复核规则，防止多个百分比被合并成一项总缺失率。</p><div class="processing-grid" id="processingStatus"></div><p class="metric-note">每项使用自己的分母，记录级状态与页面级状态不相加。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-2">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">02</span><span>AI 平台引用全景</span></h2><p class="chapter-lede">平台样本规模与问题覆盖存在显著差异。规模、覆盖、信源广度和单问题密度需要同时观察。</p><p class="takeaway"><b>本章用途：</b>识别各平台的引用供给强度、覆盖边界，以及同产品 Web/移动端的结构差异。</p></header>
+    <div class="grid-2">
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">02.1 · Citation scale</span><div class="card-actions"><span class="link-badge">口径联动</span><div class="metric-switch" role="group" aria-label="平台规模显示口径"><button class="metric-toggle" type="button" data-metric-view="platformScale" data-metric-value="count" aria-pressed="true">引用量</button><button class="metric-toggle" type="button" data-metric-view="platformScale" data-metric-value="share" aria-pressed="false">样本份额</button></div></div></div><h3>头部平台贡献了更密集的样本，平台规模差距需与问题覆盖共同解释</h3><p class="purpose">排序比较平台引用量和样本引用份额。建立平台样本权重基线。</p><div class="chart tall" id="chartPlatformScale" role="img" aria-label="12 个平台引用规模与样本份额排序条形图"></div><p class="metric-note">样本引用份额的分母为 12 个平台在当前原始或精确去重口径下的引用总量，用于描述本报告样本结构，不能外推为市场份额。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">02.2 · Question coverage</span></div><h3>六个平台覆盖接近完整，长尾平台的比较范围更窄</h3><p class="purpose">比较问题覆盖数和覆盖率。约束跨平台结论的可比范围。</p><div class="chart" id="chartCoverage" role="img" aria-label="平台问题覆盖率条形图"></div><p class="metric-note">覆盖率分母为数据集内 620 个标准问题。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">02.3 · Source breadth</span></div><h3>引用量、信源数与页面数共同刻画平台的检索广度</h3><p class="purpose">观察平台规模与信源广度关系。区分“高频集中”与“广泛覆盖”。</p><div class="chart" id="chartPlatformBreadth" role="img" aria-label="平台信源广度气泡图"></div><p class="metric-note">横轴为规范信源数，纵轴为去重引用量，气泡大小为规范页面数。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">02.4 · Per-question density</span><span class="link-badge">口径联动</span></div><h3>单问题引用密度呈长尾分布，中位数比均值更适合横向比较</h3><p class="purpose">展示各平台每问题引用数的五数概括。识别典型密度与极端高值。</p><div class="chart tall" id="chartDensity" role="img" aria-label="平台每问题引用密度箱线图"></div><p class="metric-note">箱体依次表示下四分位数、中位数和上四分位数，须线表示最小值与最大值。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">02.5 · Terminal pairs</span><span class="link-badge">口径联动</span></div><h3>同产品电脑端与移动端的样本体量并不一致</h3><p class="purpose">对照具备双端数据的产品。支持终端差异研究与采集配额规划。</p><div class="chart" id="chartTerminal" role="img" aria-label="同产品电脑端与移动端引用量分组条形图"></div><div class="terminal-rate-grid" id="terminalRateGrid" aria-label="同产品双端比例摘要"></div><p class="metric-note">移动端样本引用占比以产品双端当前口径引用合计为分母；问题覆盖差以电脑端覆盖问题数为分母。只纳入同时存在电脑端与移动端记录的产品家族。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-3">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">03</span><span>信源生态与集中度</span></h2><p class="chapter-lede">9,878 个规范信源形成明显的头部集中和长尾并存结构。信源类型、跨平台覆盖与生态归属提供互补视角。</p><p class="takeaway"><b>本章用途：</b>筛选稳定信源、识别平台偏好，并判断新增内容进入头部生态的难度。</p></header>
+    <div class="grid-2">
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">03.1 · Top sources</span><span class="link-badge">平台 / 类型 / 口径联动</span></div><h3>头部信源排名会随平台与信源类型发生明显变化</h3><p class="purpose">按当前筛选条件展示头部信源，并同时显示样本引用份额。形成平台级信源优先名单。</p><div class="chart tall" id="chartTopSources" role="img" aria-label="当前筛选条件下的头部信源引用量与样本份额条形图"></div><p class="metric-note">样本引用份额使用当前平台、信源类型和记录口径下的全部可关联信源引用作为分母；问题覆盖率使用当前筛选集合覆盖的问题数作为分母。图中仅展示 Top 20，分母保留完整集合。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">03.2 · Source types</span><div class="card-actions"><span class="link-badge">平台 / 口径联动</span><div class="metric-switch" role="group" aria-label="信源类型显示口径"><button class="metric-toggle" type="button" data-metric-view="sourceTypes" data-metric-value="count" aria-pressed="true">引用量</button><button class="metric-toggle" type="button" data-metric-view="sourceTypes" data-metric-value="share" aria-pressed="false">构成率</button></div></div></div><h3>内容平台、新闻媒体与榜单类站点构成可识别的核心供给层</h3><p class="purpose">比较信源类型的引用规模和样本构成率。观察内容供给结构和分类缺口。</p><div class="chart tall" id="chartSourceTypes" role="img" aria-label="信源类型引用规模与构成率条形图"></div><p class="metric-note">构成率以当前平台和记录口径的全部类型引用合计为 100%。高贡献 Top 500 域名已完成人工复核，.gov.cn 使用确定性规则；证据不足的长尾域名保留“未分类”。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">03.3 · Pareto</span></div><h3>头部少量信源吸收了较高比例的去重引用</h3><p class="purpose">展示信源排名与累计引用份额。评估头部集中度和长尾扩展空间。</p><div class="chart tall" id="chartPareto" role="img" aria-label="信源引用帕累托图"></div><p class="metric-note">累计份额按精确去重引用量排序计算。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">03.4 · Source × platform</span></div><h3>同一头部信源在 12 个平台上的引用强度分布不均</h3><p class="purpose">对照头部信源的平台分布。寻找平台偏好与跨平台扩展线索。</p><div class="chart x-tall" id="chartSourcePlatform" role="img" aria-label="头部信源与平台引用量热力图"></div><p class="metric-note">选取全局去重引用量最高的 16 个信源；颜色为平台内去重引用数。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">03.5 · Ecosystems</span></div><h3 id="ecosystemHeadline">已归属信源与未归属生态长尾结构</h3><p class="purpose">对照已归属生态规模，并拆解生态归属空缺长尾的头部与低频结构。</p><div class="ecosystem-stats" aria-label="未归属生态信源结构摘要"><div class="ecosystem-stat"><b id="ecosystemUnclassifiedShare">…</b><span>信源表去重引用来自未归属生态信源</span></div><div class="ecosystem-stat"><b id="ecosystemLowFrequencyShare">…</b><span>未归属生态域名仅产生 1 至 5 条引用</span></div><div class="ecosystem-stat"><b id="ecosystemTop50Share">…</b><span>未归属生态 Top 50 的引用占比</span></div></div><div class="ecosystem-visuals"><section class="ecosystem-panel"><h4>已归属生态引用规模</h4><div class="chart" id="chartEcosystem" role="img" aria-label="已归属信源生态引用规模条形图"></div></section><section class="ecosystem-panel"><h4>未归属生态信源 Top 10</h4><div class="chart" id="chartUnclassifiedSources" role="img" aria-label="未归属生态头部信源引用规模条形图"></div></section></div><p class="metric-note" id="ecosystemNote">“未归属生态”仅描述集团或内容生态标签尚未标注。信源类型分类覆盖率与未分类长尾见 04.5。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-4">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">04</span><span>四大 AI 产品的信源偏好与终端差异</span></h2><p class="chapter-lede">以八端共同问题建立公平基线，再以豆包和 DeepSeek 四个高活跃端点的头部信源作为锚点，观察元宝与千问的承接情况，并展开各端真实 Top 10/20 排行、终端倾向和一级类型构成。Kimi 不进入本章的数据、筛选和结论。</p><p class="takeaway"><b>本章用途：</b>识别核心信源的跨产品迁移机会，对照每个端点的真实头部结构，并形成面向具体产品和终端的 GEO 信源初筛名单。</p></header>
+    <div class="preference-toolbar" aria-label="信源偏好章节筛选">
+      <div class="field"><label for="preferenceProductFilter">产品范围</label><select id="preferenceProductFilter"><option value="ALL">全部四个产品</option></select></div>
+      <p class="preference-scope" id="preferenceScopeSummary">固定口径：精确去重、共同问题、问题等权。选择具体产品后，差异图与行动清单聚焦该产品，锚点和八端排行保留完整对照并突出所选产品。</p>
+    </div>
+    <div class="preference-stats" aria-label="信源偏好分析范围">
+      <div class="preference-stat"><b id="preferenceCommonQuestions">…</b><span>八端均有可识别信源的共同问题</span></div>
+      <div class="preference-stat"><b id="preferenceEndpointCount">…</b><span>电脑端与移动端终端</span></div>
+      <div class="preference-stat"><b id="preferenceProductCount">…</b><span>具备双端数据的产品</span></div>
+      <div class="preference-stat"><b id="preferenceQualifiedSources">…</b><span>达到筛选门槛的信源</span></div>
+    </div>
+    <div class="grid-2">
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">04.1 · Preference matrix</span><span class="link-badge">产品联动</span></div><h3>八端偏好指数定位跨端差异较大的信源候选</h3><p class="purpose">以八端平均占比为 100，比较筛选达标信源在各端点的相对权重。点击有引用的单元格或使用键盘选择器可联动锁定信源。</p><div class="preference-source-picker"><label for="preferenceSourceSelect">键盘选择矩阵信源</label><select id="preferenceSourceSelect" aria-label="选择偏好矩阵中的信源"><option value="">未选择信源</option></select></div><div class="preference-chart-scroll" aria-label="移动端可横向滑动查看完整矩阵"><div class="chart preference-matrix" id="chartSourcePreference" role="img" aria-label="四大 AI 产品八终端信源偏好指数热力图"></div></div><p class="metric-note">每个问题先在可识别信源中归一化，再按问题等权汇总。八端偏好指数的理论范围为 0 至 800；矩阵从筛选达标信源中展示跨端差异度最高的 20 个，颜色在指数 200 处封顶，悬停显示实际指数、引用量和覆盖问题数。极高指数可能来自较小覆盖样本，需要结合明细读取。窄屏可横向滑动图表。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">04.2 · Anchor migration</span><span class="link-badge">锚点 / 信源联动</span></div><h3>豆包与 DeepSeek 的 17 个头部锚点在八端呈现不同承接深度</h3><p class="purpose">合并豆包电脑端、豆包移动端、DeepSeek 电脑端和 DeepSeek 移动端各自 Top 10，得到 17 个去重锚点，再观察这些信源在元宝与千问双端的排名和份额。</p><div class="anchor-carryover" id="anchorCarryover" role="list" aria-label="17 个锚点在各端 Top 20 中的继承率"></div><div class="preference-chart-scroll" aria-label="移动端可横向滑动查看完整锚点迁移矩阵"><div class="anchor-groups" aria-hidden="true"><span data-preference-group="anchor">锚定端：豆包与 DeepSeek</span><span data-preference-group="control">对照端：元宝与千问</span></div><div class="chart preference-anchor" id="chartAnchorMigration" role="img" aria-label="核心锚点在八终端的排名、份额与锚定端复现率热力图"></div></div><p class="metric-note">锚点继承率 = 进入当前端点 Top 20 的锚点数 ÷ 17。单元格数字为共同问题口径下的真实排名，点号表示未进入该端完整信源排行；悬停还可查看该信源在四个锚定端的 Top 10 出现率。</p></article>
+      <article class="text-card wide" id="preferenceRankBoard"><div class="card-top"><span class="card-index">04.3 · Top source ranks</span><span class="link-badge">口径 / 数量 / 信源联动</span></div><h3>八端 Top 10/20 排行还原每个终端的真实头部信源</h3><p class="purpose">共同问题使用 334 个八端均有可识别信源的问题，适合横向公平比较；全量范围使用各端全部有效信源问题，呈现端内真实分布。</p><div class="rank-toolbar"><div class="rank-controls"><div class="rank-control" id="preferenceRankScope" role="group" aria-label="排行口径"><span class="rank-control-label">口径</span><button class="rank-toggle" type="button" data-rank-scope="common" aria-pressed="true">共同问题</button><button class="rank-toggle" type="button" data-rank-scope="full" aria-pressed="false">全量范围</button></div><div class="rank-control" id="preferenceTopN" role="group" aria-label="排行数量"><span class="rank-control-label">数量</span><button class="rank-toggle" type="button" data-top-n="10" aria-pressed="true">Top 10</button><button class="rank-toggle" type="button" data-top-n="20" aria-pressed="false">Top 20</button></div></div><p class="rank-scope-note" id="preferenceRankScopeNote">当前使用 334 个共同问题，八端分母一致，适合比较端点偏好。</p></div><div class="preference-rank-sticky" id="preferenceRankSticky" aria-hidden="true"><table class="preference-rank-table"><thead id="preferenceRankStickyHead"></thead></table></div><div class="preference-rank-scroll" tabindex="0" aria-label="八终端信源排行，可横向滚动"><table class="preference-rank-table" id="preferenceRankTable" role="table" aria-label="八终端 Top 信源排行"><thead id="preferenceRankHead"></thead><tbody id="preferenceRankBody"></tbody></table></div><p class="metric-note">份额先在单个问题内按可识别信源归一化，再对问题等权汇总。选择产品时保留八端完整结构，并突出对应双端。点击其他产品列的信源会自动切换产品范围，同一 source_id 随后在矩阵、终端倾向和 GEO 清单同步高亮。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">04.4 · Terminal tilt</span><span class="link-badge">产品 / 信源联动</span></div><h3>同一产品的电脑端与移动端呈现不同的部分信源权重</h3><p class="purpose">使用双端均有可识别信源的共同问题，比较信源在电脑端和移动端的等权占比。全部产品模式展示每个产品差异最大的信源。</p><div class="preference-pair-stats" aria-label="当前产品双端摘要"><div class="preference-stat"><b id="pairCommonQuestions">…</b><span>双端可识别共同问题</span></div><div class="preference-stat"><b id="pairSourceJaccard">…</b><span>全量信源重合度</span></div><div class="preference-stat"><b id="pairQualifiedSourceJaccard">…</b><span>筛选达标信源重合度</span></div><div class="preference-stat"><b id="pairSharedSources">…</b><span>全量双端共同信源</span></div></div><div class="chart preference-tilt" id="chartTerminalTilt" role="img" aria-label="产品电脑端与移动端信源占比镜像图"></div><p class="metric-note">左侧为电脑端，右侧为移动端。全量重合度使用共同问题内出现过的全部可识别信源；达标重合度仅保留累计不少于 20 条去重引用且覆盖不少于 5 个问题的信源。两层口径用于区分长尾差异和稳定信源差异。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">04.5 · Source type mix</span><span class="link-badge">产品联动</span></div><h3>一级信源类型构成显示不同终端的内容入口倾向</h3><p class="purpose">把每个终端的等权引用占比分解为九个一级分类，并单列信源未规范化记录。悬停可继续查看一级分类中的二级类型构成。</p><div class="classification-coverage" aria-label="信源分类治理覆盖摘要"><div class="classification-item"><b id="classificationCoverage">…</b><span>八端共同问题等权口径的分类覆盖率</span></div><div class="classification-item"><b id="classificationRuleShare">…</b><span>八端共同问题等权口径的规则分类份额</span></div><div class="classification-item"><b id="classificationUnclassified">…</b><span>八端共同问题等权口径的未分类长尾</span></div><div class="classification-item"><b id="classificationUnnormalized">…</b><span>八端共同问题等权口径的信源未规范化</span></div><div class="classification-item"><b>Top 500 + .gov.cn</b><span>高贡献域名人工复核与政府域名确定性规则</span></div></div><div class="chart preference-types" id="chartPreferenceTypes" role="img" aria-label="八终端一级信源类型占比堆叠条形图"></div><p class="metric-note">每个终端合计为 100%。一级分类保证跨端可读性，二级类型保留主体与内容形态细节。未分类长尾继续保留，分类证据不足的域名不做强制归类；无法关联规范域名的记录单列为“信源未规范化”。</p></article>
+      <article class="text-card wide preference-table"><div class="card-top"><span class="card-index">04.6 · GEO shortlist</span><span class="link-badge">产品 / 信源联动</span></div><h3>覆盖规模与终端倾向共同形成信源初筛清单</h3><p class="purpose">汇总信源在具体产品中的优势终端、倾向强度和共同问题覆盖率，形成内容研究与终端专项验证名单。全部产品模式为每个产品保留 5 个候选。</p><div class="table-wrap"><table><thead><tr><th>信源</th><th>产品</th><th>优势终端</th><th class="num">终端倾向指数</th><th class="num preference-optional">终端差异</th><th class="num preference-optional">覆盖问题</th><th class="num preference-optional">共同问题覆盖率</th><th class="num preference-optional">去重引用</th><th>初筛建议</th></tr></thead><tbody id="preferenceTable"></tbody></table></div><p class="metric-note">共同问题覆盖率 = 信源覆盖问题数 ÷ 该产品双端均有可识别信源的问题数。终端倾向指数以产品双端平均值为 100，范围为 100 至 200。双端份额相对差不超过 15% 时标记为接近；指数不低于 150 且覆盖少于 15 个问题时标记为高倾向低覆盖；其余信源按份额较高的终端进入专项验证。Kimi 不进入本章计算、筛选和结论。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-5">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">05</span><span>跨平台重合与共识</span></h2><p class="chapter-lede">跨平台共享的“问题与页面”组合整体有限，少数平台对具有更高重合。共识信源因此更适合作为跨平台策略起点。</p><p class="takeaway"><b>本章用途：</b>区分平台独有供给、平台间共享供给和跨平台共识信源。</p></header>
+    <div class="grid-2">
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">05.1 · Jaccard matrix</span></div><h3>平台间问题与页面集合的重合普遍偏低</h3><p class="purpose">比较任意两个平台的 Jaccard 相似度。定位最接近的平台对与相对独立的平台。</p><div class="chart x-tall" id="chartOverlapHeat" role="img" aria-label="12 个平台 Jaccard 相似度热力图"></div><p class="metric-note">Jaccard = 共享问题与页面组合数 ÷ 两平台问题与页面组合并集；0 表示没有共享组合，对角线表示平台自身。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">05.2 · Network</span></div><h3>平台关系网络由少数较强连接和大量弱连接组成</h3><p class="purpose">把相似度转为关系网络。观察平台簇与桥接节点。</p><div class="chart tall" id="chartNetwork" role="img" aria-label="平台引用集合相似关系网络图"></div><p class="metric-note">只显示相似度高于样本中位数且大于 0 的连接，线宽随相似度增加。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">05.3 · Shared pairs</span></div><h3>最高重合的平台对贡献了主要共享问题与页面组合</h3><p class="purpose">排序展示共享组合数量。筛选适合做迁移验证的平台对。</p><div class="chart tall" id="chartSharedPairs" role="img" aria-label="平台对共享问题页面组合排名图"></div><p class="metric-note">图中展示共享组合数最高的 16 个平台对。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">05.4 · Shared vs unique</span></div><h3>多数平台同时拥有大量独有问题与页面组合</h3><p class="purpose">分解各平台共享与独有组合。估算单平台专项优化的必要性。</p><div class="chart tall" id="chartSharedUnique" role="img" aria-label="平台共享与独有问题页面组合堆叠条形图"></div><p class="metric-note">共享表示同一问题与同一规范页面同时出现在至少两个平台。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">05.5 · Consensus sources</span></div><h3>高问题覆盖与高平台覆盖共同定义跨平台共识信源</h3><p class="purpose">综合信源的平台数和问题数。形成跨平台优先合作与内容研究名单。</p><div class="chart tall" id="chartConsensus" role="img" aria-label="跨平台共识信源排名图"></div><p class="metric-note">共识分数 = 覆盖问题数 × 覆盖平台数，仅用于本数据集内筛选。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-6">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">06</span><span>问题类型与场景差异</span></h2><p class="chapter-lede">620 个问题按照来源分层映射到七类维度。不同标签的引用密度、信源多样性和平台供给具有独立结构。</p><p class="takeaway"><b>本章用途：</b>把平台与信源研究落到具体需求场景，建立按问题类型分层的数据挖掘单元。</p></header>
+    <div class="grid-2">
+      <article class="chart-card"><div class="card-top"><span class="card-index">06.1 · Taxonomy</span><span class="link-badge">问题维度联动</span></div><h3>问题分类采用分层来源，每个维度覆盖不同问题子集</h3><p class="purpose">呈现维度与标签的结构。避免把不同分层误当成同一套全量标签。</p><div class="chart tall" id="chartTaxonomy" role="img" aria-label="问题分类维度与标签矩形树图"></div><p class="metric-note">面积表示标签内问题数；当前版本每个问题只保留其来源分层对应的一个标签。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">06.2 · Label scale</span><div class="card-actions"><span class="link-badge">问题 / 口径联动</span><div class="metric-switch" role="group" aria-label="问题标签供给显示口径"><button class="metric-toggle" type="button" data-metric-view="labelScale" data-metric-value="count" aria-pressed="true">引用量</button><button class="metric-toggle" type="button" data-metric-view="labelScale" data-metric-value="rate" aria-pressed="false">题均引用</button></div></div></div><h3>同一问题维度下，各标签的引用供给强度存在差异</h3><p class="purpose">比较当前维度的标签引用规模和题均引用。筛选高供给与低供给场景。</p><div class="chart tall" id="chartLabelScale" role="img" aria-label="当前问题维度各标签引用规模与题均引用图"></div><p class="metric-note">题均引用以标签内标准问题数为分母；悬停同步展示题均信源、题均页面和题均平台数。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">06.3 · Label × platform</span><span class="link-badge">问题 / 口径联动</span></div><h3>问题标签与平台之间形成差异化供给矩阵</h3><p class="purpose">比较当前问题维度在 12 个平台上的引用量。定位平台场景优势和采集空白。</p><div class="chart x-tall" id="chartLabelPlatform" role="img" aria-label="问题标签与平台引用量热力图"></div><p class="metric-note">颜色为当前口径下的引用观察数；样本覆盖差异需与第 2 章结合阅读。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">06.4 · Source diversity</span><span class="link-badge">问题维度联动</span></div><h3>高引用量标签并不一定拥有更高题均信源多样性</h3><p class="purpose">对照每个标签按问题先聚合后计算的题均信源数与题均页面数。识别供给集中和内容补位空间。</p><div class="chart tall" id="chartLabelDiversity" role="img" aria-label="问题标签题均信源与题均页面多样性气泡图"></div><p class="metric-note">横轴为单问题不同规范信源数的标签均值，纵轴为单问题不同规范页面数的标签均值，气泡大小为标签问题数。</p></article>
+      <article class="text-card"><div class="card-top"><span class="card-index">06.5 · Leading sources</span><span class="link-badge">问题标签联动</span></div><h3>当前场景的头部信源可以直接转为内容与竞品研究清单</h3><p class="purpose">列出当前维度或标签的高频信源。支持页面拆解和信源合作优先级。</p><div class="table-wrap"><table><thead><tr><th>信源</th><th>标签</th><th class="num">去重引用</th><th class="num">覆盖问题</th></tr></thead><tbody id="labelSourceTable"></tbody></table></div><p class="metric-note">选择具体问题标签时显示该标签前 8 位；选择全部时展示当前维度的代表性信源。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-7">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">07</span><span>页面特征与内容表现</span></h2><p class="chapter-lede">页面特征来自标题和摘要的确定性规则。标题与摘要未提供的页面单独标记，特征占比在字段已提供的样本内计算。</p><p class="takeaway"><b>本章用途：</b>总结高覆盖页面的可观察形态，并明确每项特征分析的字段前提和可用样本。</p></header>
+    <div class="grid-2">
+      <article class="chart-card"><div class="card-top"><span class="card-index">07.1 · Feature prevalence</span></div><h3>年份和榜单信号是已提供标题中最常见的显式特征</h3><p class="purpose">比较四类标题特征在标题已提供页面中的覆盖率。建立内容结构基线。</p><div class="chart" id="chartFeaturePrevalence" role="img" aria-label="页面标题特征覆盖率条形图"></div><p class="metric-note">规则基于关键词和年份模式；分母为 <span id="titledPageCount">已提供标题的页面</span>。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">07.2 · Content formats</span><span class="link-badge">平台 / 口径联动</span></div><h3>通用内容占主体，榜单、指南和对比构成可分离的内容形态</h3><p class="purpose">比较内容形态的页面量和引用密度。识别适合细分研究的内容模板。</p><div class="chart" id="chartFormats" role="img" aria-label="内容形式页面数与引用密度组合图"></div><p class="metric-note">内容形态按标题信号归类；标题未提供页面单独显示，不归入通用内容。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">07.3 · Title length</span></div><h3>标题长度区间与平均引用表现存在可观察差异</h3><p class="purpose">比较标题长度区间的页面量与平均引用。为标题结构实验提供区间参考。</p><div class="chart" id="chartTitleLength" role="img" aria-label="标题长度区间与平均引用组合图"></div><p class="metric-note">标题未提供为独立区间；相关性用于筛选，未控制平台、主题和域名权重等混杂因素。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">07.4 · Snippet length</span></div><h3>摘要长度在摘要已提供页面内反映初步信息密度</h3><p class="purpose">比较摘要长度与页面平均引用。为正文抓取优先级提供线索。</p><div class="chart" id="chartSnippetLength" role="img" aria-label="摘要长度区间与平均引用组合图"></div><p class="metric-note">摘要未提供为独立区间；max_snippet_length 是同一规范页面的最大引用摘要长度。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">07.5 · Feature × platform</span></div><h3>同一标题特征在不同平台的页面占比并不一致</h3><p class="purpose">对照平台级页面特征覆盖率。发现平台内容偏好候选。</p><div class="chart tall" id="chartFeaturePlatform" role="img" aria-label="页面特征与平台覆盖率热力图"></div><p class="metric-note">分母为各平台去重引用涉及且标题已提供的不同规范页面数。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">07.6 · High-coverage pages</span></div><h3>高覆盖页面同时拥有更高问题数和平台数</h3><p class="purpose">识别覆盖多个问题与平台的页面。建立正文深挖与页面解构样本池。</p><div class="chart tall" id="chartTopPages" role="img" aria-label="高覆盖页面问题数与平台数气泡图"></div><p class="metric-note">气泡大小为精确去重引用数；悬停可查看页面标题和域名。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">07.7 · Feature combinations</span></div><h3>组合特征为页面分层提供比单一关键词更细的结构</h3><p class="purpose">比较常见特征组合的平均问题覆盖。为内容模板聚类和内容实验生成候选。</p><div class="chart tall" id="chartFeatureCombos" role="img" aria-label="页面标题特征组合平均问题覆盖图"></div><p class="metric-note">排除标题未提供页面，只展示页面数不少于 40 的组合；均值受头部页面影响。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-8">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">08</span><span>发布时间覆盖与内容新鲜度</span></h2><p class="chapter-lede">107,659 个规范页面中，63,314 个拥有一致发布时间，43,675 个时间未知，670 个存在日期冲突。已知时间页面主要集中于 2025 和 2026。</p><p class="takeaway"><b>本章用途：</b>先确认时间字段覆盖，再分析已知时间样本内部结构，并把未知与冲突页面保留在其他适用分析中。</p></header>
+    <div class="insight-strip" aria-label="页面发布时间状态概览"><div class="insight"><b id="dateKnownShare">…</b><span>页面拥有一致发布时间</span></div><div class="insight"><b id="dateUnknownShare">…</b><span>页面发布时间未知</span></div><div class="insight"><b id="dateConflictShare">…</b><span>页面存在多个发布时间</span></div></div>
+    <div class="grid-2">
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">08.1 · Publication years</span></div><h3>拥有一致发布时间的页面主要集中在 2025 与 2026 年</h3><p class="purpose">展示可靠时间样本的年度分布。观察可分析页面的新鲜内容重心。</p><div class="chart" id="chartYears" role="img" aria-label="规范页面发布时间年度分布图"></div><p class="metric-note">仅纳入拥有唯一一致日期的页面；发布时间未知和日期冲突页面不进入年度序列。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">08.2 · Freshness bands</span><span class="link-badge">时间联动</span></div><h3>已确认发布时间的页面中，2025 和 2026 占 88.8%</h3><p class="purpose">同时展示全体页面状态和已知时间样本内部构成。建立内容更新与存量分析口径。</p><div class="chart" id="chartFreshness" role="img" aria-label="页面新鲜度分段条形图"></div><p class="metric-note">图中同时标注占全部页面比例；已知时间段额外显示其在 63,314 个可靠时间页面中的占比。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">08.3 · Label freshness</span><span class="link-badge">问题 / 时间联动</span></div><h3>问题标签的时间覆盖与新鲜度构成可以揭示更新压力</h3><p class="purpose">比较当前问题维度内各标签的时间状态占比。识别高时效场景的旧内容与补采空间。</p><div class="chart tall" id="chartLabelFreshness" role="img" aria-label="问题标签与页面新鲜度占比热力图"></div><p class="metric-note">每行以该标签的问题与页面关联总数为 100%，悬停显示占比和关联数。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">08.4 · Source-type freshness</span><span class="link-badge">时间联动</span></div><h3>信源类型比较使用各类型内部时间构成</h3><p class="purpose">比较主要信源类型的时间状态占比。判断更新型内容、常青内容和字段覆盖差异。</p><div class="chart tall" id="chartSourceFreshness" role="img" aria-label="信源类型页面新鲜度百分比堆叠条形图"></div><p class="metric-note">每类信源以自身页面数为 100%；展示页面量最高的 12 类信源。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">08.5 · Title year audit</span></div><h3>标题中的年份需要与可靠页面发布时间交叉核验</h3><p class="purpose">审计标题年份和发布时间的一致性。日期冲突与未知状态独立呈现。</p><div class="chart" id="chartTitleYear" role="img" aria-label="标题年份与页面发布时间一致性图"></div><p class="metric-note">标题取首个四位年份；年份一致只表示标题年份与唯一页面日期年份相同。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-9">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">09</span><span>GEO 机会地图</span></h2><p class="chapter-lede">机会筛选同时考虑已有覆盖强度、平台覆盖缺口、问题供给密度和内容形态。所有评分用于形成候选队列，后续仍需人工验证。</p><p class="takeaway"><b>本章用途：</b>把描述性分析转成信源扩展、场景补位、内容模板和跨平台迁移四类行动清单。</p></header>
+    <div class="grid-2">
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">09.1 · Source quadrant</span></div><h3>高问题覆盖率、高平台渗透率的信源构成优先研究象限</h3><p class="purpose">按问题覆盖率和平台渗透率定位信源。区分共识型、平台型与长尾型信源。</p><div class="chart x-tall" id="chartSourceQuadrant" role="img" aria-label="信源问题覆盖率与平台渗透率象限气泡图"></div><p class="metric-note">问题覆盖率以 620 个标准问题为分母，平台渗透率以 12 个平台为分母；虚线分别位于问题覆盖率 6.5%（40 个问题）和平台渗透率 50%（6 个平台），气泡大小为精确去重引用量。</p></article>
+      <article class="text-card"><div class="card-top"><span class="card-index">09.2 · Platform whitespace</span><span class="link-badge">平台联动</span></div><h3>其他平台已验证、当前平台尚未出现的信源形成扩展候选</h3><p class="purpose">列出当前平台未覆盖的高潜信源。设计跨平台迁移验证清单。</p><div class="table-wrap"><table><thead><tr><th>候选信源</th><th>类型</th><th class="num">现有平台</th><th class="num">问题数</th></tr></thead><tbody id="whitespaceTable"></tbody></table></div><p class="metric-note">全部平台模式展示综合候选；选择具体平台后展示该平台空白。</p></article>
+      <article class="chart-card"><div class="card-top"><span class="card-index">09.3 · Category gaps</span><span class="link-badge">问题维度联动</span></div><h3>高引用需求与低页面供给的组合形成内容补位候选</h3><p class="purpose">比较每问题引用量与每问题页面量。筛选需求密集、供给相对集中的场景。</p><div class="chart tall" id="chartContentGaps" role="img" aria-label="问题标签引用需求与页面供给气泡图"></div><p class="metric-note">右上表示高需求高供给；左上更适合作为新增页面的初筛方向。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">09.4 · Format opportunity</span></div><h3>平台与内容形态之间存在可观察的引用密度差异</h3><p class="purpose">比较各平台每种内容形态的每页引用数。为平台定制内容模板提供候选依据。</p><div class="chart tall" id="chartFormatOpportunity" role="img" aria-label="平台与内容形态引用密度热力图"></div><p class="metric-note">单元格 = 去重引用数 ÷ 不同规范页面数；页面量较小时需谨慎解读。</p></article>
+      <article class="chart-card wide"><div class="card-top"><span class="card-index">09.5 · Expansion candidates</span></div><h3>已有一定问题覆盖、仍有平台空间的信源适合进入扩展验证</h3><p class="purpose">综合问题覆盖率、平台渗透率和平台空白率。生成跨平台扩展候选队列。</p><div class="chart tall" id="chartExpansion" role="img" aria-label="跨平台扩展候选信源筛选分与平台空白率排名图"></div><p class="metric-note">筛选分 = 覆盖问题数 ×（12 − 已覆盖平台数），用于保持原有排序；条形标签补充平台空白率，悬停显示问题覆盖率和平台渗透率。</p></article>
+    </div>
+  </section>
+
+  <section class="report-section" id="chapter-10">
+    <header class="chapter-head"><h2 class="chapter-title"><span class="chapter-no">10</span><span>结论、行动建议与方法说明</span></h2><p class="chapter-lede">本报告提供一套可以反复更新的分析骨架：平台比较、信源分层、场景拆解、页面特征和机会筛选均可随新数据版本重算。</p><p class="takeaway"><b>本章用途：</b>把当前发现转成下一轮数据采集、内容研究和 GEO 实验的执行顺序。</p></header>
+    <ol class="finding-list" id="findingList"></ol>
+    <div class="action-grid">
+      <article class="action"><small>Platform</small><h3>平台研究</h3><p>优先对问题覆盖接近的电脑端与移动端产品做配对比较；引用序号只在平台内部使用。</p></article>
+      <article class="action"><small>Source</small><h3>信源策略</h3><p>建立跨平台共识、产品与终端特色、空白候选三类信源名单，并按月复算。</p></article>
+      <article class="action"><small>Content</small><h3>内容加工</h3><p>从高问题覆盖页面抽样抓取正文，补充结构、实体、事实密度、表格和作者权威性特征。</p></article>
+      <article class="action"><small>Collection</small><h3>数据补采</h3><p>按研究目的补充响应边界、模型版本、采集时间和页面正文；发布时间作为时间分析的可选增强字段。</p></article>
+    </div>
+    <div class="method">
+      <div class="method-grid">
+        <div><h3>方法与边界</h3><ul><li>默认统计粒度为精确去重后的引用观察；原始口径保留重复采集事实。</li><li>平台规模反映当前样本覆盖，不能作为产品市场份额或用户规模。</li><li>信源偏好表示共同问题样本中的相对引用份额。它不能外推为平台固定抓取规则、市场整体偏好或因果关系，指数为 0 仅表示当前样本未观察到。</li><li>信源偏好章节只覆盖豆包、DeepSeek、腾讯元宝和千问。腾讯元宝手机版与千问手机版的终端映射由代码配对规则推定，Kimi 未进入该章节。</li><li>发布时间未知的记录继续参与平台、问题和引用观察统计；时间分析只使用可靠时间样本。</li><li>同一规范页面出现多个日期时标记为发布时间冲突，不直接选取最早日期。</li><li>标题或摘要未提供的页面单独标记，不进入对应的特征占比和组合分析。</li><li>页面特征由标题和摘要规则生成，支持相关性筛选，不承载因果结论。</li><li>响应表目前为空，无法恢复一次回答中的完整引用边界。</li><li>信源分类已复核高贡献 Top 500 域名，并对 .gov.cn 应用确定性规则；证据不足的长尾域名继续保留未分类。</li></ul></div>
+        <div><h3>核心数据表</h3><dl class="definition-list" id="dictionaryList"></dl></div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer"><span>CN-GEO 数据研究项目 · 单文件可视化报告</span><span>设计系统：Kami · 页面背景：纯白 · 数据版本：2026-07-14</span></footer>
+</main>
+<noscript><div class="noscript">本报告需要浏览器启用 JavaScript 才能显示交互图表。</div></noscript>
+<script>/*__ECHARTS_LIBRARY__*/</script>
+<script>
+const REPORT = /*__REPORT_DATA__*/;
+</script>
+<script>
+//__REPORT_RUNTIME__
+</script>
+</body>
+</html>

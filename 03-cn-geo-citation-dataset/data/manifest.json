@@ -1,0 +1,809 @@
+{
+  "dataset": "CN-GEO Citation Dataset",
+  "repository": "cn-geo-citation-dataset",
+  "version": "2.0.1",
+  "release_date": "2026-07-14",
+  "format": "JSON Lines (UTF-8)",
+  "record_schema": "schema/record.schema.json",
+  "shard_policy": {
+    "group_by": [
+      "layer",
+      "subcat"
+    ],
+    "max_records_per_file": 5000,
+    "ordering": "source order within each category"
+  },
+  "source": {
+    "file_name": "aidso-results-v2-updated.txt",
+    "bytes": 261827429,
+    "sha256": "839903dfda8bed7b212e1d37009c838c800fa0d4a0055d8def2b2ba2546a947d",
+    "records": 214119
+  },
+  "publication_sanitization": {
+    "applied_at": "2026-07-20",
+    "records": 25,
+    "rule": "Remove URL userinfo and recompute the affected record hash before public release"
+  },
+  "summary": {
+    "records": 214119,
+    "prompt_ids": 609,
+    "platforms": 12,
+    "layers": 7,
+    "category_pairs": 32,
+    "exact_duplicate_records": 24274,
+    "valid_urls": 211248,
+    "invalid_nonempty_urls": 1738,
+    "empty_urls": 1133
+  },
+  "missing_values": {
+    "domain": 2802,
+    "prompt_id": 4433,
+    "published_at": 74509,
+    "quote_index": 3545,
+    "quote_title": 1981,
+    "quote_url": 1133,
+    "site_name": 3573,
+    "snippet": 7816
+  },
+  "platform_distribution": [
+    {
+      "platform_code": "TYQW",
+      "records": 37320
+    },
+    {
+      "platform_code": "DB",
+      "records": 32115
+    },
+    {
+      "platform_code": "DOUBA",
+      "records": 29477
+    },
+    {
+      "platform_code": "TXYB",
+      "records": 25138
+    },
+    {
+      "platform_code": "TXYBA",
+      "records": 24622
+    },
+    {
+      "platform_code": "DP",
+      "records": 18712
+    },
+    {
+      "platform_code": "DPA",
+      "records": 16055
+    },
+    {
+      "platform_code": "TYQWA",
+      "records": 11314
+    },
+    {
+      "platform_code": "BDAI",
+      "records": 9588
+    },
+    {
+      "platform_code": "KIMI",
+      "records": 4819
+    },
+    {
+      "platform_code": "WXYY",
+      "records": 4689
+    },
+    {
+      "platform_code": "DYAI",
+      "records": 270
+    }
+  ],
+  "layer_distribution": [
+    {
+      "layer": "极端与真实场景",
+      "slug": "edge-real-world",
+      "records": 68089
+    },
+    {
+      "layer": "提问属性",
+      "slug": "query-intent",
+      "records": 51201
+    },
+    {
+      "layer": "行业维度",
+      "slug": "industry",
+      "records": 37528
+    },
+    {
+      "layer": "提示风格",
+      "slug": "prompt-style",
+      "records": 19996
+    },
+    {
+      "layer": "时间敏感度",
+      "slug": "time-sensitivity",
+      "records": 18653
+    },
+    {
+      "layer": "触发强度",
+      "slug": "trigger-intensity",
+      "records": 14219
+    },
+    {
+      "layer": "未分类",
+      "slug": "uncategorized",
+      "records": 4433
+    }
+  ],
+  "categories": [
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "金融",
+      "subcat_slug": "finance",
+      "records": 10237,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/finance/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 7668661,
+          "sha256": "0b905e0d1e59e22cc9363fdcaa333fa7323b2bedd90615a95bb53226e99c80a0"
+        },
+        {
+          "path": "data/records/edge-real-world/finance/part-0002.jsonl",
+          "records": 5000,
+          "bytes": 5213310,
+          "sha256": "d3399ad127d5d2f1c717fe64a2a855b049ce564a8a6d1225d6188d4f037973cd"
+        },
+        {
+          "path": "data/records/edge-real-world/finance/part-0003.jsonl",
+          "records": 237,
+          "bytes": 177474,
+          "sha256": "56b943c0e8113c2cacea8850da658adc309ffe405a1e26548d4d2193bfd721a3"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "医疗",
+      "subcat_slug": "healthcare",
+      "records": 6638,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/healthcare/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6479437,
+          "sha256": "b15ea50ca74ff4d4a7d8e1b1db84b86f1bc0988066eac56b1bf776e918ef703f"
+        },
+        {
+          "path": "data/records/edge-real-world/healthcare/part-0002.jsonl",
+          "records": 1638,
+          "bytes": 2565071,
+          "sha256": "dae9673be79f091bad81ecaee810529f551fe758967e3a32455103e7a21cde7e"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "极度模糊",
+      "subcat_slug": "highly-ambiguous",
+      "records": 7209,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/highly-ambiguous/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 7306538,
+          "sha256": "5acf3eccfa23a1861390cbe3517332855b7ded8c8d8beea343b1c090d347ba01"
+        },
+        {
+          "path": "data/records/edge-real-world/highly-ambiguous/part-0002.jsonl",
+          "records": 2209,
+          "bytes": 2847477,
+          "sha256": "9352f8dcc59951425676300542d463171bf45c5ae640699df618e204d7d3c7b5"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "法律",
+      "subcat_slug": "legal",
+      "records": 10148,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/legal/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 7664607,
+          "sha256": "316ad1b113b2afdef1c186d2d29c5721b525719890853fb78a6b159bda1c82aa"
+        },
+        {
+          "path": "data/records/edge-real-world/legal/part-0002.jsonl",
+          "records": 5000,
+          "bytes": 5000614,
+          "sha256": "664423f6e1301176af0da866685976a13caa3a429e34894ff85dfc21eea9f21d"
+        },
+        {
+          "path": "data/records/edge-real-world/legal/part-0003.jsonl",
+          "records": 148,
+          "bytes": 112318,
+          "sha256": "cbee8c7f5c39f8a24b1ef18fa6e9a1903455124b423a400c0296daad339b2329"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "地域限定",
+      "subcat_slug": "location-specific",
+      "records": 9787,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/location-specific/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 7453221,
+          "sha256": "d36a3d87bf7fa13ed7081928ab4416955835734203eeebb62249af9671f3b900"
+        },
+        {
+          "path": "data/records/edge-real-world/location-specific/part-0002.jsonl",
+          "records": 4787,
+          "bytes": 4995013,
+          "sha256": "7aaaebc95362b08883622a262e679f70a7d92e54e2aaf7a93d493f7e4674c6ce"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "多约束真实任务",
+      "subcat_slug": "multi-constraint",
+      "records": 9350,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/multi-constraint/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 7432739,
+          "sha256": "e8abb7a81ce1d29adb64a4c12104877f8baec901f2ef6445823c83220a342334"
+        },
+        {
+          "path": "data/records/edge-real-world/multi-constraint/part-0002.jsonl",
+          "records": 4350,
+          "bytes": 4586363,
+          "sha256": "8406e9e6e56a8bd84091ca85a867e8e19d4902f0ea5bdf667f7fd582b95b05e9"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "操作步骤",
+      "subcat_slug": "procedural",
+      "records": 7904,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/procedural/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 5066342,
+          "sha256": "afa786fc740b441e2eec54445cfc4605b20aa6c6d65c865f828318ed0ddeb5e4"
+        },
+        {
+          "path": "data/records/edge-real-world/procedural/part-0002.jsonl",
+          "records": 2904,
+          "bytes": 3050615,
+          "sha256": "fbe6a9cf2f32ae8e6ae8790070096d5912accd6110ee842613310d91bc36342e"
+        }
+      ]
+    },
+    {
+      "layer": "极端与真实场景",
+      "layer_slug": "edge-real-world",
+      "subcat": "时间敏感",
+      "subcat_slug": "time-sensitive",
+      "records": 6816,
+      "files": [
+        {
+          "path": "data/records/edge-real-world/time-sensitive/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6923602,
+          "sha256": "c2c9c01ae300c39a55b5e5d808d2d6de5a7c18bb11b9bfa6f866614d362faf08"
+        },
+        {
+          "path": "data/records/edge-real-world/time-sensitive/part-0002.jsonl",
+          "records": 1816,
+          "bytes": 2151835,
+          "sha256": "414bd8360069a73583ff809761d236bbf489ed3c12afb881217da9ce83495533"
+        }
+      ]
+    },
+    {
+      "layer": "行业维度",
+      "layer_slug": "industry",
+      "subcat": "美容美发",
+      "subcat_slug": "beauty-hair",
+      "records": 6261,
+      "files": [
+        {
+          "path": "data/records/industry/beauty-hair/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6252642,
+          "sha256": "5835367838dd738703812f4bed6ee01a38d05d8e74d2da5ef297d14f76879b86"
+        },
+        {
+          "path": "data/records/industry/beauty-hair/part-0002.jsonl",
+          "records": 1261,
+          "bytes": 1762987,
+          "sha256": "d112a8fb450efefbd3a1c11412f64c37d6ce4aab86af1d90358ae478dcdabbe5"
+        }
+      ]
+    },
+    {
+      "layer": "行业维度",
+      "layer_slug": "industry",
+      "subcat": "餐饮",
+      "subcat_slug": "food-beverage",
+      "records": 6256,
+      "files": [
+        {
+          "path": "data/records/industry/food-beverage/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6202396,
+          "sha256": "4cb680877c8fb0ce83e4fb9e529ba7d53728fd143119c4f1235a3bc2414b25fe"
+        },
+        {
+          "path": "data/records/industry/food-beverage/part-0002.jsonl",
+          "records": 1256,
+          "bytes": 1472652,
+          "sha256": "05fd8298e337149fe79619df95570709317a3250090b7922ae3a8a498b9e5b09"
+        }
+      ]
+    },
+    {
+      "layer": "行业维度",
+      "layer_slug": "industry",
+      "subcat": "酒店民宿",
+      "subcat_slug": "hotels-homestays",
+      "records": 6073,
+      "files": [
+        {
+          "path": "data/records/industry/hotels-homestays/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6404574,
+          "sha256": "82f47e334868fc2d430c7aef6d69c0a76f54a10ad667358cbf4665d54fc27b5d"
+        },
+        {
+          "path": "data/records/industry/hotels-homestays/part-0002.jsonl",
+          "records": 1073,
+          "bytes": 1358874,
+          "sha256": "3c578b16784fe64f39d8d973147cf1bee6f33e13acabc74d01db7bb6c3208e30"
+        }
+      ]
+    },
+    {
+      "layer": "行业维度",
+      "layer_slug": "industry",
+      "subcat": "休闲娱乐",
+      "subcat_slug": "leisure-entertainment",
+      "records": 6286,
+      "files": [
+        {
+          "path": "data/records/industry/leisure-entertainment/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 5955045,
+          "sha256": "1d269ac96398cb07f2cc8c70c5b2e5ff1488b4b70dfcda8982f767307819c25a"
+        },
+        {
+          "path": "data/records/industry/leisure-entertainment/part-0002.jsonl",
+          "records": 1286,
+          "bytes": 1603922,
+          "sha256": "90cdd01c55c8a28a712722a4bcc1dd5556d7b3592863f621bb907d6ad4ea73b8"
+        }
+      ]
+    },
+    {
+      "layer": "行业维度",
+      "layer_slug": "industry",
+      "subcat": "婚庆摄影",
+      "subcat_slug": "wedding-photography",
+      "records": 6298,
+      "files": [
+        {
+          "path": "data/records/industry/wedding-photography/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6127614,
+          "sha256": "381f1b48d3ca97e82080cc50cde268c1d63455edd212bdd4d162fe54eea123a6"
+        },
+        {
+          "path": "data/records/industry/wedding-photography/part-0002.jsonl",
+          "records": 1298,
+          "bytes": 1578599,
+          "sha256": "eca9175dd015fc160fed8e867bd8c97ce03703da5adec4b70609209c5a203af4"
+        }
+      ]
+    },
+    {
+      "layer": "行业维度",
+      "layer_slug": "industry",
+      "subcat": "保健养生",
+      "subcat_slug": "wellness",
+      "records": 6354,
+      "files": [
+        {
+          "path": "data/records/industry/wellness/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6218973,
+          "sha256": "3af9bdc6beff67a6c7235fc5f632c41a4ebee4daff58c242861322f7d4404f2c"
+        },
+        {
+          "path": "data/records/industry/wellness/part-0002.jsonl",
+          "records": 1354,
+          "bytes": 1758979,
+          "sha256": "f4b060a1245034e7a81f47a28c3b1ced268f00705ea356aff77b988f1cf335e9"
+        }
+      ]
+    },
+    {
+      "layer": "提示风格",
+      "layer_slug": "prompt-style",
+      "subcat": "专家角色",
+      "subcat_slug": "expert-role",
+      "records": 6857,
+      "files": [
+        {
+          "path": "data/records/prompt-style/expert-role/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6621421,
+          "sha256": "48880886d50fb5f6949c4a9496aefdffd0480ed344fa0dede552ec98e83be4b0"
+        },
+        {
+          "path": "data/records/prompt-style/expert-role/part-0002.jsonl",
+          "records": 1857,
+          "bytes": 2403174,
+          "sha256": "95fc2ba7b97968ccaa51c020629647657ee0b310b62819a206281706843b4c71"
+        }
+      ]
+    },
+    {
+      "layer": "提示风格",
+      "layer_slug": "prompt-style",
+      "subcat": "自然提问",
+      "subcat_slug": "natural-query",
+      "records": 6070,
+      "files": [
+        {
+          "path": "data/records/prompt-style/natural-query/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6549485,
+          "sha256": "345b9527b8488cfef37617ba10c11e4be4be1de5b511eb0f7791cc44c724913c"
+        },
+        {
+          "path": "data/records/prompt-style/natural-query/part-0002.jsonl",
+          "records": 1070,
+          "bytes": 1447000,
+          "sha256": "2eea1cdd864b5384cf5362b584432d15741a01ec4455978065d46310bd22c40d"
+        }
+      ]
+    },
+    {
+      "layer": "提示风格",
+      "layer_slug": "prompt-style",
+      "subcat": "要求来源",
+      "subcat_slug": "source-required",
+      "records": 7069,
+      "files": [
+        {
+          "path": "data/records/prompt-style/source-required/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6672310,
+          "sha256": "8aae8a0abdce42c573aeaa439c73293b4eb8a15539c84bb4120143b141396f1b"
+        },
+        {
+          "path": "data/records/prompt-style/source-required/part-0002.jsonl",
+          "records": 2069,
+          "bytes": 2947460,
+          "sha256": "6d90d26d5d54712cf6f1e6f9ea90293fbeda6738c0eadf386baac9242dc2bfef"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "汇总类",
+      "subcat_slug": "aggregation",
+      "records": 6326,
+      "files": [
+        {
+          "path": "data/records/query-intent/aggregation/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6137902,
+          "sha256": "ba20e47f36a0de9707cdb82f1567f2922a57bb91f38b36066080dead1edd3b4b"
+        },
+        {
+          "path": "data/records/query-intent/aggregation/part-0002.jsonl",
+          "records": 1326,
+          "bytes": 1709094,
+          "sha256": "3a082a9bb8aa73cc8b8ad860a1b13d3347c561464c231f02ec4870075585870b"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "品牌类",
+      "subcat_slug": "brand",
+      "records": 5427,
+      "files": [
+        {
+          "path": "data/records/query-intent/brand/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 5505291,
+          "sha256": "62fd2168fcaf4770919b7e7c9f40c9ae848c9369abb09e0b76ccdd401adda359"
+        },
+        {
+          "path": "data/records/query-intent/brand/part-0002.jsonl",
+          "records": 427,
+          "bytes": 560786,
+          "sha256": "946012222ba0b9c30454beec44f0899c948a7494586d512f32f138406b01ddc8"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "对比类",
+      "subcat_slug": "comparison",
+      "records": 6720,
+      "files": [
+        {
+          "path": "data/records/query-intent/comparison/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6819386,
+          "sha256": "f5c7150498cf2fd498a7a75b184906e0cf2cd4c3de7cd915f666a5f0cf4aa435"
+        },
+        {
+          "path": "data/records/query-intent/comparison/part-0002.jsonl",
+          "records": 1720,
+          "bytes": 3904141,
+          "sha256": "5cd969d4c435fd667fdc5d630cba4056ae5fa5dc78ed51f29ab35c1e398bec6a"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "购买类-电商",
+      "subcat_slug": "ecommerce-purchase",
+      "records": 6618,
+      "files": [
+        {
+          "path": "data/records/query-intent/ecommerce-purchase/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6582805,
+          "sha256": "7efaee957e16e70556e9706766326663ff2d952966fab1350bb5bb7ac28be2d0"
+        },
+        {
+          "path": "data/records/query-intent/ecommerce-purchase/part-0002.jsonl",
+          "records": 1618,
+          "bytes": 3109085,
+          "sha256": "d87c54bc0f68de4c7a8a3b26f4c08b06c4cd940f8f28033674565208145aec33"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "事实类",
+      "subcat_slug": "factual",
+      "records": 6771,
+      "files": [
+        {
+          "path": "data/records/query-intent/factual/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6270973,
+          "sha256": "f9c8c6b89dd2436db13d3eea0bfd6d67d5d90553e1d33a41396aa6bcda5af538"
+        },
+        {
+          "path": "data/records/query-intent/factual/part-0002.jsonl",
+          "records": 1771,
+          "bytes": 2555376,
+          "sha256": "9d42aae2efc8a3013eb9b4334b8810d94cadca7cb13a1f17ac6595e7484303d4"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "购买类-本地生活",
+      "subcat_slug": "local-services-purchase",
+      "records": 6229,
+      "files": [
+        {
+          "path": "data/records/query-intent/local-services-purchase/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6195772,
+          "sha256": "2dd5456f5744eaea137865e33e8ed3b79a321db497f55aabc9b1951ce690ea9c"
+        },
+        {
+          "path": "data/records/query-intent/local-services-purchase/part-0002.jsonl",
+          "records": 1229,
+          "bytes": 1416124,
+          "sha256": "661eb7c4eb7f3ad74f2c4f9dcb9e8c36bb9c0f20816a845f72fe279721335c62"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "口碑类",
+      "subcat_slug": "reputation",
+      "records": 6664,
+      "files": [
+        {
+          "path": "data/records/query-intent/reputation/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6552321,
+          "sha256": "35befc9bcf31a6bb1e61c65aba421f9c26358eaf00a65606c89527c0e2fd0f14"
+        },
+        {
+          "path": "data/records/query-intent/reputation/part-0002.jsonl",
+          "records": 1664,
+          "bytes": 3173532,
+          "sha256": "e4276259c9c1b73ad6be85dda7e702748790386bb5616efe7eb14842d0b78ad1"
+        }
+      ]
+    },
+    {
+      "layer": "提问属性",
+      "layer_slug": "query-intent",
+      "subcat": "场景类",
+      "subcat_slug": "scenario",
+      "records": 6446,
+      "files": [
+        {
+          "path": "data/records/query-intent/scenario/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6778995,
+          "sha256": "748b782476d7318a2b6d63549e5e79963ea3d0d24d6ee6cf1f7610e5d5eeda35"
+        },
+        {
+          "path": "data/records/query-intent/scenario/part-0002.jsonl",
+          "records": 1446,
+          "bytes": 2221792,
+          "sha256": "9fdf9dc0177f5da6c5901ef8d92489feff53d90c09cd1b132c5da8c93b28a38d"
+        }
+      ]
+    },
+    {
+      "layer": "时间敏感度",
+      "layer_slug": "time-sensitivity",
+      "subcat": "高",
+      "subcat_slug": "high",
+      "records": 6195,
+      "files": [
+        {
+          "path": "data/records/time-sensitivity/high/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 5785198,
+          "sha256": "a5c608bc2cebba8604ba1a710aabb0c7e55a45318ce1ca4a0f6fe3e18bfc85b6"
+        },
+        {
+          "path": "data/records/time-sensitivity/high/part-0002.jsonl",
+          "records": 1195,
+          "bytes": 1393320,
+          "sha256": "1385d4e15803e81a681fde556d3d18bc828d6cfdf9e34112323650ec4fcb9b87"
+        }
+      ]
+    },
+    {
+      "layer": "时间敏感度",
+      "layer_slug": "time-sensitivity",
+      "subcat": "低",
+      "subcat_slug": "low",
+      "records": 6039,
+      "files": [
+        {
+          "path": "data/records/time-sensitivity/low/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6733847,
+          "sha256": "99382401395c9282e869055f057fc9417fb78ddbb1d03efc4c6943af5c74feb3"
+        },
+        {
+          "path": "data/records/time-sensitivity/low/part-0002.jsonl",
+          "records": 1039,
+          "bytes": 1353168,
+          "sha256": "3dff810b5fd6a7995c5e83d9be60d2972970fd65b1d5e1f84bfe7910aa681ea4"
+        }
+      ]
+    },
+    {
+      "layer": "时间敏感度",
+      "layer_slug": "time-sensitivity",
+      "subcat": "中",
+      "subcat_slug": "medium",
+      "records": 6419,
+      "files": [
+        {
+          "path": "data/records/time-sensitivity/medium/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6556574,
+          "sha256": "bc217a8463cd359a2e420411bfb1b8ee7c3245ae41bf14b7eb3ebe1ed134e45e"
+        },
+        {
+          "path": "data/records/time-sensitivity/medium/part-0002.jsonl",
+          "records": 1419,
+          "bytes": 2061743,
+          "sha256": "a41457e88245fb830fec4a3068652c5f84d6e6ff237ac67c00e2dd0d249e6dc5"
+        }
+      ]
+    },
+    {
+      "layer": "触发强度",
+      "layer_slug": "trigger-intensity",
+      "subcat": "高",
+      "subcat_slug": "high",
+      "records": 6117,
+      "files": [
+        {
+          "path": "data/records/trigger-intensity/high/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 6695674,
+          "sha256": "5819841f0ebf6783006552c7449f5aefe93d6c8859ec2b9ac54ed0a58d52a841"
+        },
+        {
+          "path": "data/records/trigger-intensity/high/part-0002.jsonl",
+          "records": 1117,
+          "bytes": 1455225,
+          "sha256": "0f4e9a928313d93f8fca6c951acf0e51c875dad14a70d37b3252ef0775f7f231"
+        }
+      ]
+    },
+    {
+      "layer": "触发强度",
+      "layer_slug": "trigger-intensity",
+      "subcat": "低",
+      "subcat_slug": "low",
+      "records": 2327,
+      "files": [
+        {
+          "path": "data/records/trigger-intensity/low/part-0001.jsonl",
+          "records": 2327,
+          "bytes": 3784899,
+          "sha256": "6a081c69f6dc5eee3bc99379b6508d742aaf09e10ba4b2d8b6c44feedc087813"
+        }
+      ]
+    },
+    {
+      "layer": "触发强度",
+      "layer_slug": "trigger-intensity",
+      "subcat": "中",
+      "subcat_slug": "medium",
+      "records": 5775,
+      "files": [
+        {
+          "path": "data/records/trigger-intensity/medium/part-0001.jsonl",
+          "records": 5000,
+          "bytes": 7060182,
+          "sha256": "b5fe670c920448b2335f9cf1d7937e99d2a1d1a9559eb209c651cfa0dacd9ac1"
+        },
+        {
+          "path": "data/records/trigger-intensity/medium/part-0002.jsonl",
+          "records": 775,
+          "bytes": 1262442,
+          "sha256": "07a208db1a04bdb30377757023c6403258082c4ce766338b7146ce9f81b4f34b"
+        }
+      ]
+    },
+    {
+      "layer": "未分类",
+      "layer_slug": "uncategorized",
+      "subcat": "未分类",
+      "subcat_slug": "uncategorized",
+      "records": 4433,
+      "files": [
+        {
+          "path": "data/records/uncategorized/uncategorized/part-0001.jsonl",
+          "records": 4433,
+          "bytes": 6004075,
+          "sha256": "5df3308161a2ebfe866e78ddc18b596c7f8518911b5251078f29987f53a1b39a"
+        }
+      ]
+    }
+  ]
+}
