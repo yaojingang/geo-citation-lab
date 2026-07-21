@@ -1,131 +1,107 @@
 # GEO Citation Lab
 
-GEO Citation Lab 汇集三类可复查的 GEO 研究资产：跨平台引用实验、GEO / AEO / AI Search 论文库，以及覆盖 12 个国内 AI 平台的 CN-GEO 引用数据集。仓库同步保留原始数据、清洗脚本、分析集市和可视化报告，方便复现、引用与继续分析。
+> **用可复查的数据，研究 AI 搜索如何选择信源、吸收内容与呈现实体。**
+>
+> *Open empirical resources for studying how generative search selects sources, absorbs content, and surfaces entities.*
 
-- `GEO 实验数据报告`：基于 ChatGPT、Google AI Overview / Gemini、Perplexity 的搜索触发、引用来源与页面吸收研究。
-- `GEO / AEO / AI Search 论文合集`：持续收纳生成式搜索、AEO、GEO、AI 搜索引用机制与操纵风险相关论文。
-- `CN-GEO 引用数据集`：覆盖 12 个国内 AI 平台、214,119 条原始引用记录和 9,878 个规范信源，并提供清洗仓库、分析集市和多维可视化报告。
+GEO Citation Lab 是一个面向 AI 搜索引用机制的公开实证研究工作台。仓库围绕两条研究主线，整理跨平台引用实验与中文生成式搜索数据，并提供分析脚本、数据仓库、可视化报告和主题论文导航。
 
-本仓库实验数据、特征抽取与分析管线对应 arXiv 论文：[From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707)，PDF 版见 [arXiv PDF](https://arxiv.org/pdf/2604.25707)。
+`提问 → 搜索触发 → 信源选择 → 内容吸收 → 实体曝光 → 跨平台与跨终端差异`
 
-CN-GEO 数据集的中文生成式搜索实证分析对应新增 arXiv 论文：[What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study](https://arxiv.org/abs/2607.15771)，PDF 已收录至本仓库的 [AI 搜索实证目录](./02-geo-aeo-ai-search-papers/04_AI搜索实证/04_AI搜索实证_Chinese_Language_Generative_Search_Engines_Citation_Study.pdf)。
+| 研究资产 | 当前规模 |
+| --- | ---: |
+| CN-GEO 原始引用记录 | 214,119 条 |
+| 国内 AI 平台与终端代码 | 12 个 |
+| 跨平台实验 Prompt | 602 条 |
+| GEO / AEO / AI Search 论文 PDF | 54 篇 |
 
-## Start Here
+[查看 CN-GEO 分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) · [读 3 分钟实验摘要](./01-geo-experiment-data-report/QUICK_REPORT.md) · [浏览论文导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) · [打开在线首页](https://yaojingang.github.io/geo-citation-lab/)
 
-| 入口 | 路径 | 适合谁 |
-| --- | --- | --- |
-| 中文生成式搜索实证论文 | [What Do Chinese-Language Generative Search Engines Cite and Surface?](https://arxiv.org/abs/2607.15771) / [仓库 PDF](./02-geo-aeo-ai-search-papers/04_AI搜索实证/04_AI搜索实证_Chinese_Language_Generative_Search_Engines_Citation_Study.pdf) | 想了解中文 AI 搜索的引用、实体曝光与跨界面一致性 |
-| 对应 arXiv 论文 | [From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707) / [PDF](https://arxiv.org/pdf/2604.25707) | 想引用或阅读本实验对应的正式论文 |
-| CN-GEO 多维分析报告 | [在线报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) / [最终报告文件](./03-cn-geo-citation-dataset/reports/final/CN-GEO_多维数据分析报告.html) | 想查看信源生态、官网来源渗透、平台差异与内容特征 |
-| CN-GEO 引用数据集 | [项目目录](./03-cn-geo-citation-dataset/) / [清洗后数据使用说明](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md) | 想使用原始 JSONL、标准 Parquet、DuckDB、分析集市和清洗脚本 |
-| GEO 实验数据报告 | [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) | 想看 AI 搜索平台如何触发搜索、选择信源、吸收引用内容 |
-| 论文 HTML 导航 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) / [`index.html`](./02-geo-aeo-ai-search-papers/index.html) | 想按主题搜索、筛选和打开 54 篇 GEO / AEO / AI Search 论文 |
-| 论文合集目录 | [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 想查看论文 PDF、CSV 清单与校验文件 |
-| 长版 HTML 报告 | [`01-geo-experiment-data-report/04-repet/final_report.html`](./01-geo-experiment-data-report/04-repet/final_report.html) | 想快速浏览完整实验报告 |
-| 长版 Markdown 报告 | [`01-geo-experiment-data-report/04-repet/final_report.md`](./01-geo-experiment-data-report/04-repet/final_report.md) | 想在 GitHub 里直接按章节阅读正文 |
-| PDF 版实验报告 | [`01-geo-experiment-data-report/04-repet/final_report.pdf`](./01-geo-experiment-data-report/04-repet/final_report.pdf) | 想下载、分享或打印实验报告 |
-| 3 分钟摘要 | [`01-geo-experiment-data-report/QUICK_REPORT.md`](./01-geo-experiment-data-report/QUICK_REPORT.md) | 想先快速判断这份实验研究讲了什么 |
+## 这套研究在看什么
 
-Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.github.io/geo-citation-lab/)
+AI 搜索中的可见性包含多个环节。一条内容可能进入检索候选、出现在引用列表、参与答案生成，或进一步影响品牌和实体的呈现。仓库用两套实证研究观察这条链路。
 
-## 仓库结构
+- [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) 研究 ChatGPT、Google AI Overview / Gemini 和 Perplexity 如何触发搜索、选择信源并吸收页面内容。
+- [`03-cn-geo-citation-dataset/`](./03-cn-geo-citation-dataset/) 整理国内 AI 引用记录，并从信源生态、页面特征、实体曝光和 Web / App 差异等角度提供可查询的数据与报告。
+- [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) 为上述问题提供文献背景，覆盖 GEO 方法、测量评估、AI 搜索实证、风险操纵、Agentic Search 和 RAG 等主题。
 
-| 路径 | 作用 |
+## 三个研究发现
+
+**引用广度和吸收深度需要分别测量。** 在跨平台实验中，Perplexity 和 Google 平均引用更多信源，ChatGPT 引用较少，但成功抓取页面的平均引用影响力更高。完整口径见论文 [From Citation Selection to Citation Absorption](https://arxiv.org/abs/2604.25707)。
+
+**内容匹配度、结构和证据密度与吸收深度相关。** 高影响力页面通常更长、分段更清楚，也更常包含定义、数字、对比和操作步骤。单独采用 Q&A 格式没有表现出吸收优势。这些结果来自静态样本中的描述性统计和相关性分析。
+
+**同一产品的 Web 与 App 需要分开观察。** 中文生成式搜索研究发现，同一平台不同终端的信源集合存在系统差异，界面类型会影响跨平台比较。完整结果见论文 [What Do Chinese-Language Generative Search Engines Cite and Surface?](https://arxiv.org/abs/2607.15771)。
+
+## 按你的目的进入
+
+| 你想做什么 | 建议入口 |
 | --- | --- |
-| [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) | 原有 GEO 引用实验资产，已统一归类到一个大目录下 |
-| [`01-geo-experiment-data-report/01-prompt/`](./01-geo-experiment-data-report/01-prompt/) | 602 条实验 Prompt |
-| [`01-geo-experiment-data-report/02-data/`](./01-geo-experiment-data-report/02-data/) | 搜索层 CSV 与 72 维 citation-level 特征 CSV |
-| [`01-geo-experiment-data-report/03-pipeline/`](./01-geo-experiment-data-report/03-pipeline/) | 解析、抓取、特征提取、统计分析脚本 |
-| [`01-geo-experiment-data-report/04-repet/`](./01-geo-experiment-data-report/04-repet/) | 完整研究报告、HTML/PDF 导出与图表 |
-| [`01-geo-experiment-data-report/05-kami-report/`](./01-geo-experiment-data-report/05-kami-report/) | 更适合展示/分享的摘要报告 |
-| [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 论文合集，按 10 个主题目录收纳 GEO / AEO / AI Search 相关论文 |
-| [`03-cn-geo-citation-dataset/`](./03-cn-geo-citation-dataset/) | 国内 AI 引用数据集、数据仓库、质量报告、分析集市与可视化报告 |
-| [`03-cn-geo-citation-dataset/data/records/`](./03-cn-geo-citation-dataset/data/records/) | 214,119 条原始引用记录，按 7 个分类层和 32 个分类组合分片 |
-| [`03-cn-geo-citation-dataset/data/curated/`](./03-cn-geo-citation-dataset/data/curated/) | 问题、平台、信源、页面和引用观察标准表 |
-| [`03-cn-geo-citation-dataset/data/marts/`](./03-cn-geo-citation-dataset/data/marts/) | 信源可见度、平台重合度、页面表现和数据质量分析集市 |
+| 了解 GEO 研究结论 | [CN-GEO 在线分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) · [跨平台实验摘要](./01-geo-experiment-data-report/QUICK_REPORT.md) |
+| 使用数据或继续分析 | [CN-GEO 数据集说明](./03-cn-geo-citation-dataset/) · [清洗后数据使用说明](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md) |
+| 阅读论文或引用研究 | [两篇实证论文](#两条实证研究主线) · [54 篇论文导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) |
+| 复查实验与处理方法 | [跨平台实验管线](./01-geo-experiment-data-report/03-pipeline/) · [CN-GEO 构建脚本](./03-cn-geo-citation-dataset/scripts/) |
 
-## CN-GEO 引用数据集 Snapshot
+只想阅读结论时，可以直接使用 GitHub Pages，无需克隆完整仓库。数据分析与复算方式分别写在两个研究目录的 README 中。
 
-| 项目 | 数字 |
-| --- | ---: |
-| 原始引用记录 | 214,119 |
-| 原始 JSONL 分片 | 64 |
-| 规范问题 | 620 |
-| AI 平台 | 12 |
-| 规范信源 | 9,878 |
-| 规范页面 | 107,659 |
-| 额外精确重复记录 | 24,274 |
+## 两条实证研究主线
 
-这套数据覆盖千问、豆包、腾讯元宝、DeepSeek、百度 AI、Kimi、文心和 AI 抖音等产品及其网页端、手机端形态。清洗层保留原始值与解析状态，分析层提供来源覆盖、跨平台共识、页面表现和确定性内容特征。新版报告进一步加入 9 类信源生态、企业官网与政府公共机构引用渗透，以及平台置信度切换等分析模块。
+### 跨平台引用选择与吸收
 
-建议先打开 [多维数据分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html)，再阅读 [`数据集中文说明`](./03-cn-geo-citation-dataset/data/数据集中文说明.md) 和 [`清洗后数据使用说明`](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md)。完整验收结果见 [`quality_report.md`](./03-cn-geo-citation-dataset/data/quality/release_date=2026-07-14/quality_report.md)。
+这套实验覆盖 `602` 条受控 Prompt、`21,143` 条有效搜索层引用和 `23,745` 条 citation-level 特征记录，并从 `18,151` 个成功抓取页面中提取 `72` 维特征。
 
-## 实验数据报告 Snapshot
+研究将生成式搜索拆为两个可观察结果：
 
-| 项目 | 数字 |
-| --- | ---: |
-| 设计 Prompt 总数 | 602 |
-| A/B/C/D 四层实验 | 432 / 60 / 60 / 50 |
-| 平台数量 | 3 |
-| 搜索层有效引用行数 | 21,143 |
-| 引用影响力特征行数 | 23,745 |
-| 特征维度 | 72 |
-| 成功抓取的引用页面 | 18,151 |
-| 抓取成功率 | 76.44% |
+- **引用选择**：平台是否触发搜索，以及哪些信源进入引用列表。
+- **引用吸收**：引用页面在语言、证据、结构和事实层面对最终答案的参与程度。
 
-实验部分主要回答三个问题：
+对应论文：
 
-- 什么样的问题最容易触发 AI 去联网搜索？
-- AI 搜索最爱选择什么样的来源网站？
-- 什么样的页面会被 AI 深度吸收，而不只是“挂名引用”？
+> Zhang Kai, He Xinyue, Yao Jingang. [From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707). arXiv:2604.25707, 2026.
 
-普通用户可以先看 [`QUICK_REPORT.md`](./01-geo-experiment-data-report/QUICK_REPORT.md)，想看完整论证再读 [`final_report.md`](./01-geo-experiment-data-report/04-repet/final_report.md) 或 [`final_report.pdf`](./01-geo-experiment-data-report/04-repet/final_report.pdf)。
+研究材料包括 [Prompt 与数据](./01-geo-experiment-data-report/)、[完整 Markdown 报告](./01-geo-experiment-data-report/04-repet/final_report.md) 和 [在线 HTML 报告](https://yaojingang.github.io/geo-citation-lab/01-geo-experiment-data-report/04-repet/final_report.html)。
 
-## 论文合集 Snapshot
+### 中文生成式搜索与 CN-GEO
 
-论文合集来自 `GEO_AI搜索_AEO_论文合集`、2026-06-20 近 30 天新增论文调研，以及 2026-07-21 新增的中文生成式搜索实证论文。当前按分类合并为 10 个主题目录，共 `54` 篇 PDF：
+CN-GEO 当前发布版包含 `214,119` 条原始引用记录、`64` 个 JSONL 分片、`9,878` 个规范信源和 `107,659` 个规范页面。仓库同时提供标准 Parquet 表、自包含 DuckDB、页面特征、分析集市、质量报告和可视化报告。
 
-| 分类 | 主题 | PDF 数量 |
-| --- | --- | ---: |
-| [`01_GEO基础框架`](./02-geo-aeo-ai-search-papers/01_GEO基础框架/) | GEO 基础框架 | 4 |
-| [`02_GEO方法优化`](./02-geo-aeo-ai-search-papers/02_GEO方法优化/) | GEO 方法优化 | 7 |
-| [`03_GEO测量评估`](./02-geo-aeo-ai-search-papers/03_GEO测量评估/) | GEO 测量评估 | 8 |
-| [`04_AI搜索实证`](./02-geo-aeo-ai-search-papers/04_AI搜索实证/) | AI 搜索实证 | 6 |
-| [`05_AEO理论整合`](./02-geo-aeo-ai-search-papers/05_AEO理论整合/) | AEO 理论整合 | 5 |
-| [`06_风险操纵`](./02-geo-aeo-ai-search-papers/06_风险操纵/) | 风险、操纵与对抗 | 10 |
-| [`07_垂直多模态`](./02-geo-aeo-ai-search-papers/07_垂直多模态/) | 垂直场景与多模态 | 5 |
-| [`08_AI搜索架构与AgenticSearch`](./02-geo-aeo-ai-search-papers/08_AI搜索架构与AgenticSearch/) | AI 搜索架构与 Agentic Search | 4 |
-| [`09_RAG检索优化`](./02-geo-aeo-ai-search-papers/09_RAG检索优化/) | RAG 检索优化 | 3 |
-| [`10_搜索评估治理`](./02-geo-aeo-ai-search-papers/10_搜索评估治理/) | 搜索评估与治理 | 2 |
+对应论文：
 
-论文合集可通过 [HTML 导航页](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) 搜索和筛选，完整 Markdown 清单见 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)。源目录中两份 `GEO_AI搜索_AEO_论文整理说明.docx` 内容相同，本仓库按 SHA-256 去重保留一份，并保留 [`论文清单.csv`](./02-geo-aeo-ai-search-papers/00_资料说明/论文清单.csv) 与 [`checksums.sha256`](./02-geo-aeo-ai-search-papers/00_资料说明/checksums.sha256) 方便复核。
+> Tao Zhen, Yue Liu, Gege Zhang, Yixuan Niu. [What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study](https://arxiv.org/abs/2607.15771). arXiv:2607.15771, 2026.
 
-## 如何阅读
+论文分析四个中文大模型产品的八个 Web / App 界面，主要研究引用行为、实体曝光和跨界面一致性。论文使用的公开数据与研究材料指向上游仓库 [WENDAOstudy/cn-geo-citation-dataset](https://github.com/WENDAOstudy/cn-geo-citation-dataset)。本仓库在相关公开数据基础上整理了 `2.0.1` 分析版，增加清洗仓库、数据契约、分析集市、质量验收和多维可视化报告。
 
-1. 先读 [`01-geo-experiment-data-report/QUICK_REPORT.md`](./01-geo-experiment-data-report/QUICK_REPORT.md)，快速理解实验结论。
-2. 再读 [`01-geo-experiment-data-report/04-repet/final_report.md`](./01-geo-experiment-data-report/04-repet/final_report.md)，查看完整方法、图表和章节论证。
-3. 打开 [`01-geo-experiment-data-report/02-data/features_all_platforms_72.csv`](./01-geo-experiment-data-report/02-data/features_all_platforms_72.csv)，筛选你关心的字段。
-4. 打开 [论文 HTML 导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) 或阅读 [`02-geo-aeo-ai-search-papers/README.md`](./02-geo-aeo-ai-search-papers/README.md)，按主题进入论文 PDF。
+## 论文库
 
-## 公开仓库运行方式
+论文库按 10 个主题收录 54 篇 PDF，包含 GEO 基础框架、方法优化、测量评估、AI 搜索实证、AEO 理论、风险与操纵、垂直多模态、Agentic Search、RAG 和搜索评估治理。
 
-本仓库已将脚本改为从环境变量读取密钥，避免把私钥直接放进 GitHub。
+- [在线搜索与筛选](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/)
+- [完整论文清单](./02-geo-aeo-ai-search-papers/README.md)
+- [来源、文件校验与整理说明](./02-geo-aeo-ai-search-papers/00_资料说明/)
 
-```bash
-cd 01-geo-experiment-data-report
-cp .env.example .env
-```
+## 来源、引用与使用边界
 
-常见重跑方式：
+| 资产 | 来源与本仓库角色 |
+| --- | --- |
+| 跨平台实验 | 本仓库保存实验 Prompt、数据、管线与报告，并作为 arXiv:2604.25707 的公开数据和分析入口。 |
+| CN-GEO | 上游仓库发布结构化原始数据与引用信息；本仓库维护面向查询和分析的衍生版本。引用原始数据时，请同时查看上游的 `CITATION.cff` 与 [CC BY 4.0 许可说明](https://github.com/WENDAOstudy/cn-geo-citation-dataset/blob/main/LICENSE.md)。 |
+| 论文 PDF | 论文著作权归原作者或出版方。仓库提供主题整理、来源链接、文件清单和校验信息。 |
 
-```bash
-cd 01-geo-experiment-data-report/03-pipeline
-python3 analyze_influence.py \
-  --input ../02-data/features_all_platforms_72.csv \
-  --output ../04-repet/citation_influence_report.md
-```
+使用数据前请留意这些边界：
 
-```bash
-cd 01-geo-experiment-data-report/04-repet
-python3 build_self_contained_html.py
-```
+- 跨平台实验来自一次静态研究快照，当前没有为每条记录提供统一采集时间戳。
+- CN-GEO 原始层缺少完整回答、回答批次、模型版本和采集时间。来源覆盖与跨平台共识可以直接研究，趋势、情感、严格引用排名和品牌推荐率需要更多回答级数据。
+- 不同论文、原始数据和清洗仓库采用各自的样本范围与处理口径。引用数字时，以对应论文或数据版本的说明为准。
+- 本仓库其余代码与报告当前没有设置顶层统一许可。再发布或商业使用前，请确认相应目录和原始材料的授权范围。
+
+完整的数据限制和验收结果见 [CN-GEO 数据集中文说明](./03-cn-geo-citation-dataset/data/数据集中文说明.md) 与 [数据质量报告](./03-cn-geo-citation-dataset/data/quality/release_date=2026-07-14/quality_report.md)。
+
+## 关注更新与参与
+
+仓库后续更新主要集中在数据版本、分析报告和论文库。可以通过 GitHub 的 **Star** 收藏项目，通过 **Watch** 关注提交与讨论。
+
+欢迎在 [Issues](https://github.com/yaojingang/geo-citation-lab/issues) 中提交：
+
+- 数据字段、清洗规则或报告口径问题；
+- 可复现的分析结果与修正建议；
+- 值得补充的 GEO / AEO / AI Search 论文。
