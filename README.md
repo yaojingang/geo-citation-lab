@@ -1,12 +1,10 @@
 # GEO Citation Lab
 
-GEO Citation Lab 是一个面向 GEO 研究的公开资料仓库，后续定位为：
+GEO Citation Lab 汇集三类可复查的 GEO 研究资产：跨平台引用实验、GEO / AEO / AI Search 论文库，以及覆盖 12 个国内 AI 平台的 CN-GEO 引用数据集。仓库同步保留原始数据、清洗脚本、分析集市和可视化报告，方便复现、引用与继续分析。
 
 - `GEO 实验数据报告`：基于 ChatGPT、Google AI Overview / Gemini、Perplexity 的搜索触发、引用来源与页面吸收研究。
 - `GEO / AEO / AI Search 论文合集`：持续收纳生成式搜索、AEO、GEO、AI 搜索引用机制与操纵风险相关论文。
-- `CN-GEO 引用数据集`：覆盖 12 个国内 AI 平台、214,119 条原始引用记录，以及清洗仓库、分析集市和多维可视化报告。
-
-仓库把可复查的数据、脚本、报告和论文资料集中在同一个入口下，方便做二次分析、引用和后续扩展。
+- `CN-GEO 引用数据集`：覆盖 12 个国内 AI 平台、214,119 条原始引用记录和 9,878 个规范信源，并提供清洗仓库、分析集市和多维可视化报告。
 
 本仓库实验数据、特征抽取与分析管线对应 arXiv 论文：[From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707)，PDF 版见 [arXiv PDF](https://arxiv.org/pdf/2604.25707)。
 
@@ -15,8 +13,8 @@ GEO Citation Lab 是一个面向 GEO 研究的公开资料仓库，后续定位�
 | 入口 | 路径 | 适合谁 |
 | --- | --- | --- |
 | 对应 arXiv 论文 | [From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707) / [PDF](https://arxiv.org/pdf/2604.25707) | 想引用或阅读本实验对应的正式论文 |
-| CN-GEO 多维分析报告 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) / [`reports/`](./03-cn-geo-citation-dataset/reports/) | 想浏览国内 AI 平台的信源、页面与内容特征分析 |
-| CN-GEO 引用数据集 | [`03-cn-geo-citation-dataset/`](./03-cn-geo-citation-dataset/) | 想使用原始 JSONL、标准 Parquet、DuckDB、分析集市和清洗脚本 |
+| CN-GEO 多维分析报告 | [在线报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) / [最终报告文件](./03-cn-geo-citation-dataset/reports/final/CN-GEO_多维数据分析报告.html) | 想查看信源生态、官网来源渗透、平台差异与内容特征 |
+| CN-GEO 引用数据集 | [项目目录](./03-cn-geo-citation-dataset/) / [清洗后数据使用说明](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md) | 想使用原始 JSONL、标准 Parquet、DuckDB、分析集市和清洗脚本 |
 | GEO 实验数据报告 | [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) | 想看 AI 搜索平台如何触发搜索、选择信源、吸收引用内容 |
 | 论文 HTML 导航 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) / [`index.html`](./02-geo-aeo-ai-search-papers/index.html) | 想按主题搜索、筛选和打开 53 篇 GEO / AEO / AI Search 论文 |
 | 论文合集目录 | [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 想查看论文 PDF、CSV 清单与校验文件 |
@@ -55,9 +53,9 @@ Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.g
 | 规范页面 | 107,659 |
 | 额外精确重复记录 | 24,274 |
 
-这套数据覆盖千问、豆包、腾讯元宝、DeepSeek、百度 AI、Kimi、文心和 AI 抖音等产品及其网页端、手机端形态。清洗层保留原始值与解析状态，分析层提供来源覆盖、跨平台共识、页面表现和确定性内容特征。
+这套数据覆盖千问、豆包、腾讯元宝、DeepSeek、百度 AI、Kimi、文心和 AI 抖音等产品及其网页端、手机端形态。清洗层保留原始值与解析状态，分析层提供来源覆盖、跨平台共识、页面表现和确定性内容特征。新版报告进一步加入 9 类信源生态、企业官网与政府公共机构引用渗透，以及平台置信度切换等分析模块。
 
-建议先打开 [多维数据分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html)，再阅读 [`数据集中文说明`](./03-cn-geo-citation-dataset/data/数据集中文说明.md) 和 [`清洗后数据使用说明`](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md)。完整验收结果见 [`quality_report.md`](./03-cn-geo-citation-dataset/data/quality/release_date=2026-07-14/quality_report.md)。
+建议先打开 [多维数据分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html)，再阅读 [`数据集中文说明`](./03-cn-geo-citation-dataset/data/数据集中文说明.md) 和 [`清洗后数据使用说明`](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md)。完整验收结果见 [`quality_report.md`](./03-cn-geo-citation-dataset/data/quality/release_date=2026-07-14/quality_report.md)。
 
 ## 实验数据报告 Snapshot
 
