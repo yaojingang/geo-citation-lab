@@ -1,6 +1,6 @@
 # GEO / AEO / AI Search 论文合集
 
-本目录收纳 GEO、AEO、AI Search、生成式搜索引擎优化与引用操纵相关论文资料。源资料来自 `GEO_AI搜索_AEO_论文合集` 及 2026-06-20 近 30 天新增论文调研，当前按主题合并为 10 个目录。
+本目录收纳 GEO、AEO、AI Search、生成式搜索引擎优化与引用操纵相关论文资料。源资料来自 `GEO_AI搜索_AEO_论文合集`、2026-06-20 近 30 天新增论文调研，以及 2026-07-21 新增的中文生成式搜索实证论文。当前按主题合并为 10 个目录。
 
 在线导航页：[https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/)
 
@@ -11,14 +11,14 @@
 | [01_GEO基础框架](./01_GEO基础框架/) | GEO 基础框架 | 4 |
 | [02_GEO方法优化](./02_GEO方法优化/) | GEO 方法优化 | 7 |
 | [03_GEO测量评估](./03_GEO测量评估/) | GEO 测量评估 | 8 |
-| [04_AI搜索实证](./04_AI搜索实证/) | AI 搜索实证 | 5 |
+| [04_AI搜索实证](./04_AI搜索实证/) | AI 搜索实证 | 6 |
 | [05_AEO理论整合](./05_AEO理论整合/) | AEO 理论整合 | 5 |
 | [06_风险操纵](./06_风险操纵/) | 风险、操纵与对抗 | 10 |
 | [07_垂直多模态](./07_垂直多模态/) | 垂直场景与多模态 | 5 |
 | [08_AI搜索架构与AgenticSearch](./08_AI搜索架构与AgenticSearch/) | AI 搜索架构与 Agentic Search | 4 |
 | [09_RAG检索优化](./09_RAG检索优化/) | RAG 检索优化 | 3 |
 | [10_搜索评估治理](./10_搜索评估治理/) | 搜索评估与治理 | 2 |
-| 合计 |  | 53 |
+| 合计 |  | 54 |
 
 ## 资料说明
 
@@ -26,6 +26,7 @@
 - [`00_资料说明/GEO_AI搜索_AEO_论文整理说明.docx`](./00_资料说明/GEO_AI搜索_AEO_论文整理说明.docx)：原始整理说明。源目录中存在两份相同内容的说明文件，本仓库按 SHA-256 去重保留一份。
 - [`00_资料说明/checksums.sha256`](./00_资料说明/checksums.sha256)：本目录导入文件的 SHA-256 校验清单。
 - 2026-06-20 新增批次：从近 30 天调研报告中核对 13 篇主表论文和 1 篇延伸阅读，其中 `Dynamics of Adversarial Attacks on Large Language Model-Based Search Engines`、`Don’t Measure Once: Reliable AI Search Visibility Requires Repeated Trials and Structure-Aware Metrics` 已在原 41 篇中，实际新增 12 篇 PDF。
+- 2026-07-21 新增：`What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study`，收录至 `04_AI搜索实证`。
 
 ## 论文目录
 
@@ -69,6 +70,7 @@
 | --- | --- | --- | --- |
 | [04_AI搜索实证_A_Survey_of_Generative_Search_and_Recommendation.pdf](./04_AI搜索实证/04_AI搜索实证_A_Survey_of_Generative_Search_and_Recommendation.pdf) | A Survey of Generative Search and Recommendation in the Era of Large Language Models | 2024/2025 | Generative Search and Recommendation |
 | [04_AI搜索实证_Characterizing_Web_Search_in_Generative_AI_Age.pdf](./04_AI搜索实证/04_AI搜索实证_Characterizing_Web_Search_in_Generative_AI_Age.pdf) | Characterizing Web Search in the Age of Generative AI | 2026 | arXiv |
+| [04_AI搜索实证_Chinese_Language_Generative_Search_Engines_Citation_Study.pdf](./04_AI搜索实证/04_AI搜索实证_Chinese_Language_Generative_Search_Engines_Citation_Study.pdf) | What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study | 2026 | arXiv |
 | [04_AI搜索实证_How_Generative_AI_Disrupts_Search_Google_AI_Overviews.pdf](./04_AI搜索实证/04_AI搜索实证_How_Generative_AI_Disrupts_Search_Google_AI_Overviews.pdf) | How Generative AI Disrupts Search: Consumer Behavior, Website Traffic, and the Impact of Google AI Overviews | 2026 | ACM SIGIR 2026 author PDF |
 | [04_AI搜索实证_NExT_Search_User_Feedback_Ecosystem.pdf](./04_AI搜索实证/04_AI搜索实证_NExT_Search_User_Feedback_Ecosystem.pdf) | NExT-Search: Rebuilding User Feedback Ecosystem for Generative AI Search | 2025 | arXiv |
 | [04_AI搜索实证_What_Evidence_Do_Language_Models_Find_Convincing.pdf](./04_AI搜索实证/04_AI搜索实证_What_Evidence_Do_Language_Models_Find_Convincing.pdf) | What Evidence Do Language Models Find Convincing? | 2024 | arXiv |
