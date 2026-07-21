@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GEO / AEO / AI Search 论文导航</title>
-<meta name="description" content="GEO Citation Lab 的 GEO、AEO、AI Search 论文导航页，按主题浏览 53 篇论文 PDF。">
+<meta name="description" content="GEO Citation Lab 的 GEO、AEO、AI Search 论文导航页，按主题浏览 54 篇论文 PDF。">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23f5f4ed'/%3E%3Cpath d='M18 14h28v36H18z' fill='%23faf9f5' stroke='%231B365D' stroke-width='3'/%3E%3Cpath d='M24 24h16M24 32h16M24 40h10' stroke='%231B365D' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
 <style>
 @font-face {
@@ -595,7 +595,7 @@ button { touch-action: manipulation; }
   <section class="hero" aria-labelledby="page-title">
     <div class="hero-copy">
       <h1 id="page-title">GEO / AEO / AI Search 论文导航</h1>
-      <p>这不是一页下载列表，而是一张可检索的研究地图：按 GEO 测量、AI 搜索架构、Agentic Search、RAG 检索、搜索评估与风险操纵组织 53 篇论文。</p>
+      <p>这是一张可检索的研究地图：按 GEO 测量、AI 搜索架构、Agentic Search、RAG 检索、搜索评估与风险操纵组织 54 篇论文。</p>
       <div class="hero-actions">
         <a class="btn primary" href="#main-content">浏览论文</a>
         <a class="btn" href="./00_资料说明/论文清单.csv">查看 CSV</a>
@@ -604,16 +604,16 @@ button { touch-action: manipulation; }
 
     <aside class="atlas" aria-label="论文集合概览">
       <div class="atlas-head">
-        <span>2026-06-20 update</span>
+        <span>2026-07-21 update</span>
         <span>10 topics</span>
       </div>
       <figure class="atlas-figure">
         <canvas id="topic-map" width="640" height="300" aria-label="按主题规模生成的论文地图"></canvas>
       </figure>
       <div class="atlas-foot">
-        <div class="metric"><strong id="metric-total">53</strong><span>论文 PDF</span></div>
+        <div class="metric"><strong id="metric-total">54</strong><span>论文 PDF</span></div>
         <div class="metric"><strong id="metric-topics">10</strong><span>主题目录</span></div>
-        <div class="metric"><strong id="metric-new">12</strong><span>新增论文</span></div>
+        <div class="metric"><strong id="metric-new">13</strong><span>新增论文</span></div>
         <div class="metric"><strong id="metric-years">2023-2026</strong><span>年份跨度</span></div>
       </div>
     </aside>
@@ -641,7 +641,7 @@ button { touch-action: manipulation; }
     <aside class="sidebar" aria-label="主题筛选">
       <p class="section-kicker">Topics</p>
       <div class="category-list" id="categories"></div>
-      <p class="note">新增批次来自 2026-06-20 近 30 天论文调研。已在原 41 篇中的论文不会重复出现。</p>
+      <p class="note">新增批次包含 2026-06-20 近 30 天论文调研和 2026-07-21 中文生成式搜索实证论文，已收录论文保持去重。</p>
     </aside>
 
     <section class="content" aria-live="polite">
@@ -670,13 +670,14 @@ const NEW_URLS = new Set([
   "https://arxiv.org/pdf/2606.18381",
   "https://arxiv.org/pdf/2606.16661",
   "https://arxiv.org/pdf/2602.07840",
-  "https://arxiv.org/pdf/2602.23234"
+  "https://arxiv.org/pdf/2602.23234",
+  "https://arxiv.org/pdf/2607.15771v1"
 ]);
 const TOPIC_COPY = {
   "01_GEO基础框架": "GEO 概念、生成式搜索优化框架和基础比较。",
   "02_GEO方法优化": "内容特征、角色意图、白帽优化和多查询融合。",
   "03_GEO测量评估": "可见性、引用行为、Source Influence 与重复采样。",
-  "04_AI搜索实证": "生成式搜索产品、AI Overviews 和证据偏好。",
+  "04_AI搜索实证": "生成式搜索产品、中文平台、AI Overviews 和证据偏好。",
   "05_AEO理论整合": "AEO、GEO、SEO 和 AIO 的理论整合。",
   "06_风险操纵": "排名操纵、投毒、知识冲突和搜索攻击。",
   "07_垂直多模态": "电商、Pinterest、VLM 排名器与多模态场景。",
@@ -813,7 +814,7 @@ function renderCategories() {
 }
 
 function renderPaper(paper) {
-  const newTag = paper.isNew ? `<span class="tag new">2026-06 新增</span>` : "";
+  const newTag = paper.isNew ? `<span class="tag new">近期新增</span>` : "";
   return `<article class="paper-row">
     <div class="paper-main">
       <h3 class="paper-title">${escapeHtml(paper["论文题名"])}</h3>
@@ -937,7 +938,7 @@ function drawTopicMap() {
   ctx.fillStyle = "#141413";
   ctx.font = "500 18px Georgia, serif";
   ctx.textAlign = "center";
-  ctx.fillText("53", centerX, centerY - 2);
+  ctx.fillText(String(allPapers.length), centerX, centerY - 2);
   ctx.fillStyle = "#6b6a64";
   ctx.font = "12px Georgia, serif";
   ctx.fillText("papers", centerX, centerY + 18);

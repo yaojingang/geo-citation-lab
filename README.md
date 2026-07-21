@@ -10,15 +10,18 @@ GEO Citation Lab 是一个面向 GEO 研究的公开资料仓库，后续定位�
 
 本仓库实验数据、特征抽取与分析管线对应 arXiv 论文：[From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707)，PDF 版见 [arXiv PDF](https://arxiv.org/pdf/2604.25707)。
 
+CN-GEO 数据集的中文生成式搜索实证分析对应新增 arXiv 论文：[What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study](https://arxiv.org/abs/2607.15771)，PDF 已收录至本仓库的 [AI 搜索实证目录](./02-geo-aeo-ai-search-papers/04_AI搜索实证/04_AI搜索实证_Chinese_Language_Generative_Search_Engines_Citation_Study.pdf)。
+
 ## Start Here
 
 | 入口 | 路径 | 适合谁 |
 | --- | --- | --- |
+| 中文生成式搜索实证论文 | [What Do Chinese-Language Generative Search Engines Cite and Surface?](https://arxiv.org/abs/2607.15771) / [仓库 PDF](./02-geo-aeo-ai-search-papers/04_AI搜索实证/04_AI搜索实证_Chinese_Language_Generative_Search_Engines_Citation_Study.pdf) | 想了解中文 AI 搜索的引用、实体曝光与跨界面一致性 |
 | 对应 arXiv 论文 | [From Citation Selection to Citation Absorption: A Measurement Framework for Generative Engine Optimization Across AI Search Platforms](https://arxiv.org/abs/2604.25707) / [PDF](https://arxiv.org/pdf/2604.25707) | 想引用或阅读本实验对应的正式论文 |
 | CN-GEO 多维分析报告 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) / [`reports/`](./03-cn-geo-citation-dataset/reports/) | 想浏览国内 AI 平台的信源、页面与内容特征分析 |
 | CN-GEO 引用数据集 | [`03-cn-geo-citation-dataset/`](./03-cn-geo-citation-dataset/) | 想使用原始 JSONL、标准 Parquet、DuckDB、分析集市和清洗脚本 |
 | GEO 实验数据报告 | [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) | 想看 AI 搜索平台如何触发搜索、选择信源、吸收引用内容 |
-| 论文 HTML 导航 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) / [`index.html`](./02-geo-aeo-ai-search-papers/index.html) | 想按主题搜索、筛选和打开 53 篇 GEO / AEO / AI Search 论文 |
+| 论文 HTML 导航 | [GitHub Pages](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) / [`index.html`](./02-geo-aeo-ai-search-papers/index.html) | 想按主题搜索、筛选和打开 54 篇 GEO / AEO / AI Search 论文 |
 | 论文合集目录 | [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) | 想查看论文 PDF、CSV 清单与校验文件 |
 | 长版 HTML 报告 | [`01-geo-experiment-data-report/04-repet/final_report.html`](./01-geo-experiment-data-report/04-repet/final_report.html) | 想快速浏览完整实验报告 |
 | 长版 Markdown 报告 | [`01-geo-experiment-data-report/04-repet/final_report.md`](./01-geo-experiment-data-report/04-repet/final_report.md) | 想在 GitHub 里直接按章节阅读正文 |
@@ -82,14 +85,14 @@ Live Site: [https://yaojingang.github.io/geo-citation-lab/](https://yaojingang.g
 
 ## 论文合集 Snapshot
 
-论文合集来自 `GEO_AI搜索_AEO_论文合集` 及 2026-06-20 近 30 天新增论文调研，当前按分类合并为 10 个主题目录，共 `53` 篇 PDF：
+论文合集来自 `GEO_AI搜索_AEO_论文合集`、2026-06-20 近 30 天新增论文调研，以及 2026-07-21 新增的中文生成式搜索实证论文。当前按分类合并为 10 个主题目录，共 `54` 篇 PDF：
 
 | 分类 | 主题 | PDF 数量 |
 | --- | --- | ---: |
 | [`01_GEO基础框架`](./02-geo-aeo-ai-search-papers/01_GEO基础框架/) | GEO 基础框架 | 4 |
 | [`02_GEO方法优化`](./02-geo-aeo-ai-search-papers/02_GEO方法优化/) | GEO 方法优化 | 7 |
 | [`03_GEO测量评估`](./02-geo-aeo-ai-search-papers/03_GEO测量评估/) | GEO 测量评估 | 8 |
-| [`04_AI搜索实证`](./02-geo-aeo-ai-search-papers/04_AI搜索实证/) | AI 搜索实证 | 5 |
+| [`04_AI搜索实证`](./02-geo-aeo-ai-search-papers/04_AI搜索实证/) | AI 搜索实证 | 6 |
 | [`05_AEO理论整合`](./02-geo-aeo-ai-search-papers/05_AEO理论整合/) | AEO 理论整合 | 5 |
 | [`06_风险操纵`](./02-geo-aeo-ai-search-papers/06_风险操纵/) | 风险、操纵与对抗 | 10 |
 | [`07_垂直多模态`](./02-geo-aeo-ai-search-papers/07_垂直多模态/) | 垂直场景与多模态 | 5 |
