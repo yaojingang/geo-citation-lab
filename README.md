@@ -69,7 +69,7 @@ CN-GEO 当前发布版包含 `214,119` 条原始引用记录、`64` 个 JSONL �
 
 > Tao Zhen, Yue Liu, Gege Zhang, Yixuan Niu. [What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study](https://arxiv.org/abs/2607.15771). arXiv:2607.15771, 2026.
 
-论文分析四个中文大模型产品的八个 Web / App 界面，主要研究引用行为、实体曝光和跨界面一致性。论文使用的公开数据与研究材料指向上游仓库 [WENDAOstudy/cn-geo-citation-dataset](https://github.com/WENDAOstudy/cn-geo-citation-dataset)。本仓库在相关公开数据基础上整理了 `2.0.1` 分析版，增加清洗仓库、数据契约、分析集市、质量验收和多维可视化报告。
+论文分析四个中文大模型产品的八个 Web / App 界面，主要研究引用行为、实体曝光和跨界面一致性。
 
 ## 论文库
 
@@ -84,7 +84,7 @@ CN-GEO 当前发布版包含 `214,119` 条原始引用记录、`64` 个 JSONL �
 | 资产 | 来源与本仓库角色 |
 | --- | --- |
 | 跨平台实验 | 本仓库保存实验 Prompt、数据、管线与报告，并作为 arXiv:2604.25707 的公开数据和分析入口。 |
-| CN-GEO | 上游仓库发布结构化原始数据与引用信息；本仓库维护面向查询和分析的衍生版本。引用原始数据时，请同时查看上游的 `CITATION.cff` 与 [CC BY 4.0 许可说明](https://github.com/WENDAOstudy/cn-geo-citation-dataset/blob/main/LICENSE.md)。 |
+| CN-GEO | 基于 [WENDAOstudy/cn-geo-citation-dataset](https://github.com/WENDAOstudy/cn-geo-citation-dataset)（[CC BY 4.0](https://github.com/WENDAOstudy/cn-geo-citation-dataset/blob/main/LICENSE.md)）整理，提供清洗、查询和可视化分析。 |
 | 论文 PDF | 论文著作权归原作者或出版方。仓库提供主题整理、来源链接、文件清单和校验信息。 |
 
 使用数据前请留意这些边界：
