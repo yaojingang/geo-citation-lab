@@ -652,12 +652,15 @@ button { touch-action: manipulation; }
 
   <footer class="foot">
     <span>GEO Citation Lab · static HTML generated from <code>论文清单.csv</code></span>
-    <span><a href="./00_资料说明/checksums.sha256">SHA-256</a> · <a href="./">返回目录</a></span>
+    <span><a rel="license" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a> · <a href="../LICENSE">许可范围</a> · <a href="./00_资料说明/checksums.sha256">SHA-256</a> · <a href="./">返回目录</a></span>
   </footer>
 </div>
 
 <script>
 const CSV_PATH = "./00_资料说明/论文清单.csv";
+const EMBEDDED_CSV = window.GEO_VIEWER_CSV || "";
+const PDF_BASE_URL = window.GEO_PDF_BASE_URL || "";
+const USE_SOURCE_PDF_URLS = window.GEO_VIEWER_USE_SOURCE_PDF_URLS || false;
 const NEW_URLS = new Set([
   "https://arxiv.org/pdf/2606.04362",
   "https://arxiv.org/pdf/2606.20065",
@@ -746,7 +749,11 @@ function parseCsv(text) {
     headers.forEach((h, i) => { item[h] = r[i] || ""; });
     item.index = index;
     item.isNew = NEW_URLS.has(item.URL);
-    item.filePath = `./${item["分类"]}/${item["文件名"]}`;
+    item.sourceUrl = safeExternalUrl(item.URL);
+    const relativeFilePath = `${item["分类"]}/${item["文件名"]}`;
+    item.filePath = USE_SOURCE_PDF_URLS
+      ? item.sourceUrl
+      : (PDF_BASE_URL ? `${PDF_BASE_URL}${relativeFilePath}` : `./${relativeFilePath}`);
     item.yearSort = parseInt((item["年份"].match(/\d{4}/) || ["0"])[0], 10);
     item.searchText = `${item["分类"]} ${item["论文题名"]} ${item["年份"]} ${item["来源"]} ${item["备注"]}`.toLowerCase();
     return item;
@@ -773,6 +780,15 @@ function escapeHtml(value) {
     '"': "&quot;",
     "'": "&#39;"
   }[ch]));
+}
+
+function safeExternalUrl(value) {
+  try {
+    const parsed = new URL(value);
+    return parsed.protocol === "https:" || parsed.protocol === "http:" ? parsed.href : "";
+  } catch (_error) {
+    return "";
+  }
 }
 
 function getFiltered() {
@@ -815,6 +831,9 @@ function renderCategories() {
 
 function renderPaper(paper) {
   const newTag = paper.isNew ? `<span class="tag new">近期新增</span>` : "";
+  const paperAction = paper.filePath
+    ? `<a class="pdf-link" href="${escapeHtml(encodeURI(paper.filePath))}" target="_blank" rel="noopener noreferrer">打开 PDF</a>`
+    : `<span class="pdf-link" aria-disabled="true">来源链接不可用</span>`;
   return `<article class="paper-row">
     <div class="paper-main">
       <h3 class="paper-title">${escapeHtml(paper["论文题名"])}</h3>
@@ -826,7 +845,7 @@ function renderPaper(paper) {
       <p class="paper-note">${escapeHtml(paper["备注"])}</p>
     </div>
     <div class="paper-action">
-      <a class="pdf-link" href="${encodeURI(paper.filePath)}">打开 PDF</a>
+      ${paperAction}
     </div>
   </article>`;
 }
@@ -946,9 +965,12 @@ function drawTopicMap() {
 
 async function init() {
   try {
-    const response = await fetch(CSV_PATH);
-    if (!response.ok) throw new Error(`HTTP ${response.status}`);
-    const csv = await response.text();
+    let csv = EMBEDDED_CSV;
+    if (!csv) {
+      const response = await fetch(CSV_PATH);
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      csv = await response.text();
+    }
     allPapers = parseCsv(csv);
     renderMetrics();
     render();

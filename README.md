@@ -8,6 +8,32 @@ GEO Citation Lab 是一个面向 AI 搜索引用机制的公开实证研究工�
 
 `提问 → 搜索触发 → 信源选择 → 内容吸收 → 实体曝光 → 跨平台与跨终端差异`
 
+## 在 AI 客户端一句话安装
+
+把下面这句话发送给具有网络和本地文件权限的 AI 客户端：
+
+> 安装 GEO Citation Lab 的轻量阅读版并打开：
+> https://github.com/yaojingang/geo-citation-lab
+
+AI 客户端会下载版本固定的 `v0.1.0` Viewer、验证 SHA-256、解压并打开
+`index.html`。Viewer
+包含自包含研究报告和可搜索论文目录，体积上限为 15 MiB，无需 Git、Python、Node
+或 Docker。论文 PDF 与完整研究数据保留在线入口。
+
+当前 `deploy/manifest.json` 中的 `release_status` 为 `released`，安装器使用
+`v0.1.0` 的固定 Release 资产地址。
+
+| 你对 AI 说 | 执行结果 |
+| --- | --- |
+| “安装并打开 GEO Citation Lab” | 安装轻量 Viewer，并在默认浏览器打开 |
+| “把 GEO Citation Lab Viewer 部署到我的 GitHub Pages” | 保留许可与署名文件，确认目标仓库与公开可见性后运行 Pages 发布流程 |
+| “下载完整数据并准备分析环境” | 提示约 568 MiB 体积，再克隆仓库并配置 Python 3.11 与 `uv` |
+
+网页聊天客户端通常没有本地文件权限，可以直接使用
+[在线首页](https://yaojingang.github.io/geo-citation-lab/)。本地 AI 客户端应遵循
+[`AGENTS.md`](./AGENTS.md) 和
+[`deploy/manifest.json`](./deploy/manifest.json) 中的安装契约。
+
 | 研究资产 | 当前规模 |
 | --- | ---: |
 | CN-GEO 原始引用记录 | 214,119 条 |
@@ -92,9 +118,38 @@ CN-GEO 当前发布版包含 `214,119` 条原始引用记录、`64` 个 JSONL �
 - 跨平台实验来自一次静态研究快照，当前没有为每条记录提供统一采集时间戳。
 - CN-GEO 原始层缺少完整回答、回答批次、模型版本和采集时间。来源覆盖与跨平台共识可以直接研究，趋势、情感、严格引用排名和品牌推荐率需要更多回答级数据。
 - 不同论文、原始数据和清洗仓库采用各自的样本范围与处理口径。引用数字时，以对应论文或数据版本的说明为准。
-- 本仓库其余代码与报告当前没有设置顶层统一许可。再发布或商业使用前，请确认相应目录和原始材料的授权范围。
+- 本仓库采用分范围许可：代码和自动化文件使用 MIT，自有报告、文档、可视化和目录元数据使用 CC BY 4.0。论文 PDF、来源数据和其他第三方材料维持原许可。
 
 完整的数据限制和验收结果见 [CN-GEO 数据集中文说明](./03-cn-geo-citation-dataset/data/数据集中文说明.md) 与 [数据质量报告](./03-cn-geo-citation-dataset/data/quality/release_date=2026-07-14/quality_report.md)。
+
+## 发布轻量 Viewer
+
+维护者可以在本地构建并验证发布包：
+
+```bash
+python3 scripts/build_viewer.py --package
+python3 scripts/verify_distribution.py
+```
+
+推送 `main` 后，[`publish.yml`](./.github/workflows/publish.yml) 会部署轻量 Viewer 到
+GitHub Pages。推送与 `deploy/manifest.json` 中 `distribution_version` 一致的 `v*`
+标签后，同一工作流会发布 Viewer ZIP、SHA-256、manifest 和两个安装器。
+
+准备下一个版本时，维护者先把 `release_status` 设为 `pending`，并同步更新
+`distribution_version`、安装器固定 URL 和 README 中的版本。发布提交再将状态设为
+`released`，通过验证后创建匹配版本的标签。安装器和 manifest 都使用版本固定的
+Release URL，避免 `main` 与 `latest` 在发布窗口内发生版本漂移。
+
+首次启用工作流部署时，需要在仓库 **Settings → Pages → Build and deployment** 中把
+Source 设置为 **GitHub Actions**。发布包的第三方材料边界见
+[`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md)。
+
+仓库采用分范围许可。代码、安装器、工作流和 Skill 使用
+[MIT](./LICENSE-CODE)；本仓库原创报告、文档、可视化和目录元数据使用
+[CC BY 4.0](./LICENSE-CONTENT)。用户可以复制、修改和公开部署 Viewer，发布时需要
+保留 [`LICENSE`](./LICENSE)、两个分范围许可文件与
+[`THIRD_PARTY_NOTICES.md`](./THIRD_PARTY_NOTICES.md)，并注明来源和修改情况。论文
+PDF、来源数据和其他第三方材料维持各自的原始条款。
 
 ## 关注更新与参与
 

@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "name": "geo-citation-lab",
+  "distribution_version": "0.1.0",
+  "release_status": "released",
+  "dataset_version": "2.0.1",
+  "source_repository": "https://github.com/yaojingang/geo-citation-lab",
+  "canonical_site": "https://yaojingang.github.io/geo-citation-lab/",
+  "licensing": {
+    "scope_file": "LICENSE",
+    "code": {
+      "spdx": "MIT",
+      "file": "LICENSE-CODE"
+    },
+    "original_content": {
+      "spdx": "CC-BY-4.0",
+      "file": "LICENSE-CONTENT",
+      "attribution": "GEO Citation Lab contributors, GEO Citation Lab, https://github.com/yaojingang/geo-citation-lab, CC BY 4.0"
+    },
+    "third_party_notices": "THIRD_PARTY_NOTICES.md"
+  },
+  "default_mode": "viewer",
+  "modes": {
+    "viewer": {
+      "description": "Lightweight offline reader with self-contained reports and a searchable paper catalog.",
+      "asset": "https://github.com/yaojingang/geo-citation-lab/releases/download/v0.1.0/geo-citation-lab-viewer.zip",
+      "checksum": "https://github.com/yaojingang/geo-citation-lab/releases/download/v0.1.0/geo-citation-lab-viewer.zip.sha256",
+      "entrypoint": "index.html",
+      "max_uncompressed_mib": 15,
+      "runtime_requirements": []
+    },
+    "full": {
+      "description": "Complete research repository with datasets, papers, reports, and analysis pipelines.",
+      "git_url": "https://github.com/yaojingang/geo-citation-lab.git",
+      "approx_uncompressed_mib": 568,
+      "analysis_requirements": [
+        "Git",
+        "Python 3.11 or newer",
+        "uv"
+      ]
+    }
+  },
+  "deployment": {
+    "provider": "github-pages",
+    "workflow": ".github/workflows/publish.yml",
+    "public_visibility": true,
+    "requires_redistribution_authorization": false,
+    "requires_license_compliance": true,
+    "required_notice_files": [
+      "LICENSE",
+      "LICENSE-CODE",
+      "LICENSE-CONTENT",
+      "THIRD_PARTY_NOTICES.md"
+    ]
+  },
+  "release_assets": [
+    "geo-citation-lab-viewer.zip",
+    "geo-citation-lab-viewer.zip.sha256",
+    "geo-citation-lab-manifest.json",
+    "install.sh",
+    "install.ps1"
+  ]
+}
