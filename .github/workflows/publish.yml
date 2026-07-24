@@ -1,6 +1,9 @@
 name: Publish lightweight viewer
 
 on:
+  pull_request:
+    branches:
+      - main
   push:
     branches:
       - main
