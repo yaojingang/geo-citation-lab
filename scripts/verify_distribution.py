@@ -6,6 +6,7 @@ from __future__ import annotations
 import csv
 import hashlib
 import json
+import os
 import shutil
 import stat
 import subprocess
@@ -393,6 +394,8 @@ def _run_shell_rejection_tests(package_dir: Path, root: Path) -> None:
 def _run_powershell_install_if_available(
     package_dir: Path, install_dir: Path
 ) -> bool:
+    if os.name != "nt":
+        return False
     executable = shutil.which("pwsh")
     if not executable:
         return False
@@ -497,7 +500,7 @@ def main() -> int:
         print(
             "powershell_install=pass"
             if powershell_verified
-            else "powershell_install=skipped-pwsh-unavailable"
+            else "powershell_install=skipped-non-windows-or-pwsh-unavailable"
         )
         print(f"viewer_uncompressed_bytes={total_bytes}")
 
