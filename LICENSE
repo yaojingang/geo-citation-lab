@@ -1,0 +1,24 @@
+# GEO Citation Lab licensing
+
+This repository uses separate licenses for software and original content.
+
+## Software
+
+Source code, analysis scripts, installation scripts, workflow files, agent skills, and the
+software portions of HTML, CSS, and JavaScript files are licensed under the MIT License in
+`LICENSE-CODE`.
+
+## Original content
+
+Original prose, research reports, documentation, visualizations, and catalog metadata created for
+GEO Citation Lab are licensed under the Creative Commons Attribution 4.0 International license
+(CC BY 4.0) described in `LICENSE-CONTENT`.
+
+## Third-party material
+
+These licenses cover only rights held by the GEO Citation Lab contributors. Academic paper PDFs,
+source datasets, fonts, trademarks, and other third-party material keep their original terms.
+Directory-level license files and `THIRD_PARTY_NOTICES.md` take precedence for those materials.
+
+Redistributions must preserve this file, `LICENSE-CODE`, `LICENSE-CONTENT`, applicable
+directory-level licenses, and `THIRD_PARTY_NOTICES.md`.

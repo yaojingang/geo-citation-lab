@@ -1,0 +1,4 @@
+interface:
+  display_name: "GEO Citation Lab"
+  short_description: "安装、打开、下载和部署 GEO Citation Lab"
+  default_prompt: "使用 $geo-citation-lab 安装轻量阅读版并在本机打开。"
