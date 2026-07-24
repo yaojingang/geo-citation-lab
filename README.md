@@ -15,13 +15,13 @@ GEO Citation Lab 是一个面向 AI 搜索引用机制的公开实证研究工�
 > 安装 GEO Citation Lab 的轻量阅读版并打开：
 > https://github.com/yaojingang/geo-citation-lab
 
-首个 `v0.1.0` Release 发布后，AI 客户端会下载版本固定的 Viewer、验证 SHA-256、
-解压并打开 `index.html`。Viewer
+AI 客户端会下载版本固定的 `v0.1.0` Viewer、验证 SHA-256、解压并打开
+`index.html`。Viewer
 包含自包含研究报告和可搜索论文目录，体积上限为 15 MiB，无需 Git、Python、Node
 或 Docker。论文 PDF 与完整研究数据保留在线入口。
 
-当前 `deploy/manifest.json` 中的 `release_status` 为 `pending`，表示远端安装资产尚未
-发布。维护者准备好首个 Release 后，将状态改为 `released`。
+当前 `deploy/manifest.json` 中的 `release_status` 为 `released`，安装器使用
+`v0.1.0` 的固定 Release 资产地址。
 
 | 你对 AI 说 | 执行结果 |
 | --- | --- |
@@ -135,9 +135,10 @@ python3 scripts/verify_distribution.py
 GitHub Pages。推送与 `deploy/manifest.json` 中 `distribution_version` 一致的 `v*`
 标签后，同一工作流会发布 Viewer ZIP、SHA-256、manifest 和两个安装器。
 
-首次发布 Release 时，维护者需在同一发布提交中把 `release_status` 从 `pending`
-改为 `released`，通过验证后再创建匹配版本的标签。安装器和 manifest 都使用该版本
-固定的 Release URL，避免 `main` 与 `latest` 在发布窗口内发生版本漂移。
+准备下一个版本时，维护者先把 `release_status` 设为 `pending`，并同步更新
+`distribution_version`、安装器固定 URL 和 README 中的版本。发布提交再将状态设为
+`released`，通过验证后创建匹配版本的标签。安装器和 manifest 都使用版本固定的
+Release URL，避免 `main` 与 `latest` 在发布窗口内发生版本漂移。
 
 首次启用工作流部署时，需要在仓库 **Settings → Pages → Build and deployment** 中把
 Source 设置为 **GitHub Actions**。发布包的第三方材料边界见

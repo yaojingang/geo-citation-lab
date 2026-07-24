@@ -2,7 +2,7 @@
   "schema_version": 1,
   "name": "geo-citation-lab",
   "distribution_version": "0.1.0",
-  "release_status": "pending",
+  "release_status": "released",
   "dataset_version": "2.0.1",
   "source_repository": "https://github.com/yaojingang/geo-citation-lab",
   "canonical_site": "https://yaojingang.github.io/geo-citation-lab/",
