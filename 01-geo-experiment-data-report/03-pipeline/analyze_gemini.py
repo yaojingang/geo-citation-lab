@@ -21,6 +21,11 @@ gemini_client = None
 if GEMINI_API_KEY and GEMINI_API_KEY != 'YOUR_NEW_GEMINI_API_KEY':
     gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
+# MiniMax client (optional): built lazily so the module still imports when the
+# OpenAI SDK is not installed. Falls back to Gemini when MINIMAX_API_KEY is unset.
+from minimax_client import build_minimax_client, categorize_website as _minimax_categorize
+minimax_client = build_minimax_client()
+
 # ================= 1. HTML 解析 =================
 def extract_citations(html_text):
     cited_domains = set()
@@ -106,8 +111,10 @@ def get_dataforseo_technologies(domain):
 
     return data
 
-# ================= 3. Gemini 分类 =================
+# ================= 3. 网站分类 =================
 def categorize_website(domain):
+    if minimax_client:
+        return _minimax_categorize(domain, minimax_client)
     if not gemini_client:
         return "null"
 

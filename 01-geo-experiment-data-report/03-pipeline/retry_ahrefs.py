@@ -17,6 +17,11 @@ gemini_client = None
 if GEMINI_API_KEY and GEMINI_API_KEY != 'YOUR_GEMINI_API_KEY':
     gemini_client = genai.Client(api_key=GEMINI_API_KEY)
 
+# MiniMax client (optional): built lazily so the module still imports when the
+# OpenAI SDK is not installed. Falls back to Gemini when MINIMAX_API_KEY is unset.
+from minimax_client import build_minimax_client, categorize_website as _minimax_categorize
+minimax_client = build_minimax_client()
+
 # 为 Ahrefs 量身定制的全新表头
 AHREFS_KEYS = [
     "文件名", "引用域名", "网站类型", 
@@ -80,6 +85,8 @@ def get_ahrefs_full_data(domain):
 
 def categorize_website(domain):
     """仅在万不得已时调用，增加超时保护"""
+    if minimax_client:
+        return _minimax_categorize(domain, minimax_client)
     if not gemini_client:
         return "null"
     prompt = f"你是SEO分析师。判断域名 {domain} 属于以下哪一类：新闻 / blog / 行业垂类 / 测评类 / 官网 / 电商 / 其他。只能返回一个词。如果无法判断，请回复 null。"
