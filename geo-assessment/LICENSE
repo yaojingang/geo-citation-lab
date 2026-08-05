@@ -1,0 +1,9 @@
+# GEO Assessment licensing
+
+GEO Assessment uses separate licenses for software and original content.
+
+- PHP, JavaScript, CSS, tests, workflows and deployment scripts use the MIT License in `LICENSE-CODE`
+- Original questions, explanations, product documentation and visualization copy use CC BY 4.0 in `LICENSE-CONTENT`
+- Chart.js and cited research materials retain their own terms, recorded in `THIRD_PARTY_NOTICES.md`
+
+Redistributions must preserve this file, both scope licenses and all applicable third-party notices.

@@ -33,8 +33,20 @@ for asset in assets/app.css assets/quiz.js assets/report.js assets/vendor/chart.
   curl -fsS "$SMOKE_ASSET_BASE/$asset" -o "$SMOKE_TMP/$(basename "$asset")"
   test -s "$SMOKE_TMP/$(basename "$asset")"
 done
-grep -q 'var _hmt = _hmt || \[\];' "$SMOKE_TMP/home.html"
-grep -q 'https://hm.baidu.com/hm.js?c0aa4d814a9bb0449f84d59c73cc5da4' "$SMOKE_TMP/home.html"
+if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
+  grep -q 'var _hmt = _hmt || \[\];' "$SMOKE_TMP/home.html"
+  grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}" "$SMOKE_TMP/home.html"
+  grep -qi '^Content-Security-Policy:.*https://hm.baidu.com' "$SMOKE_TMP/home.headers"
+else
+  if grep -q 'var _hmt = _hmt || \[\];' "$SMOKE_TMP/home.html"; then
+    printf '[FAIL] 未配置统计 ID 时不应加载百度统计\n' >&2
+    exit 1
+  fi
+  if grep -qi '^Content-Security-Policy:.*https://hm.baidu.com' "$SMOKE_TMP/home.headers"; then
+    printf '[FAIL] 未配置统计 ID 时 CSP 不应允许百度统计域名\n' >&2
+    exit 1
+  fi
+fi
 if grep -q '/assets/analytics.js' "$SMOKE_TMP/home.html"; then
   printf '[FAIL] 百度统计初始化代码应直接内联到页面\n' >&2
   exit 1

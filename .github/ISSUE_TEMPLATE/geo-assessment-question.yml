@@ -1,0 +1,52 @@
+name: GEO Assessment 题目修订
+description: 反馈题干、答案、解析、原理、分值或来源问题
+title: "[Assessment Question] "
+body:
+  - type: input
+    id: code
+    attributes:
+      label: 题目编号
+      placeholder: Q01
+    validations:
+      required: true
+  - type: dropdown
+    id: field
+    attributes:
+      label: 修订范围
+      options:
+        - 题干
+        - 选项与正确答案
+        - 解析与原理
+        - 分值与难度
+        - 来源与数据口径
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: issue
+    attributes:
+      label: 当前问题
+      description: 说明具体表述、证据或逻辑问题
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: 建议修订
+      description: 给出建议文本或判断
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: 证据来源
+      description: 提供论文、数据版本或可复查链接，并说明证据与修订的关系
+    validations:
+      required: true
+  - type: checkboxes
+    id: license
+    attributes:
+      label: 许可确认
+      options:
+        - label: 我提交的新增表述可以按仓库的 CC BY 4.0 范围发布
+          required: true

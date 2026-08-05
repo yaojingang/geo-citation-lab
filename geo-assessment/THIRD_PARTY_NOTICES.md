@@ -17,3 +17,11 @@ composer licenses
 ```
 
 Production installation uses `composer install --no-dev --classmap-authoritative` and does not include PHPUnit.
+
+## Cited research and datasets
+
+The assessment Release stores citation metadata, stable links and original assessment content. It does not redistribute the cited paper PDFs or the external datasets. The canonical source list is in `database/seeds/geo-30-v1.1.json`, and the writing boundary is documented in `docs/question-provenance.md`.
+
+## Optional Baidu Analytics
+
+The public source and local development environment leave analytics disabled. A deployer may set `GEO_BAIDU_ANALYTICS_ID` to load Baidu Analytics from `https://hm.baidu.com`. This optional integration follows Baidu's terms and privacy policy. Deployers are responsible for user notice, consent requirements and regional compliance.

@@ -1,0 +1,28 @@
+# 把示例中的 /geo、项目路径和 PHP-FPM socket 替换为实际值
+# 这些 location 需要放在站点 server {} 内，并位于通用 location / 之前
+
+location = /geo {
+    return 301 /geo/;
+}
+
+location ^~ /geo/assets/ {
+    alias /srv/geo-assessment/public/assets/;
+    access_log off;
+    expires 7d;
+}
+
+location = /geo/index.php {
+    include fastcgi_params;
+    fastcgi_param SCRIPT_FILENAME /srv/geo-assessment/public/index.php;
+    fastcgi_param SCRIPT_NAME /geo/index.php;
+    fastcgi_param APP_BASE_PATH /geo;
+    fastcgi_param APP_ENV production;
+    fastcgi_param APP_DEBUG 0;
+    # 可选：填写自己的 32 位百度统计 ID；留空时应用不会发起统计请求
+    # fastcgi_param GEO_BAIDU_ANALYTICS_ID 0123456789abcdef0123456789abcdef;
+    fastcgi_pass unix:/run/php/php7.3-fpm.sock;
+}
+
+location ^~ /geo/ {
+    rewrite ^ /geo/index.php last;
+}

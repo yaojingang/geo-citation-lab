@@ -12,6 +12,8 @@
 - [ ] `php bin/console app:health` 通过
 - [ ] Chart.js 固定为 4.5.1，SHA-256 与许可清单一致
 - [ ] 部署包不含论文 PDF、用户数据库、密钥、日志、备份和开发依赖
+- [ ] `bash tools/build-release.sh assessment-v0.1.0` 生成 ZIP 与 SHA-256
+- [ ] `bash tools/verify-release.sh dist/geo-assessment-0.1.0.zip` 完成归档与隔离安装验证
 
 ## 功能验收
 
@@ -40,3 +42,4 @@
 - [ ] Web 文档根只指向 `public/`
 - [ ] 发布前备份已创建并验证，恢复步骤已明确
 - [ ] `bash tests/Smoke/http.sh https://target.example` 通过
+- [ ] 公共源码默认不加载第三方统计；演示站点启用统计时首页已披露用途

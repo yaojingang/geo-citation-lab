@@ -1,0 +1,60 @@
+name: GEO Assessment 功能缺陷
+description: 报告可复现的答题、报告、身份或界面问题
+title: "[Assessment Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈。请移除姓名、Cookie、数据库、服务器凭据和真实作答记录后再提交。
+  - type: input
+    id: version
+    attributes:
+      label: 版本或提交
+      description: 填写 assessment-v* 版本、提交哈希或在线演示地址
+    validations:
+      required: true
+  - type: dropdown
+    id: surface
+    attributes:
+      label: 问题页面
+      options:
+        - 首页与身份
+        - 答题页
+        - 报告页
+        - 安装与命令行
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 复现步骤
+      description: 写明操作顺序、输入条件和问题出现频率
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 预期结果
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: 实际结果
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 环境
+      description: PHP、SQLite、浏览器、操作系统和屏幕尺寸
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 隐私确认
+      options:
+        - label: 我已移除姓名、Cookie、密钥、数据库和服务器凭据
+          required: true

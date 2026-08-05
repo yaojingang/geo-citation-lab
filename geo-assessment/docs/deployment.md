@@ -4,12 +4,12 @@
 
 ```bash
 composer install --no-dev --classmap-authoritative
-php bin/console app:install
-php bin/console questions:verify
-php bin/console app:health
+sudo WEB_USER=www-data PHP_BIN=php bash deploy/install.sh
 ```
 
 站点文档根必须设为项目的 `public/`。将整个项目目录暴露为文档根会增加数据库和密钥泄露风险。
+
+GitHub Release 压缩包已经包含生产依赖，服务器可以直接解压后运行 `deploy/install.sh`。从源码部署时先运行 Composer。安装脚本要求 root 权限，`WEB_USER` 应与 PHP-FPM 进程用户一致，`PHP_BIN` 可以填写完整路径。
 
 ## Nginx
 
@@ -34,6 +34,8 @@ server {
 }
 ```
 
+部署到已有站点的子目录时，参考 [`../deploy/nginx-subdirectory.conf.example`](../deploy/nginx-subdirectory.conf.example)。示例中的 URL 前缀、项目绝对路径和 PHP-FPM socket 都需要替换。
+
 ## Apache
 
 启用 `mod_rewrite`，将 DocumentRoot 指向 `public/`。仓库内 `public/.htaccess` 会把不存在的文件转发到入口，并拒绝点文件访问。
@@ -52,3 +54,5 @@ server {
 6. 验证首页、答题保存、交卷、报告、打印和删除测试数据。
 
 反向代理使用 HTTPS 时，设置 `GEO_TRUST_PROXY=1`，并限制只有受信代理可以写入 `X-Forwarded-Proto`。应用会在受信配置下根据 `X-Forwarded-Proto: https` 设置 Secure Cookie。
+
+公共源码不启用访问统计。需要百度统计时，通过 PHP-FPM 环境或 Nginx `fastcgi_param` 设置 `GEO_BAIDU_ANALYTICS_ID`，并更新站点隐私说明。官方演示配置位于 `../deploy/examples/ai.laoyao.cn/`。

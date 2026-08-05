@@ -3,6 +3,7 @@
 declare(strict_types=1);
 
 use GeoAssessment\Support\View;
+use GeoAssessment\Support\BaiduAnalytics;
 
 $assetUrl = static function (string $path) use ($basePath): string {
     $absolutePath = dirname(__DIR__) . '/public' . $path;
@@ -36,13 +37,9 @@ $assetUrl = static function (string $path) use ($basePath): string {
     <p>GEO Citation Lab · 题集 geo-30-v1.1</p>
     <nav aria-label="隐私与规则"><a href="<?= View::e($basePath . '/#privacy') ?>">隐私边界</a><span aria-hidden="true">·</span><a href="<?= View::e($basePath . '/#terms') ?>">测试规则</a></nav>
   </footer>
-  <script>var _hmt = _hmt || [];
-(function() {
-  var hm = document.createElement("script");
-  hm.src = "https://hm.baidu.com/hm.js?c0aa4d814a9bb0449f84d59c73cc5da4";
-  var s = document.getElementsByTagName("script")[0];
-  s.parentNode.insertBefore(hm, s);
-})();</script>
+  <?php if (BaiduAnalytics::enabled($baiduAnalyticsId)): ?>
+    <script><?= BaiduAnalytics::inlineLoader($baiduAnalyticsId) ?></script>
+  <?php endif; ?>
   <script src="<?= View::e($assetUrl('/assets/app.js')) ?>" defer></script>
   <?php if ($pageClass === 'page-question'): ?>
     <script src="<?= View::e($assetUrl('/assets/quiz-state.js')) ?>" defer></script>

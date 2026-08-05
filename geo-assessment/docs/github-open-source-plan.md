@@ -1,6 +1,12 @@
 # GEO Assessment GitHub 开源计划
 
-版本：v1 方案稿
+版本：v1 执行稿
+
+当前状态：公开基线、CI、Release 自动化与社区治理文件已进入发布前验证；首次标签仍为 `assessment-v0.1.0`
+
+已完成：统计配置默认关闭、通用部署入口、题目来源说明、分范围许可、CI、Release 构建与校验脚本、贡献指南、安全策略、Issue 模板和 PR 模板。
+
+待执行：推送功能分支、观察 GitHub Actions、创建 Pull Request、合并后创建 `assessment-v0.1.0` 标签，并从 GitHub Release 回读 ZIP 与 SHA-256。
 
 适用目录：`geo-assessment/`
 

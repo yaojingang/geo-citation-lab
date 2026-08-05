@@ -45,6 +45,11 @@ final class HealthCheck
         $hasChartVersion = strpos($chartVersion, 'Chart.js v4.5.1') !== false;
         $add('Chart.js', $hasChartVersion, $hasChartVersion ? '4.5.1 本地文件' : '本地文件缺失或版本不匹配');
 
+        $analyticsId = trim((string) $this->config->get('baidu_analytics_id', ''));
+        $analyticsValid = $analyticsId === '' || BaiduAnalytics::enabled($analyticsId);
+        $analyticsMessage = $analyticsId === '' ? '未启用' : ($analyticsValid ? '已启用' : 'ID 应为 32 位十六进制字符串');
+        $add('百度统计', $analyticsValid, $analyticsMessage);
+
         $databasePath = (string) $this->config->get('db_path');
         if (!is_file($databasePath)) {
             $add('数据库', false, '文件不存在');

@@ -14,7 +14,10 @@
 | `GEO_COOKIE_SECURE` | `auto` | `1` 强制 Secure，`0` 关闭，`auto` 跟随 HTTPS |
 | `GEO_TRUST_PROXY` | `0` | 只在受信反向代理固定覆盖来源头时设为 `1` |
 | `GEO_APP_KEY` | 空 | 可由环境注入；空值时读取 `storage/app.key` |
+| `GEO_BAIDU_ANALYTICS_ID` | 空 | 可选的 32 位百度统计 ID；留空时不输出统计脚本，也不在 CSP 中放行统计域名 |
 
 首次运行 `php bin/console app:install` 会创建存储目录、生成 64 字符密钥、迁移数据库并导入 `geo-30-v1.1`。安装过程幂等，现有密钥与同指纹题集会保留。
 
 生产权限建议：应用用户可读源代码，可读写 `storage/`，Web 文档根只指向 `public/`。`storage/app.key` 使用 `0600`，数据库、日志与备份禁止 Web 直接访问。
+
+启用百度统计时，模板会直接输出完整初始化代码，并为这段代码动态生成精确的 CSP 哈希。无效 ID 会被关闭，`app:health` 会报告配置错误。部署者需要在面向用户的隐私说明中说明第三方统计的数据范围和保留政策。

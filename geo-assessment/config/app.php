@@ -22,4 +22,5 @@ return [
     'cookie_secure' => getenv('GEO_COOKIE_SECURE') ?: 'auto',
     'trust_proxy' => filter_var(getenv('GEO_TRUST_PROXY') ?: '0', FILTER_VALIDATE_BOOLEAN),
     'app_key' => getenv('GEO_APP_KEY') ?: null,
+    'baidu_analytics_id' => getenv('GEO_BAIDU_ANALYTICS_ID') ?: '',
 ];

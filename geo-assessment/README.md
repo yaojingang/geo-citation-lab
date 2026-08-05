@@ -4,7 +4,7 @@
 
 ## 本地运行
 
-生产运行时支持 PHP 7.3.5+。完整开发测试使用 PHPUnit 11，需要 PHP 8.2+；PHP 7.3 服务器请直接使用已包含生产依赖的发布压缩包，无需在服务器执行 Composer。
+生产运行时兼容 PHP 7.3.5+。PHP 7.3 已停止安全维护，新的公开部署建议使用仍在安全维护期内的 PHP 版本。完整开发测试使用 PHPUnit 11，需要 PHP 8.2+；旧版 PHP 服务器可使用包含生产依赖的 Release 压缩包，无需在服务器执行 Composer。
 
 ```bash
 composer install
@@ -42,6 +42,10 @@ bash tests/Smoke/http.sh http://127.0.0.1:8080
 - [部署说明](docs/deployment.md)
 - [备份与恢复](docs/backup-and-restore.md)
 - [发布检查清单](docs/release-checklist.md)
+- [题目来源与编写边界](docs/question-provenance.md)
+- [贡献指南](CONTRIBUTING.md)
+- [安全策略](SECURITY.md)
+- [变更记录](CHANGELOG.md)
 
 产品规范见 [DESIGN.md](DESIGN.md)，第三方许可见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)。
 
@@ -50,9 +54,11 @@ bash tests/Smoke/http.sh http://127.0.0.1:8080
 - 在线体验：<https://ai.laoyao.cn/geo/>
 - GitHub 开源计划：[docs/github-open-source-plan.md](docs/github-open-source-plan.md)
 
+公共源码默认关闭访问统计。部署者可以通过 `GEO_BAIDU_ANALYTICS_ID` 配置自己的百度统计 ID；启用后需要在站点隐私说明中披露统计用途。官方演示站点的参数位于 `deploy/examples/ai.laoyao.cn/`，通用部署从 `deploy/install.sh` 与 `deploy/nginx-subdirectory.conf.example` 开始。
+
 ## 许可范围
 
-- PHP、JavaScript、CSS、安装脚本和测试代码采用仓库根目录的 [MIT License](../LICENSE-CODE)
-- 题目、解析、产品文档与原创可视化内容采用 [CC BY 4.0](../LICENSE-CONTENT)
+- PHP、JavaScript、CSS、安装脚本和测试代码采用 [MIT License](LICENSE-CODE)
+- 题目、解析、产品文档与原创可视化内容采用 [CC BY 4.0](LICENSE-CONTENT)
 - Chart.js 及其他第三方材料维持各自许可，详见 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md)
 - 本地 SQLite 数据库、应用密钥、日志、备份、开发依赖和发布压缩包不进入 Git 仓库

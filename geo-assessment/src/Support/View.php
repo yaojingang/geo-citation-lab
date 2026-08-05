@@ -14,10 +14,14 @@ final class View
     /** @var string */
     private $basePath;
 
-    public function __construct(string $templatesPath, string $basePath = '')
+    /** @var string */
+    private $baiduAnalyticsId;
+
+    public function __construct(string $templatesPath, string $basePath = '', string $baiduAnalyticsId = '')
     {
         $this->templatesPath = $templatesPath;
         $this->basePath = $basePath;
+        $this->baiduAnalyticsId = BaiduAnalytics::normalize($baiduAnalyticsId);
     }
 
     public function render(string $template, array $data = [], string $title = 'GEO 在线能力测试', string $pageClass = '', int $status = 200): Response
@@ -27,6 +31,7 @@ final class View
             throw new \RuntimeException("模板不存在：{$template}");
         }
         $basePath = $this->basePath;
+        $baiduAnalyticsId = $this->baiduAnalyticsId;
         $templatesPath = $this->templatesPath;
         extract($data, EXTR_SKIP);
         ob_start();
@@ -43,6 +48,11 @@ final class View
             $path = '/';
         }
         return $this->basePath . $path;
+    }
+
+    public function analyticsEnabled(): bool
+    {
+        return BaiduAnalytics::enabled($this->baiduAnalyticsId);
     }
 
     /** @param mixed $value */

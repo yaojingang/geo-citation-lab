@@ -15,8 +15,6 @@ use RuntimeException;
 
 final class ConsoleApplication
 {
-    private const VERSION = '1.0.0';
-
     /** @var Config */
     private $config;
 
@@ -198,7 +196,9 @@ TEXT);
 
     private function version(): int
     {
-        $this->line('GEO Assessment ' . self::VERSION);
+        $versionFile = (string) $this->config->get('root') . '/VERSION';
+        $version = is_file($versionFile) ? trim((string) file_get_contents($versionFile)) : 'development';
+        $this->line('GEO Assessment ' . $version);
         return 0;
     }
 

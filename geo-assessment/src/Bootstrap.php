@@ -19,6 +19,7 @@ use GeoAssessment\Http\SecurityHeaders;
 use GeoAssessment\Identity\IdentityService;
 use GeoAssessment\Reporting\ReportViewModelFactory;
 use GeoAssessment\Support\Config;
+use GeoAssessment\Support\BaiduAnalytics;
 use GeoAssessment\Support\Database;
 use GeoAssessment\Support\JsonLogger;
 use GeoAssessment\Support\View;
@@ -35,7 +36,11 @@ final class Bootstrap
 
     public function handle(Request $request): Response
     {
-        $view = new View($this->config->get('root') . '/templates', (string) $this->config->get('base_path', ''));
+        $view = new View(
+            $this->config->get('root') . '/templates',
+            (string) $this->config->get('base_path', ''),
+            $this->baiduAnalyticsId()
+        );
         try {
             $appKey = $this->appKey();
             $pdo = Database::connect((string) $this->config->get('db_path'));
@@ -94,7 +99,7 @@ final class Bootstrap
             $response = $request->expectsJson()
                 ? Response::json(['error' => $error->getMessage()], 401)
                 : Response::redirect($view->url('/'));
-            return $response->withHeaders(SecurityHeaders::all());
+            return $response->withHeaders(SecurityHeaders::all($this->baiduAnalyticsId()));
         } catch (\Throwable $error) {
             (new JsonLogger((string) $this->config->get('log_dir')))->error($error, [
                 'method' => $request->method,
@@ -103,7 +108,7 @@ final class Bootstrap
             $debug = (bool) $this->config->get('debug', false);
             $message = $debug ? $error->getMessage() : '应用正在完成初始化，或当前服务暂不可用。';
             $response = $view->render('maintenance', ['view' => $view, 'message' => $message], '服务暂不可用', 'page-maintenance', 503);
-            return $response->withHeaders(SecurityHeaders::all())->withHeader('Retry-After', '60');
+            return $response->withHeaders(SecurityHeaders::all($this->baiduAnalyticsId()))->withHeader('Retry-After', '60');
         }
     }
 
@@ -138,7 +143,7 @@ final class Bootstrap
 
     private function finish(Response $response, Csrf $csrf, bool $secureCookie): Response
     {
-        $response = $response->withHeaders(SecurityHeaders::all())->withHeader('X-Request-Id', bin2hex(random_bytes(8)));
+        $response = $response->withHeaders(SecurityHeaders::all($this->baiduAnalyticsId()))->withHeader('X-Request-Id', bin2hex(random_bytes(8)));
         if (($secret = $csrf->issuedSecret()) !== null) {
             $parts = [
                 Csrf::COOKIE . '=' . rawurlencode($secret),
@@ -153,5 +158,10 @@ final class Bootstrap
             $response = $response->withHeader('Set-Cookie', implode('; ', $parts), true);
         }
         return $response;
+    }
+
+    private function baiduAnalyticsId(): string
+    {
+        return BaiduAnalytics::normalize($this->config->get('baidu_analytics_id', ''));
     }
 }

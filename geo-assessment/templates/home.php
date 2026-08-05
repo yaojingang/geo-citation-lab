@@ -111,7 +111,7 @@ $attemptStatusLabels = [
 
   <section id="privacy" class="boundary-section">
     <div><p class="eyebrow">PRIVACY</p><h2>测试记录保存在本站 SQLite 数据库</h2></div>
-    <p>应用保存姓名、作答、用时与报告。页面同时接入百度统计，用于汇总访问情况，百度可能接收浏览器、设备与访问页面等信息。浏览器随机令牌承担登录凭证，姓名无法用于跨设备找回。删除本人记录会级联删除作答与报告。</p>
+    <p>应用保存姓名、作答、用时与报告。<?php if ($view->analyticsEnabled()): ?>当前部署已启用百度统计，用于汇总访问情况，百度可能接收浏览器、设备与访问页面等信息。<?php endif; ?>浏览器随机令牌承担登录凭证，姓名无法用于跨设备找回。删除本人记录会级联删除作答与报告。</p>
   </section>
   <section id="terms" class="boundary-section">
     <div><p class="eyebrow">RULES</p><h2>题集与评分规则</h2></div>
