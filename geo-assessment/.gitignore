@@ -1,0 +1,7 @@
+/vendor/
+/.phpunit.cache/
+/.phpunit.result.cache
+/storage/*
+!/storage/.gitignore
+.DS_Store
+*.log

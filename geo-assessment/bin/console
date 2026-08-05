@@ -1,0 +1,13 @@
+#!/usr/bin/env php
+<?php
+
+declare(strict_types=1);
+
+use GeoAssessment\Console\ConsoleApplication;
+use GeoAssessment\Support\Config;
+
+require dirname(__DIR__) . '/vendor/autoload.php';
+
+$config = Config::load(dirname(__DIR__) . '/config/app.php');
+date_default_timezone_set((string) $config->get('timezone', 'Asia/Shanghai'));
+exit((new ConsoleApplication($config))->run($argv));
