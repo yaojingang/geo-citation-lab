@@ -45,7 +45,7 @@ PACKAGE_DIR="${VERIFY_DIR}/geo-assessment"
 
 for required in \
     VERSION README.md LICENSE LICENSE-CODE LICENSE-CONTENT THIRD_PARTY_NOTICES.md \
-    vendor/autoload.php bin/console public/index.php database/seeds/geo-30-v1.1.json \
+    vendor/autoload.php bin/console public/index.php database/seeds/geo-30-v1.2.json \
     deploy/install.sh deploy/nginx-subdirectory.conf.example storage/.gitignore; do
     [[ -f "${PACKAGE_DIR}/${required}" ]] || fail "Release 缺少 ${required}"
 done

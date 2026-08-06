@@ -51,7 +51,7 @@ AI 搜索中的可见性包含多个环节。一条内容可能进入检索候�
 - [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) 研究 ChatGPT、Google AI Overview / Gemini 和 Perplexity 如何触发搜索、选择信源并吸收页面内容。
 - [`03-cn-geo-citation-dataset/`](./03-cn-geo-citation-dataset/) 整理国内 AI 引用记录，并从信源生态、页面特征、实体曝光和 Web / App 差异等角度提供可查询的数据与报告。
 - [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) 为上述问题提供文献背景，覆盖 GEO 方法、测量评估、AI 搜索实证、风险操纵、Agentic Search 和 RAG 等主题。
-- [`geo-assessment/`](./geo-assessment/) 将论文、跨平台实验和 CN-GEO 数据中的关键结论转化为 30 道研究型测试题，并生成六维能力报告。
+- [`geo-assessment/`](./geo-assessment/) 将论文、跨平台实验和 CN-GEO 数据中的关键结论转化为 30 道场景题。题目以国内应用为主，面向刚接触 GEO 的用户，并生成六维能力报告。
 
 ## 三个研究发现
 

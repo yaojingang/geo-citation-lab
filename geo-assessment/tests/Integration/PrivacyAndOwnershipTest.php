@@ -24,7 +24,7 @@ final class PrivacyAndOwnershipTest extends TestCase
         $this->path = sys_get_temp_dir() . '/geo-privacy-' . bin2hex(random_bytes(8)) . '.sqlite';
         $this->pdo = Database::connect($this->path);
         (new MigrationRunner($this->pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
-        (new QuestionImporter($this->pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+        (new QuestionImporter($this->pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
     }
 
     protected function tearDown(): void

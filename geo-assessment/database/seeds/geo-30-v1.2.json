@@ -1,0 +1,2051 @@
+{
+    "schema_version": "question-set-v1",
+    "set": {
+        "version": "geo-30-v1.2",
+        "title": "GEO 在线能力测试",
+        "description": "面向 GEO 初学者的 30 道场景题，以国内应用为主，并保留论文与数据证据",
+        "total_points": 100,
+        "time_limit_seconds": 1800,
+        "scoring_version": "score-v1.2",
+        "validation_profile": "beginner-domestic-v1",
+        "evidence_frozen_at": "2026-08-04"
+    },
+    "sources": [
+        {
+            "id": "P01",
+            "title": "GEO: Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2023/2024 · arXiv, KDD 2024",
+            "url": "https://arxiv.org/pdf/2311.09735"
+        },
+        {
+            "id": "P02",
+            "title": "Generative Engine Optimization in Digital Repositories: Optimizing Visibility for Generative AI",
+            "kind": "paper",
+            "citation": "2025 · Infonomy",
+            "url": "https://infonomy.scimagoepi.com/index.php/infonomy/en/article/download/115/153/217"
+        },
+        {
+            "id": "P03",
+            "title": "Generative Engine Optimization: How to Dominate AI Search",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2509.08919"
+        },
+        {
+            "id": "P04",
+            "title": "Navigating the Shift: A Comparative Analysis of Web Search and Generative AI Response Generation",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2601.16858"
+        },
+        {
+            "id": "P05",
+            "title": "Beyond Keywords: Driving Generative Search Engine Optimization with Content-Centric Agents",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2509.05607"
+        },
+        {
+            "id": "P06",
+            "title": "Beyond SEO: A Transformer-Based Approach for Reinventing Web Content Optimisation",
+            "kind": "paper",
+            "citation": "2025 · arXiv mirror",
+            "url": "https://arxiv.org/pdf/2507.03169"
+        },
+        {
+            "id": "P07",
+            "title": "IF-GEO: Conflict-Aware Instruction Fusion for Multi-Query Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2601.13938"
+        },
+        {
+            "id": "P08",
+            "title": "Role-Augmented Intent-Driven Generative Search Engine Optimization",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2508.11158"
+        },
+        {
+            "id": "P09",
+            "title": "Think Before Writing: Feature-Level Optimization for Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2604.19113"
+        },
+        {
+            "id": "P10",
+            "title": "What Generative Search Engines Like: Explaining and Optimizing Website Visibility in Generative Search",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2510.11438"
+        },
+        {
+            "id": "P11",
+            "title": "White Hat Search Engine Optimization using Large Language Models",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2502.07315"
+        },
+        {
+            "id": "P12",
+            "title": "AI Answer Engine Citation Behavior: A Longitudinal Study of GEO in 16 Generative Engines",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2509.10762"
+        },
+        {
+            "id": "P13",
+            "title": "C-SEO Bench: Does Conversational SEO Work?",
+            "kind": "paper",
+            "citation": "2025 · arXiv, NeurIPS Datasets and Benchmarks",
+            "url": "https://arxiv.org/pdf/2506.11097"
+        },
+        {
+            "id": "P14",
+            "title": "Don’t Measure Once: Reliable AI Search Visibility Requires Repeated Trials and Structure-Aware Metrics",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2604.07585"
+        },
+        {
+            "id": "P15",
+            "title": "Disentangling Answer Engine Optimization from Platform Growth: A Log-Based Natural Experiment on ChatGPT Referral Traffic",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.04362"
+        },
+        {
+            "id": "P16",
+            "title": "From Citation Selection to Citation Absorption: Understanding Source Influence in LLM-Generated Answers",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2604.25707"
+        },
+        {
+            "id": "P17",
+            "title": "Generative Engine Optimization at Scale: Measuring Brand Visibility Across AI Search Engines",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.20065"
+        },
+        {
+            "id": "P18",
+            "title": "SAGEO: A Search Arena for Generative Engine Optimization in a Realistic Environment",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.12187"
+        },
+        {
+            "id": "P19",
+            "title": "Structural Feature Engineering for Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2603.29979"
+        },
+        {
+            "id": "P20",
+            "title": "A Survey of Generative Search and Recommendation in the Era of Large Language Models",
+            "kind": "paper",
+            "citation": "2024/2025 · Generative Search and Recommendation",
+            "url": "https://generative-rec.github.io/assets/files/survey.pdf"
+        },
+        {
+            "id": "P21",
+            "title": "Characterizing Web Search in the Age of Generative AI",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2510.11560"
+        },
+        {
+            "id": "P22",
+            "title": "What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2607.15771v1"
+        },
+        {
+            "id": "P23",
+            "title": "How Generative AI Disrupts Search: Consumer Behavior, Website Traffic, and the Impact of Google AI Overviews",
+            "kind": "paper",
+            "citation": "2026 · ACM SIGIR 2026 author PDF",
+            "url": "https://web.njit.edu/~borcea/papers/acm-sigir26.pdf"
+        },
+        {
+            "id": "P24",
+            "title": "NExT-Search: Rebuilding User Feedback Ecosystem for Generative AI Search",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2505.14680"
+        },
+        {
+            "id": "P25",
+            "title": "What Evidence Do Language Models Find Convincing?",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2402.11782"
+        },
+        {
+            "id": "P26",
+            "title": "From SEO to Answer Engine Optimization (AEO): Generative AI and the Transformation of Search Visibility",
+            "kind": "paper",
+            "citation": "2025 · ResearchGate chapter PDF",
+            "url": "https://www.researchgate.net/publication/399872181_From_SEO_to_Answer_Engine_Optimization_AEO_Generative_Ai_and_the_Transformation_of_Search_Visibility"
+        },
+        {
+            "id": "P27",
+            "title": "Optimizing for the Artificial Intelligence-Driven Search Era: An Integrated Framework for SEO, GEO, and AEO",
+            "kind": "paper",
+            "citation": "2025 · IJSREM",
+            "url": "https://ijsrem.com/uploads/production/Optimizing-for-the-Artificial-Intelligence-Driven-Search-Era-An-Integrated-Framework-for-Search-Engine-Optimization-Generative-Engine-Optimization-and-Answer-Engine-Optimization.pdf"
+        },
+        {
+            "id": "P28",
+            "title": "Smart Search Optimization: A Theoretical Framework Integrating SEO, AEO and GEO in the Era of Generative AI",
+            "kind": "paper",
+            "citation": "2025 · Loro Journal",
+            "url": "https://lorojournals.com/index.php/emsj/en/article/download/1728/1679/2401"
+        },
+        {
+            "id": "P29",
+            "title": "How the Transition from SEO to GEO, AEO, and AIO is Impacting Digital Marketing Strategies",
+            "kind": "paper",
+            "citation": "2025 · IJCRT",
+            "url": "https://www.ijcrt.org/papers/IJCRT2510315.pdf"
+        },
+        {
+            "id": "P30",
+            "title": "Zero-Click Search and Answer Engines: A Literature Review on SEO Transformation in Digital Marketing",
+            "kind": "paper",
+            "citation": "2025/2026 · JIEM",
+            "url": "https://ejurnal.kampusakademik.co.id/index.php/jiem/article/download/9040/7646/32415"
+        },
+        {
+            "id": "P31",
+            "title": "Adversarial Search Engine Optimization for Large Language Models",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2406.18382"
+        },
+        {
+            "id": "P32",
+            "title": "CONFLICTBANK: A Benchmark for Evaluating the Influence of Knowledge Conflicts in LLMs",
+            "kind": "paper",
+            "citation": "2024 · OpenReview",
+            "url": "https://openreview.net/pdf?id=wjHVmgBDzc"
+        },
+        {
+            "id": "P33",
+            "title": "Dynamics of Adversarial Attacks on Large Language Model-Based Search Engines",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2501.00745"
+        },
+        {
+            "id": "P34",
+            "title": "GASLITEing the Retrieval: Exploring Vulnerabilities in Dense Embedding-Based Search",
+            "kind": "paper",
+            "citation": "2024/2025 · OpenReview",
+            "url": "https://openreview.net/pdf?id=LBd87fWerd"
+        },
+        {
+            "id": "P35",
+            "title": "Manipulating Large Language Models to Increase Product Visibility",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2404.07981"
+        },
+        {
+            "id": "P36",
+            "title": "Persistent Pre-Training Poisoning of LLMs",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2410.13722"
+        },
+        {
+            "id": "P37",
+            "title": "PoisonArena: Uncovering Competing Poisoning Attacks in Retrieval-Augmented Generation",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2505.12574"
+        },
+        {
+            "id": "P38",
+            "title": "Ranking Manipulation for Conversational Search Engines",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2406.03589v1.pdf"
+        },
+        {
+            "id": "P39",
+            "title": "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2504.05804"
+        },
+        {
+            "id": "P40",
+            "title": "Unveiling the Resilience of LLM-Enhanced Search Engines Against Adversarial Attacks",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2603.25500"
+        },
+        {
+            "id": "P41",
+            "title": "Caption Injection for Optimization in Generative Search Engines",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2511.04080"
+        },
+        {
+            "id": "P42",
+            "title": "E-GEO: A Testbed for Generative Engine Optimization in E-Commerce",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2511.20867"
+        },
+        {
+            "id": "P43",
+            "title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
+            "kind": "paper",
+            "citation": "2026 · ResearchGate paper PDF",
+            "url": "https://www.researchgate.net/publication/399931268_Multimodal_Generative_Engine_Optimization_Rank_Manipulation_for_Vision-Language_Model_Rankers"
+        },
+        {
+            "id": "P44",
+            "title": "Generative Engine Optimization: A VLM and Agent Framework for Pinterest Acquisition Growth",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.02961"
+        },
+        {
+            "id": "P45",
+            "title": "When Content is Goliath and Algorithm is David: The Style and Semantic Effects of Generative Search Engine",
+            "kind": "paper",
+            "citation": "2025 · ResearchGate paper PDF",
+            "url": "https://www.researchgate.net/publication/395651066_When_Content_is_Goliath_and_Algorithm_is_David_The_Style_and_Semantic_Effects_of_Generative_Search_Engine"
+        },
+        {
+            "id": "P46",
+            "title": "Decoupling Search from Reasoning: A Vendor-Agnostic Grounding Architecture for LLM Agents",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.18947"
+        },
+        {
+            "id": "P47",
+            "title": "Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.17209"
+        },
+        {
+            "id": "P48",
+            "title": "ScholarQuest: A Taxonomy-Guided Benchmark for Agentic Academic Paper Search in Open Literature Environments",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.20235"
+        },
+        {
+            "id": "P49",
+            "title": "When Does Streaming Tool Use Help? Characterizing Tool-Intent Stabilization in Streaming Retrieval-Augmented Generation",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.20113"
+        },
+        {
+            "id": "P50",
+            "title": "MCompassRAG: Topic Metadata as a Semantic Compass for Paragraph-Level Retrieval",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.18508"
+        },
+        {
+            "id": "P51",
+            "title": "SCAR: Semantic Continuity-Aware Retrieval for Efficient Context Expansion in RAG",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.16661"
+        },
+        {
+            "id": "P52",
+            "title": "SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.18381"
+        },
+        {
+            "id": "P53",
+            "title": "Scaling Search Relevance: Augmenting App Store Ranking with LLM-Generated Judgments",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.23234"
+        },
+        {
+            "id": "P54",
+            "title": "SAGE: Scalable AI Governance & Evaluation",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.07840"
+        },
+        {
+            "id": "D01",
+            "title": "跨平台引用选择与答案吸收实验数据",
+            "kind": "dataset",
+            "citation": "602 条 Prompt，3 个海外生成式搜索平台，证据冻结于 2026-08-04",
+            "url": "https://github.com/yaojingang/geo-citation-lab/tree/main/01-geo-experiment-data-report"
+        },
+        {
+            "id": "D02",
+            "title": "CN-GEO 中文生成式搜索引用数据集",
+            "kind": "dataset",
+            "citation": "v2.0.1，214,119 条原始引用记录，证据冻结于 2026-08-04",
+            "url": "https://github.com/yaojingang/geo-citation-lab/tree/main/03-cn-geo-citation-dataset"
+        }
+    ],
+    "questions": [
+        {
+            "code": "Q01",
+            "title": "AI 答案如何选用网页",
+            "sort_order": 1,
+            "region_scope": "general",
+            "type": "single",
+            "dimension": "mechanism",
+            "dimension_label": "GEO 基础理解",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "理解",
+            "prompt": "用户向 AI 提问后，一个网页通常要经历哪些步骤，才可能出现在最终答案里？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "AI 只看关键词出现次数",
+                    "is_correct": false,
+                    "rationale": "关键词可能帮助理解主题，无法单独决定网页会不会进入答案"
+                },
+                {
+                    "code": "B",
+                    "text": "网页先被找到，再被选作来源，相关内容才可能写进答案",
+                    "is_correct": true,
+                    "rationale": "网页需要依次经过发现、来源选择和内容采用"
+                },
+                {
+                    "code": "C",
+                    "text": "网页排名靠前就一定会被提到",
+                    "is_correct": false,
+                    "rationale": "传统搜索排名无法保证 AI 会引用该页或采用其中内容"
+                },
+                {
+                    "code": "D",
+                    "text": "AI 完全依靠记忆，不会读取网页",
+                    "is_correct": false,
+                    "rationale": "许多 AI 搜索产品会调用外部搜索或读取网页"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "AI 通常先理解问题并找到相关网页，再选择可用来源，最后从来源中提取内容。网页被找到、被引用和内容进入答案是三个不同结果，分开看更容易判断问题出在哪",
+            "principle": "GEO 可以按被找到、被引用、被采用三个阶段来分析",
+            "misconception_tag": "把网页被找到、被引用和内容进入答案当成同一件事",
+            "source_refs": [
+                "P01",
+                "P03",
+                "P04",
+                "P16",
+                "P21",
+                "P26",
+                "P27",
+                "P28",
+                "P29",
+                "P30"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q02",
+            "title": "文章一直没有成为来源",
+            "sort_order": 2,
+            "region_scope": "general",
+            "type": "multiple",
+            "dimension": "mechanism",
+            "dimension_label": "GEO 基础理解",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "应用",
+            "prompt": "一篇产品文章已经反复改写，但始终没有出现在 AI 答案的来源里。接下来适合检查哪些问题？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "页面是否公开可访问，并允许搜索工具读取",
+                    "is_correct": true,
+                    "rationale": "页面无法被访问时，后续引用没有可用输入"
+                },
+                {
+                    "code": "B",
+                    "text": "文章是否真正回答了目标用户会问的问题",
+                    "is_correct": true,
+                    "rationale": "内容与问题不相关时，即使页面可访问也很难被选中"
+                },
+                {
+                    "code": "C",
+                    "text": "继续增加“领先、权威、最好”等宣传词",
+                    "is_correct": false,
+                    "rationale": "宣传词不会解决页面无法访问或内容不相关的问题"
+                },
+                {
+                    "code": "D",
+                    "text": "平台是否已经重新抓取页面，缓存是否仍是旧版本",
+                    "is_correct": true,
+                    "rationale": "平台尚未更新页面时，新改动不会进入当次搜索结果"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "D"
+            ],
+            "weight": 3,
+            "explanation": "先检查页面能不能被读取、内容能不能回答问题，以及平台看到的是不是最新版本。页面没有进入可用来源范围时，继续润色几个句子通常不会改变结果",
+            "principle": "诊断应从页面可访问性和内容相关性开始，再看来源选择和答案采用",
+            "misconception_tag": "页面没有被找到时仍把精力放在宣传文案上",
+            "source_refs": [
+                "P18",
+                "P20",
+                "P46",
+                "P50"
+            ],
+            "expected_seconds": 60
+        },
+        {
+            "code": "Q03",
+            "title": "引用官网却没写品牌名",
+            "sort_order": 3,
+            "region_scope": "general",
+            "type": "single",
+            "dimension": "mechanism",
+            "dimension_label": "GEO 基础理解",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "AI 答案引用了企业官网，却没有写出企业名称。最合理的解释是什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "引用记录一定出错了",
+                    "is_correct": false,
+                    "rationale": "引用存在时仍可能只采用页面中的部分信息"
+                },
+                {
+                    "code": "B",
+                    "text": "官网已经完成全部 GEO 目标",
+                    "is_correct": false,
+                    "rationale": "有引用不代表品牌名、产品名和观点都进入了答案"
+                },
+                {
+                    "code": "C",
+                    "text": "AI 只采用了页面中的部分内容，没有采用品牌信息",
+                    "is_correct": true,
+                    "rationale": "来源选择和具体内容采用是两个步骤"
+                },
+                {
+                    "code": "D",
+                    "text": "品牌名至少重复二十次才会出现",
+                    "is_correct": false,
+                    "rationale": "机械重复没有通用阈值，还可能降低内容质量"
+                }
+            ],
+            "correct_codes": [
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "引用链接只说明网页参与了答案支撑，AI 仍会从页面里选择它认为与问题最相关的内容。品牌名、产品名和联系方式都可能在这一步没有被采用",
+            "principle": "来源被引用后，页面中的每条信息仍会经历一次内容选择",
+            "misconception_tag": "把出现引用链接直接当成品牌已经进入答案",
+            "source_refs": [
+                "P16",
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q04",
+            "title": "长文章怎样方便 AI 查找",
+            "sort_order": 4,
+            "region_scope": "general",
+            "type": "single",
+            "dimension": "mechanism",
+            "dimension_label": "GEO 基础理解",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "分析",
+            "prompt": "一篇很长的指南既要方便 AI 找到具体答案，又要避免断章取义。怎样整理更合适？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "每五十字强制切成一段",
+                    "is_correct": false,
+                    "rationale": "固定短段会拆散完整定义、条件和结论"
+                },
+                {
+                    "code": "B",
+                    "text": "整篇只保留一个大段落",
+                    "is_correct": false,
+                    "rationale": "整页内容过长会增加无关信息，具体答案更难定位"
+                },
+                {
+                    "code": "C",
+                    "text": "按主题分段，保留标题、上下文和前后段关系",
+                    "is_correct": true,
+                    "rationale": "主题分段兼顾查找准确度和上下文完整性"
+                },
+                {
+                    "code": "D",
+                    "text": "随机切分，避免平台形成偏好",
+                    "is_correct": false,
+                    "rationale": "随机切分会破坏语义连续性"
+                }
+            ],
+            "correct_codes": [
+                "C"
+            ],
+            "weight": 4,
+            "explanation": "短段更容易命中具体问题，过短会丢掉条件和上下文。按主题分段，并保留标题、层级和前后关系，可以让 AI 找到局部答案时仍知道它属于哪一部分",
+            "principle": "内容分段需要同时照顾查找准确度和上下文完整性",
+            "misconception_tag": "把所有文章都套用同一种固定分段长度",
+            "source_refs": [
+                "P50",
+                "P51",
+                "P52"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q05",
+            "title": "有限内容预算怎样覆盖多种问题",
+            "sort_order": 5,
+            "region_scope": "general",
+            "type": "multiple",
+            "dimension": "mechanism",
+            "dimension_label": "GEO 基础理解",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "用户会从价格、适合人群、售后等角度询问同一产品。内容预算有限时，哪些做法更合适？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "把相近问题归为一组，找出共同需求和差异",
+                    "is_correct": true,
+                    "rationale": "问题分组能减少重复，也能看清哪些信息需要单独回答"
+                },
+                {
+                    "code": "B",
+                    "text": "为价格、人群和售后分别准备清楚的证据段落",
+                    "is_correct": true,
+                    "rationale": "不同需求有独立证据时，AI 更容易提取准确答案"
+                },
+                {
+                    "code": "C",
+                    "text": "为每个问法复制一篇几乎相同的文章",
+                    "is_correct": false,
+                    "rationale": "大量近似页面会增加重复内容和维护成本"
+                },
+                {
+                    "code": "D",
+                    "text": "同时检查覆盖范围、可读性和重复程度",
+                    "is_correct": true,
+                    "rationale": "内容覆盖需要和质量、维护成本一起评估"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "可以先把用户问题按意图分组，共用产品基础信息，再为价格、适用人群和售后补充独立证据。这样既能覆盖不同问法，也能控制重复内容",
+            "principle": "多问题内容规划要在覆盖范围、内容质量和维护成本之间做平衡",
+            "misconception_tag": "用大量近似文章分别追逐每一种问法",
+            "source_refs": [
+                "P05",
+                "P07",
+                "P08",
+                "P47",
+                "P49"
+            ],
+            "expected_seconds": 65
+        },
+        {
+            "code": "Q06",
+            "title": "国内产品页先回答真实问题",
+            "sort_order": 6,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "content",
+            "dimension_label": "内容与证据优化",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "理解",
+            "prompt": "一家国内企业希望产品页更容易被 AI 答案采用，最该先做好什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "在每段重复产品关键词",
+                    "is_correct": false,
+                    "rationale": "重复关键词无法替代清楚的事实和问题匹配"
+                },
+                {
+                    "code": "B",
+                    "text": "直接回答用户问题，并给出可核验的事实",
+                    "is_correct": true,
+                    "rationale": "相关、清楚且可核验的内容更容易成为答案依据"
+                },
+                {
+                    "code": "C",
+                    "text": "把页面背景换成更醒目的颜色",
+                    "is_correct": false,
+                    "rationale": "页面颜色通常不决定文字内容是否会被采用"
+                },
+                {
+                    "code": "D",
+                    "text": "把文章扩写到固定字数",
+                    "is_correct": false,
+                    "rationale": "长度没有通用门槛，信息质量和相关性更重要"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "AI 需要从页面中找到能直接回答问题的内容。产品参数、适用条件、价格口径、服务范围和来源说明写清楚后，页面才更容易被理解和核对",
+            "principle": "内容是否与问题相关、能否核验，会直接影响答案采用",
+            "misconception_tag": "追逐关键词、颜色和固定字数等表面特征",
+            "source_refs": [
+                "P10",
+                "P16",
+                "P22",
+                "P25",
+                "P45",
+                "D02"
+            ],
+            "expected_seconds": 35
+        },
+        {
+            "code": "Q07",
+            "title": "哪些内容更容易被准确引用",
+            "sort_order": 7,
+            "region_scope": "domestic",
+            "type": "multiple",
+            "dimension": "content",
+            "dimension_label": "内容与证据优化",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "应用",
+            "prompt": "国内企业整理官网内容时，哪些信息更方便 AI 准确引用？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "写清概念是什么，以及适用于哪些情况",
+                    "is_correct": true,
+                    "rationale": "定义和适用范围能减少断章取义"
+                },
+                {
+                    "code": "B",
+                    "text": "数字同时标明统计时间、口径和来源",
+                    "is_correct": true,
+                    "rationale": "带口径和来源的数字更容易核验"
+                },
+                {
+                    "code": "C",
+                    "text": "用相同维度比较不同产品或方案",
+                    "is_correct": true,
+                    "rationale": "统一比较维度便于提取差异"
+                },
+                {
+                    "code": "D",
+                    "text": "只增加问答标题，正文继续使用宣传口号",
+                    "is_correct": false,
+                    "rationale": "标题形式无法弥补正文缺少事实依据"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "定义、带来源的数字和统一维度的比较都能独立回答一个具体问题。AI 读取这些内容时，更容易保留原有条件，也方便用户回到网页核对",
+            "principle": "边界清楚、可以核验、容易提取的信息更适合作为答案依据",
+            "misconception_tag": "只增加内容形式，没有补充可核验信息",
+            "source_refs": [
+                "P01",
+                "P10",
+                "P16",
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q08",
+            "title": "一页内容怎样服务多种用户需求",
+            "sort_order": 8,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "content",
+            "dimension_label": "内容与证据优化",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "同一款国内产品，有人关心价格，有人关心适用人群，还有人关心售后。页面空间有限时，怎样安排更合适？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只写搜索量最高的一个问题",
+                    "is_correct": false,
+                    "rationale": "只覆盖一个问题会丢掉其他重要需求"
+                },
+                {
+                    "code": "B",
+                    "text": "为每个问法复制一篇内容相同的文章",
+                    "is_correct": false,
+                    "rationale": "近似页面会增加重复和更新负担"
+                },
+                {
+                    "code": "C",
+                    "text": "先列共同信息，再为不同需求设置清楚的小节",
+                    "is_correct": true,
+                    "rationale": "共同信息与独立小节能兼顾覆盖和可读性"
+                },
+                {
+                    "code": "D",
+                    "text": "随机选择一种写法，避免过度优化",
+                    "is_correct": false,
+                    "rationale": "随机选择无法保证重要需求得到回答"
+                }
+            ],
+            "correct_codes": [
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "产品基础信息可以共用，价格、适用人群和售后需要各自有明确小节。这样既能减少重复，也方便 AI 定位对应问题的答案",
+            "principle": "内容结构应围绕用户意图组织，共用信息与独立信息分开维护",
+            "misconception_tag": "用单一问法代表全部用户需求",
+            "source_refs": [
+                "P05",
+                "P07",
+                "P08",
+                "P22"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q09",
+            "title": "为什么要一次只改少量内容",
+            "sort_order": 9,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "content",
+            "dimension_label": "内容与证据优化",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "优化国内企业页面时，为什么更适合一次只改标题、证据或结构中的一两项？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "便于判断哪项改动有效，也方便恢复旧版本",
+                    "is_correct": true,
+                    "rationale": "控制改动范围能提高实验解释力和回滚能力"
+                },
+                {
+                    "code": "B",
+                    "text": "可以保证在所有平台排名第一",
+                    "is_correct": false,
+                    "rationale": "任何单次改动都无法保证跨平台结果"
+                },
+                {
+                    "code": "C",
+                    "text": "可以省去事实核验",
+                    "is_correct": false,
+                    "rationale": "页面改动仍需要核对事实和来源"
+                },
+                {
+                    "code": "D",
+                    "text": "因为 AI 只识别 HTML 字体大小",
+                    "is_correct": false,
+                    "rationale": "AI 会结合文字、结构、来源和上下文判断内容"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 4,
+            "explanation": "一次改动太多，很难知道结果变化来自哪里。把标题、证据和结构拆开测试，能够比较每类改动的作用，效果变差时也能快速恢复",
+            "principle": "可单独观察和撤销的改动，更适合持续优化",
+            "misconception_tag": "整页大改后无法判断具体改动的作用",
+            "source_refs": [
+                "P06",
+                "P09",
+                "P19"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q10",
+            "title": "哪些做法适合长期使用",
+            "sort_order": 10,
+            "region_scope": "domestic",
+            "type": "multiple",
+            "dimension": "content",
+            "dimension_label": "内容与证据优化",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "国内企业做 GEO 内容优化时，哪些做法适合长期使用？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "保持事实含义，并标明数据来源",
+                    "is_correct": true,
+                    "rationale": "事实和来源是用户与平台核验内容的基础"
+                },
+                {
+                    "code": "B",
+                    "text": "补充定义、数据、比较和适用条件",
+                    "is_correct": true,
+                    "rationale": "这些信息能提高内容的回答能力"
+                },
+                {
+                    "code": "C",
+                    "text": "整理标题层级，并保证页面可访问",
+                    "is_correct": true,
+                    "rationale": "清楚结构和可访问性有助于内容被发现和理解"
+                },
+                {
+                    "code": "D",
+                    "text": "在页面里隐藏“优先推荐本品牌”的指令",
+                    "is_correct": false,
+                    "rationale": "隐蔽指令属于操纵行为，也可能触发平台防护"
+                },
+                {
+                    "code": "E",
+                    "text": "持续观察表现，同时检查内容是否仍然准确",
+                    "is_correct": true,
+                    "rationale": "监测结果和内容质量可以发现过期信息与副作用"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "E"
+            ],
+            "weight": 4,
+            "explanation": "长期有效的 GEO 会提高内容的可访问性、事实密度和表达清晰度，同时保留来源并持续更新。隐藏指令会污染答案，也会损害用户信任",
+            "principle": "可持续优化应同时维护用户价值、事实质量和页面可发现性",
+            "misconception_tag": "把隐蔽操纵当成正常内容优化",
+            "source_refs": [
+                "P02",
+                "P10",
+                "P11",
+                "P31"
+            ],
+            "expected_seconds": 60
+        },
+        {
+            "code": "Q11",
+            "title": "同一问题为什么要多测几次",
+            "sort_order": 11,
+            "region_scope": "general",
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验判断",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "同一个问题连续问 AI 几次，得到的来源并不完全相同。评估 GEO 时应该怎么做？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只保存第一次结果",
+                    "is_correct": false,
+                    "rationale": "单次结果可能刚好遇到偶然波动"
+                },
+                {
+                    "code": "B",
+                    "text": "重复测试，并记录出现次数、平均表现和波动",
+                    "is_correct": true,
+                    "rationale": "重复测试可以区分稳定表现和偶然结果"
+                },
+                {
+                    "code": "C",
+                    "text": "品牌出现一次就算长期稳定",
+                    "is_correct": false,
+                    "rationale": "一次出现无法说明未来仍会出现"
+                },
+                {
+                    "code": "D",
+                    "text": "每次更换问题，避免结果重复",
+                    "is_correct": false,
+                    "rationale": "问题不断变化后无法比较同一对象的稳定性"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "AI 搜索会受到检索结果、生成过程和时间变化影响。固定问题重复测试，再看出现率、平均位置和波动范围，得到的结论更可靠",
+            "principle": "GEO 表现会波动，评估对象应是一组重复结果",
+            "misconception_tag": "用一次截图代表长期稳定表现",
+            "source_refs": [
+                "P14",
+                "P17"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q12",
+            "title": "流量增长是不是都来自 AI 推荐",
+            "sort_order": 12,
+            "region_scope": "general",
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验判断",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "被 AI 推荐的页面流量增长了五成，未被推荐的相似页面也增长了四成。怎样判断更合理？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "五成增长都来自 AI 推荐",
+                    "is_correct": false,
+                    "rationale": "相似页面同时增长，说明还有共同因素"
+                },
+                {
+                    "code": "B",
+                    "text": "先比较两组原有趋势，再估算 AI 推荐带来的额外增长",
+                    "is_correct": true,
+                    "rationale": "对照组可以帮助估计没有推荐时可能发生什么"
+                },
+                {
+                    "code": "C",
+                    "text": "删除未推荐页面的数据",
+                    "is_correct": false,
+                    "rationale": "未推荐页面正是判断共同增长的重要参照"
+                },
+                {
+                    "code": "D",
+                    "text": "五成大于四成，已经证明了全部因果关系",
+                    "is_correct": false,
+                    "rationale": "简单比较两个比例仍可能受到季节和平台增长影响"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "两组页面都增长，可能受到平台用户增长、季节变化或其他推广影响。需要先确认两组原有走势是否接近，再估算推荐带来的额外变化",
+            "principle": "可信的效果评估需要一个可比较的参照",
+            "misconception_tag": "把页面的全部增长都归因于 AI 推荐",
+            "source_refs": [
+                "P15",
+                "P23"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q13",
+            "title": "来源数量和使用深度要分开看",
+            "sort_order": 13,
+            "region_scope": "general",
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验判断",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "答案甲引用了十个来源，答案乙只引用三个来源，但更完整地采用了每个来源的内容。哪项判断更合理？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "来源越多，每个来源一定用得越充分",
+                    "is_correct": false,
+                    "rationale": "来源数量和单个来源的使用程度没有必然关系"
+                },
+                {
+                    "code": "B",
+                    "text": "甲的来源覆盖更广，乙对单个来源使用更深入",
+                    "is_correct": true,
+                    "rationale": "两个答案分别体现了覆盖范围和使用深度"
+                },
+                {
+                    "code": "C",
+                    "text": "来源少的答案一定没有搜索",
+                    "is_correct": false,
+                    "rationale": "搜索后也可能只选择少量来源"
+                },
+                {
+                    "code": "D",
+                    "text": "把来源数减去引用句数就能得到质量分",
+                    "is_correct": false,
+                    "rationale": "两个指标含义不同，无法直接相减"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "来源数量回答用了多少个网页，使用深度回答每个网页有多少内容进入答案。两个指标可以同时记录，不能相互替代",
+            "principle": "证据覆盖范围和单个来源的使用程度是两项不同指标",
+            "misconception_tag": "用来源数量代替内容采用程度",
+            "source_refs": [
+                "P16",
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q14",
+            "title": "怎样让 GEO 测试可以复查",
+            "sort_order": 14,
+            "region_scope": "general",
+            "type": "multiple",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验判断",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "应用",
+            "prompt": "一项 GEO 测试要让其他人能够复查，至少应该保存哪些信息？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "固定并标注版本的问题清单",
+                    "is_correct": true,
+                    "rationale": "问题发生变化时，前后结果无法直接比较"
+                },
+                {
+                    "code": "B",
+                    "text": "每个条件重复测试的次数和结果",
+                    "is_correct": true,
+                    "rationale": "重复记录可以显示波动范围"
+                },
+                {
+                    "code": "C",
+                    "text": "平台、端别、模型和测试时间",
+                    "is_correct": true,
+                    "rationale": "这些条件会影响来源和答案"
+                },
+                {
+                    "code": "D",
+                    "text": "当时的问题、答案和来源页面快照",
+                    "is_correct": true,
+                    "rationale": "快照可以支持后续核对和重新计算"
+                },
+                {
+                    "code": "E",
+                    "text": "只保留一张最终汇总图",
+                    "is_correct": false,
+                    "rationale": "汇总图无法还原单次测试过程"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "可复查的测试需要保留输入、运行条件、重复次数和原始结果。最终图表适合展示，问题、答案与来源快照才支持后续核对",
+            "principle": "测试结论需要能追溯到当时的输入、条件和原始输出",
+            "misconception_tag": "只保存汇总结果，无法还原测试过程",
+            "source_refs": [
+                "P14",
+                "P17",
+                "P18",
+                "P22",
+                "P48"
+            ],
+            "expected_seconds": 65
+        },
+        {
+            "code": "Q15",
+            "title": "用 AI 给内容打分怎样更可靠",
+            "sort_order": 15,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验判断",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "团队用 AI 给国内品牌内容打分，怎样减少评分标准随模型变化而漂移？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "让模型自由判断，不保存评分要求",
+                    "is_correct": false,
+                    "rationale": "缺少固定规则后，不同时间的分数很难比较"
+                },
+                {
+                    "code": "B",
+                    "text": "固定评分规则和示例，安排人工抽查，并定期复测",
+                    "is_correct": true,
+                    "rationale": "规则、示例和人工校准能发现评分偏移"
+                },
+                {
+                    "code": "C",
+                    "text": "每次随机更换评分标准",
+                    "is_correct": false,
+                    "rationale": "标准不断变化会让分数失去可比性"
+                },
+                {
+                    "code": "D",
+                    "text": "只看模型表达得是否自信",
+                    "is_correct": false,
+                    "rationale": "语气自信无法证明评分准确"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 4,
+            "explanation": "AI 评分会受到提示词、模型版本和案例变化影响。固定规则、保存典型示例、人工抽查边界案例，并在模型升级后复测，才能保持前后可比",
+            "principle": "评分工具本身也需要固定标准、校准和持续检查",
+            "misconception_tag": "把 AI 评分直接当成长期不变的标准答案",
+            "source_refs": [
+                "P24",
+                "P53",
+                "P54"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q16",
+            "title": "海外平台都会联网但来源数量不同",
+            "sort_order": 16,
+            "region_scope": "overseas",
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "平台与来源差异",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "做海外市场测试时，几个主流 AI 工具都会联网，但引用来源数量差别很大。这说明什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "是否联网和联网后引用多少，需要分开评估",
+                    "is_correct": true,
+                    "rationale": "工具调用和来源选择发生在不同步骤"
+                },
+                {
+                    "code": "B",
+                    "text": "只要联网，所有平台的来源数量就会相同",
+                    "is_correct": false,
+                    "rationale": "平台会采用不同的来源预算和呈现方式"
+                },
+                {
+                    "code": "C",
+                    "text": "知道平台名称就能解释全部差异",
+                    "is_correct": false,
+                    "rationale": "问题、版本、时间和端别也会影响结果"
+                },
+                {
+                    "code": "D",
+                    "text": "来源越多，答案一定越准确",
+                    "is_correct": false,
+                    "rationale": "来源数量无法单独证明事实是否正确"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "海外平台可能都会调用搜索，但各自选择和展示来源的方式不同。测试时要分别记录是否联网、引用多少来源，以及来源内容有多少进入答案",
+            "principle": "是否调用搜索和怎样分配来源，是两个不同步骤",
+            "misconception_tag": "把联网率和来源数量当成同一个指标",
+            "source_refs": [
+                "P04",
+                "P16",
+                "P21",
+                "D01"
+            ],
+            "expected_seconds": 35
+        },
+        {
+            "code": "Q17",
+            "title": "海外样本里的英语来源较多",
+            "sort_order": 17,
+            "region_scope": "overseas",
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "平台与来源差异",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "一次海外测试里，英语和美国网站占比较高。怎样表述更稳妥？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "海外 AI 天生只偏好美国网站",
+                    "is_correct": false,
+                    "rationale": "一次样本无法证明平台存在固定偏好"
+                },
+                {
+                    "code": "B",
+                    "text": "本次可识别样本较集中，还要检查问题语言、主题和缺失来源",
+                    "is_correct": true,
+                    "rationale": "样本范围和缺失信息会影响比例"
+                },
+                {
+                    "code": "C",
+                    "text": "中文来源永远不会被引用",
+                    "is_correct": false,
+                    "rationale": "当前样本分布无法推出所有语言场景"
+                },
+                {
+                    "code": "D",
+                    "text": "来源国家不明的记录可以忽略",
+                    "is_correct": false,
+                    "rationale": "缺失记录会改变分母和结论范围"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "来源分布会受到提问语言、主题、网页覆盖和缺失信息影响。可以描述这次样本的集中情况，再通过不同语言和主题的测试判断结果能否推广",
+            "principle": "比例结论要说明样本范围、分母和缺失情况",
+            "misconception_tag": "把一次海外样本的集中分布解释成固定平台偏好",
+            "source_refs": [
+                "P16",
+                "P25",
+                "P45",
+                "D01"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q18",
+            "title": "海外平台差异怎样测试",
+            "sort_order": 18,
+            "region_scope": "overseas",
+            "type": "multiple",
+            "dimension": "overseas",
+            "dimension_label": "平台与来源差异",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "理解",
+            "prompt": "评估海外 AI 平台时，哪些做法能减少误判？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "每个平台分开记录产品版本、端别和时间",
+                    "is_correct": true,
+                    "rationale": "平台更新和入口差异会改变答案与来源"
+                },
+                {
+                    "code": "B",
+                    "text": "同时测试当地语言和目标用户的真实问法",
+                    "is_correct": true,
+                    "rationale": "问题语言和表达方式会影响可见来源"
+                },
+                {
+                    "code": "C",
+                    "text": "分别比较来源数量、来源质量和内容采用程度",
+                    "is_correct": true,
+                    "rationale": "多个指标可以呈现不同平台策略"
+                },
+                {
+                    "code": "D",
+                    "text": "找到一次有效写法后，永久套用到所有海外平台",
+                    "is_correct": false,
+                    "rationale": "平台、模型和内容环境会持续变化"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "海外平台之间的搜索入口、来源范围和答案组织方式不同。记录版本与时间，使用真实问法，并把来源覆盖和内容采用分开比较，结果会更容易解释",
+            "principle": "平台差异需要在相同问题和明确运行条件下分别测量",
+            "misconception_tag": "把一次测试得到的平台经验当成长期通用规则",
+            "source_refs": [
+                "P04",
+                "P12",
+                "P16",
+                "P17",
+                "D01"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q19",
+            "title": "国内同一平台的网页端和 App 不同",
+            "sort_order": 19,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "平台与来源差异",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "同一个国内 AI 产品，在网页端和 App 里给出的来源不同。评估时怎样处理？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "合并成一个结果，不记录端别",
+                    "is_correct": false,
+                    "rationale": "合并后会看不到网页端和 App 的真实差异"
+                },
+                {
+                    "code": "B",
+                    "text": "把网页端和 App 分开记录，再比较相同与不同的来源",
+                    "is_correct": true,
+                    "rationale": "分开统计可以判断差异来自哪个入口"
+                },
+                {
+                    "code": "C",
+                    "text": "只保留两个端别都出现的来源",
+                    "is_correct": false,
+                    "rationale": "独有来源也是理解平台差异的重要信息"
+                },
+                {
+                    "code": "D",
+                    "text": "用品牌是否出现代替来源记录",
+                    "is_correct": false,
+                    "rationale": "品牌曝光和来源选择回答的是不同问题"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "国内 AI 产品的网页端和 App 可能连接不同的搜索方式与内容生态。先分开记录，再比较共同来源和各自独有来源，才能看清入口差异",
+            "principle": "平台入口会改变可用来源，网页端和 App 应作为不同测试条件",
+            "misconception_tag": "合并网页端和 App 后忽略来源差异",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q20",
+            "title": "官网权威和内容好用怎样配合",
+            "sort_order": 20,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "平台与来源差异",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "分析",
+            "prompt": "国内用户询问一款产品时，官网信息很权威，但页面内容与问题不够贴近。怎样理解更合适？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "官网权威可以替代内容相关性",
+                    "is_correct": false,
+                    "rationale": "权威页面仍需要直接回答用户问题"
+                },
+                {
+                    "code": "B",
+                    "text": "官网有助于提供可信事实，相关且结构清楚的内容更容易进入答案",
+                    "is_correct": true,
+                    "rationale": "可信度、相关性和内容结构会在不同步骤发挥作用"
+                },
+                {
+                    "code": "C",
+                    "text": "添加结构化数据后一定会被引用",
+                    "is_correct": false,
+                    "rationale": "结构化数据有帮助，无法保证来源选择结果"
+                },
+                {
+                    "code": "D",
+                    "text": "官网和第三方来源无法分别评估",
+                    "is_correct": false,
+                    "rationale": "可以分别记录来源类型、引用率和内容采用情况"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 4,
+            "explanation": "官网适合承载产品参数、政策和正式说明，AI 仍会判断这些内容是否直接回答当前问题。清楚的结构和相关证据能帮助页面内容进入答案",
+            "principle": "可信来源更容易获得考虑，相关且清楚的内容更容易被实际采用",
+            "misconception_tag": "让单一权威信号解释完整的来源选择过程",
+            "source_refs": [
+                "P03",
+                "P12",
+                "P16",
+                "P22",
+                "P25",
+                "D02"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q21",
+            "title": "国内品牌为什么需要第三方信息",
+            "sort_order": 21,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "domestic",
+            "dimension_label": "国内平台与内容生态",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "应用",
+            "prompt": "国内 AI 答案经常同时引用官网、新闻、行业媒体和社区内容。品牌应该怎样准备信息？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只维护官网，其他来源都不关注",
+                    "is_correct": false,
+                    "rationale": "只靠官网会遗漏 AI 常用的第三方证据"
+                },
+                {
+                    "code": "B",
+                    "text": "官网写清事实，同时关注高质量第三方信息是否准确一致",
+                    "is_correct": true,
+                    "rationale": "官网和第三方来源承担不同的事实与验证作用"
+                },
+                {
+                    "code": "C",
+                    "text": "把所有第三方内容都改成品牌口径",
+                    "is_correct": false,
+                    "rationale": "品牌无法控制独立来源，也不应抹去真实差异"
+                },
+                {
+                    "code": "D",
+                    "text": "停止更新官网，完全依赖媒体报道",
+                    "is_correct": false,
+                    "rationale": "官网仍是产品事实和正式政策的重要来源"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "官网可以提供正式事实，新闻、行业媒体和社区内容会补充独立观察。品牌需要保持官网清楚、及时，也要发现第三方信息中的错误和冲突",
+            "principle": "国内 AI 搜索会组合多类来源，信息一致性会影响品牌呈现",
+            "misconception_tag": "只维护单一渠道，忽略其他公开信息来源",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 35
+        },
+        {
+            "code": "Q22",
+            "title": "国内平台测试要记录哪些差异",
+            "sort_order": 22,
+            "region_scope": "domestic",
+            "type": "multiple",
+            "dimension": "domestic",
+            "dimension_label": "国内平台与内容生态",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "理解",
+            "prompt": "测试国内 AI 平台时，哪些条件应该分开记录？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "不同平台分别记录",
+                    "is_correct": true,
+                    "rationale": "不同平台可能连接不同来源和排序方式"
+                },
+                {
+                    "code": "B",
+                    "text": "同一平台的网页端和 App 分别记录",
+                    "is_correct": true,
+                    "rationale": "产品入口可能改变来源范围"
+                },
+                {
+                    "code": "C",
+                    "text": "记录测试日期、产品版本和问题原文",
+                    "is_correct": true,
+                    "rationale": "时间、版本和问题会影响结果复查"
+                },
+                {
+                    "code": "D",
+                    "text": "把所有结果合并成一个统一平台结论",
+                    "is_correct": false,
+                    "rationale": "过早合并会隐藏平台和端别差异"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "国内平台和端别可能使用不同的搜索方式、内容生态和展示规则。保留平台、端别、版本、时间和问题原文，才能解释前后变化",
+            "principle": "平台与端别都是测试条件，需要分层记录",
+            "misconception_tag": "合并平台与端别后得出统一结论",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 60
+        },
+        {
+            "code": "Q23",
+            "title": "变化快的信息怎样减少过期引用",
+            "sort_order": 23,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "domestic",
+            "dimension_label": "国内平台与内容生态",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "国内产品的价格、参数和服务政策经常变化。怎样减少 AI 引用旧信息的风险？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "删除所有更新时间，避免用户看到变化",
+                    "is_correct": false,
+                    "rationale": "缺少时间信息会让新旧内容更难区分"
+                },
+                {
+                    "code": "B",
+                    "text": "标明更新时间和适用范围，及时修正相互冲突的页面",
+                    "is_correct": true,
+                    "rationale": "时间与适用范围能帮助平台和用户判断信息是否仍有效"
+                },
+                {
+                    "code": "C",
+                    "text": "同时保留多个互相矛盾的价格页面",
+                    "is_correct": false,
+                    "rationale": "冲突信息会增加 AI 选择错误内容的概率"
+                },
+                {
+                    "code": "D",
+                    "text": "只在图片里更新价格，正文保持旧值",
+                    "is_correct": false,
+                    "rationale": "图文不一致会增加提取和核验难度"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "价格、参数和政策应标明更新时间与适用条件，旧页面需要更新、重定向或明确失效。公开页面之间保持一致，可以减少 AI 选到过期内容",
+            "principle": "时效信息和跨页面一致性会影响事实是否被正确采用",
+            "misconception_tag": "让多个公开页面长期保留互相冲突的信息",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q24",
+            "title": "看到排行标题表现好后怎么办",
+            "sort_order": 24,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "domestic",
+            "dimension_label": "国内平台与内容生态",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "数据里带排行标题的页面平均引用更多。下一步怎样验证这个发现？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "立刻把所有标题改成“十大排行”",
+                    "is_correct": false,
+                    "rationale": "全面改写会把标题作用和主题差异混在一起"
+                },
+                {
+                    "code": "B",
+                    "text": "选择内容相近的页面，只改变标题和对应结构，再重复测试",
+                    "is_correct": true,
+                    "rationale": "控制其他条件后更容易判断标题格式的额外作用"
+                },
+                {
+                    "code": "C",
+                    "text": "直接宣布排行标题会带来固定提升",
+                    "is_correct": false,
+                    "rationale": "平均差异可能来自站点、主题和内容质量"
+                },
+                {
+                    "code": "D",
+                    "text": "删除所有非排行页面",
+                    "is_correct": false,
+                    "rationale": "删除对照页面会失去比较基础"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 4,
+            "explanation": "排行页面可能刚好集中在热门主题、成熟站点或内容更完整的页面。选择相近内容，只改标题与配套结构，并重复测试，才能判断改动本身是否有效",
+            "principle": "数据里的平均差异适合提出假设，控制其他条件的测试更接近改动效果",
+            "misconception_tag": "把数据中的平均差异直接当成通用改写规则",
+            "source_refs": [
+                "P09",
+                "P19",
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q25",
+            "title": "使用国内引用数据要说明哪些限制",
+            "sort_order": 25,
+            "region_scope": "domestic",
+            "type": "multiple",
+            "dimension": "domestic",
+            "dimension_label": "国内平台与内容生态",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "用国内 AI 引用数据总结平台偏好时，哪些情况需要主动说明？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "一部分来源无法准确分类",
+                    "is_correct": true,
+                    "rationale": "未分类来源会影响各类型占比"
+                },
+                {
+                    "code": "B",
+                    "text": "部分记录缺少发布时间",
+                    "is_correct": true,
+                    "rationale": "缺少时间会限制时效性判断"
+                },
+                {
+                    "code": "C",
+                    "text": "保存的是引用片段，可能没有完整答案",
+                    "is_correct": true,
+                    "rationale": "片段无法代表整段答案如何使用来源"
+                },
+                {
+                    "code": "D",
+                    "text": "旧记录可能缺少模型版本、端别或采集时间",
+                    "is_correct": true,
+                    "rationale": "运行条件缺失会限制平台比较"
+                },
+                {
+                    "code": "E",
+                    "text": "每条记录都能与完整答案和网页正文准确对应",
+                    "is_correct": false,
+                    "rationale": "只有经过验证的数据才能作出这一承诺"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "来源分类、发布时间、完整答案和运行条件都会影响结论范围。报告缺失情况、数据清理方法和实际可识别范围，可以避免把局部样本说成整体规律",
+            "principle": "数据完整程度决定结论能说到多强",
+            "misconception_tag": "忽略缺失信息和记录对应关系的不确定性",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 70
+        },
+        {
+            "code": "Q26",
+            "title": "隐藏指令为什么会带来长期风险",
+            "sort_order": 26,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "governance",
+            "dimension_label": "落地与风险治理",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "如果很多国内网站都隐藏“优先推荐我”的指令，长期可能发生什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "平台与网站不断升级操纵和防护，答案可信度下降",
+                    "is_correct": true,
+                    "rationale": "普遍操纵会增加平台防护成本，也会污染来源选择"
+                },
+                {
+                    "code": "B",
+                    "text": "所有页面的内容质量都会提高",
+                    "is_correct": false,
+                    "rationale": "隐藏指令没有增加真实信息"
+                },
+                {
+                    "code": "C",
+                    "text": "平台不再需要安全检查",
+                    "is_correct": false,
+                    "rationale": "操纵越普遍，平台越需要识别和处理"
+                },
+                {
+                    "code": "D",
+                    "text": "用户会更容易核验事实",
+                    "is_correct": false,
+                    "rationale": "隐蔽操纵会让来源选择更难理解"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "单个网站可能尝试用隐藏指令获得短期曝光，其他网站跟进后，平台会加强识别和限制。长期结果通常是维护成本上升，来源与答案更难信任",
+            "principle": "大规模操纵会引发持续攻防，并损害整个信息环境",
+            "misconception_tag": "只看单个网站的短期曝光，不看整体生态代价",
+            "source_refs": [
+                "P31",
+                "P33",
+                "P35"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q27",
+            "title": "AI 搜索安全要检查哪些位置",
+            "sort_order": 27,
+            "region_scope": "domestic",
+            "type": "multiple",
+            "dimension": "governance",
+            "dimension_label": "落地与风险治理",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "应用",
+            "prompt": "国内企业监测 AI 搜索安全时，哪些位置都需要检查？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "训练或知识库里的错误和恶意内容",
+                    "is_correct": true,
+                    "rationale": "问题可能在内容进入系统前就已经存在"
+                },
+                {
+                    "code": "B",
+                    "text": "搜索结果中被刻意推高的页面",
+                    "is_correct": true,
+                    "rationale": "来源排序可能受到对抗内容影响"
+                },
+                {
+                    "code": "C",
+                    "text": "网页里写给 AI 的隐藏指令",
+                    "is_correct": true,
+                    "rationale": "页面指令可能改变模型对内容的处理"
+                },
+                {
+                    "code": "D",
+                    "text": "攻击方式变化后，原有防护是否仍有效",
+                    "is_correct": true,
+                    "rationale": "攻击会根据平台规则调整，需要持续复测"
+                },
+                {
+                    "code": "E",
+                    "text": "只检查最终答案读起来是否流畅",
+                    "is_correct": false,
+                    "rationale": "流畅答案仍可能引用错误或被操纵的来源"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 3,
+            "explanation": "问题可能出现在训练内容、知识库、搜索排序、网页指令和最终答案等多个位置。只看答案是否顺畅，无法发现错误来源和隐蔽操纵",
+            "principle": "安全检查需要覆盖内容进入系统到答案生成的完整过程",
+            "misconception_tag": "只检查答案表达，忽略来源和搜索过程",
+            "source_refs": [
+                "P32",
+                "P34",
+                "P36",
+                "P37",
+                "P38",
+                "P39",
+                "P40"
+            ],
+            "expected_seconds": 65
+        },
+        {
+            "code": "Q28",
+            "title": "图片怎样更容易被准确理解",
+            "sort_order": 28,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "governance",
+            "dimension_label": "落地与风险治理",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "国内网站希望产品图片更容易被多模态 AI 理解，哪项做法更适合长期使用？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "给图片写真实说明、替代文字和来源，并保持图文一致",
+                    "is_correct": true,
+                    "rationale": "真实说明有助于可访问性、理解和核验"
+                },
+                {
+                    "code": "B",
+                    "text": "加入肉眼看不到的干扰信号来强制排名",
+                    "is_correct": false,
+                    "rationale": "对抗信号会污染系统，也可能随模型更新失效"
+                },
+                {
+                    "code": "C",
+                    "text": "在替代文字里堆满与图片无关的热门词",
+                    "is_correct": false,
+                    "rationale": "无关词会降低图文匹配质量"
+                },
+                {
+                    "code": "D",
+                    "text": "删除图片来源和版权信息",
+                    "is_correct": false,
+                    "rationale": "缺少来源会降低可核验性并带来版权风险"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "图片标题、替代文字、正文说明和来源信息应互相一致。这样既方便无障碍访问，也能帮助多模态 AI 理解图片在页面中的真实作用",
+            "principle": "图片内容、文字说明和页面上下文需要表达同一件事",
+            "misconception_tag": "用对抗信号或无关关键词代替真实图文说明",
+            "source_refs": [
+                "P41",
+                "P43",
+                "P44"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q29",
+            "title": "电商 GEO 不能只看品牌出现",
+            "sort_order": 29,
+            "region_scope": "domestic",
+            "type": "single",
+            "dimension": "governance",
+            "dimension_label": "落地与风险治理",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "应用",
+            "prompt": "评估国内电商场景的 GEO 表现时，怎样设计指标更合适？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只看品牌名有没有出现",
+                    "is_correct": false,
+                    "rationale": "品牌出现无法说明价格、规格和购买条件是否正确"
+                },
+                {
+                    "code": "B",
+                    "text": "同时检查商品事实、用户条件、比较结果和引用来源",
+                    "is_correct": true,
+                    "rationale": "电商答案需要满足多个真实购买条件"
+                },
+                {
+                    "code": "C",
+                    "text": "所有商品统一使用同一段营销文案",
+                    "is_correct": false,
+                    "rationale": "商品属性和用户需求不同，统一文案无法准确回答"
+                },
+                {
+                    "code": "D",
+                    "text": "把某次排名当成所有平台的长期规则",
+                    "is_correct": false,
+                    "rationale": "平台、库存、价格和模型都会变化"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "电商问题常常同时包含价格、规格、库存、适用人群和比较条件。评估时应检查事实是否正确、用户条件是否满足、商品是否合理曝光，以及来源能否核验",
+            "principle": "电商 GEO 的评价标准应覆盖真实购买决策需要的信息",
+            "misconception_tag": "用单一品牌曝光指标代表完整购买答案质量",
+            "source_refs": [
+                "P13",
+                "P42"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q30",
+            "title": "长期评测系统怎样保持可靠",
+            "sort_order": 30,
+            "region_scope": "domestic",
+            "type": "multiple",
+            "dimension": "governance",
+            "dimension_label": "落地与风险治理",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "国内团队长期运行 GEO 评测系统时，需要保留哪些能力？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "能追溯数据、问题、模型和结论的来源",
+                    "is_correct": true,
+                    "rationale": "来源追踪支持复查和责任定位"
+                },
+                {
+                    "code": "B",
+                    "text": "保存固定评分规则和典型示例",
+                    "is_correct": true,
+                    "rationale": "稳定规则与示例可以校准不同版本的判断"
+                },
+                {
+                    "code": "C",
+                    "text": "定期测试错误信息、恶意内容和旧问题是否复发",
+                    "is_correct": true,
+                    "rationale": "回归测试能发现升级带来的新问题"
+                },
+                {
+                    "code": "D",
+                    "text": "模型或规则升级失败时可以恢复旧版本",
+                    "is_correct": true,
+                    "rationale": "回滚能力能减少升级故障影响"
+                },
+                {
+                    "code": "E",
+                    "text": "只保留最高分，删除失败记录",
+                    "is_correct": false,
+                    "rationale": "失败记录是发现问题和验证修复的重要依据"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "长期评测需要保留来源记录、固定规则、典型案例、回归测试和回滚能力。失败记录能够说明系统在哪些条件下出错，也能验证后续修复是否有效",
+            "principle": "可靠评测依靠可追溯、可复测和可恢复的运行方式",
+            "misconception_tag": "只保留好结果，删除失败证据",
+            "source_refs": [
+                "P24",
+                "P32",
+                "P36",
+                "P37",
+                "P40",
+                "P53",
+                "P54"
+            ],
+            "expected_seconds": 70
+        }
+    ]
+}

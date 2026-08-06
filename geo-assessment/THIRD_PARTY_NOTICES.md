@@ -20,7 +20,7 @@ Production installation uses `composer install --no-dev --classmap-authoritative
 
 ## Cited research and datasets
 
-The assessment Release stores citation metadata, stable links and original assessment content. It does not redistribute the cited paper PDFs or the external datasets. The canonical source list is in `database/seeds/geo-30-v1.1.json`, and the writing boundary is documented in `docs/question-provenance.md`.
+The assessment Release stores citation metadata, stable links and original assessment content. It does not redistribute the cited paper PDFs or the external datasets. The current canonical source list is in `database/seeds/geo-30-v1.2.json`, and the writing boundary is documented in `docs/question-provenance.md`.
 
 ## Optional Baidu Analytics
 

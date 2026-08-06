@@ -73,11 +73,12 @@ final class QuestionImporter
                 'created_at' => $now,
             ]);
 
-            $insertQuestion = $this->pdo->prepare('INSERT INTO questions (id, set_id, code, title, type, dimension, dimension_label, difficulty, difficulty_label, cognitive_level, prompt, weight, sort_order, misconception_tag, explanation, principle, expected_seconds, source_refs_json, source_objects_json) VALUES (:id, :set_id, :code, :title, :type, :dimension, :dimension_label, :difficulty, :difficulty_label, :cognitive_level, :prompt, :weight, :sort_order, :misconception_tag, :explanation, :principle, :expected_seconds, :source_refs_json, :source_objects_json)');
+            $insertQuestion = $this->pdo->prepare('INSERT INTO questions (id, set_id, code, title, type, dimension, dimension_label, region_scope, difficulty, difficulty_label, cognitive_level, prompt, weight, sort_order, misconception_tag, explanation, principle, expected_seconds, source_refs_json, source_objects_json) VALUES (:id, :set_id, :code, :title, :type, :dimension, :dimension_label, :region_scope, :difficulty, :difficulty_label, :cognitive_level, :prompt, :weight, :sort_order, :misconception_tag, :explanation, :principle, :expected_seconds, :source_refs_json, :source_objects_json)');
             $insertChoice = $this->pdo->prepare('INSERT INTO choices (id, question_id, code, text, is_correct, rationale) VALUES (:id, :question_id, :code, :text, :is_correct, :rationale)');
 
             foreach ($payload['questions'] as $question) {
                 $questionId = substr(hash('sha256', $version . ':' . $question['code']), 0, 32);
+                $regionScope = trim((string) ($question['region_scope'] ?? ''));
                 $sourceObjects = array_values(array_map(static function (string $ref) use ($sourceMap): array {
                     return $sourceMap[$ref];
                 }, $question['source_refs']));
@@ -89,6 +90,7 @@ final class QuestionImporter
                     'type' => $question['type'],
                     'dimension' => $question['dimension'],
                     'dimension_label' => $question['dimension_label'],
+                    'region_scope' => $regionScope === '' ? 'general' : $regionScope,
                     'difficulty' => $question['difficulty'],
                     'difficulty_label' => $question['difficulty_label'],
                     'cognitive_level' => $question['cognitive_level'],

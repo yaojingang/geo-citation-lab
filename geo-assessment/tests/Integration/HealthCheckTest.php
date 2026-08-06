@@ -24,7 +24,7 @@ final class HealthCheckTest extends TestCase
         file_put_contents($directory . '/storage/app.key', str_repeat('a', 64));
         $pdo = Database::connect($databasePath);
         (new MigrationRunner($pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
-        (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+        (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
         $config = new Config([
             'root' => $directory,
             'db_path' => $databasePath,

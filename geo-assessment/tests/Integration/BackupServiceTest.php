@@ -20,7 +20,7 @@ final class BackupServiceTest extends TestCase
         $databasePath = $directory . '/app.sqlite';
         $pdo = Database::connect($databasePath);
         (new MigrationRunner($pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
-        (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+        (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
 
         $service = new BackupService($databasePath, $directory . '/backups');
         $backup = $service->create();
@@ -37,7 +37,7 @@ final class BackupServiceTest extends TestCase
         $databasePath = $directory . '/app.sqlite';
         $pdo = Database::connect($databasePath);
         (new MigrationRunner($pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
-        (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+        (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
 
         $target = $directory . '/legacy-copy.sqlite';
         $service = new BackupService($databasePath, $directory . '/backups');

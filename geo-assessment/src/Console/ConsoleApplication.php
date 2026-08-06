@@ -15,6 +15,8 @@ use RuntimeException;
 
 final class ConsoleApplication
 {
+    private const DEFAULT_QUESTION_SET = '/database/seeds/geo-30-v1.2.json';
+
     /** @var Config */
     private $config;
 
@@ -103,7 +105,7 @@ final class ConsoleApplication
     private function import(?string $path, bool $activate): int
     {
         if ($path === null) {
-            $path = (string) $this->config->get('root') . '/database/seeds/geo-30-v1.1.json';
+            $path = (string) $this->config->get('root') . self::DEFAULT_QUESTION_SET;
         }
         $pdo = Database::connect((string) $this->config->get('db_path'));
         $result = (new QuestionImporter($pdo))->import($path, $activate);
@@ -114,7 +116,7 @@ final class ConsoleApplication
     private function verifyQuestions(?string $path): int
     {
         if ($path === null) {
-            $path = (string) $this->config->get('root') . '/database/seeds/geo-30-v1.1.json';
+            $path = (string) $this->config->get('root') . self::DEFAULT_QUESTION_SET;
         }
         $payload = json_decode((string) file_get_contents($path), true, 512, JSON_THROW_ON_ERROR);
         $summary = (new QuestionSetValidator())->validate($payload);

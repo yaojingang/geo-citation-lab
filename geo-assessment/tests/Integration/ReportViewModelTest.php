@@ -21,7 +21,7 @@ final class ReportViewModelTest extends TestCase
         try {
             $pdo = Database::connect($path);
             (new MigrationRunner($pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
-            (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+            (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
             $identity = (new IdentityService($pdo))->create('陈星河');
             $attempts = new AttemptService($pdo);
             $attempt = $attempts->start($identity['user']['id']);
@@ -39,6 +39,8 @@ final class ReportViewModelTest extends TestCase
 
             self::assertSame('陈星河', $report['user']['display_name']);
             self::assertCount(6, $report['dimensions']);
+            self::assertSame('GEO 基础理解', $report['dimensions'][0]['label']);
+            self::assertSame('平台与来源差异', $report['dimensions'][3]['label']);
             self::assertCount(3, $report['difficulties']);
             self::assertCount(30, $report['questions']);
             self::assertSame('Q01', $report['questions'][0]['code']);
@@ -56,6 +58,30 @@ final class ReportViewModelTest extends TestCase
             self::assertCount(3, $report['insights']['learning_path']);
             self::assertFalse($report['cohort']['visible']);
             self::assertSame(8, count($report['view_catalog']));
+        } finally {
+            unset($pdo);
+            @unlink($path);
+            @unlink($path . '-shm');
+            @unlink($path . '-wal');
+        }
+    }
+
+    public function test_report_keeps_the_dimension_labels_saved_with_an_older_question_set(): void
+    {
+        $path = sys_get_temp_dir() . '/geo-assessment-' . bin2hex(random_bytes(8)) . '.sqlite';
+        try {
+            $pdo = Database::connect($path);
+            (new MigrationRunner($pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
+            (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+            $identity = (new IdentityService($pdo))->create('旧版测试者');
+            $attempts = new AttemptService($pdo);
+            $attempt = $attempts->start($identity['user']['id']);
+            $attempts->submit($attempt['id'], $identity['user']['id']);
+
+            $report = (new ReportViewModelFactory($pdo))->build($attempt['id'], $identity['user']['id']);
+
+            self::assertSame('底层机制与范式', $report['dimensions'][0]['label']);
+            self::assertSame('海外引用特征', $report['dimensions'][3]['label']);
         } finally {
             unset($pdo);
             @unlink($path);

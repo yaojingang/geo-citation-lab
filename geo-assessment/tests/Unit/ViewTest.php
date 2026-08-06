@@ -16,4 +16,19 @@ final class ViewTest extends TestCase
         self::assertSame('第一句。第二句', View::trimTerminalPeriod('第一句。第二句。'));
         self::assertSame('为什么？', View::trimTerminalPeriod('为什么？'));
     }
+
+    public function test_layout_footer_uses_the_attempt_question_set_version(): void
+    {
+        $view = new View(dirname(__DIR__, 2) . '/templates');
+        $response = $view->render('error', [
+            'view' => $view,
+            'statusCode' => 200,
+            'heading' => '历史报告',
+            'message' => '版本显示校验',
+            'attempt' => ['set_version' => 'geo-30-v1.1'],
+        ], '历史报告', 'page-error');
+
+        self::assertStringContainsString('题集 geo-30-v1.1', $response->body);
+        self::assertStringNotContainsString('题集 geo-30-v1.2', $response->body);
+    }
 }

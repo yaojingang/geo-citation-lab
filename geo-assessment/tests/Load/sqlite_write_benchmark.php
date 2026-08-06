@@ -21,7 +21,7 @@ $exitCode = 1;
 try {
     $pdo = Database::connect($databasePath);
     (new MigrationRunner($pdo, $root . '/database/migrations'))->migrate();
-    (new QuestionImporter($pdo))->import($root . '/database/seeds/geo-30-v1.1.json');
+    (new QuestionImporter($pdo))->import($root . '/database/seeds/geo-30-v1.2.json');
     $identities = new IdentityService($pdo);
     $attempts = new AttemptService($pdo);
     $actors = [];

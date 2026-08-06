@@ -13,8 +13,8 @@ $attemptStatusLabels = [
   <?php if ($user === null): ?>
     <section class="home-intro" aria-labelledby="home-title">
       <p class="eyebrow">GEO RESEARCH ASSESSMENT · 2026</p>
-      <h1 id="home-title">理解 AI 如何选择来源、<br>吸收内容与呈现实体。</h1>
-      <p class="home-lede">这套测试依据 54 篇 GEO、AI 搜索与 RAG 论文，结合海外平台实验和 214,119 条国内引用记录设计。</p>
+      <h1 id="home-title">看懂 AI 如何找到、<br>引用并使用你的内容</h1>
+      <p class="home-lede">这套测试面向刚接触 GEO 的用户，依据 54 篇研究和国内引用数据设计。题目以国内场景为主，无需先读论文或数据集</p>
 
       <form class="identity-form" action="<?= View::e($view->url('/identity')) ?>" method="post" novalidate data-validate-name>
         <input type="hidden" name="_csrf" value="<?= View::e($csrfToken) ?>">

@@ -12,12 +12,12 @@ use PDO;
 final class ReportViewModelFactory
 {
     private const DIMENSIONS = [
-        'mechanism' => '底层机制与范式',
-        'content' => '内容与优化',
-        'measurement' => '测量与实验推理',
-        'overseas' => '海外引用特征',
-        'domestic' => '国内引用特征',
-        'governance' => '风险治理与多模态',
+        'mechanism' => 'GEO 基础理解',
+        'content' => '内容与证据优化',
+        'measurement' => '测量与实验判断',
+        'overseas' => '平台与来源差异',
+        'domestic' => '国内平台与内容生态',
+        'governance' => '落地与风险治理',
     ];
     private const DIFFICULTIES = ['basic' => '基础', 'advanced' => '进阶', 'challenge' => '挑战'];
 
@@ -56,13 +56,28 @@ final class ReportViewModelFactory
         }
 
         $items = $this->loadItems($attemptId);
+        $dimensionLabels = self::DIMENSIONS;
+        $snapshotLabels = [];
+        foreach ($items as $item) {
+            $snapshot = $item['snapshot'];
+            $dimension = (string) ($snapshot['dimension'] ?? '');
+            $label = trim((string) ($snapshot['dimension_label'] ?? ''));
+            if (isset($dimensionLabels[$dimension]) && $label !== '') {
+                $snapshotLabels[$dimension][$label] = true;
+            }
+        }
+        foreach ($snapshotLabels as $dimension => $labels) {
+            $candidates = array_keys($labels);
+            sort($candidates, SORT_STRING);
+            $dimensionLabels[$dimension] = $candidates[0];
+        }
         $scored = $this->scoring->score(array_map(static function (array $item): array {
             return ['snapshot' => $item['snapshot'], 'selected_codes' => $item['selected_codes']];
         }, $items));
         $scoredByCode = array_column($scored['items'], null, 'code');
         $questions = [];
         $dimensions = [];
-        foreach (self::DIMENSIONS as $key => $label) {
+        foreach ($dimensionLabels as $key => $label) {
             $dimension = $scored['dimensions'][$key] ?? ['earned' => 0, 'possible' => 0, 'percentage' => 0.0, 'label' => '需补课'];
             $dimensions[$key] = [
                 'key' => $key,
@@ -175,7 +190,7 @@ final class ReportViewModelFactory
                 'score_trend' => ['labels' => array_map(static function (array $entry): string {
                     return '第' . $entry['attempt_no'] . '次';
                 }, $trendHistory), 'scores' => array_column($trendHistory, 'score'), 'attempt_ids' => array_column($trendHistory, 'id')],
-                'dimension_trend' => $this->dimensionTrend($trendHistory),
+                'dimension_trend' => $this->dimensionTrend($trendHistory, $dimensionLabels),
             ],
         ];
     }
@@ -218,10 +233,10 @@ final class ReportViewModelFactory
     }
 
     /** @return array{labels: list<string>, series: list<array{name: string, key: string, values: list<float>}>} */
-    private function dimensionTrend(array $history): array
+    private function dimensionTrend(array $history, array $dimensionLabels): array
     {
         $series = [];
-        foreach (self::DIMENSIONS as $key => $label) {
+        foreach ($dimensionLabels as $key => $label) {
             $series[] = [
                 'name' => $label,
                 'key' => $key,

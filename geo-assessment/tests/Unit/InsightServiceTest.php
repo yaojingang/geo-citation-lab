@@ -10,12 +10,12 @@ use PHPUnit\Framework\TestCase;
 final class InsightServiceTest extends TestCase
 {
     private const LABELS = [
-        'mechanism' => '底层机制与范式',
-        'content' => '内容与优化',
-        'measurement' => '测量与实验推理',
-        'overseas' => '海外引用特征',
-        'domestic' => '国内引用特征',
-        'governance' => '风险治理与多模态',
+        'mechanism' => 'GEO 基础理解',
+        'content' => '内容与证据优化',
+        'measurement' => '测量与实验判断',
+        'overseas' => '平台与来源差异',
+        'domestic' => '国内平台与内容生态',
+        'governance' => '落地与风险治理',
     ];
 
     public function testAllUnansweredDoesNotInventAStrength(): void

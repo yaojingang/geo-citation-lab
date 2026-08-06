@@ -100,6 +100,7 @@ final class AttemptService
                     'type' => $question['type'],
                     'dimension' => $question['dimension'],
                     'dimension_label' => $question['dimension_label'],
+                    'region_scope' => $question['region_scope'] ?? 'general',
                     'difficulty' => $question['difficulty'],
                     'difficulty_label' => $question['difficulty_label'],
                     'cognitive_level' => $question['cognitive_level'],

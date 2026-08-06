@@ -27,7 +27,7 @@ final class AttemptLifecycleTest extends TestCase
         $this->path = sys_get_temp_dir() . '/geo-assessment-' . bin2hex(random_bytes(8)) . '.sqlite';
         $this->pdo = Database::connect($this->path);
         (new MigrationRunner($this->pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
-        (new QuestionImporter($this->pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.1.json');
+        (new QuestionImporter($this->pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
         $this->identity = new IdentityService($this->pdo);
         $this->attempts = new AttemptService($this->pdo);
     }
@@ -62,6 +62,7 @@ final class AttemptLifecycleTest extends TestCase
 
         $firstItem = $this->attempts->itemAt($attempt['id'], $identity['user']['id'], 1);
         $snapshot = $firstItem['snapshot'];
+        self::assertContains($snapshot['region_scope'], ['domestic', 'general', 'overseas']);
         self::assertSame(range('A', chr(64 + count($snapshot['choices']))), array_column($snapshot['choices'], 'code'));
         $saved = $this->attempts->saveAnswer($attempt['id'], $identity['user']['id'], $snapshot['code'], [$snapshot['correct_codes'][0]], 2, 8);
         self::assertFalse($saved['stale']);

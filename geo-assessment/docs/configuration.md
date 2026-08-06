@@ -16,7 +16,7 @@
 | `GEO_APP_KEY` | 空 | 可由环境注入；空值时读取 `storage/app.key` |
 | `GEO_BAIDU_ANALYTICS_ID` | 空 | 可选的 32 位百度统计 ID；留空时不输出统计脚本，也不在 CSP 中放行统计域名 |
 
-首次运行 `php bin/console app:install` 会创建存储目录、生成 64 字符密钥、迁移数据库并导入 `geo-30-v1.1`。安装过程幂等，现有密钥与同指纹题集会保留。
+首次运行 `php bin/console app:install` 会创建存储目录、生成 64 字符密钥、迁移数据库并导入 `geo-30-v1.2`。安装过程幂等，现有密钥与同指纹题集会保留。已有 `geo-30-v1.1` 作答记录继续使用当时保存的题目、维度名称和题集版本。升级现有环境时，先运行 `php bin/console db:migrate`，再运行 `php bin/console questions:import database/seeds/geo-30-v1.2.json`。
 
 生产权限建议：应用用户可读源代码，可读写 `storage/`，Web 文档根只指向 `public/`。`storage/app.key` 使用 `0600`，数据库、日志与备份禁止 Web 直接访问。
 

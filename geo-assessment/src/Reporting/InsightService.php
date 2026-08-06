@@ -8,12 +8,12 @@ final class InsightService
 {
     private const ORDER = ['mechanism', 'content', 'measurement', 'overseas', 'domestic', 'governance'];
     private const GUIDANCE = [
-        'mechanism' => '沿候选检索、引用选择和答案吸收的漏斗逐层定位损失。',
-        'content' => '将定义、数字、对比与步骤组织成可抽取的证据单元。',
-        'measurement' => '用重复测量、反事实和版本元数据控制波动与混杂。',
-        'overseas' => '区分搜索触发、来源广度与单源吸收深度，保留平台版本边界。',
-        'domestic' => '将平台与 Web、App 端别分层，同时披露缺失率与数据映射边界。',
-        'governance' => '把语料、检索、上下文、输出与回滚纳入同一条可追溯证据链。',
+        'mechanism' => '按网页能否被找到、能否成为来源、内容能否进入答案三个步骤复盘',
+        'content' => '把用户问题、事实依据、适用条件和页面结构放在一起检查',
+        'measurement' => '用重复测试、对照页面和完整记录区分稳定表现与偶然变化',
+        'overseas' => '分别记录平台、端别、时间、来源数量和内容采用程度',
+        'domestic' => '重点检查国内平台差异、第三方信息、内容时效和数据缺失',
+        'governance' => '保留来源记录、失败案例、回归测试和可恢复的旧版本',
     ];
 
     /** @param array<string, array<string, mixed>> $dimensions */
@@ -65,7 +65,7 @@ final class InsightService
                 -(int) $left['order'],
             ];
         });
-        $strong = $strongRanked[0] ?? ['key' => 'mechanism', 'label' => '底层机制与范式', 'percentage' => 0];
+        $strong = $strongRanked[0] ?? ['key' => 'mechanism', 'label' => 'GEO 基础理解', 'percentage' => 0];
         $answeredQuestions = array_filter($questions, static function (array $question): bool {
             return (bool) ($question['is_answered'] ?? false);
         });
@@ -99,10 +99,10 @@ final class InsightService
             ));
             if ($perfect) {
                 $title = '巩固「' . $dimension['label'] . '」的迁移能力';
-                $text = '将当前判断框架迁移到新平台、新模型与新数据，保留版本和证据边界。';
+                $text = '把当前判断方法用于新平台、新模型和新内容，并记录测试条件';
             } elseif ($limitedEvidence) {
                 $title = '优先补齐「' . $dimension['label'] . '」的作答证据';
-                $text = '先完成该维度的题目，再结合解析区分知识缺口与作答缺失。';
+                $text = '先完成该维度的题目，再结合解析区分知识缺口和未作答情况';
             } else {
                 $title = '优先补强「' . $dimension['label'] . '」';
                 $text = self::GUIDANCE[$dimension['key']];
@@ -116,15 +116,15 @@ final class InsightService
         }
 
         if ($answeredCount === 0) {
-            $strength = ['dimension' => null, 'title' => '尚无可判定强项', 'text' => '本次未作答，六维得分仅表示当前缺少可用证据。下次可从基础机制题开始完整作答。'];
+            $strength = ['dimension' => null, 'title' => '尚无可判定强项', 'text' => '本次未作答，六维得分只表示当前缺少可用信息。下次可从基础题开始完整作答'];
         } elseif ($perfect) {
-            $strength = ['dimension' => null, 'title' => '六维均已系统掌握', 'text' => '本次六个维度均为 100.0%，后续重点是跨平台迁移、版本复验与长期保持。'];
+            $strength = ['dimension' => null, 'title' => '六维均已系统掌握', 'text' => '本次六个维度均为 100.0%，后续可以用新的平台和内容场景复验'];
         } elseif ($limitedEvidence) {
-            $strength = ['dimension' => null, 'title' => '当前证据有限', 'text' => '本次仅完成 ' . $answeredCount . ' 道题，覆盖 ' . $answeredDimensions . ' 个维度。当前得分可用于核对已答内容，能力结构需要更多作答证据。'];
+            $strength = ['dimension' => null, 'title' => '当前证据有限', 'text' => '本次仅完成 ' . $answeredCount . ' 道题，覆盖 ' . $answeredDimensions . ' 个维度。当前得分可用于核对已答内容，完整作答后再判断能力结构'];
         } elseif ((float) $strong['percentage'] === 0.0) {
-            $strength = ['dimension' => $strong['key'], 'title' => '当前未形成稳定强项', 'text' => '已作答题目尚未得分，建议按解析和证据链重建基本判断框架。'];
+            $strength = ['dimension' => $strong['key'], 'title' => '当前未形成稳定强项', 'text' => '已作答题目尚未得分，可以结合题目解析重新理解基本判断方法'];
         } else {
-            $strength = ['dimension' => $strong['key'], 'title' => '当前强项：' . $strong['label'], 'text' => '本维度得分率为 ' . number_format((float) $strong['percentage'], 1) . '%，可作为后续跨维度学习的支点。'];
+            $strength = ['dimension' => $strong['key'], 'title' => '当前强项：' . $strong['label'], 'text' => '本维度得分率为 ' . number_format((float) $strong['percentage'], 1) . '%，可以继续用实际页面和平台测试巩固'];
         }
 
         return [
@@ -133,9 +133,9 @@ final class InsightService
             'recommendations' => $recommendations,
             'time_strategy' => $this->timeStrategy($questions),
             'learning_path' => [
-                ['step' => 1, 'title' => '回看错题证据链', 'text' => '先阅读错题的解析、底层原理与选项说明。'],
-                ['step' => 2, 'title' => '按维度重建判断框架', 'text' => '用两个最低维度的建议复盘相关论文与数据。'],
-                ['step' => 3, 'title' => '间隔后再测', 'text' => '完成定向学习后再开始下一次测试，对比同版本维度变化。'],
+                ['step' => 1, 'title' => '回看错题', 'text' => '阅读错题的解析、原理和每个选项的说明'],
+                ['step' => 2, 'title' => '联系实际页面', 'text' => '从两个最低维度各选一个真实页面或平台案例重新判断'],
+                ['step' => 3, 'title' => '间隔后再测', 'text' => '完成复盘后再开始下一次测试，对比同版本维度变化'],
             ],
         ];
     }
@@ -147,13 +147,13 @@ final class InsightService
             return (bool) ($question['is_answered'] ?? false);
         }));
         if ($answered === []) {
-            return ['title' => '暂无用时诊断', 'text' => '完成作答后，报告会区分知识缺口和时间分配问题。', 'question_codes' => []];
+            return ['title' => '暂无用时诊断', 'text' => '完成作答后，报告会区分知识缺口和时间分配问题', 'question_codes' => []];
         }
         $timed = array_values(array_filter($answered, static function (array $question): bool {
             return (int) $question['time_spent_seconds'] > 0;
         }));
         if (count($timed) < 3) {
-            return ['title' => '用时样本不足', 'text' => '至少记录 3 道题的活跃用时后，报告才会判断时间分配。', 'question_codes' => []];
+            return ['title' => '用时样本不足', 'text' => '至少记录 3 道题的活跃用时后，报告才会判断时间分配', 'question_codes' => []];
         }
         $times = array_map(static function (array $question): int {
             return (int) $question['time_spent_seconds'];
@@ -170,8 +170,8 @@ final class InsightService
         });
         $codes = array_column(array_slice($slowIncorrect, 0, 3), 'code');
         if ($codes !== []) {
-            return ['title' => '优先复盘高耗时错题', 'text' => '已答题活跃用时中位数约为 ' . number_format($median, 0) . ' 秒。高耗时且失分的题目更适合先补充判断框架。', 'question_codes' => $codes];
+            return ['title' => '优先复盘高耗时错题', 'text' => '已答题活跃用时中位数约为 ' . number_format($median, 0) . ' 秒。可以先回看高耗时且失分的题目', 'question_codes' => $codes];
         }
-        return ['title' => '当前时间分配较稳定', 'text' => '已答题活跃用时中位数约为 ' . number_format($median, 0) . ' 秒，未出现明显的高耗时错题集中。', 'question_codes' => []];
+        return ['title' => '当前时间分配较稳定', 'text' => '已答题活跃用时中位数约为 ' . number_format($median, 0) . ' 秒，未出现明显的高耗时错题集中', 'question_codes' => []];
     }
 }

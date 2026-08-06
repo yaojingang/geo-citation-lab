@@ -79,6 +79,8 @@ until the release is ready.
 `geo-assessment/` is an independent PHP and SQLite application. Keep runtime compatibility with
 PHP 7.3.5 and SQLite 3.24 while running development tests on PHP 8.2 or newer. Public source must
 leave `GEO_BAIDU_ANALYTICS_ID` empty; deployment examples may enable a disclosed site-specific ID.
+The current question set is `geo-30-v1.2`: keep 18 domestic, 9 general and 3 overseas questions,
+preserve beginner-copy validation and retain `geo-30-v1.1` for historical report verification.
 
 Before changing or releasing the assessment, run from `geo-assessment/`:
 
