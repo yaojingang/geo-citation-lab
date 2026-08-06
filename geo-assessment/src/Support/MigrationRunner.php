@@ -38,6 +38,7 @@ final class MigrationRunner
             $statement = $this->pdo->prepare('SELECT checksum FROM schema_migrations WHERE version = :version');
             $statement->execute(['version' => $version]);
             $knownChecksum = $statement->fetchColumn();
+            $statement->closeCursor();
             if (is_string($knownChecksum)) {
                 if (!hash_equals($knownChecksum, $checksum)) {
                     throw new RuntimeException("迁移 {$version} 的校验和已变更。");
