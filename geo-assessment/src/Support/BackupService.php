@@ -21,7 +21,7 @@ final class BackupService
         $this->backupDirectory = $backupDirectory;
     }
 
-    public function create(): string
+    public function create(?PDO $pdo = null): string
     {
         if (!is_file($this->databasePath)) {
             throw new RuntimeException('数据库尚未创建。');
@@ -29,7 +29,7 @@ final class BackupService
         $this->ensureDirectory($this->backupDirectory);
         $name = 'geo-assessment-' . gmdate('Ymd-His') . '-' . bin2hex(random_bytes(3)) . '.sqlite';
         $target = rtrim($this->backupDirectory, '/') . '/' . $name;
-        $pdo = Database::connect($this->databasePath);
+        $pdo = $pdo ?? Database::connect($this->databasePath);
         $sqliteVersion = (string) $pdo->query('SELECT sqlite_version()')->fetchColumn();
         if (version_compare($sqliteVersion, '3.27.0', '>=')) {
             $pdo->exec('PRAGMA wal_checkpoint(FULL)');

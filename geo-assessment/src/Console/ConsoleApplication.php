@@ -93,7 +93,7 @@ final class ConsoleApplication
         if ($this->hasPendingMigrations($pdo)) {
             $hasQuestionSets = (int) $pdo->query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = 'question_sets'")->fetchColumn() === 1;
             if ($hasQuestionSets) {
-                $backup = $this->backups()->create();
+                $backup = $this->backups()->create($pdo);
                 $this->line('[OK] 迁移前备份 ' . $backup);
             }
         }
