@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GeoAssessment\Tests\Unit;
 
+use GeoAssessment\Support\BaiduAnalytics;
 use GeoAssessment\Support\View;
 use PHPUnit\Framework\TestCase;
 
@@ -30,5 +31,25 @@ final class ViewTest extends TestCase
 
         self::assertStringContainsString('题集 geo-30-v1.1', $response->body);
         self::assertStringNotContainsString('题集 geo-30-v1.2', $response->body);
+    }
+
+    public function test_complete_analytics_loader_is_rendered_inside_the_document_head(): void
+    {
+        $analyticsId = '0123456789abcdef0123456789abcdef';
+        $view = new View(dirname(__DIR__, 2) . '/templates', '', $analyticsId);
+        $response = $view->render('error', [
+            'view' => $view,
+            'statusCode' => 200,
+            'heading' => '统计代码',
+            'message' => '页面头部校验',
+        ], '统计代码', 'page-error');
+        $loader = '<script>' . BaiduAnalytics::inlineLoader($analyticsId) . '</script>';
+        $headEnd = strpos($response->body, '</head>');
+        $loaderPosition = strpos($response->body, $loader);
+
+        self::assertIsInt($headEnd);
+        self::assertIsInt($loaderPosition);
+        self::assertLessThan($headEnd, $loaderPosition);
+        self::assertSame(1, substr_count($response->body, $loader));
     }
 }

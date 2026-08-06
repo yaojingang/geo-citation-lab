@@ -24,6 +24,9 @@ $footerQuestionSetVersion = isset($attempt) && is_array($attempt) && trim((strin
   <meta name="theme-color" content="#FFFFFF">
   <meta name="description" content="30 道题、30 分钟的 GEO 在线能力测试，面向初学者并以国内应用场景为主">
   <title><?= View::e($title) ?></title>
+  <?php if (BaiduAnalytics::enabled($baiduAnalyticsId)): ?>
+    <script><?= BaiduAnalytics::inlineLoader($baiduAnalyticsId) ?></script>
+  <?php endif; ?>
   <link rel="stylesheet" href="<?= View::e($assetUrl('/assets/app.css')) ?>">
 </head>
 <body class="<?= View::e($pageClass) ?>">
@@ -40,9 +43,6 @@ $footerQuestionSetVersion = isset($attempt) && is_array($attempt) && trim((strin
     <p>GEO Citation Lab · 题集 <?= View::e($footerQuestionSetVersion) ?></p>
     <nav aria-label="隐私与规则"><a href="<?= View::e($basePath . '/#privacy') ?>">隐私边界</a><span aria-hidden="true">·</span><a href="<?= View::e($basePath . '/#terms') ?>">测试规则</a></nav>
   </footer>
-  <?php if (BaiduAnalytics::enabled($baiduAnalyticsId)): ?>
-    <script><?= BaiduAnalytics::inlineLoader($baiduAnalyticsId) ?></script>
-  <?php endif; ?>
   <script src="<?= View::e($assetUrl('/assets/app.js')) ?>" defer></script>
   <?php if ($pageClass === 'page-question'): ?>
     <script src="<?= View::e($assetUrl('/assets/quiz-state.js')) ?>" defer></script>

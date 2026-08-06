@@ -34,8 +34,8 @@ for asset in assets/app.css assets/quiz.js assets/report.js assets/vendor/chart.
   test -s "$SMOKE_TMP/$(basename "$asset")"
 done
 if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
-  grep -q 'var _hmt = _hmt || \[\];' "$SMOKE_TMP/home.html"
-  grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}" "$SMOKE_TMP/home.html"
+  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/home.html" | grep -q 'var _hmt = _hmt || \[\];'
+  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/home.html" | grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}"
   grep -qi '^Content-Security-Policy:.*https://hm.baidu.com' "$SMOKE_TMP/home.headers"
 else
   if grep -q 'var _hmt = _hmt || \[\];' "$SMOKE_TMP/home.html"; then
@@ -77,6 +77,9 @@ test -n "$SMOKE_QUESTION_PATH"
 curl -fsS -b "$SMOKE_JAR" -c "$SMOKE_JAR" "$(smoke_url "$SMOKE_QUESTION_PATH")" -o "$SMOKE_TMP/question.html"
 grep -q 'data-quiz' "$SMOKE_TMP/question.html"
 grep -q 'data-question-form' "$SMOKE_TMP/question.html"
+if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
+  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/question.html" | grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}"
+fi
 SMOKE_QUESTION_ROUTE="$SMOKE_QUESTION_PATH"
 if [[ -n "$SMOKE_PREFIX" && ("$SMOKE_QUESTION_ROUTE" == "$SMOKE_PREFIX" || "$SMOKE_QUESTION_ROUTE" == "$SMOKE_PREFIX/"*) ]]; then
   SMOKE_QUESTION_ROUTE="${SMOKE_QUESTION_ROUTE#"$SMOKE_PREFIX"}"
@@ -100,6 +103,9 @@ curl -fsS -b "$SMOKE_JAR" "$(smoke_url "$SMOKE_REPORT_PATH")" -o "$SMOKE_TMP/rep
 grep -q 'GEO 能力报告' "$SMOKE_TMP/report.html"
 test "$(grep -c 'class="question-detail ' "$SMOKE_TMP/report.html")" -eq 30
 grep -q 'data-chart="dimension-radar"' "$SMOKE_TMP/report.html"
+if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
+  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/report.html" | grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}"
+fi
 
 SMOKE_SWITCH_STATUS="$(curl -sS -o "$SMOKE_TMP/switch.html" -w '%{http_code}' -b "$SMOKE_JAR" -c "$SMOKE_JAR" \
   -X POST "$SMOKE_BASE/switch-user" \
