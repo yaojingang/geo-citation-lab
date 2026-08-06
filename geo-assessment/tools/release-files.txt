@@ -14,7 +14,13 @@ composer.lock
 config
 database
 deploy
-docs
+docs/backup-and-restore.md
+docs/configuration.md
+docs/deployment.md
+docs/github-open-source-plan.md
+docs/question-provenance.md
+docs/question-review-v1.2.md
+docs/release-checklist.md
 public
 src
 storage/.gitignore

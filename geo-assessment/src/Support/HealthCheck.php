@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace GeoAssessment\Support;
 
+use GeoAssessment\Reporting\QrCodeSvg;
 use PDO;
 
 final class HealthCheck
@@ -25,7 +26,7 @@ final class HealthCheck
         };
 
         $add('PHP', version_compare(PHP_VERSION, '7.3.5', '>='), PHP_VERSION);
-        $required = ['json', 'mbstring', 'openssl', 'pdo', 'pdo_sqlite'];
+        $required = ['iconv', 'json', 'mbstring', 'openssl', 'pdo', 'pdo_sqlite'];
         $missing = array_values(array_filter($required, static function (string $extension): bool {
             return !extension_loaded($extension);
         }));
@@ -44,6 +45,14 @@ final class HealthCheck
         $chartVersion = is_file($chartPath) ? (string) file_get_contents($chartPath, false, null, 0, 80) : '';
         $hasChartVersion = strpos($chartVersion, 'Chart.js v4.5.1') !== false;
         $add('Chart.js', $hasChartVersion, $hasChartVersion ? '4.5.1 本地文件' : '本地文件缺失或版本不匹配');
+
+        try {
+            $qrCode = (new QrCodeSvg())->render('https://example.invalid/certificates/health-check');
+            $qrCodeReady = strpos($qrCode, '<svg ') === 0 && strpos($qrCode, 'shape-rendering="crispEdges"') !== false;
+            $add('证书二维码', $qrCodeReady, $qrCodeReady ? '本地 SVG 生成正常' : '生成结果无效');
+        } catch (\Throwable $error) {
+            $add('证书二维码', false, $error->getMessage());
+        }
 
         $analyticsId = trim((string) $this->config->get('baidu_analytics_id', ''));
         $analyticsValid = $analyticsId === '' || BaiduAnalytics::enabled($analyticsId);

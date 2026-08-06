@@ -15,6 +15,7 @@ return [
     'environment' => getenv('APP_ENV') ?: 'production',
     'debug' => filter_var(getenv('APP_DEBUG') ?: '0', FILTER_VALIDATE_BOOLEAN),
     'base_path' => rtrim(getenv('APP_BASE_PATH') ?: '', '/'),
+    'public_url' => rtrim(getenv('GEO_PUBLIC_URL') ?: '', '/'),
     'timezone' => getenv('APP_TIMEZONE') ?: 'Asia/Shanghai',
     'db_path' => $resolve(getenv('GEO_DB_PATH') ?: 'storage/app.sqlite'),
     'log_dir' => $resolve(getenv('GEO_LOG_DIR') ?: 'storage/logs'),

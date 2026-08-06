@@ -8,6 +8,13 @@
 - License: MIT, copied to `public/assets/vendor/LICENSE.chartjs`
 - SHA-256: `48444a82d4edcb5bec0f1965faacdde18d9c17db3063d042abada2f705c9f54a`
 
+## BaconQrCode 2.x
+
+- Project: <https://github.com/Bacon/BaconQrCode>
+- Purpose: generate the certificate verification QR code as local SVG markup
+- License: BSD 2-Clause, included in the installed Composer package
+- Runtime dependencies and exact versions are recorded in `composer.lock`
+
 ## PHPUnit and Composer development dependencies
 
 Development packages and exact versions are recorded in `composer.lock`. Their package metadata and licenses are available through:

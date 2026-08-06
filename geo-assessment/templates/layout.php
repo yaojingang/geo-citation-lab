@@ -14,6 +14,9 @@ $assetUrl = static function (string $path) use ($basePath): string {
 $footerQuestionSetVersion = isset($attempt) && is_array($attempt) && trim((string) ($attempt['set_version'] ?? '')) !== ''
     ? (string) $attempt['set_version']
     : 'geo-30-v1.2';
+$metaDescription = $pageClass === 'page-certificate'
+    ? 'GEO专业能力测试评估证书，展示综合得分、专业称号与六维能力画像'
+    : '30 道题、30 分钟的 GEO 在线能力测试，面向初学者并以国内应用场景为主';
 ?>
 <!doctype html>
 <html lang="zh-CN">
@@ -22,10 +25,17 @@ $footerQuestionSetVersion = isset($attempt) && is_array($attempt) && trim((strin
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="color-scheme" content="light">
   <meta name="theme-color" content="#FFFFFF">
-  <meta name="description" content="30 道题、30 分钟的 GEO 在线能力测试，面向初学者并以国内应用场景为主">
+  <meta name="description" content="<?= View::e($metaDescription) ?>">
   <title><?= View::e($title) ?></title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%231b365d'/%3E%3Ctext x='32' y='43' text-anchor='middle' font-family='Georgia,serif' font-size='38' font-weight='700' fill='white'%3EG%3C/text%3E%3C/svg%3E">
   <?php if (BaiduAnalytics::enabled($baiduAnalyticsId)): ?>
-    <script><?= BaiduAnalytics::inlineLoader($baiduAnalyticsId) ?></script>
+    <script>var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?<?= View::e($baiduAnalyticsId) ?>";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();</script>
   <?php endif; ?>
   <link rel="stylesheet" href="<?= View::e($assetUrl('/assets/app.css')) ?>">
 </head>
@@ -51,6 +61,9 @@ $footerQuestionSetVersion = isset($attempt) && is_array($attempt) && trim((strin
   <?php if ($pageClass === 'page-report'): ?>
     <script src="<?= View::e($assetUrl('/assets/vendor/chart.umd.min.js')) ?>" defer></script>
     <script src="<?= View::e($assetUrl('/assets/report.js')) ?>" defer></script>
+  <?php endif; ?>
+  <?php if ($pageClass === 'page-certificate'): ?>
+    <script src="<?= View::e($assetUrl('/assets/certificate.js')) ?>" defer></script>
   <?php endif; ?>
 </body>
 </html>

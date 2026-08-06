@@ -8,6 +8,7 @@ use DomainException;
 use GeoAssessment\Http\Request;
 use GeoAssessment\Http\Response;
 use GeoAssessment\Identity\IdentityService;
+use GeoAssessment\Reporting\CertificateViewModelFactory;
 use GeoAssessment\Reporting\ReportViewModelFactory;
 use GeoAssessment\Support\View;
 
@@ -22,11 +23,20 @@ final class ReportController
     /** @var ReportViewModelFactory */
     private $reports;
 
-    public function __construct(View $view, IdentityService $identities, ReportViewModelFactory $reports)
+    /** @var CertificateViewModelFactory */
+    private $certificates;
+
+    public function __construct(
+        View $view,
+        IdentityService $identities,
+        ReportViewModelFactory $reports,
+        CertificateViewModelFactory $certificates
+    )
     {
         $this->view = $view;
         $this->identities = $identities;
         $this->reports = $reports;
+        $this->certificates = $certificates;
     }
 
     public function show(Request $request, array $params): Response
@@ -40,7 +50,11 @@ final class ReportController
         } catch (DomainException $error) {
             return $this->view->render('error', ['view' => $this->view, 'statusCode' => 404, 'heading' => '报告未找到', 'message' => '该报告不存在、尚未生成，或不属于当前测试者。'], '报告未找到', 'page-error', 404);
         }
-        return $this->view->render('report', ['view' => $this->view, 'report' => $report], 'GEO 能力报告 · ' . $report['summary']['score'] . ' 分', 'page-report')
+        return $this->view->render('report', [
+            'view' => $this->view,
+            'report' => $report,
+            'certificate' => $this->certificates->fromReport($report),
+        ], 'GEO 能力报告 · ' . $report['summary']['score'] . ' 分', 'page-report')
             ->withHeader('X-Robots-Tag', 'noindex, noarchive');
     }
 }

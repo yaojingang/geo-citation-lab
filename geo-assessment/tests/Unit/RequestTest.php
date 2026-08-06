@@ -48,4 +48,22 @@ final class RequestTest extends TestCase
         $this->expectException(\LogicException::class);
         $request->method = 'POST';
     }
+
+    public function test_absolute_url_honors_https_only_from_a_trusted_proxy(): void
+    {
+        $request = new Request('GET', '/', [], [], [
+            'host' => 'ai.laoyao.cn',
+            'x-forwarded-proto' => 'https',
+        ]);
+
+        self::assertSame('http://ai.laoyao.cn/geo/certificates/example', $request->absoluteUrl('/geo/certificates/example'));
+        self::assertSame('https://ai.laoyao.cn/geo/certificates/example', $request->absoluteUrl('/geo/certificates/example', true));
+    }
+
+    public function test_absolute_url_rejects_an_invalid_host_header(): void
+    {
+        $request = new Request('GET', '/', [], [], ['host' => "ai.laoyao.cn\r\ninvalid"]);
+
+        self::assertSame('http://localhost/certificates/example', $request->absoluteUrl('/certificates/example'));
+    }
 }

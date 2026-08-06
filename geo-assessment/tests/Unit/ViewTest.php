@@ -33,23 +33,44 @@ final class ViewTest extends TestCase
         self::assertStringNotContainsString('题集 geo-30-v1.2', $response->body);
     }
 
-    public function test_complete_analytics_loader_is_rendered_inside_the_document_head(): void
+    public function test_complete_analytics_loader_is_rendered_inside_every_shared_document_head(): void
     {
         $analyticsId = '0123456789abcdef0123456789abcdef';
         $view = new View(dirname(__DIR__, 2) . '/templates', '', $analyticsId);
-        $response = $view->render('error', [
-            'view' => $view,
-            'statusCode' => 200,
-            'heading' => '统计代码',
-            'message' => '页面头部校验',
-        ], '统计代码', 'page-error');
         $loader = '<script>' . BaiduAnalytics::inlineLoader($analyticsId) . '</script>';
-        $headEnd = strpos($response->body, '</head>');
-        $loaderPosition = strpos($response->body, $loader);
+        $pages = [
+            $view->render('error', [
+                'view' => $view,
+                'statusCode' => 200,
+                'heading' => '统计代码',
+                'message' => '页面头部校验',
+            ], '统计代码', 'page-error'),
+            $view->render('maintenance', [
+                'view' => $view,
+                'message' => '维护页面头部校验',
+            ], '服务暂不可用', 'page-maintenance', 503),
+        ];
 
-        self::assertIsInt($headEnd);
-        self::assertIsInt($loaderPosition);
-        self::assertLessThan($headEnd, $loaderPosition);
-        self::assertSame(1, substr_count($response->body, $loader));
+        foreach ($pages as $response) {
+            $headEnd = strpos($response->body, '</head>');
+            $loaderPosition = strpos($response->body, $loader);
+
+            self::assertIsInt($headEnd);
+            self::assertIsInt($loaderPosition);
+            self::assertLessThan($headEnd, $loaderPosition);
+            self::assertSame(1, substr_count($response->body, $loader));
+        }
+    }
+
+    public function test_layout_contains_the_complete_literal_analytics_script(): void
+    {
+        $layout = (string) file_get_contents(dirname(__DIR__, 2) . '/templates/layout.php');
+
+        self::assertStringContainsString('<script>var _hmt = _hmt || [];', $layout);
+        self::assertStringContainsString('(function() {', $layout);
+        self::assertStringContainsString('var hm = document.createElement("script");', $layout);
+        self::assertStringContainsString('hm.src = "https://hm.baidu.com/hm.js?', $layout);
+        self::assertStringContainsString('var s = document.getElementsByTagName("script")[0];', $layout);
+        self::assertStringContainsString('s.parentNode.insertBefore(hm, s);', $layout);
     }
 }

@@ -23,34 +23,53 @@ smoke_url() {
   fi
 }
 
+assert_analytics_in_head() {
+  local page_file="$1"
+  local page_label="$2"
+  local head_file="$SMOKE_TMP/${page_label}.head.html"
+
+  sed -n '/<head>/,/<\/head>/p' "$page_file" > "$head_file"
+  if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
+    grep -Fq 'var _hmt = _hmt || [];' "$head_file"
+    grep -Fq '(function() {' "$head_file"
+    grep -Fq 'var hm = document.createElement("script");' "$head_file"
+    grep -Fq "hm.src = \"https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}\";" "$head_file"
+    grep -Fq 'var s = document.getElementsByTagName("script")[0];' "$head_file"
+    grep -Fq 's.parentNode.insertBefore(hm, s);' "$head_file"
+    test "$(grep -Fc "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}" "$head_file")" -eq 1
+  elif grep -Fq 'var _hmt = _hmt || [];' "$head_file"; then
+    printf '[FAIL] %s 在未配置统计 ID 时加载了百度统计\n' "$page_label" >&2
+    exit 1
+  fi
+  if grep -Fq '/assets/analytics.js' "$page_file"; then
+    printf '[FAIL] %s 通过额外文件加载百度统计\n' "$page_label" >&2
+    exit 1
+  fi
+}
+
 curl -fsS -D "$SMOKE_TMP/home.headers" -c "$SMOKE_JAR" "$SMOKE_BASE/" -o "$SMOKE_TMP/home.html"
 grep -q 'GEO 在线能力测试' "$SMOKE_TMP/home.html"
 grep -qi '^Content-Security-Policy:' "$SMOKE_TMP/home.headers"
 grep -qi '^X-Content-Type-Options: nosniff' "$SMOKE_TMP/home.headers"
 grep -qi '^Cache-Control: no-store, private' "$SMOKE_TMP/home.headers"
 
-for asset in assets/app.css assets/quiz.js assets/report.js assets/vendor/chart.umd.min.js; do
+for asset in assets/app.css assets/quiz.js assets/report.js assets/certificate.js assets/vendor/chart.umd.min.js; do
   curl -fsS "$SMOKE_ASSET_BASE/$asset" -o "$SMOKE_TMP/$(basename "$asset")"
   test -s "$SMOKE_TMP/$(basename "$asset")"
 done
+assert_analytics_in_head "$SMOKE_TMP/home.html" home
 if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
-  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/home.html" | grep -q 'var _hmt = _hmt || \[\];'
-  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/home.html" | grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}"
   grep -qi '^Content-Security-Policy:.*https://hm.baidu.com' "$SMOKE_TMP/home.headers"
 else
-  if grep -q 'var _hmt = _hmt || \[\];' "$SMOKE_TMP/home.html"; then
-    printf '[FAIL] 未配置统计 ID 时不应加载百度统计\n' >&2
-    exit 1
-  fi
   if grep -qi '^Content-Security-Policy:.*https://hm.baidu.com' "$SMOKE_TMP/home.headers"; then
     printf '[FAIL] 未配置统计 ID 时 CSP 不应允许百度统计域名\n' >&2
     exit 1
   fi
 fi
-if grep -q '/assets/analytics.js' "$SMOKE_TMP/home.html"; then
-  printf '[FAIL] 百度统计初始化代码应直接内联到页面\n' >&2
-  exit 1
-fi
+
+SMOKE_NOT_FOUND_STATUS="$(curl -sS -o "$SMOKE_TMP/not-found.html" -w '%{http_code}' "$SMOKE_BASE/analytics-page-audit-not-found")"
+test "$SMOKE_NOT_FOUND_STATUS" = '404'
+assert_analytics_in_head "$SMOKE_TMP/not-found.html" not-found
 
 if [[ "$SMOKE_BASE" == http://* ]]; then
   curl -fsS -D "$SMOKE_TMP/spoofed-proto.headers" -H 'X-Forwarded-Proto: https' "$SMOKE_BASE/" -o /dev/null
@@ -63,8 +82,9 @@ fi
 SMOKE_CSRF="$(sed -n 's/.*name="_csrf" value="\([^"]*\)".*/\1/p' "$SMOKE_TMP/home.html" | head -n 1)"
 test -n "$SMOKE_CSRF"
 
-SMOKE_BAD_STATUS="$(curl -sS -o /dev/null -w '%{http_code}' -b "$SMOKE_JAR" -X POST "$SMOKE_BASE/identity" --data-urlencode '_csrf=invalid' --data-urlencode 'name=错误验证')"
+SMOKE_BAD_STATUS="$(curl -sS -o "$SMOKE_TMP/csrf-error.html" -w '%{http_code}' -b "$SMOKE_JAR" -X POST "$SMOKE_BASE/identity" --data-urlencode '_csrf=invalid' --data-urlencode 'name=错误验证')"
 test "$SMOKE_BAD_STATUS" = '403'
+assert_analytics_in_head "$SMOKE_TMP/csrf-error.html" csrf-error
 
 curl -fsS -D "$SMOKE_TMP/identity.headers" -b "$SMOKE_JAR" -c "$SMOKE_JAR" \
   -X POST "$SMOKE_BASE/identity" \
@@ -77,9 +97,7 @@ test -n "$SMOKE_QUESTION_PATH"
 curl -fsS -b "$SMOKE_JAR" -c "$SMOKE_JAR" "$(smoke_url "$SMOKE_QUESTION_PATH")" -o "$SMOKE_TMP/question.html"
 grep -q 'data-quiz' "$SMOKE_TMP/question.html"
 grep -q 'data-question-form' "$SMOKE_TMP/question.html"
-if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
-  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/question.html" | grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}"
-fi
+assert_analytics_in_head "$SMOKE_TMP/question.html" question
 SMOKE_QUESTION_ROUTE="$SMOKE_QUESTION_PATH"
 if [[ -n "$SMOKE_PREFIX" && ("$SMOKE_QUESTION_ROUTE" == "$SMOKE_PREFIX" || "$SMOKE_QUESTION_ROUTE" == "$SMOKE_PREFIX/"*) ]]; then
   SMOKE_QUESTION_ROUTE="${SMOKE_QUESTION_ROUTE#"$SMOKE_PREFIX"}"
@@ -103,15 +121,29 @@ curl -fsS -b "$SMOKE_JAR" "$(smoke_url "$SMOKE_REPORT_PATH")" -o "$SMOKE_TMP/rep
 grep -q 'GEO 能力报告' "$SMOKE_TMP/report.html"
 test "$(grep -c 'class="question-detail ' "$SMOKE_TMP/report.html")" -eq 30
 grep -q 'data-chart="dimension-radar"' "$SMOKE_TMP/report.html"
-if [[ -n "${SMOKE_EXPECT_ANALYTICS_ID:-}" ]]; then
-  sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/report.html" | grep -q "https://hm.baidu.com/hm.js?${SMOKE_EXPECT_ANALYTICS_ID}"
+grep -q 'class="report-certificate-entry no-print"' "$SMOKE_TMP/report.html"
+assert_analytics_in_head "$SMOKE_TMP/report.html" report
+
+SMOKE_CERTIFICATE_PATH="$(sed -n 's/.*class="report-certificate-entry no-print" href="\([^"]*\)".*/\1/p' "$SMOKE_TMP/report.html" | head -n 1)"
+test -n "$SMOKE_CERTIFICATE_PATH"
+curl -fsS -D "$SMOKE_TMP/certificate.headers" "$(smoke_url "$SMOKE_CERTIFICATE_PATH")" -o "$SMOKE_TMP/certificate.html"
+grep -q 'GEO专业能力测试评估证书' "$SMOKE_TMP/certificate.html"
+grep -q 'data-certificate' "$SMOKE_TMP/certificate.html"
+grep -q 'data:image/svg+xml;base64' "$SMOKE_TMP/certificate.html"
+sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/certificate.html" | grep -q 'content="GEO专业能力测试评估证书，展示综合得分、专业称号与六维能力画像"'
+if sed -n '/<head>/,/<\/head>/p' "$SMOKE_TMP/certificate.html" | grep -q '30 道题'; then
+  printf '[FAIL] 证书页面不应提及题目数量\n' >&2
+  exit 1
 fi
+grep -qi '^X-Robots-Tag: noindex, noarchive, noimageindex' "$SMOKE_TMP/certificate.headers"
+assert_analytics_in_head "$SMOKE_TMP/certificate.html" certificate
 
 SMOKE_SWITCH_STATUS="$(curl -sS -o "$SMOKE_TMP/switch.html" -w '%{http_code}' -b "$SMOKE_JAR" -c "$SMOKE_JAR" \
   -X POST "$SMOKE_BASE/switch-user" \
   --data-urlencode "_csrf=$SMOKE_CSRF")"
 test "$SMOKE_SWITCH_STATUS" = '422'
 grep -q '请先确认切换' "$SMOKE_TMP/switch.html"
+assert_analytics_in_head "$SMOKE_TMP/switch.html" switch-confirmation
 curl -fsS -b "$SMOKE_JAR" "$(smoke_url "$SMOKE_REPORT_PATH")" -o /dev/null
 
 curl -fsS -D "$SMOKE_TMP/delete.headers" -b "$SMOKE_JAR" -c "$SMOKE_JAR" \
@@ -121,4 +153,4 @@ curl -fsS -D "$SMOKE_TMP/delete.headers" -b "$SMOKE_JAR" -c "$SMOKE_JAR" \
   -o /dev/null
 grep -q 'geo_assessment_session=' "$SMOKE_TMP/delete.headers"
 
-printf '[OK] HTTP 冒烟测试通过：首页、身份、答题、交卷、报告、切换确认、删除与安全头\n'
+printf '[OK] HTTP 冒烟测试通过：首页、身份、答题、交卷、报告、证书、切换确认、删除与安全头\n'

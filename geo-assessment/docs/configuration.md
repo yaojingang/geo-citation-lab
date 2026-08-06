@@ -7,6 +7,7 @@
 | `APP_ENV` | `production` | 运行环境名称 |
 | `APP_DEBUG` | `0` | 本地诊断时可设为 `1`，生产保持 `0` |
 | `APP_BASE_PATH` | 空 | 安装在子目录时填写路径，例如 `/geo` |
+| `GEO_PUBLIC_URL` | 空 | 证书二维码使用的公开根地址，例如 `https://ai.laoyao.cn/geo`；留空时根据当前请求生成 |
 | `APP_TIMEZONE` | `Asia/Shanghai` | 页面日期显示时区 |
 | `GEO_DB_PATH` | `storage/app.sqlite` | SQLite 数据库路径 |
 | `GEO_LOG_DIR` | `storage/logs` | JSONL 错误日志目录 |

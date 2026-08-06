@@ -3,3 +3,4 @@ dist/
 __pycache__/
 *.pyc
 .env
+geo-assessment/docs/demos/

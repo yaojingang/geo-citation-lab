@@ -27,6 +27,9 @@ final class Request
     /** @var string */
     private $remoteAddress;
 
+    /** @var bool */
+    private $secure;
+
     /** @param array<string, mixed> $input @param array<string, string> $cookies @param array<string, string> $headers */
     public function __construct(
         string $method,
@@ -35,7 +38,8 @@ final class Request
         array $cookies = [],
         array $headers = [],
         array $query = [],
-        string $remoteAddress = '127.0.0.1'
+        string $remoteAddress = '127.0.0.1',
+        bool $secure = false
     ) {
         $this->method = $method;
         $this->path = $path;
@@ -44,6 +48,7 @@ final class Request
         $this->headers = $headers;
         $this->query = $query;
         $this->remoteAddress = $remoteAddress;
+        $this->secure = $secure;
     }
 
     /** @return mixed */
@@ -95,7 +100,9 @@ final class Request
             $input = is_array($decoded) ? $decoded : [];
         }
 
-        return new self($method, rawurldecode($uri), $input, array_map('strval', $_COOKIE), $headers, $_GET, (string) ($_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'));
+        $secure = !empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off';
+
+        return new self($method, rawurldecode($uri), $input, array_map('strval', $_COOKIE), $headers, $_GET, (string) ($_SERVER['REMOTE_ADDR'] ?? '127.0.0.1'), $secure);
     }
 
     /** @return mixed */
@@ -132,6 +139,18 @@ final class Request
             return trim(explode(',', (string) $this->header('x-forwarded-for'))[0]);
         }
         return $this->remoteAddress;
+    }
+
+    public function absoluteUrl(string $path, bool $trustProxy = false): string
+    {
+        $forwardedProto = strtolower(trim(explode(',', (string) ($this->header('x-forwarded-proto') ?? ''))[0]));
+        $scheme = $this->secure || ($trustProxy && $forwardedProto === 'https') ? 'https' : 'http';
+        $host = trim((string) ($this->header('host') ?? 'localhost'));
+        if (preg_match('/\A(?:[A-Za-z0-9.-]+|\[[A-Fa-f0-9:.]+\])(?::[0-9]{1,5})?\z/D', $host) !== 1) {
+            $host = 'localhost';
+        }
+
+        return $scheme . '://' . $host . '/' . ltrim($path, '/');
     }
 
     private static function startsWith(string $value, string $prefix): bool

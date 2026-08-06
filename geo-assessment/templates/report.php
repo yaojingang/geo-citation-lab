@@ -37,6 +37,16 @@ $reportStatusLabel = static function (string $status): string {
     </div>
   </header>
 
+  <a class="report-certificate-entry no-print" href="<?= View::e($view->url('/certificates/' . $certificate['attempt_id'])) ?>" aria-label="查看 <?= View::e($report['user']['display_name']) ?> 的 <?= View::e($certificate['title']) ?>，综合得分 <?= View::e($certificate['score']) ?> 分<?= $certificate['award']['title'] !== '' ? '，称号 ' . View::e($certificate['award']['title']) : '' ?>">
+    <span class="report-certificate-seal" aria-hidden="true">认证</span>
+    <span class="report-certificate-copy">
+      <span class="report-certificate-label">VERIFIABLE CERTIFICATE</span>
+      <strong>你的 GEO 专业能力证书已生成</strong>
+      <span class="report-certificate-summary"><?php if ($certificate['award']['title'] !== ''): ?><b><?= View::e($certificate['award']['title']) ?> · <?= View::e($certificate['score']) ?> 分</b><?php else: ?><b>综合得分 <?= View::e($certificate['score']) ?> 分</b><?php endif; ?>，扫码查询证书</span>
+    </span>
+    <span class="report-certificate-action">查看我的证书<svg viewBox="0 0 20 20" aria-hidden="true"><path d="M4 10h11m-4-4 4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+  </a>
+
   <section class="report-overview" aria-labelledby="overview-title">
     <div class="score-hero">
       <div class="score-ring-wrap">

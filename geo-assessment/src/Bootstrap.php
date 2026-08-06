@@ -7,6 +7,7 @@ namespace GeoAssessment;
 use DomainException;
 use GeoAssessment\Assessment\AttemptService;
 use GeoAssessment\Http\Controller\AttemptController;
+use GeoAssessment\Http\Controller\CertificateController;
 use GeoAssessment\Http\Controller\HomeController;
 use GeoAssessment\Http\Controller\IdentityController;
 use GeoAssessment\Http\Controller\ReportController;
@@ -18,6 +19,7 @@ use GeoAssessment\Http\Router;
 use GeoAssessment\Http\SecurityHeaders;
 use GeoAssessment\Identity\IdentityService;
 use GeoAssessment\Reporting\ReportViewModelFactory;
+use GeoAssessment\Reporting\CertificateViewModelFactory;
 use GeoAssessment\Support\Config;
 use GeoAssessment\Support\BaiduAnalytics;
 use GeoAssessment\Support\Database;
@@ -52,7 +54,16 @@ final class Bootstrap
             $secureCookie = $this->secureCookie($request);
             $identity = new IdentityController($view, $home, $identities, $attempts, $limiter, (bool) $this->config->get('trust_proxy', false), $secureCookie);
             $attempt = new AttemptController($view, $identities, $attempts, $csrf, $limiter);
-            $report = new ReportController($view, $identities, new ReportViewModelFactory($pdo));
+            $reportFactory = new ReportViewModelFactory($pdo);
+            $certificateFactory = new CertificateViewModelFactory($pdo, $reportFactory);
+            $report = new ReportController($view, $identities, $reportFactory, $certificateFactory);
+            $certificate = new CertificateController(
+                $view,
+                $certificateFactory,
+                null,
+                (bool) $this->config->get('trust_proxy', false),
+                (string) $this->config->get('public_url', '')
+            );
 
             if ($request->method === 'POST' && !$csrf->validate($request)) {
                 $response = $request->expectsJson()
@@ -88,6 +99,9 @@ final class Bootstrap
             });
             $router->add('GET', '/reports/{id}', static function (Request $req, array $params) use ($report): Response {
                 return $report->show($req, $params);
+            });
+            $router->add('GET', '/certificates/{id}', static function (Request $req, array $params) use ($certificate): Response {
+                return $certificate->show($req, $params);
             });
 
             $response = $router->dispatch($request);
