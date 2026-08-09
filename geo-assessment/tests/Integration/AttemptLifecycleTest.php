@@ -57,6 +57,8 @@ final class AttemptLifecycleTest extends TestCase
         $attempt = $this->attempts->start($identity['user']['id']);
 
         self::assertSame(1, $attempt['attempt_no']);
+        self::assertMatchesRegularExpression('/\A[A-Za-z0-9_-]{43}\z/', $attempt['certificate_token']);
+        self::assertNotSame($attempt['id'], $attempt['certificate_token']);
         self::assertCount(30, $this->attempts->items($attempt['id'], $identity['user']['id']));
         self::assertSame($attempt['id'], $this->attempts->start($identity['user']['id'])['id']);
 

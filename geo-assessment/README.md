@@ -56,7 +56,7 @@ bash tests/Smoke/http.sh http://127.0.0.1:8080
 - 在线体验：<https://ai.laoyao.cn/geo/>
 - GitHub 开源计划：[docs/github-open-source-plan.md](docs/github-open-source-plan.md)
 
-公共源码默认关闭访问统计。部署者可以通过 `GEO_BAIDU_ANALYTICS_ID` 配置自己的百度统计 ID；启用后需要在站点隐私说明中披露统计用途。官方演示站点的参数位于 `deploy/examples/ai.laoyao.cn/`，通用部署从 `deploy/install.sh` 与 `deploy/nginx-subdirectory.conf.example` 开始。
+公共源码默认关闭访问统计。部署者可以通过 `GEO_BAIDU_ANALYTICS_ID` 配置自己的百度统计 ID；启用后只在未登录首页加载，并需要在站点隐私说明中披露统计用途。身份、答题、报告与证书页面不会加载第三方统计。官方演示站点的参数位于 `deploy/examples/ai.laoyao.cn/`，通用部署从 `deploy/install.sh` 与 `deploy/nginx-subdirectory.conf.example` 开始。
 
 ## 许可范围
 

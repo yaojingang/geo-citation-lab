@@ -15,12 +15,16 @@ final class Response
     /** @var array<string, string|list<string>> */
     private $headers;
 
+    /** @var bool */
+    private $analyticsAllowed;
+
     /** @param array<string, string|list<string>> $headers */
-    public function __construct(string $body = '', int $status = 200, array $headers = [])
+    public function __construct(string $body = '', int $status = 200, array $headers = [], bool $analyticsAllowed = false)
     {
         $this->body = $body;
         $this->status = $status;
         $this->headers = $headers;
+        $this->analyticsAllowed = $analyticsAllowed;
     }
 
     /** @return mixed */
@@ -35,6 +39,9 @@ final class Response
         if ($name === 'headers') {
             return $this->headers;
         }
+        if ($name === 'analyticsAllowed') {
+            return $this->analyticsAllowed;
+        }
 
         throw new \OutOfBoundsException("未知响应属性：{$name}");
     }
@@ -47,7 +54,7 @@ final class Response
 
     public function __isset(string $name): bool
     {
-        return $name === 'body' || $name === 'status' || $name === 'headers';
+        return $name === 'body' || $name === 'status' || $name === 'headers' || $name === 'analyticsAllowed';
     }
 
     public static function html(string $body, int $status = 200): self
@@ -74,13 +81,18 @@ final class Response
         } else {
             $headers[$name] = $value;
         }
-        return new self($this->body, $this->status, $headers);
+        return new self($this->body, $this->status, $headers, $this->analyticsAllowed);
     }
 
     /** @param array<string, string> $headers */
     public function withHeaders(array $headers): self
     {
-        return new self($this->body, $this->status, array_merge($this->headers, $headers));
+        return new self($this->body, $this->status, array_merge($this->headers, $headers), $this->analyticsAllowed);
+    }
+
+    public function withAnalyticsAllowed(bool $allowed): self
+    {
+        return new self($this->body, $this->status, $this->headers, $allowed);
     }
 
     public function send(): void

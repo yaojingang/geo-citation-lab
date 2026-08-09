@@ -7,6 +7,7 @@ namespace GeoAssessment\Tests\Integration;
 use GeoAssessment\Assessment\AttemptService;
 use GeoAssessment\Assessment\QuestionImporter;
 use GeoAssessment\Identity\IdentityService;
+use GeoAssessment\Reporting\CertificateViewModelFactory;
 use GeoAssessment\Reporting\ReportViewModelFactory;
 use GeoAssessment\Support\Database;
 use GeoAssessment\Support\MigrationRunner;
@@ -82,6 +83,51 @@ final class ReportViewModelTest extends TestCase
 
             self::assertSame('底层机制与范式', $report['dimensions'][0]['label']);
             self::assertSame('海外引用特征', $report['dimensions'][3]['label']);
+        } finally {
+            unset($pdo);
+            @unlink($path);
+            @unlink($path . '-shm');
+            @unlink($path . '-wal');
+        }
+    }
+
+    public function test_report_and_certificate_use_the_points_persisted_at_submission(): void
+    {
+        $path = sys_get_temp_dir() . '/geo-assessment-' . bin2hex(random_bytes(8)) . '.sqlite';
+        try {
+            $pdo = Database::connect($path);
+            (new MigrationRunner($pdo, dirname(__DIR__, 2) . '/database/migrations'))->migrate();
+            (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
+            $identity = (new IdentityService($pdo))->create('历史评分测试者');
+            $attempts = new AttemptService($pdo);
+            $attempt = $attempts->start($identity['user']['id']);
+            $items = $attempts->items($attempt['id'], $identity['user']['id']);
+            foreach ($items as $item) {
+                $attempts->saveAnswer($attempt['id'], $identity['user']['id'], $item['snapshot']['code'], $item['snapshot']['correct_codes'], 100 + $item['position'], 1);
+            }
+            $attempts->submit($attempt['id'], $identity['user']['id']);
+
+            $historicalItem = $items[0];
+            $historicalWeight = (int) $historicalItem['snapshot']['weight'];
+            $updateItem = $pdo->prepare('UPDATE attempt_items SET points = 0 WHERE attempt_id = :attempt_id AND question_id = :question_id');
+            $updateItem->execute(['attempt_id' => $attempt['id'], 'question_id' => $historicalItem['question_id']]);
+            $updateAttempt = $pdo->prepare("UPDATE attempts SET score = :score, correct_count = 29, scoring_version = 'score-historical' WHERE id = :id");
+            $updateAttempt->execute(['score' => 100 - $historicalWeight, 'id' => $attempt['id']]);
+
+            $reportFactory = new ReportViewModelFactory($pdo);
+            $report = $reportFactory->build($attempt['id'], $identity['user']['id']);
+            $questionByCode = array_column($report['questions'], null, 'code');
+            $dimensionByKey = array_column($report['dimensions'], null, 'key');
+            $historicalCode = (string) $historicalItem['snapshot']['code'];
+            $historicalDimension = (string) $historicalItem['snapshot']['dimension'];
+            $certificate = (new CertificateViewModelFactory($pdo, $reportFactory))->fromReport($report);
+            $certificateDimensionByKey = array_column($certificate['dimensions'], null, 'key');
+
+            self::assertSame(100 - $historicalWeight, $report['summary']['score']);
+            self::assertSame(0, $questionByCode[$historicalCode]['points']);
+            self::assertSame('incorrect', $questionByCode[$historicalCode]['status']);
+            self::assertSame($dimensionByKey[$historicalDimension]['possible'] - $historicalWeight, $dimensionByKey[$historicalDimension]['earned']);
+            self::assertSame($dimensionByKey[$historicalDimension]['percentage'], $certificateDimensionByKey[$historicalDimension]['score']);
         } finally {
             unset($pdo);
             @unlink($path);

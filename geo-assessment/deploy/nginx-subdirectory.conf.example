@@ -16,8 +16,10 @@ location = /geo/index.php {
     fastcgi_param SCRIPT_FILENAME /srv/geo-assessment/public/index.php;
     fastcgi_param SCRIPT_NAME /geo/index.php;
     fastcgi_param APP_BASE_PATH /geo;
-    # 建议配置，确保公开证书二维码始终指向正式 HTTPS 地址
-    # fastcgi_param GEO_PUBLIC_URL https://example.com/geo;
+    # 独立于版本目录的持久化数据目录，升级时必须复用
+    fastcgi_param GEO_DATA_DIR /srv/geo-assessment/shared;
+    # 生产环境必须配置，确保公开证书二维码始终指向正式 HTTPS 地址
+    fastcgi_param GEO_PUBLIC_URL https://example.com/geo;
     fastcgi_param APP_ENV production;
     fastcgi_param APP_DEBUG 0;
     # 可选：填写自己的 32 位百度统计 ID；留空时应用不会发起统计请求

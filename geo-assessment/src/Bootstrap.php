@@ -100,7 +100,7 @@ final class Bootstrap
             $router->add('GET', '/reports/{id}', static function (Request $req, array $params) use ($report): Response {
                 return $report->show($req, $params);
             });
-            $router->add('GET', '/certificates/{id}', static function (Request $req, array $params) use ($certificate): Response {
+            $router->add('GET', '/certificates/{token}', static function (Request $req, array $params) use ($certificate): Response {
                 return $certificate->show($req, $params);
             });
 
@@ -113,7 +113,7 @@ final class Bootstrap
             $response = $request->expectsJson()
                 ? Response::json(['error' => $error->getMessage()], 401)
                 : Response::redirect($view->url('/'));
-            return $response->withHeaders(SecurityHeaders::all($this->baiduAnalyticsId()));
+            return $response->withHeaders(SecurityHeaders::all());
         } catch (\Throwable $error) {
             (new JsonLogger((string) $this->config->get('log_dir')))->error($error, [
                 'method' => $request->method,
@@ -122,7 +122,7 @@ final class Bootstrap
             $debug = (bool) $this->config->get('debug', false);
             $message = $debug ? $error->getMessage() : '应用正在完成初始化，或当前服务暂不可用。';
             $response = $view->render('maintenance', ['view' => $view, 'message' => $message], '服务暂不可用', 'page-maintenance', 503);
-            return $response->withHeaders(SecurityHeaders::all($this->baiduAnalyticsId()))->withHeader('Retry-After', '60');
+            return $response->withHeaders(SecurityHeaders::all())->withHeader('Retry-After', '60');
         }
     }
 
@@ -132,7 +132,7 @@ final class Bootstrap
         if (is_string($configured) && strlen($configured) >= 32) {
             return $configured;
         }
-        $path = $this->config->get('root') . '/storage/app.key';
+        $path = (string) $this->config->get('app_key_path');
         $key = is_file($path) ? trim((string) file_get_contents($path)) : '';
         if (strlen($key) < 32) {
             throw new \RuntimeException('应用尚未安装，请运行 php bin/console app:install。');
@@ -157,7 +157,8 @@ final class Bootstrap
 
     private function finish(Response $response, Csrf $csrf, bool $secureCookie): Response
     {
-        $response = $response->withHeaders(SecurityHeaders::all($this->baiduAnalyticsId()))->withHeader('X-Request-Id', bin2hex(random_bytes(8)));
+        $analyticsId = $response->analyticsAllowed ? $this->baiduAnalyticsId() : '';
+        $response = $response->withHeaders(SecurityHeaders::all($analyticsId))->withHeader('X-Request-Id', bin2hex(random_bytes(8)));
         if (($secret = $csrf->issuedSecret()) !== null) {
             $parts = [
                 Csrf::COOKIE . '=' . rawurlencode($secret),

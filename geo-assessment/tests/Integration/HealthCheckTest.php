@@ -27,10 +27,12 @@ final class HealthCheckTest extends TestCase
         (new QuestionImporter($pdo))->import(dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json');
         $config = new Config([
             'root' => $directory,
+            'data_dir' => $directory . '/storage',
             'db_path' => $databasePath,
             'log_dir' => $directory . '/storage/logs',
             'backup_dir' => $directory . '/storage/backups',
             'app_key' => null,
+            'app_key_path' => $directory . '/storage/app.key',
         ]);
 
         $result = (new HealthCheck($config))->run();

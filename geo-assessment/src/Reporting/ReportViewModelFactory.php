@@ -71,9 +71,7 @@ final class ReportViewModelFactory
             sort($candidates, SORT_STRING);
             $dimensionLabels[$dimension] = $candidates[0];
         }
-        $scored = $this->scoring->score(array_map(static function (array $item): array {
-            return ['snapshot' => $item['snapshot'], 'selected_codes' => $item['selected_codes']];
-        }, $items));
+        $scored = $this->scorePersistedItems($items);
         $scoredByCode = array_column($scored['items'], null, 'code');
         $questions = [];
         $dimensions = [];
@@ -223,13 +221,58 @@ final class ReportViewModelFactory
             $entry['correct_count'] = (int) $entry['correct_count'];
             $entry['duration_seconds'] = (int) $entry['duration_seconds'];
             $items = $this->loadItems((string) $entry['id']);
-            $scored = $this->scoring->score(array_map(static function (array $item): array {
-                return ['snapshot' => $item['snapshot'], 'selected_codes' => $item['selected_codes']];
-            }, $items));
+            $scored = $this->scorePersistedItems($items);
             $entry['dimensions'] = $scored['dimensions'];
         }
         unset($entry);
         return $history;
+    }
+
+    /**
+     * The stored item points are the scoring-version result captured at submission.
+     * Current scoring is used only for stable answer diagnostics and presentation.
+     *
+     * @param list<array<string, mixed>> $items
+     * @return array<string, mixed>
+     */
+    private function scorePersistedItems(array $items): array
+    {
+        $scored = $this->scoring->score(array_map(static function (array $item): array {
+            return ['snapshot' => $item['snapshot'], 'selected_codes' => $item['selected_codes']];
+        }, $items));
+        $dimensions = [];
+        $score = 0;
+        $correctCount = 0;
+
+        foreach ($items as $index => $item) {
+            $result = $scored['items'][$index];
+            $points = $item['points'] === null ? (int) $result['points'] : (int) $item['points'];
+            $possible = (int) $result['possible_points'];
+            $dimension = (string) $item['snapshot']['dimension'];
+            $isCorrect = $points === $possible;
+            $scored['items'][$index]['points'] = $points;
+            $scored['items'][$index]['is_correct'] = $isCorrect;
+            $score += $points;
+            $correctCount += $isCorrect ? 1 : 0;
+            if (!isset($dimensions[$dimension])) {
+                $dimensions[$dimension] = ['earned' => 0, 'possible' => 0, 'percentage' => 0.0, 'label' => ''];
+            }
+            $dimensions[$dimension]['earned'] += $points;
+            $dimensions[$dimension]['possible'] += $possible;
+        }
+
+        foreach ($dimensions as &$dimension) {
+            $dimension['percentage'] = $dimension['possible'] > 0
+                ? round(($dimension['earned'] / $dimension['possible']) * 100, 1)
+                : 0.0;
+            $dimension['label'] = ScoreBands::dimension($dimension['percentage']);
+        }
+        unset($dimension);
+
+        $scored['score'] = $score;
+        $scored['correct_count'] = $correctCount;
+        $scored['dimensions'] = $dimensions;
+        return $scored;
     }
 
     /** @return array{labels: list<string>, series: list<array{name: string, key: string, values: list<float>}>} */

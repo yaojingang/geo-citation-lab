@@ -33,7 +33,8 @@ final class HealthCheck
         $add('扩展', $missing === [], $missing === [] ? '所有必需扩展已加载' : '缺少 ' . implode(', ', $missing));
 
         $root = (string) $this->config->get('root');
-        $appKey = (string) ($this->config->get('app_key') ?: (is_file($root . '/storage/app.key') ? trim((string) file_get_contents($root . '/storage/app.key')) : ''));
+        $appKeyPath = (string) $this->config->get('app_key_path');
+        $appKey = (string) ($this->config->get('app_key') ?: (is_file($appKeyPath) ? trim((string) file_get_contents($appKeyPath)) : ''));
         $add('应用密钥', strlen($appKey) >= 32, strlen($appKey) >= 32 ? '已配置' : '未配置');
 
         foreach (['log_dir' => '日志目录', 'backup_dir' => '备份目录'] as $key => $name) {
@@ -58,6 +59,11 @@ final class HealthCheck
         $analyticsValid = $analyticsId === '' || BaiduAnalytics::enabled($analyticsId);
         $analyticsMessage = $analyticsId === '' ? '未启用' : ($analyticsValid ? '已启用' : 'ID 应为 32 位十六进制字符串');
         $add('百度统计', $analyticsValid, $analyticsMessage);
+
+        $publicUrl = trim((string) $this->config->get('public_url', ''));
+        $publicUrlValid = $publicUrl === '' || $this->validPublicUrl($publicUrl);
+        $publicUrlMessage = $publicUrl === '' ? '本机开发回退；生产部署需配置' : ($publicUrlValid ? $publicUrl : '必须是有效的 HTTPS 地址');
+        $add('公开地址', $publicUrlValid, $publicUrlMessage);
 
         $databasePath = (string) $this->config->get('db_path');
         if (!is_file($databasePath)) {
@@ -90,5 +96,17 @@ final class HealthCheck
         $exists = $pdo->prepare("SELECT COUNT(*) FROM sqlite_master WHERE type = 'table' AND name = :name");
         $exists->execute(['name' => $table]);
         return (int) $exists->fetchColumn() === 1 ? (int) $pdo->query('SELECT COUNT(*) FROM ' . $table)->fetchColumn() : 0;
+    }
+
+    private function validPublicUrl(string $url): bool
+    {
+        $parts = parse_url($url);
+        return is_array($parts)
+            && isset($parts['scheme'], $parts['host'])
+            && strtolower((string) $parts['scheme']) === 'https'
+            && !isset($parts['user'])
+            && !isset($parts['pass'])
+            && !isset($parts['query'])
+            && !isset($parts['fragment']);
     }
 }

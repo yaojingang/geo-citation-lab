@@ -33,16 +33,16 @@ final class CertificateViewModelFactory
     }
 
     /** @return array<string, mixed> */
-    public function build(string $attemptId): array
+    public function build(string $verificationToken): array
     {
-        $statement = $this->pdo->prepare("SELECT user_id FROM attempts WHERE id = :id AND status IN ('submitted', 'timed_out')");
-        $statement->execute(['id' => $attemptId]);
-        $userId = $statement->fetchColumn();
-        if (!is_string($userId) || $userId === '') {
+        $statement = $this->pdo->prepare("SELECT id, user_id FROM attempts WHERE certificate_token = :token AND status IN ('submitted', 'timed_out')");
+        $statement->execute(['token' => $verificationToken]);
+        $attempt = $statement->fetch();
+        if (!is_array($attempt)) {
             throw new DomainException('证书不存在或测试尚未结束');
         }
 
-        return $this->fromReport($this->reports->build($attemptId, $userId));
+        return $this->fromReport($this->reports->build((string) $attempt['id'], (string) $attempt['user_id']));
     }
 
     /** @param array<string, mixed> $report @return array<string, mixed> */
@@ -73,6 +73,7 @@ final class CertificateViewModelFactory
         return [
             'title' => 'GEO专业能力测试评估证书',
             'attempt_id' => $attemptId,
+            'verification_token' => $this->verificationToken($attemptId),
             'recipient_name' => (string) $report['user']['display_name'],
             'score' => $score,
             'award' => CertificateAward::forScore($score),
@@ -81,5 +82,39 @@ final class CertificateViewModelFactory
             'issued_on' => $submittedAt->format('Y.m.d'),
             'issuer' => 'GEO Citation Lab',
         ];
+    }
+
+    private function verificationToken(string $attemptId): string
+    {
+        $statement = $this->pdo->prepare('SELECT certificate_token FROM attempts WHERE id = :id');
+        $statement->execute(['id' => $attemptId]);
+        $token = $statement->fetchColumn();
+        if (is_string($token) && $token !== '') {
+            return $token;
+        }
+
+        for ($attempt = 0; $attempt < 3; $attempt++) {
+            $token = rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
+            try {
+                $update = $this->pdo->prepare('UPDATE attempts SET certificate_token = :token WHERE id = :id AND certificate_token IS NULL');
+                $update->execute(['token' => $token, 'id' => $attemptId]);
+                if ($update->rowCount() === 1) {
+                    return $token;
+                }
+            } catch (\PDOException $error) {
+                if ($attempt === 2) {
+                    throw $error;
+                }
+                continue;
+            }
+
+            $statement->execute(['id' => $attemptId]);
+            $existing = $statement->fetchColumn();
+            if (is_string($existing) && $existing !== '') {
+                return $existing;
+            }
+        }
+
+        throw new DomainException('证书验证标识生成失败');
     }
 }

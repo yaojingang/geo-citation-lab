@@ -16,6 +16,11 @@ final class ResponseTest extends TestCase
         self::assertSame('ok', $response->body);
         self::assertSame(201, $response->status);
         self::assertSame('text/html; charset=UTF-8', $response->headers['Content-Type']);
+        self::assertFalse($response->analyticsAllowed);
+
+        $analyticsResponse = $response->withAnalyticsAllowed(true)->withHeader('X-Test', 'yes');
+        self::assertTrue($analyticsResponse->analyticsAllowed);
+        self::assertFalse($response->analyticsAllowed);
 
         $this->expectException(\LogicException::class);
         $response->status = 500;

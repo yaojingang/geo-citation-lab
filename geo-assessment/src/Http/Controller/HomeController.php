@@ -66,6 +66,6 @@ final class HomeController
             'currentPosition' => $currentPosition,
             'remaining' => max(0, 10 - count($history)),
             'error' => $error,
-        ], 'GEO 在线能力测试', 'page-home', $status);
+        ], 'GEO 在线能力测试', 'page-home', $status, $user === null && $error === null && $status === 200);
     }
 }

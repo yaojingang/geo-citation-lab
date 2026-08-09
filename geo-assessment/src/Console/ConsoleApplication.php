@@ -66,13 +66,12 @@ final class ConsoleApplication
 
     private function install(): int
     {
-        $root = (string) $this->config->get('root');
-        foreach ([(string) $this->config->get('log_dir'), (string) $this->config->get('backup_dir'), dirname((string) $this->config->get('db_path'))] as $directory) {
+        foreach ([(string) $this->config->get('data_dir'), (string) $this->config->get('log_dir'), (string) $this->config->get('backup_dir'), dirname((string) $this->config->get('db_path')), dirname((string) $this->config->get('app_key_path'))] as $directory) {
             if (!is_dir($directory) && !mkdir($directory, 0770, true) && !is_dir($directory)) {
                 throw new RuntimeException("无法创建目录：{$directory}");
             }
         }
-        $keyPath = $root . '/storage/app.key';
+        $keyPath = (string) $this->config->get('app_key_path');
         if (!is_file($keyPath)) {
             $key = rtrim(strtr(base64_encode(random_bytes(48)), '+/', '-_'), '=');
             file_put_contents($keyPath, $key . PHP_EOL, LOCK_EX);

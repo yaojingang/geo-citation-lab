@@ -11,4 +11,4 @@ if [[ "${PROJECT_ROOT}" != "${EXPECTED_ROOT}" ]]; then
     exit 1
 fi
 
-WEB_USER=www PHP_BIN=/www/server/php/73/bin/php "${PROJECT_ROOT}/deploy/install.sh"
+GEO_DATA_DIR=/www/wwwroot/ai.laoyao.cn/geo-data GEO_PUBLIC_URL=https://ai.laoyao.cn/geo WEB_USER=www PHP_BIN=/www/server/php/73/bin/php "${PROJECT_ROOT}/deploy/install.sh"

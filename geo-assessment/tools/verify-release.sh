@@ -42,6 +42,7 @@ fi
 
 unzip -q "${ARCHIVE}" -d "${VERIFY_DIR}"
 PACKAGE_DIR="${VERIFY_DIR}/geo-assessment"
+PERSISTENT_DATA_DIR="${VERIFY_DIR}/persistent-data"
 
 for required in \
     VERSION README.md LICENSE LICENSE-CODE LICENSE-CONTENT THIRD_PARTY_NOTICES.md \
@@ -74,10 +75,15 @@ done
 
 (
     cd "${PACKAGE_DIR}"
+    export GEO_DATA_DIR="${PERSISTENT_DATA_DIR}"
     php bin/console app:install
     php bin/console questions:verify
     php bin/console app:health
     [[ "$(php bin/console --version)" == "GEO Assessment ${VERSION}" ]]
+    [[ -f "${PERSISTENT_DATA_DIR}/app.sqlite" ]]
+    [[ -f "${PERSISTENT_DATA_DIR}/app.key" ]]
+    [[ ! -f "${PACKAGE_DIR}/storage/app.sqlite" ]]
+    [[ ! -f "${PACKAGE_DIR}/storage/app.key" ]]
 )
 
 printf '[OK] Release 内容、安全边界和隔离安装验证通过：%s\n' "${ARCHIVE}"

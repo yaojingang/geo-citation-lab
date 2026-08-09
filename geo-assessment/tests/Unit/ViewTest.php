@@ -33,33 +33,33 @@ final class ViewTest extends TestCase
         self::assertStringNotContainsString('题集 geo-30-v1.2', $response->body);
     }
 
-    public function test_complete_analytics_loader_is_rendered_inside_every_shared_document_head(): void
+    public function test_analytics_loader_requires_an_explicit_page_allowance(): void
     {
         $analyticsId = '0123456789abcdef0123456789abcdef';
         $view = new View(dirname(__DIR__, 2) . '/templates', '', $analyticsId);
         $loader = '<script>' . BaiduAnalytics::inlineLoader($analyticsId) . '</script>';
-        $pages = [
-            $view->render('error', [
-                'view' => $view,
-                'statusCode' => 200,
-                'heading' => '统计代码',
-                'message' => '页面头部校验',
-            ], '统计代码', 'page-error'),
-            $view->render('maintenance', [
-                'view' => $view,
-                'message' => '维护页面头部校验',
-            ], '服务暂不可用', 'page-maintenance', 503),
-        ];
+        $privateResponse = $view->render('error', [
+            'view' => $view,
+            'statusCode' => 200,
+            'heading' => '统计代码',
+            'message' => '页面头部校验',
+        ], '统计代码', 'page-error');
+        $publicResponse = $view->render('error', [
+            'view' => $view,
+            'statusCode' => 200,
+            'heading' => '统计代码',
+            'message' => '页面头部校验',
+        ], '统计代码', 'page-error', 200, true);
 
-        foreach ($pages as $response) {
-            $headEnd = strpos($response->body, '</head>');
-            $loaderPosition = strpos($response->body, $loader);
-
-            self::assertIsInt($headEnd);
-            self::assertIsInt($loaderPosition);
-            self::assertLessThan($headEnd, $loaderPosition);
-            self::assertSame(1, substr_count($response->body, $loader));
-        }
+        self::assertStringNotContainsString($loader, $privateResponse->body);
+        self::assertFalse($privateResponse->analyticsAllowed);
+        $headEnd = strpos($publicResponse->body, '</head>');
+        $loaderPosition = strpos($publicResponse->body, $loader);
+        self::assertIsInt($headEnd);
+        self::assertIsInt($loaderPosition);
+        self::assertLessThan($headEnd, $loaderPosition);
+        self::assertSame(1, substr_count($publicResponse->body, $loader));
+        self::assertTrue($publicResponse->analyticsAllowed);
     }
 
     public function test_layout_contains_the_complete_literal_analytics_script(): void

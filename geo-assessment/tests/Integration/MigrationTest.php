@@ -20,7 +20,7 @@ final class MigrationTest extends TestCase
             $pdo = Database::connect($path);
             $migrations = dirname(__DIR__, 2) . '/database/migrations';
             $runner = new MigrationRunner($pdo, $migrations);
-            self::assertSame(2, $runner->migrate());
+            self::assertSame(3, $runner->migrate());
             self::assertSame(0, $runner->migrate());
 
             $seed = dirname(__DIR__, 2) . '/database/seeds/geo-30-v1.2.json';
@@ -34,6 +34,8 @@ final class MigrationTest extends TestCase
             self::assertSame(9, (int) $pdo->query("SELECT COUNT(*) FROM questions WHERE region_scope = 'general'")->fetchColumn());
             self::assertSame(3, (int) $pdo->query("SELECT COUNT(*) FROM questions WHERE region_scope = 'overseas'")->fetchColumn());
             self::assertSame(1, (int) $pdo->query('SELECT COUNT(*) FROM question_sets WHERE active = 1')->fetchColumn());
+            self::assertContains('certificate_token', array_column($pdo->query('PRAGMA table_info(attempts)')->fetchAll(), 'name'));
+            self::assertSame(1, (int) $pdo->query("SELECT COUNT(*) FROM sqlite_master WHERE type = 'index' AND name = 'idx_attempts_certificate_token'")->fetchColumn());
             self::assertSame('ok', (string) $pdo->query('PRAGMA integrity_check')->fetchColumn());
         } finally {
             unset($pdo);
@@ -79,9 +81,11 @@ final class MigrationTest extends TestCase
                 'applied_at' => '2026-08-04T00:00:00Z',
             ]);
 
-            self::assertSame(1, (new MigrationRunner($pdo, $migrationDirectory))->migrate());
+            self::assertSame(2, (new MigrationRunner($pdo, $migrationDirectory))->migrate());
             $columns = $pdo->query('PRAGMA table_info(questions)')->fetchAll();
             self::assertContains('region_scope', array_column($columns, 'name'));
+            $attemptColumns = $pdo->query('PRAGMA table_info(attempts)')->fetchAll();
+            self::assertContains('certificate_token', array_column($attemptColumns, 'name'));
         } finally {
             unset($pdo);
             @unlink($path);

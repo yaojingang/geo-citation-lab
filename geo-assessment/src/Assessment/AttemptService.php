@@ -71,11 +71,12 @@ final class AttemptService
             $this->secureShuffle($questions);
 
             $attemptId = Uuid::v4();
+            $certificateToken = $this->randomToken();
             $now = $this->clock->now();
             $nowText = $this->format($now);
             $deadline = $this->format($now->modify('+' . (int) $set['time_limit_seconds'] . ' seconds'));
             $attemptNo = $count + 1;
-            $insertAttempt = $this->pdo->prepare("INSERT INTO attempts (id, user_id, set_id, attempt_no, status, started_at, deadline_at, scoring_version, created_at, updated_at) VALUES (:id, :user_id, :set_id, :attempt_no, 'in_progress', :started_at, :deadline_at, :scoring_version, :created_at, :updated_at)");
+            $insertAttempt = $this->pdo->prepare("INSERT INTO attempts (id, user_id, set_id, attempt_no, status, started_at, deadline_at, scoring_version, certificate_token, created_at, updated_at) VALUES (:id, :user_id, :set_id, :attempt_no, 'in_progress', :started_at, :deadline_at, :scoring_version, :certificate_token, :created_at, :updated_at)");
             $insertAttempt->execute([
                 'id' => $attemptId,
                 'user_id' => $userId,
@@ -84,6 +85,7 @@ final class AttemptService
                 'started_at' => $nowText,
                 'deadline_at' => $deadline,
                 'scoring_version' => $set['scoring_version'],
+                'certificate_token' => $certificateToken,
                 'created_at' => $nowText,
                 'updated_at' => $nowText,
             ]);
@@ -139,6 +141,7 @@ final class AttemptService
                 'started_at' => $nowText,
                 'deadline_at' => $deadline,
                 'scoring_version' => $set['scoring_version'],
+                'certificate_token' => $certificateToken,
             ];
         } catch (\Throwable $error) {
             if ($transactionStarted) {
@@ -146,6 +149,11 @@ final class AttemptService
             }
             throw $error;
         }
+    }
+
+    private function randomToken(): string
+    {
+        return rtrim(strtr(base64_encode(random_bytes(32)), '+/', '-_'), '=');
     }
 
     /** @return list<array<string, mixed>> */

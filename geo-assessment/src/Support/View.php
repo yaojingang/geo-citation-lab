@@ -24,14 +24,14 @@ final class View
         $this->baiduAnalyticsId = BaiduAnalytics::normalize($baiduAnalyticsId);
     }
 
-    public function render(string $template, array $data = [], string $title = 'GEO 在线能力测试', string $pageClass = '', int $status = 200): Response
+    public function render(string $template, array $data = [], string $title = 'GEO 在线能力测试', string $pageClass = '', int $status = 200, bool $allowAnalytics = false): Response
     {
         $templatePath = $this->templatesPath . '/' . $template . '.php';
         if (!is_file($templatePath)) {
             throw new \RuntimeException("模板不存在：{$template}");
         }
         $basePath = $this->basePath;
-        $baiduAnalyticsId = $this->baiduAnalyticsId;
+        $baiduAnalyticsId = $allowAnalytics ? $this->baiduAnalyticsId : '';
         $templatesPath = $this->templatesPath;
         extract($data, EXTR_SKIP);
         ob_start();
@@ -39,7 +39,8 @@ final class View
         $content = (string) ob_get_clean();
         ob_start();
         require $this->templatesPath . '/layout.php';
-        return Response::html((string) ob_get_clean(), $status);
+        return Response::html((string) ob_get_clean(), $status)
+            ->withAnalyticsAllowed(BaiduAnalytics::enabled($baiduAnalyticsId));
     }
 
     public function url(string $path): string

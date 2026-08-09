@@ -37,7 +37,7 @@ $reportStatusLabel = static function (string $status): string {
     </div>
   </header>
 
-  <a class="report-certificate-entry no-print" href="<?= View::e($view->url('/certificates/' . $certificate['attempt_id'])) ?>" aria-label="查看 <?= View::e($report['user']['display_name']) ?> 的 <?= View::e($certificate['title']) ?>，综合得分 <?= View::e($certificate['score']) ?> 分<?= $certificate['award']['title'] !== '' ? '，称号 ' . View::e($certificate['award']['title']) : '' ?>">
+  <a class="report-certificate-entry no-print" href="<?= View::e($view->url('/certificates/' . rawurlencode((string) $certificate['verification_token']))) ?>" aria-label="查看 <?= View::e($report['user']['display_name']) ?> 的 <?= View::e($certificate['title']) ?>，综合得分 <?= View::e($certificate['score']) ?> 分<?= $certificate['award']['title'] !== '' ? '，称号 ' . View::e($certificate['award']['title']) : '' ?>">
     <span class="report-certificate-seal" aria-hidden="true">认证</span>
     <span class="report-certificate-copy">
       <span class="report-certificate-label">VERIFIABLE CERTIFICATE</span>
