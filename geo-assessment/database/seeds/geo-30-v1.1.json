@@ -1,0 +1,1993 @@
+{
+    "schema_version": "question-set-v1",
+    "set": {
+        "version": "geo-30-v1.1",
+        "title": "GEO 在线能力测试",
+        "description": "基于 54 篇论文、海外实验与 CN-GEO 数据集的 30 道研究型评测。",
+        "total_points": 100,
+        "time_limit_seconds": 1800,
+        "scoring_version": "score-v1.1",
+        "evidence_frozen_at": "2026-08-04"
+    },
+    "sources": [
+        {
+            "id": "P01",
+            "title": "GEO: Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2023/2024 · arXiv, KDD 2024",
+            "url": "https://arxiv.org/pdf/2311.09735"
+        },
+        {
+            "id": "P02",
+            "title": "Generative Engine Optimization in Digital Repositories: Optimizing Visibility for Generative AI",
+            "kind": "paper",
+            "citation": "2025 · Infonomy",
+            "url": "https://infonomy.scimagoepi.com/index.php/infonomy/en/article/download/115/153/217"
+        },
+        {
+            "id": "P03",
+            "title": "Generative Engine Optimization: How to Dominate AI Search",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2509.08919"
+        },
+        {
+            "id": "P04",
+            "title": "Navigating the Shift: A Comparative Analysis of Web Search and Generative AI Response Generation",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2601.16858"
+        },
+        {
+            "id": "P05",
+            "title": "Beyond Keywords: Driving Generative Search Engine Optimization with Content-Centric Agents",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2509.05607"
+        },
+        {
+            "id": "P06",
+            "title": "Beyond SEO: A Transformer-Based Approach for Reinventing Web Content Optimisation",
+            "kind": "paper",
+            "citation": "2025 · arXiv mirror",
+            "url": "https://arxiv.org/pdf/2507.03169"
+        },
+        {
+            "id": "P07",
+            "title": "IF-GEO: Conflict-Aware Instruction Fusion for Multi-Query Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2601.13938"
+        },
+        {
+            "id": "P08",
+            "title": "Role-Augmented Intent-Driven Generative Search Engine Optimization",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2508.11158"
+        },
+        {
+            "id": "P09",
+            "title": "Think Before Writing: Feature-Level Optimization for Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2604.19113"
+        },
+        {
+            "id": "P10",
+            "title": "What Generative Search Engines Like: Explaining and Optimizing Website Visibility in Generative Search",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2510.11438"
+        },
+        {
+            "id": "P11",
+            "title": "White Hat Search Engine Optimization using Large Language Models",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2502.07315"
+        },
+        {
+            "id": "P12",
+            "title": "AI Answer Engine Citation Behavior: A Longitudinal Study of GEO in 16 Generative Engines",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2509.10762"
+        },
+        {
+            "id": "P13",
+            "title": "C-SEO Bench: Does Conversational SEO Work?",
+            "kind": "paper",
+            "citation": "2025 · arXiv, NeurIPS Datasets and Benchmarks",
+            "url": "https://arxiv.org/pdf/2506.11097"
+        },
+        {
+            "id": "P14",
+            "title": "Don’t Measure Once: Reliable AI Search Visibility Requires Repeated Trials and Structure-Aware Metrics",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2604.07585"
+        },
+        {
+            "id": "P15",
+            "title": "Disentangling Answer Engine Optimization from Platform Growth: A Log-Based Natural Experiment on ChatGPT Referral Traffic",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.04362"
+        },
+        {
+            "id": "P16",
+            "title": "From Citation Selection to Citation Absorption: Understanding Source Influence in LLM-Generated Answers",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2604.25707"
+        },
+        {
+            "id": "P17",
+            "title": "Generative Engine Optimization at Scale: Measuring Brand Visibility Across AI Search Engines",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.20065"
+        },
+        {
+            "id": "P18",
+            "title": "SAGEO: A Search Arena for Generative Engine Optimization in a Realistic Environment",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.12187"
+        },
+        {
+            "id": "P19",
+            "title": "Structural Feature Engineering for Generative Engine Optimization",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2603.29979"
+        },
+        {
+            "id": "P20",
+            "title": "A Survey of Generative Search and Recommendation in the Era of Large Language Models",
+            "kind": "paper",
+            "citation": "2024/2025 · Generative Search and Recommendation",
+            "url": "https://generative-rec.github.io/assets/files/survey.pdf"
+        },
+        {
+            "id": "P21",
+            "title": "Characterizing Web Search in the Age of Generative AI",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2510.11560"
+        },
+        {
+            "id": "P22",
+            "title": "What Do Chinese-Language Generative Search Engines Cite and Surface? A Large-Scale Empirical Study",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2607.15771v1"
+        },
+        {
+            "id": "P23",
+            "title": "How Generative AI Disrupts Search: Consumer Behavior, Website Traffic, and the Impact of Google AI Overviews",
+            "kind": "paper",
+            "citation": "2026 · ACM SIGIR 2026 author PDF",
+            "url": "https://web.njit.edu/~borcea/papers/acm-sigir26.pdf"
+        },
+        {
+            "id": "P24",
+            "title": "NExT-Search: Rebuilding User Feedback Ecosystem for Generative AI Search",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2505.14680"
+        },
+        {
+            "id": "P25",
+            "title": "What Evidence Do Language Models Find Convincing?",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2402.11782"
+        },
+        {
+            "id": "P26",
+            "title": "From SEO to Answer Engine Optimization (AEO): Generative AI and the Transformation of Search Visibility",
+            "kind": "paper",
+            "citation": "2025 · ResearchGate chapter PDF",
+            "url": "https://www.researchgate.net/publication/399872181_From_SEO_to_Answer_Engine_Optimization_AEO_Generative_Ai_and_the_Transformation_of_Search_Visibility"
+        },
+        {
+            "id": "P27",
+            "title": "Optimizing for the Artificial Intelligence-Driven Search Era: An Integrated Framework for SEO, GEO, and AEO",
+            "kind": "paper",
+            "citation": "2025 · IJSREM",
+            "url": "https://ijsrem.com/uploads/production/Optimizing-for-the-Artificial-Intelligence-Driven-Search-Era-An-Integrated-Framework-for-Search-Engine-Optimization-Generative-Engine-Optimization-and-Answer-Engine-Optimization.pdf"
+        },
+        {
+            "id": "P28",
+            "title": "Smart Search Optimization: A Theoretical Framework Integrating SEO, AEO and GEO in the Era of Generative AI",
+            "kind": "paper",
+            "citation": "2025 · Loro Journal",
+            "url": "https://lorojournals.com/index.php/emsj/en/article/download/1728/1679/2401"
+        },
+        {
+            "id": "P29",
+            "title": "How the Transition from SEO to GEO, AEO, and AIO is Impacting Digital Marketing Strategies",
+            "kind": "paper",
+            "citation": "2025 · IJCRT",
+            "url": "https://www.ijcrt.org/papers/IJCRT2510315.pdf"
+        },
+        {
+            "id": "P30",
+            "title": "Zero-Click Search and Answer Engines: A Literature Review on SEO Transformation in Digital Marketing",
+            "kind": "paper",
+            "citation": "2025/2026 · JIEM",
+            "url": "https://ejurnal.kampusakademik.co.id/index.php/jiem/article/download/9040/7646/32415"
+        },
+        {
+            "id": "P31",
+            "title": "Adversarial Search Engine Optimization for Large Language Models",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2406.18382"
+        },
+        {
+            "id": "P32",
+            "title": "CONFLICTBANK: A Benchmark for Evaluating the Influence of Knowledge Conflicts in LLMs",
+            "kind": "paper",
+            "citation": "2024 · OpenReview",
+            "url": "https://openreview.net/pdf?id=wjHVmgBDzc"
+        },
+        {
+            "id": "P33",
+            "title": "Dynamics of Adversarial Attacks on Large Language Model-Based Search Engines",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2501.00745"
+        },
+        {
+            "id": "P34",
+            "title": "GASLITEing the Retrieval: Exploring Vulnerabilities in Dense Embedding-Based Search",
+            "kind": "paper",
+            "citation": "2024/2025 · OpenReview",
+            "url": "https://openreview.net/pdf?id=LBd87fWerd"
+        },
+        {
+            "id": "P35",
+            "title": "Manipulating Large Language Models to Increase Product Visibility",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2404.07981"
+        },
+        {
+            "id": "P36",
+            "title": "Persistent Pre-Training Poisoning of LLMs",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2410.13722"
+        },
+        {
+            "id": "P37",
+            "title": "PoisonArena: Uncovering Competing Poisoning Attacks in Retrieval-Augmented Generation",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2505.12574"
+        },
+        {
+            "id": "P38",
+            "title": "Ranking Manipulation for Conversational Search Engines",
+            "kind": "paper",
+            "citation": "2024 · arXiv",
+            "url": "https://arxiv.org/pdf/2406.03589v1.pdf"
+        },
+        {
+            "id": "P39",
+            "title": "StealthRank: LLM Ranking Manipulation via Stealthy Prompt Optimization",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2504.05804"
+        },
+        {
+            "id": "P40",
+            "title": "Unveiling the Resilience of LLM-Enhanced Search Engines Against Adversarial Attacks",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2603.25500"
+        },
+        {
+            "id": "P41",
+            "title": "Caption Injection for Optimization in Generative Search Engines",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2511.04080"
+        },
+        {
+            "id": "P42",
+            "title": "E-GEO: A Testbed for Generative Engine Optimization in E-Commerce",
+            "kind": "paper",
+            "citation": "2025 · arXiv",
+            "url": "https://arxiv.org/pdf/2511.20867"
+        },
+        {
+            "id": "P43",
+            "title": "Multimodal Generative Engine Optimization: Rank Manipulation for Vision-Language Model Rankers",
+            "kind": "paper",
+            "citation": "2026 · ResearchGate paper PDF",
+            "url": "https://www.researchgate.net/publication/399931268_Multimodal_Generative_Engine_Optimization_Rank_Manipulation_for_Vision-Language_Model_Rankers"
+        },
+        {
+            "id": "P44",
+            "title": "Generative Engine Optimization: A VLM and Agent Framework for Pinterest Acquisition Growth",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.02961"
+        },
+        {
+            "id": "P45",
+            "title": "When Content is Goliath and Algorithm is David: The Style and Semantic Effects of Generative Search Engine",
+            "kind": "paper",
+            "citation": "2025 · ResearchGate paper PDF",
+            "url": "https://www.researchgate.net/publication/395651066_When_Content_is_Goliath_and_Algorithm_is_David_The_Style_and_Semantic_Effects_of_Generative_Search_Engine"
+        },
+        {
+            "id": "P46",
+            "title": "Decoupling Search from Reasoning: A Vendor-Agnostic Grounding Architecture for LLM Agents",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.18947"
+        },
+        {
+            "id": "P47",
+            "title": "Beyond Parallel Sampling: Diverse Query Initialization for Agentic Search",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.17209"
+        },
+        {
+            "id": "P48",
+            "title": "ScholarQuest: A Taxonomy-Guided Benchmark for Agentic Academic Paper Search in Open Literature Environments",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.20235"
+        },
+        {
+            "id": "P49",
+            "title": "When Does Streaming Tool Use Help? Characterizing Tool-Intent Stabilization in Streaming Retrieval-Augmented Generation",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.20113"
+        },
+        {
+            "id": "P50",
+            "title": "MCompassRAG: Topic Metadata as a Semantic Compass for Paragraph-Level Retrieval",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.18508"
+        },
+        {
+            "id": "P51",
+            "title": "SCAR: Semantic Continuity-Aware Retrieval for Efficient Context Expansion in RAG",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.16661"
+        },
+        {
+            "id": "P52",
+            "title": "SproutRAG: Attention-Guided Tree Search with Progressive Embeddings for Long-Document RAG",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2606.18381"
+        },
+        {
+            "id": "P53",
+            "title": "Scaling Search Relevance: Augmenting App Store Ranking with LLM-Generated Judgments",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.23234"
+        },
+        {
+            "id": "P54",
+            "title": "SAGE: Scalable AI Governance & Evaluation",
+            "kind": "paper",
+            "citation": "2026 · arXiv",
+            "url": "https://arxiv.org/pdf/2602.07840"
+        },
+        {
+            "id": "D01",
+            "title": "跨平台引用选择与答案吸收实验数据",
+            "kind": "dataset",
+            "citation": "602 条 Prompt，3 个海外生成式搜索平台，证据冻结于 2026-08-04",
+            "url": "https://github.com/yaojingang/geo-citation-lab/tree/main/01-geo-experiment-data-report"
+        },
+        {
+            "id": "D02",
+            "title": "CN-GEO 中文生成式搜索引用数据集",
+            "kind": "dataset",
+            "citation": "v2.0.1，214,119 条原始引用记录，证据冻结于 2026-08-04",
+            "url": "https://github.com/yaojingang/geo-citation-lab/tree/main/03-cn-geo-citation-dataset"
+        }
+    ],
+    "questions": [
+        {
+            "code": "Q01",
+            "title": "从排序到生成式引用",
+            "sort_order": 1,
+            "type": "single",
+            "dimension": "mechanism",
+            "dimension_label": "底层机制与范式",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "理解",
+            "prompt": "传统搜索排名与生成式搜索可见性的关键差异，哪一项概括最准确？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "生成式搜索完全取消了检索，只由语言模型记忆生成",
+                    "is_correct": false,
+                    "rationale": "A 忽略联网检索与工具；C 将网页排序与答案曝光视为确定关系；D 将评价信号缩减为单一关键词特征。"
+                },
+                {
+                    "code": "B",
+                    "text": "页面进入候选集、被选为引用、被吸收到答案，是三个可分别测量的阶段",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。候选资格、引用选择与答案吸收构成连续漏斗，每一层都有独立选择机制与观测指标。"
+                },
+                {
+                    "code": "C",
+                    "text": "只要网页排名第一，品牌必然出现在生成答案中",
+                    "is_correct": false,
+                    "rationale": "A 忽略联网检索与工具；C 将网页排序与答案曝光视为确定关系；D 将评价信号缩减为单一关键词特征。"
+                },
+                {
+                    "code": "D",
+                    "text": "生成式搜索只评估关键词密度，不评估语义相关性",
+                    "is_correct": false,
+                    "rationale": "A 忽略联网检索与工具；C 将网页排序与答案曝光视为确定关系；D 将评价信号缩减为单一关键词特征。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "生成式搜索通常包含查询理解、候选检索或工具调用、引用选择、答案组织等环节。网页进入候选集后仍可能未被引用；被引用后，页面中的品牌、主张或联系方式仍可能未进入答案。把三个阶段拆开，才能定位可见性损失发生在哪里。",
+            "principle": "候选资格、引用选择与答案吸收构成连续漏斗，每一层都有独立选择机制与观测指标。",
+            "misconception_tag": "将网页排名、引用和答案曝光合并为一步",
+            "source_refs": [
+                "P01",
+                "P03",
+                "P04",
+                "P16",
+                "P21",
+                "P26",
+                "P27",
+                "P28",
+                "P29",
+                "P30"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q02",
+            "title": "页面从未进入候选集",
+            "sort_order": 2,
+            "type": "multiple",
+            "dimension": "mechanism",
+            "dimension_label": "底层机制与范式",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "应用",
+            "prompt": "一篇文章反复润色后仍未进入任何检索候选。下一步应优先检查哪些环节？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "抓取、索引、检索与重排链路",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成阶段只能使用模型内部知识或当次上下文。诊断应沿数据流从上游向下游推进。"
+                },
+                {
+                    "code": "B",
+                    "text": "页面是否进入模型可用的上下文",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成阶段只能使用模型内部知识或当次上下文。诊断应沿数据流从上游向下游推进。"
+                },
+                {
+                    "code": "C",
+                    "text": "增加“权威、领先、最好”等形容词",
+                    "is_correct": false,
+                    "rationale": "C 不能解决可访问性与检索缺失，且可能降低内容可信度。"
+                },
+                {
+                    "code": "D",
+                    "text": "平台、缓存、搜索工具和检索边界",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成阶段只能使用模型内部知识或当次上下文。诊断应沿数据流从上游向下游推进。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "D"
+            ],
+            "weight": 3,
+            "explanation": "页面没有进入候选集时，文案层面的细微润色很难改变结果。应先确认页面可抓取、可索引、与查询可召回，并观察平台是否调用搜索、使用何种检索边界以及缓存是否更新。候选集缺失会让后续引用与吸收失去输入。",
+            "principle": "生成阶段只能使用模型内部知识或当次上下文。诊断应沿数据流从上游向下游推进。",
+            "misconception_tag": "候选缺失时继续做表层文案优化",
+            "source_refs": [
+                "P18",
+                "P20",
+                "P46",
+                "P50"
+            ],
+            "expected_seconds": 60
+        },
+        {
+            "code": "Q03",
+            "title": "被引用却未被答案采用",
+            "sort_order": 3,
+            "type": "single",
+            "dimension": "mechanism",
+            "dimension_label": "底层机制与范式",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "来源页面明确出现某品牌，答案引用了该页，却没有提到该品牌。最合理的判断是？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "引用记录一定抓取错误",
+                    "is_correct": false,
+                    "rationale": "A 缺乏证据；B 忽略答案曝光目标；D 提供无研究依据的固定频次。"
+                },
+                {
+                    "code": "B",
+                    "text": "该页面已经完成全部 GEO 目标",
+                    "is_correct": false,
+                    "rationale": "A 缺乏证据；B 忽略答案曝光目标；D 提供无研究依据的固定频次。"
+                },
+                {
+                    "code": "C",
+                    "text": "引用包含不等于实体曝光，答案吸收仍有二次选择",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。引用选择回答“采用哪个来源”，答案吸收回答“从来源中采用什么”。两层目标与损失函数可以不同。"
+                },
+                {
+                    "code": "D",
+                    "text": "品牌词需要在页面中重复至少 20 次",
+                    "is_correct": false,
+                    "rationale": "A 缺乏证据；B 忽略答案曝光目标；D 提供无研究依据的固定频次。"
+                }
+            ],
+            "correct_codes": [
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "国内生成式搜索研究显示，来源中出现品牌到答案采用该品牌的转化比例有限。引用链接只说明来源参与了答案支撑，无法保证页面中的每个实体、观点和联系方式都进入最终文本。",
+            "principle": "引用选择回答“采用哪个来源”，答案吸收回答“从来源中采用什么”。两层目标与损失函数可以不同。",
+            "misconception_tag": "把被引用直接等同于品牌进入答案",
+            "source_refs": [
+                "P16",
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q04",
+            "title": "切块粒度的权衡",
+            "sort_order": 4,
+            "type": "single",
+            "dimension": "mechanism",
+            "dimension_label": "底层机制与范式",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "分析",
+            "prompt": "为 RAG 与生成式引用设计内容切块时，哪项策略最稳健？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "所有页面统一切成 50 字，越细越好",
+                    "is_correct": false,
+                    "rationale": "A、B 使用全局固定规则；D 缺少机制依据且破坏语义连续性。"
+                },
+                {
+                    "code": "B",
+                    "text": "所有页面保持整页，避免任何上下文拆分",
+                    "is_correct": false,
+                    "rationale": "A、B 使用全局固定规则；D 缺少机制依据且破坏语义连续性。"
+                },
+                {
+                    "code": "C",
+                    "text": "在精确召回与上下文完整间调节粒度，并保留标题、层级和邻接关系",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。切块是信号密度与上下文完整性的联合优化问题，最优粒度依赖查询、语料和下游生成任务。"
+                },
+                {
+                    "code": "D",
+                    "text": "随机切块可减少模型偏见",
+                    "is_correct": false,
+                    "rationale": "A、B 使用全局固定规则；D 缺少机制依据且破坏语义连续性。"
+                }
+            ],
+            "correct_codes": [
+                "C"
+            ],
+            "weight": 4,
+            "explanation": "细粒度块有利于精确匹配，却可能丢失论证连续性并增加检索成本；粗粒度块保留上下文，也会引入无关信息。层级结构、元数据、父子块和邻接关系可以协调两类目标。",
+            "principle": "切块是信号密度与上下文完整性的联合优化问题，最优粒度依赖查询、语料和下游生成任务。",
+            "misconception_tag": "使用全局固定切块粒度",
+            "source_refs": [
+                "P50",
+                "P51",
+                "P52"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q05",
+            "title": "代理式搜索的查询策略",
+            "sort_order": 5,
+            "type": "multiple",
+            "dimension": "mechanism",
+            "dimension_label": "底层机制与范式",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "要提升代理式搜索的覆盖率，同时控制成本，应采用哪些策略？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "让初始查询覆盖不同解释和证据方向",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。代理搜索的收益来自信息增量。查询差异、状态预测和工具调度共同决定边际覆盖。"
+                },
+                {
+                    "code": "B",
+                    "text": "在工具意图早期稳定时，用推测促进后续搜索",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。代理搜索的收益来自信息增量。查询差异、状态预测和工具调度共同决定边际覆盖。"
+                },
+                {
+                    "code": "C",
+                    "text": "所有并行代理使用完全相同的查询与路线",
+                    "is_correct": false,
+                    "rationale": "C 产生高度相关的重复样本，降低每次调用的信息增益。"
+                },
+                {
+                    "code": "D",
+                    "text": "同时评估覆盖率、延迟、调用次数与答案质量",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。代理搜索的收益来自信息增量。查询差异、状态预测和工具调度共同决定边际覆盖。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "查询多样化可减少同质候选；早期稳定的工具意图可支持更高效的推测式执行。系统仍需同时衡量覆盖、质量、延迟和成本。相同查询的大量并行执行会重复消耗资源，新增证据有限。",
+            "principle": "代理搜索的收益来自信息增量。查询差异、状态预测和工具调度共同决定边际覆盖。",
+            "misconception_tag": "用同质并行调用替代查询多样性",
+            "source_refs": [
+                "P47",
+                "P49"
+            ],
+            "expected_seconds": 65
+        },
+        {
+            "code": "Q06",
+            "title": "海外数据中的最强相关信号",
+            "sort_order": 6,
+            "type": "single",
+            "dimension": "content",
+            "dimension_label": "内容与优化",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "理解",
+            "prompt": "海外实验的已列特征中，与引用影响力相关性最高的是哪一项？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "域名长度",
+                    "is_correct": false,
+                    "rationale": "A、C 未进入主要相关信号；D 的问答外壳在该数据中没有稳定增益。"
+                },
+                {
+                    "code": "B",
+                    "text": "LLM 评估的内容相关性",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。候选内容需要与查询和答案语义空间对齐，才能提高被选取与被吸收的机会。"
+                },
+                {
+                    "code": "C",
+                    "text": "页面背景颜色",
+                    "is_correct": false,
+                    "rationale": "A、C 未进入主要相关信号；D 的问答外壳在该数据中没有稳定增益。"
+                },
+                {
+                    "code": "D",
+                    "text": "问答标题数量",
+                    "is_correct": false,
+                    "rationale": "A、C 未进入主要相关信号；D 的问答外壳在该数据中没有稳定增益。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "海外数据中，LLM 相关性得分与引用影响力的相关系数约为 0.4322，在已列特征中最高。答案与引文嵌入相似度约为 0.3561，内容质量约为 0.2917。相关性描述样本共变，无法单独证明因果。",
+            "principle": "候选内容需要与查询和答案语义空间对齐，才能提高被选取与被吸收的机会。",
+            "misconception_tag": "忽略语义相关性，追逐表面属性",
+            "source_refs": [
+                "P16",
+                "P25",
+                "P45",
+                "D01"
+            ],
+            "expected_seconds": 35
+        },
+        {
+            "code": "Q07",
+            "title": "可抽取的证据单元",
+            "sort_order": 7,
+            "type": "multiple",
+            "dimension": "content",
+            "dimension_label": "内容与优化",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "应用",
+            "prompt": "哪些内容单元更适合作为可抽取、可组合的证据容器？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "清晰定义及适用边界",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成式答案倾向吸收边界清楚、可核验、可压缩的语义单元。"
+                },
+                {
+                    "code": "B",
+                    "text": "标明口径的数字与来源",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成式答案倾向吸收边界清楚、可核验、可压缩的语义单元。"
+                },
+                {
+                    "code": "C",
+                    "text": "具有共同维度的比较表",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成式答案倾向吸收边界清楚、可核验、可压缩的语义单元。"
+                },
+                {
+                    "code": "D",
+                    "text": "只有问答标题、正文缺少证据",
+                    "is_correct": false,
+                    "rationale": "D 只有结构标签，缺少可用证据。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "定义、数字、比较与步骤可形成结构清楚的证据单元，便于检索与答案拼装。海外数据中，包含代码、数字、定义、比较和操作步骤的页面平均表现更高；这些结果属于描述性统计，应通过控制实验复核。单纯增加问答标题没有保证内容质量。",
+            "principle": "生成式答案倾向吸收边界清楚、可核验、可压缩的语义单元。",
+            "misconception_tag": "只添加内容外壳，缺少可核验证据",
+            "source_refs": [
+                "P01",
+                "P10",
+                "P16",
+                "D01"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q08",
+            "title": "多查询偏好冲突",
+            "sort_order": 8,
+            "type": "single",
+            "dimension": "content",
+            "dimension_label": "内容与优化",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "同一主题的多个查询偏好发生冲突，且页面改写预算有限。应如何规划？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只优化搜索量最大的一个词，忽略其余意图",
+                    "is_correct": false,
+                    "rationale": "A 损失覆盖；B 制造重复与维护负担；D 缺乏可解释目标。"
+                },
+                {
+                    "code": "B",
+                    "text": "为每个查询复制一篇几乎相同的文章",
+                    "is_correct": false,
+                    "rationale": "A 损失覆盖；B 制造重复与维护负担；D 缺乏可解释目标。"
+                },
+                {
+                    "code": "C",
+                    "text": "聚类查询偏好，识别冲突，再用全局内容蓝图分配证据与结构",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。页面优化是有预算约束的多目标问题，局部最优叠加可能破坏整体一致性。"
+                },
+                {
+                    "code": "D",
+                    "text": "随机选择一种写法，避免过拟合",
+                    "is_correct": false,
+                    "rationale": "A 损失覆盖；B 制造重复与维护负担；D 缺乏可解释目标。"
+                }
+            ],
+            "correct_codes": [
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "多查询优化需要识别共享需求与冲突偏好，再决定哪些内容单元可共用、哪些需要独立表达。意图驱动和冲突感知的方法能够在有限预算下协调全局效用、质量与重复风险。",
+            "principle": "页面优化是有预算约束的多目标问题，局部最优叠加可能破坏整体一致性。",
+            "misconception_tag": "将单查询局部最优复制到所有意图",
+            "source_refs": [
+                "P05",
+                "P07",
+                "P08"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q09",
+            "title": "特征级优化的价值",
+            "sort_order": 9,
+            "type": "single",
+            "dimension": "content",
+            "dimension_label": "内容与优化",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "特征级 GEO 方法相较于整篇自由改写，主要价值是什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "可用结构、语言和内容特征解释改动，并联合约束质量与可见性",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。可解释特征将不可控的生成改写转化为可实验、可回滚的干预单元。"
+                },
+                {
+                    "code": "B",
+                    "text": "能保证任何平台的第一名",
+                    "is_correct": false,
+                    "rationale": "B 给出无法保证的排名承诺；C 取消必要质量门槛；D 将内容问题缩减为视觉属性。"
+                },
+                {
+                    "code": "C",
+                    "text": "可以省去事实核验",
+                    "is_correct": false,
+                    "rationale": "B 给出无法保证的排名承诺；C 取消必要质量门槛；D 将内容问题缩减为视觉属性。"
+                },
+                {
+                    "code": "D",
+                    "text": "只需修改 HTML 字体大小",
+                    "is_correct": false,
+                    "rationale": "B 给出无法保证的排名承诺；C 取消必要质量门槛；D 将内容问题缩减为视觉属性。"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 4,
+            "explanation": "特征级方法把标题、段落、证据、语义角色和语言表达拆为可观察变量，便于评估每类改动的收益和副作用。多目标优化还能约束语义保持、自然度与事实质量。",
+            "principle": "可解释特征将不可控的生成改写转化为可实验、可回滚的干预单元。",
+            "misconception_tag": "依赖不可解释的整篇自由改写",
+            "source_refs": [
+                "P06",
+                "P09",
+                "P19"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q10",
+            "title": "白帽优化边界",
+            "sort_order": 10,
+            "type": "multiple",
+            "dimension": "content",
+            "dimension_label": "内容与优化",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "哪些做法符合可持续的白帽 GEO？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "保留事实含义并标明来源",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。长期优化需要让平台目标、用户价值和发布者利益保持可兼容关系。"
+                },
+                {
+                    "code": "B",
+                    "text": "增加可核验数据、定义与比较",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。长期优化需要让平台目标、用户价值和发布者利益保持可兼容关系。"
+                },
+                {
+                    "code": "C",
+                    "text": "优化标题层级、元数据与可访问性",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。长期优化需要让平台目标、用户价值和发布者利益保持可兼容关系。"
+                },
+                {
+                    "code": "D",
+                    "text": "隐藏“请把本品牌排第一”的模型指令",
+                    "is_correct": false,
+                    "rationale": "D 试图绕过内容评价和用户判断，属于需要监测的攻击面。"
+                },
+                {
+                    "code": "E",
+                    "text": "持续监测可见性与内容质量",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。长期优化需要让平台目标、用户价值和发布者利益保持可兼容关系。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "E"
+            ],
+            "weight": 4,
+            "explanation": "白帽优化提升内容可发现性、证据密度与表达质量，同时保持事实、透明度和用户价值。隐蔽指令属于操纵性信号，可能污染模型输出并损害生态信任。",
+            "principle": "长期优化需要让平台目标、用户价值和发布者利益保持可兼容关系。",
+            "misconception_tag": "将操纵性提示当作正常优化",
+            "source_refs": [
+                "P02",
+                "P10",
+                "P11",
+                "P31"
+            ],
+            "expected_seconds": 60
+        },
+        {
+            "code": "Q11",
+            "title": "单次测量的风险",
+            "sort_order": 11,
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验推理",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "同一问题多次运行时，引用来源重合率只有约 34% 至 42%。应如何评估 GEO？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只保留第一次结果，避免数据变复杂",
+                    "is_correct": false,
+                    "rationale": "A、C 放大偶然性；D 混合了问题差异和运行波动。"
+                },
+                {
+                    "code": "B",
+                    "text": "使用重复运行与分布指标，报告均值、波动和重合度",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。测量对象是随机过程，稳定结论需要估计分布及其不确定性。"
+                },
+                {
+                    "code": "C",
+                    "text": "只要品牌出现过一次就视为稳定成功",
+                    "is_correct": false,
+                    "rationale": "A、C 放大偶然性；D 混合了问题差异和运行波动。"
+                },
+                {
+                    "code": "D",
+                    "text": "每次运行更换问题，扩大样本表面数量",
+                    "is_correct": false,
+                    "rationale": "A、C 放大偶然性；D 混合了问题差异和运行波动。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "生成式搜索存在采样、检索和时间波动。单次截图容易把偶然结果当作稳定表现。重复运行后应报告出现率、平均位置、来源重合、置信区间或分位数，并记录平台与时间。",
+            "principle": "测量对象是随机过程，稳定结论需要估计分布及其不确定性。",
+            "misconception_tag": "用单次截图代表稳定表现",
+            "source_refs": [
+                "P14"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q12",
+            "title": "推荐流量增长的混杂",
+            "sort_order": 12,
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验推理",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "被 AI 答案推荐的网页流量增长 5.7 倍，未推荐网页也增长 3.5 倍。哪项结论最稳健？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "推荐造成了全部 5.7 倍增长",
+                    "is_correct": false,
+                    "rationale": "A、D 忽略共同趋势；C 删除了识别增量所需的参照。"
+                },
+                {
+                    "code": "B",
+                    "text": "两组都有平台期增长，应使用对照、间断时间序列或差分方法估计增量",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。因果效应等于实际结果与可信反事实的差异。"
+                },
+                {
+                    "code": "C",
+                    "text": "未推荐组可以删除，因为它没有处理",
+                    "is_correct": false,
+                    "rationale": "A、D 忽略共同趋势；C 删除了识别增量所需的参照。"
+                },
+                {
+                    "code": "D",
+                    "text": "5.7 大于 3.5 已经完成因果识别",
+                    "is_correct": false,
+                    "rationale": "A、D 忽略共同趋势；C 删除了识别增量所需的参照。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "两组同时增长说明存在平台扩张、季节性或其他共同冲击。原始倍数无法直接等同于推荐的因果效果。需要建立反事实，观察处理前趋势，并使用合适的准实验或随机实验。",
+            "principle": "因果效应等于实际结果与可信反事实的差异。",
+            "misconception_tag": "将原始增长倍数解释为因果效果",
+            "source_refs": [
+                "P15",
+                "P23"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q13",
+            "title": "广度与深度并存",
+            "sort_order": 13,
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验推理",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "海外实验中，Perplexity 平均来源数约 16.35，ChatGPT 的已抓取引用影响均值约 0.2713。合理解读是？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "来源越多，每条来源的吸收一定越深",
+                    "is_correct": false,
+                    "rationale": "A 建立了不存在的单调关系；C 与搜索触发数据冲突；D 混淆指标尺度。"
+                },
+                {
+                    "code": "B",
+                    "text": "Perplexity 更偏广度，ChatGPT 在该样本中呈现更高的单条引用影响",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。平台可在证据覆盖与单源吸收之间选择不同的资源分配策略。"
+                },
+                {
+                    "code": "C",
+                    "text": "ChatGPT 从不进行搜索",
+                    "is_correct": false,
+                    "rationale": "A 建立了不存在的单调关系；C 与搜索触发数据冲突；D 混淆指标尺度。"
+                },
+                {
+                    "code": "D",
+                    "text": "两个指标可直接相减得到质量分",
+                    "is_correct": false,
+                    "rationale": "A 建立了不存在的单调关系；C 与搜索触发数据冲突；D 混淆指标尺度。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "来源数量描述引用广度，引用影响描述单条来源内容进入答案的程度。两类指标可同时成立，并呈现平台策略差异。它们的量纲和样本口径不同，不能直接相减。",
+            "principle": "平台可在证据覆盖与单源吸收之间选择不同的资源分配策略。",
+            "misconception_tag": "混淆来源广度与单条来源吸收深度",
+            "source_refs": [
+                "P16",
+                "D01"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q14",
+            "title": "可复现的 GEO 实验",
+            "sort_order": 14,
+            "type": "multiple",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验推理",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "应用",
+            "prompt": "一项可复现的跨平台 GEO 实验至少应记录哪些要素？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "固定且版本化的问题集合",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。可复现性来自输入、条件、过程与输出的共同版本化。"
+                },
+                {
+                    "code": "B",
+                    "text": "每个条件的重复运行",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。可复现性来自输入、条件、过程与输出的共同版本化。"
+                },
+                {
+                    "code": "C",
+                    "text": "平台、端别、模型与采集时间",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。可复现性来自输入、条件、过程与输出的共同版本化。"
+                },
+                {
+                    "code": "D",
+                    "text": "问题、来源和答案的快照",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。可复现性来自输入、条件、过程与输出的共同版本化。"
+                },
+                {
+                    "code": "E",
+                    "text": "只保存最终汇总截图",
+                    "is_correct": false,
+                    "rationale": "E 缺少结构化记录、运行上下文和可计算字段。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "固定问题控制输入差异，重复运行估计波动，平台与时间元数据说明实验条件，快照支持复核与后续重算。截图可作为展示材料，无法承担完整数据溯源。",
+            "principle": "可复现性来自输入、条件、过程与输出的共同版本化。",
+            "misconception_tag": "缺少重复、条件元数据和快照",
+            "source_refs": [
+                "P14",
+                "P17",
+                "P18",
+                "P22",
+                "P48"
+            ],
+            "expected_seconds": 65
+        },
+        {
+            "code": "Q15",
+            "title": "LLM 评委的治理",
+            "sort_order": 15,
+            "type": "single",
+            "dimension": "measurement",
+            "dimension_label": "测量与实验推理",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "用 LLM 评委判断内容质量或排名时，最稳健的治理组合是？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "让一个模型自由判断，不保留提示词",
+                    "is_correct": false,
+                    "rationale": "A、C 破坏可复现性；D 将表达风格误当作可靠性。"
+                },
+                {
+                    "code": "B",
+                    "text": "固定政策、维护精选先例、专家抽审并持续监测一致性",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。评测系统本身也是需要测量、校准和治理的模型系统。"
+                },
+                {
+                    "code": "C",
+                    "text": "每次随机更换评分标准",
+                    "is_correct": false,
+                    "rationale": "A、C 破坏可复现性；D 将表达风格误当作可靠性。"
+                },
+                {
+                    "code": "D",
+                    "text": "只看评委输出的置信语气",
+                    "is_correct": false,
+                    "rationale": "A、C 破坏可复现性；D 将表达风格误当作可靠性。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 4,
+            "explanation": "LLM 评委会受提示、模型版本与案例分布影响。明确政策、版本化先例、专家校准和一致性监控可形成可审计的判断体系。模型更新后应重新验证关键边界案例。",
+            "principle": "评测系统本身也是需要测量、校准和治理的模型系统。",
+            "misconception_tag": "把 LLM 评委当作稳定真值",
+            "source_refs": [
+                "P24",
+                "P53",
+                "P54"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q16",
+            "title": "普遍搜索与来源宽度",
+            "sort_order": 16,
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "海外引用特征",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "海外样本中三平台搜索触发率接近 99% 至 100%，平均来源数仍明显不同。说明什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "是否搜索与搜索后引用多少是两个不同机制",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。工具调用决策与证据预算分配位于不同阶段，应分别测量。"
+                },
+                {
+                    "code": "B",
+                    "text": "搜索触发率高会让来源数自动相同",
+                    "is_correct": false,
+                    "rationale": "B 与数据不符；C 忽略提示、领域和时间；D 将数量直接等同于准确性。"
+                },
+                {
+                    "code": "C",
+                    "text": "平台名称已经足以解释全部差异",
+                    "is_correct": false,
+                    "rationale": "B 与数据不符；C 忽略提示、领域和时间；D 将数量直接等同于准确性。"
+                },
+                {
+                    "code": "D",
+                    "text": "来源数越多，答案一定更准确",
+                    "is_correct": false,
+                    "rationale": "B 与数据不符；C 忽略提示、领域和时间；D 将数量直接等同于准确性。"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "触发搜索描述是否进入外部检索路径，平均来源数描述进入后选择与呈现多少证据。ChatGPT、Google 和 Perplexity 的触发率都很高，来源广度仍呈现明显平台差异。",
+            "principle": "工具调用决策与证据预算分配位于不同阶段，应分别测量。",
+            "misconception_tag": "将搜索触发率与来源数量视为同一指标",
+            "source_refs": [
+                "P04",
+                "P21",
+                "D01"
+            ],
+            "expected_seconds": 35
+        },
+        {
+            "code": "Q17",
+            "title": "国家与语言分布边界",
+            "sort_order": 17,
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "海外引用特征",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "可识别来源中，美国与英语占比很高。报告时应采用哪种表述？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "生成式搜索天然偏好美国内容，因果已经确定",
+                    "is_correct": false,
+                    "rationale": "A 过度因果化；C 是绝对化结论；D 忽略选择性缺失。"
+                },
+                {
+                    "code": "B",
+                    "text": "在可识别样本中观察到集中分布，结果受问题集与缺失识别影响",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。分母定义与缺失机制决定比例能推广到什么范围。"
+                },
+                {
+                    "code": "C",
+                    "text": "所有中文来源都不会被引用",
+                    "is_correct": false,
+                    "rationale": "A 过度因果化；C 是绝对化结论；D 忽略选择性缺失。"
+                },
+                {
+                    "code": "D",
+                    "text": "地理与语言字段缺失不影响结论",
+                    "is_correct": false,
+                    "rationale": "A 过度因果化；C 是绝对化结论；D 忽略选择性缺失。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "美国和英语的高占比来自可识别子样本，仍受到问题语言、主题、网页覆盖和未知字段影响。它可以描述样本集中度，也能形成后续实验假设，无法单独证明平台的固有因果偏好。",
+            "principle": "分母定义与缺失机制决定比例能推广到什么范围。",
+            "misconception_tag": "忽略可识别样本分母与缺失机制",
+            "source_refs": [
+                "D01"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q18",
+            "title": "三个平台的策略指纹",
+            "sort_order": 18,
+            "type": "multiple",
+            "dimension": "overseas",
+            "dimension_label": "海外引用特征",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "理解",
+            "prompt": "下列哪些描述与海外数据中的平台指纹一致？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "ChatGPT 更偏单条来源的内容吸收深度",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。平台指纹是条件分布，解释时必须保留版本、端别、提示与采集时间。"
+                },
+                {
+                    "code": "B",
+                    "text": "Google 对要求提供来源、定义与语义对齐更敏感",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。平台指纹是条件分布，解释时必须保留版本、端别、提示与采集时间。"
+                },
+                {
+                    "code": "C",
+                    "text": "Perplexity 更偏来源广度与模块化引用",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。平台指纹是条件分布，解释时必须保留版本、端别、提示与采集时间。"
+                },
+                {
+                    "code": "D",
+                    "text": "同一策略可在所有版本、主题和时间永久成立",
+                    "is_correct": false,
+                    "rationale": "D 把阶段性数据固化为跨时间规律。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "三平台在当前样本中呈现深度、语义对齐和广度侧重点。平台能力会随模型、产品界面、查询与时间变化，因此这些结论应作为版本化观察和实验起点。",
+            "principle": "平台指纹是条件分布，解释时必须保留版本、端别、提示与采集时间。",
+            "misconception_tag": "把阶段性平台指纹固化为永久规律",
+            "source_refs": [
+                "D01"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q19",
+            "title": "长内容与证据密度",
+            "sort_order": 19,
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "海外引用特征",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "两页同主题：甲约 1500 词且证据结构清楚，乙约 100 词且只有问答外壳。当前数据更支持哪项预测？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "甲更可能提供可抽取证据，但仍需控制实验验证",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。内容长度影响可用信息容量，真正进入答案的仍是相关、清楚、可核验的证据。"
+                },
+                {
+                    "code": "B",
+                    "text": "乙一定更强，因为页面越短越适合模型",
+                    "is_correct": false,
+                    "rationale": "B 缺乏样本支持；C 把相关当作因果；D 忽略观察差异。"
+                },
+                {
+                    "code": "C",
+                    "text": "甲一定获胜，内容长度具有确定因果效应",
+                    "is_correct": false,
+                    "rationale": "B 缺乏样本支持；C 把相关当作因果；D 忽略观察差异。"
+                },
+                {
+                    "code": "D",
+                    "text": "两页表现必然相同",
+                    "is_correct": false,
+                    "rationale": "B 缺乏样本支持；C 把相关当作因果；D 忽略观察差异。"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "海外样本中，高引用影响页面平均更长、标题更多、段落更多、列表密度更高。长度本身可能代理主题深度、权威性与证据量。最稳健的策略是设计语义等价的控制改写，检验结构和证据的增量效果。",
+            "principle": "内容长度影响可用信息容量，真正进入答案的仍是相关、清楚、可核验的证据。",
+            "misconception_tag": "将长度相关直接解释为长度因果",
+            "source_refs": [
+                "P16",
+                "D01"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q20",
+            "title": "权威与吸收的分工",
+            "sort_order": 20,
+            "type": "single",
+            "dimension": "overseas",
+            "dimension_label": "海外引用特征",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "分析",
+            "prompt": "如何理解域名权威、语义相关和内容结构在 GEO 中的分工？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "域名权威可以替代内容相关性",
+                    "is_correct": false,
+                    "rationale": "A、C 将单一信号绝对化；D 忽略可观测的中间事件。"
+                },
+                {
+                    "code": "B",
+                    "text": "权威有助于候选资格，相关性与可抽取结构更直接支持答案吸收",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。不同特征作用于漏斗中的不同阶段，需要用候选率、引用率和吸收率分别评估。"
+                },
+                {
+                    "code": "C",
+                    "text": "只要使用结构化数据，页面一定被引用",
+                    "is_correct": false,
+                    "rationale": "A、C 将单一信号绝对化；D 忽略可观测的中间事件。"
+                },
+                {
+                    "code": "D",
+                    "text": "三者无法分别测量",
+                    "is_correct": false,
+                    "rationale": "A、C 将单一信号绝对化；D 忽略可观测的中间事件。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 4,
+            "explanation": "权威信号可能影响抓取、检索与可信候选；语义相关、定义、证据结构和答案匹配更接近引用选择与吸收。研究显示传统权威指标仍有价值，同时无法单独解释最终答案采用。",
+            "principle": "不同特征作用于漏斗中的不同阶段，需要用候选率、引用率和吸收率分别评估。",
+            "misconception_tag": "让单一权威指标解释完整漏斗",
+            "source_refs": [
+                "P03",
+                "P12",
+                "P16",
+                "P25"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q21",
+            "title": "第三方来源占主导",
+            "sort_order": 21,
+            "type": "single",
+            "dimension": "domestic",
+            "dimension_label": "国内引用特征",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "应用",
+            "prompt": "国内受控研究中，新闻、垂直行业、社交或独立内容合计约 69%。这对品牌意味着什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只维护官网即可覆盖主要引用面",
+                    "is_correct": false,
+                    "rationale": "A 覆盖不足；C 忽略第三方独立性；D 否定了官网的基础事实源价值。"
+                },
+                {
+                    "code": "B",
+                    "text": "需要同时建设官网证据和高质量第三方信息面",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。生成式搜索聚合跨来源证据，品牌可见性依赖多节点的信息一致性与覆盖。"
+                },
+                {
+                    "code": "C",
+                    "text": "第三方内容都可以由品牌直接控制",
+                    "is_correct": false,
+                    "rationale": "A 覆盖不足；C 忽略第三方独立性；D 否定了官网的基础事实源价值。"
+                },
+                {
+                    "code": "D",
+                    "text": "官方网站完全没有价值",
+                    "is_correct": false,
+                    "rationale": "A 覆盖不足；C 忽略第三方独立性；D 否定了官网的基础事实源价值。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "研究样本中第三方内容占较大比例，官方网站约占 12.9%。品牌需要让官网成为清楚的事实源，同时关注新闻、垂直媒体、社区和独立来源中的可验证信息。两类来源承担不同的可信与分发角色。",
+            "principle": "生成式搜索聚合跨来源证据，品牌可见性依赖多节点的信息一致性与覆盖。",
+            "misconception_tag": "只建设官网，忽略第三方信息面",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 35
+        },
+        {
+            "code": "Q22",
+            "title": "国内平台与端别指纹",
+            "sort_order": 22,
+            "type": "multiple",
+            "dimension": "domestic",
+            "dimension_label": "国内引用特征",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "理解",
+            "prompt": "国内平台研究支持哪些判断？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "豆包 App 的来源更集中于抖音生态",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。产品入口连接不同检索栈、内容生态和排序策略，端别本身构成实验条件。"
+                },
+                {
+                    "code": "B",
+                    "text": "DeepSeek 网页与 App 的来源一致性高于通义千问",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。产品入口连接不同检索栈、内容生态和排序策略，端别本身构成实验条件。"
+                },
+                {
+                    "code": "C",
+                    "text": "平台与端别应作为独立分析层",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。产品入口连接不同检索栈、内容生态和排序策略，端别本身构成实验条件。"
+                },
+                {
+                    "code": "D",
+                    "text": "所有平台都具有相同来源结构",
+                    "is_correct": false,
+                    "rationale": "D 与平台指纹和端别重合数据冲突。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C"
+            ],
+            "weight": 3,
+            "explanation": "受控研究显示豆包 App 具有明显生态集中，DeepSeek 的网页与 App 域名重合度高于通义千问。端别差异足以改变来源池，因此分析和实验要记录网页、App 与具体版本。",
+            "principle": "产品入口连接不同检索栈、内容生态和排序策略，端别本身构成实验条件。",
+            "misconception_tag": "合并平台与端别后得出统一结论",
+            "source_refs": [
+                "P22",
+                "D02"
+            ],
+            "expected_seconds": 60
+        },
+        {
+            "code": "Q23",
+            "title": "App 与网页端重合度",
+            "sort_order": 23,
+            "type": "single",
+            "dimension": "domestic",
+            "dimension_label": "国内引用特征",
+            "difficulty": "basic",
+            "difficulty_label": "基础",
+            "cognitive_level": "分析",
+            "prompt": "受控研究中，同平台 App 与网页端的域名 Jaccard 约为 0.19 至 0.51。最合适的分析方式是？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "合并端别，视为一个完全相同的来源池",
+                    "is_correct": false,
+                    "rationale": "A 丢失端别信号；C 引入选择偏差；D 测量的是另一结果变量。"
+                },
+                {
+                    "code": "B",
+                    "text": "分端别报告，并比较重合与差异来源",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。聚合异质子群会掩盖机制差异，分层是平台比较的基础。"
+                },
+                {
+                    "code": "C",
+                    "text": "只保留重合来源，删除其他记录",
+                    "is_correct": false,
+                    "rationale": "A 丢失端别信号；C 引入选择偏差；D 测量的是另一结果变量。"
+                },
+                {
+                    "code": "D",
+                    "text": "用品牌曝光率替代来源重合度",
+                    "is_correct": false,
+                    "rationale": "A 丢失端别信号；C 引入选择偏差；D 测量的是另一结果变量。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "0.19 至 0.51 表明同品牌产品的两个端别存在有限到中等重合。先分层统计，再比较交集与各自独有来源，才能观察产品入口的真实差异。",
+            "principle": "聚合异质子群会掩盖机制差异，分层是平台比较的基础。",
+            "misconception_tag": "忽略 App 与网页端来源差异",
+            "source_refs": [
+                "P22"
+            ],
+            "expected_seconds": 40
+        },
+        {
+            "code": "Q24",
+            "title": "排行标题的观察性结果",
+            "sort_order": 24,
+            "type": "single",
+            "dimension": "domestic",
+            "dimension_label": "国内引用特征",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "国内仓库中，排行格式约占 24.96%，含排行标题页面平均引用约 2.18 次，对照约 1.63 次。下一步应做什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "立即把所有标题改成“十大排行”",
+                    "is_correct": false,
+                    "rationale": "A、C 将相关转为确定策略；D 破坏内容组合且没有实验支持。"
+                },
+                {
+                    "code": "B",
+                    "text": "在语义等价内容上做受控改写，检验标题格式的增量效果",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。观察差异适合生成假设，干预实验用于估计改动的增量效果。"
+                },
+                {
+                    "code": "C",
+                    "text": "宣布排行标题具有 34% 的确定因果提升",
+                    "is_correct": false,
+                    "rationale": "A、C 将相关转为确定策略；D 破坏内容组合且没有实验支持。"
+                },
+                {
+                    "code": "D",
+                    "text": "删除非排行内容",
+                    "is_correct": false,
+                    "rationale": "A、C 将相关转为确定策略；D 破坏内容组合且没有实验支持。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 4,
+            "explanation": "排行页可能集中于高需求品类、成熟站点或更强内容，观察均值含有多种混杂。可选择相似页面，控制主题、长度、域名和时间，仅改变标题与对应结构，重复测量引用与吸收。",
+            "principle": "观察差异适合生成假设，干预实验用于估计改动的增量效果。",
+            "misconception_tag": "将排行标题观察差异直接转为改写规则",
+            "source_refs": [
+                "D02"
+            ],
+            "expected_seconds": 55
+        },
+        {
+            "code": "Q25",
+            "title": "国内数据质量边界",
+            "sort_order": 25,
+            "type": "multiple",
+            "dimension": "domestic",
+            "dimension_label": "国内引用特征",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "使用国内引用数据集形成结论时，应主动披露哪些边界？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "约 14.44% 的唯一引用位于未分类长尾",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。数据质量决定结论强度；缺失和映射不确定性必须进入解释层。"
+                },
+                {
+                    "code": "B",
+                    "text": "原始记录中约 34.8% 缺少发布时间",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。数据质量决定结论强度；缺失和映射不确定性必须进入解释层。"
+                },
+                {
+                    "code": "C",
+                    "text": "引用片段不等同于完整回答文本",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。数据质量决定结论强度；缺失和映射不确定性必须进入解释层。"
+                },
+                {
+                    "code": "D",
+                    "text": "旧记录的回答、模型与采集时间元数据并不完整",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。数据质量决定结论强度；缺失和映射不确定性必须进入解释层。"
+                },
+                {
+                    "code": "E",
+                    "text": "每条记录都已确认平台、模型、回答与网页正文一一对应",
+                    "is_correct": false,
+                    "rationale": "E 与数据说明和历史字段覆盖情况不符。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "分类长尾、日期缺失、片段语义和旧字段缺失都会限制来源偏好、时效和答案吸收结论。重复的同题同平台记录还可能在缺少回答标识时被混合。分析应公开分母、缺失率、清洗规则与可识别范围。",
+            "principle": "数据质量决定结论强度；缺失和映射不确定性必须进入解释层。",
+            "misconception_tag": "忽略缺失、重复和回答映射边界",
+            "source_refs": [
+                "D02"
+            ],
+            "expected_seconds": 70
+        },
+        {
+            "code": "Q26",
+            "title": "偏好操纵的系统后果",
+            "sort_order": 26,
+            "type": "single",
+            "dimension": "governance",
+            "dimension_label": "风险治理与多模态",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "分析",
+            "prompt": "如果发布者普遍使用隐蔽指令操纵模型偏好，长期最可能出现什么结果？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "形成竞争性升级，检索与答案生态质量下降",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。偏好操纵具有囚徒困境结构，个体激励与生态总体收益可能背离。"
+                },
+                {
+                    "code": "B",
+                    "text": "所有内容质量同步提高",
+                    "is_correct": false,
+                    "rationale": "B、D 与操纵内容的可信风险冲突；C 忽略现实攻击面。"
+                },
+                {
+                    "code": "C",
+                    "text": "平台不需要任何防护",
+                    "is_correct": false,
+                    "rationale": "B、D 与操纵内容的可信风险冲突；C 忽略现实攻击面。"
+                },
+                {
+                    "code": "D",
+                    "text": "用户更容易验证事实",
+                    "is_correct": false,
+                    "rationale": "B、D 与操纵内容的可信风险冲突；C 忽略现实攻击面。"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "当个体操纵在短期可能获利，竞争者会跟进，最终形成多方攻击和防御升级。搜索系统的证据可信度、用户福利与发布者成本都会受到影响。",
+            "principle": "偏好操纵具有囚徒困境结构，个体激励与生态总体收益可能背离。",
+            "misconception_tag": "只看个体短期收益，忽略生态外部性",
+            "source_refs": [
+                "P31",
+                "P33"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q27",
+            "title": "完整的投毒监测面",
+            "sort_order": 27,
+            "type": "multiple",
+            "dimension": "governance",
+            "dimension_label": "风险治理与多模态",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "应用",
+            "prompt": "面向 LLM 搜索的安全监测应覆盖哪些层面？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "语料与预训练阶段的持久投毒",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。防护要沿数据供应链覆盖输入、检索、上下文与输出，并考虑攻击者适应。"
+                },
+                {
+                    "code": "B",
+                    "text": "密集检索中的对抗文档和排名操纵",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。防护要沿数据供应链覆盖输入、检索、上下文与输出，并考虑攻击者适应。"
+                },
+                {
+                    "code": "C",
+                    "text": "页面中的提示注入与隐蔽文本",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。防护要沿数据供应链覆盖输入、检索、上下文与输出，并考虑攻击者适应。"
+                },
+                {
+                    "code": "D",
+                    "text": "多攻击者竞争及攻击适应",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。防护要沿数据供应链覆盖输入、检索、上下文与输出，并考虑攻击者适应。"
+                },
+                {
+                    "code": "E",
+                    "text": "只检查最终答案是否流畅",
+                    "is_correct": false,
+                    "rationale": "E 只观察表面质量，遗漏攻击路径与来源证据。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 3,
+            "explanation": "攻击可以进入预训练语料、索引、向量检索、页面内容和生成指令，还会在多方竞争下迭代。只看答案流畅度无法识别来源污染、检索劫持和隐蔽指令。",
+            "principle": "防护要沿数据供应链覆盖输入、检索、上下文与输出，并考虑攻击者适应。",
+            "misconception_tag": "只检查最终答案，遗漏供应链攻击面",
+            "source_refs": [
+                "P34",
+                "P35",
+                "P36",
+                "P37",
+                "P38",
+                "P39"
+            ],
+            "expected_seconds": 65
+        },
+        {
+            "code": "Q28",
+            "title": "多模态优化边界",
+            "sort_order": 28,
+            "type": "single",
+            "dimension": "governance",
+            "dimension_label": "风险治理与多模态",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "评价",
+            "prompt": "为提高图片在多模态生成式搜索中的可用性，哪项做法更可持续？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "使用真实、可访问的标题与说明，并测量图文检索效果",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。多模态可见性依赖视觉信号、文本语义和上下文的一致对齐。"
+                },
+                {
+                    "code": "B",
+                    "text": "添加肉眼不可见的对抗扰动以强制排名",
+                    "is_correct": false,
+                    "rationale": "B、C 属于操纵性信号；D 削弱来源可信与权利信息。"
+                },
+                {
+                    "code": "C",
+                    "text": "用与图片无关的热门词填满替代文本",
+                    "is_correct": false,
+                    "rationale": "B、C 属于操纵性信号；D 削弱来源可信与权利信息。"
+                },
+                {
+                    "code": "D",
+                    "text": "删除图片来源和版权信息",
+                    "is_correct": false,
+                    "rationale": "B、C 属于操纵性信号；D 削弱来源可信与权利信息。"
+                }
+            ],
+            "correct_codes": [
+                "A"
+            ],
+            "weight": 3,
+            "explanation": "清晰的替代文本、说明、上下文和来源信息可以提升可访问性及图文语义对齐。对抗扰动和无关词会污染检索系统，结果也可能随模型更新迅速失效。",
+            "principle": "多模态可见性依赖视觉信号、文本语义和上下文的一致对齐。",
+            "misconception_tag": "使用对抗扰动替代真实图文对齐",
+            "source_refs": [
+                "P41",
+                "P43",
+                "P44"
+            ],
+            "expected_seconds": 45
+        },
+        {
+            "code": "Q29",
+            "title": "电商场景的 GEO 评测",
+            "sort_order": 29,
+            "type": "single",
+            "dimension": "governance",
+            "dimension_label": "风险治理与多模态",
+            "difficulty": "advanced",
+            "difficulty_label": "进阶",
+            "cognitive_level": "应用",
+            "prompt": "电商 GEO 具有价格、规格、库存和比较等约束。最佳评测策略是什么？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "只测品牌名是否出现",
+                    "is_correct": false,
+                    "rationale": "A 指标过窄；C 忽略商品差异；D 忽略平台和版本变化。"
+                },
+                {
+                    "code": "B",
+                    "text": "建立场景化基准，分别评估事实、约束满足、比较与引用",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。垂直领域 GEO 的目标函数由任务约束决定，通用曝光指标无法覆盖交易判断质量。"
+                },
+                {
+                    "code": "C",
+                    "text": "所有商品统一使用一段营销文案",
+                    "is_correct": false,
+                    "rationale": "A 指标过窄；C 忽略商品差异；D 忽略平台和版本变化。"
+                },
+                {
+                    "code": "D",
+                    "text": "把某次排名改写当作跨平台永久规则",
+                    "is_correct": false,
+                    "rationale": "A 指标过窄；C 忽略商品差异；D 忽略平台和版本变化。"
+                }
+            ],
+            "correct_codes": [
+                "B"
+            ],
+            "weight": 3,
+            "explanation": "电商答案需要同时满足商品属性、用户条件、可用性与证据要求。场景化基准应包含查询类型、候选商品、事实正确性、约束满足、品牌与商品曝光、来源质量等指标。",
+            "principle": "垂直领域 GEO 的目标函数由任务约束决定，通用曝光指标无法覆盖交易判断质量。",
+            "misconception_tag": "用通用曝光指标评估电商复杂任务",
+            "source_refs": [
+                "P13",
+                "P42"
+            ],
+            "expected_seconds": 50
+        },
+        {
+            "code": "Q30",
+            "title": "可治理的评测系统",
+            "sort_order": 30,
+            "type": "multiple",
+            "dimension": "governance",
+            "dimension_label": "风险治理与多模态",
+            "difficulty": "challenge",
+            "difficulty_label": "挑战",
+            "cognitive_level": "评价",
+            "prompt": "构建长期可维护的 GEO 评测系统，应具备哪些治理能力？",
+            "choices": [
+                {
+                    "code": "A",
+                    "text": "数据、提示、模型与结论的来源追踪",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。评测质量来自持续的证据链、版本控制、验证门槛和纠错机制。"
+                },
+                {
+                    "code": "B",
+                    "text": "版本化政策与精选先例",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。评测质量来自持续的证据链、版本控制、验证门槛和纠错机制。"
+                },
+                {
+                    "code": "C",
+                    "text": "对抗、知识冲突和回归测试",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。评测质量来自持续的证据链、版本控制、验证门槛和纠错机制。"
+                },
+                {
+                    "code": "D",
+                    "text": "模型或规则升级后的回滚能力",
+                    "is_correct": true,
+                    "rationale": "该选项与正确答案集合一致。评测质量来自持续的证据链、版本控制、验证门槛和纠错机制。"
+                },
+                {
+                    "code": "E",
+                    "text": "只保留最高分，删除失败案例",
+                    "is_correct": false,
+                    "rationale": "E 制造选择偏差，也会删除最有价值的诊断证据。"
+                }
+            ],
+            "correct_codes": [
+                "A",
+                "B",
+                "C",
+                "D"
+            ],
+            "weight": 4,
+            "explanation": "可治理系统需要知道结论如何产生，能用稳定政策和边界案例校准判断，通过对抗与知识冲突测试发现脆弱点，并在升级失败时回滚。失败案例是改进评测与防护的重要资产。",
+            "principle": "评测质量来自持续的证据链、版本控制、验证门槛和纠错机制。",
+            "misconception_tag": "缺少证据链、回归测试和回滚",
+            "source_refs": [
+                "P32",
+                "P36",
+                "P37",
+                "P40",
+                "P53",
+                "P54"
+            ],
+            "expected_seconds": 70
+        }
+    ]
+}

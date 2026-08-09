@@ -73,3 +73,26 @@ For a release tag, require `v<distribution_version>` from `deploy/manifest.json`
 must stay within `modes.viewer.max_uncompressed_mib` and must exclude PDF, Parquet, DuckDB, JSONL,
 and font files. Set `release_status` to `released` in the tagged commit; leave it as `pending`
 until the release is ready.
+
+## GEO Assessment subproject
+
+`geo-assessment/` is an independent PHP and SQLite application. Keep runtime compatibility with
+PHP 7.3.5 and SQLite 3.24 while running development tests on PHP 8.2 or newer. Public source must
+leave `GEO_BAIDU_ANALYTICS_ID` empty; deployment examples may enable a disclosed site-specific ID.
+The current question set is `geo-30-v1.2`: keep 18 domestic, 9 general and 3 overseas questions,
+preserve beginner-copy validation and retain `geo-30-v1.1` for historical report verification.
+
+Before changing or releasing the assessment, run from `geo-assessment/`:
+
+```bash
+composer validate --strict
+composer verify
+bash tools/build-release.sh "assessment-v$(cat VERSION)"
+bash tools/verify-release.sh "dist/geo-assessment-$(cat VERSION).zip"
+```
+
+Assessment releases use `assessment-v*` tags so they do not trigger the Viewer `v*` workflow.
+The release archive is generated from `tools/release-files.txt`, includes production Composer
+autoloading, and excludes tests, development dependencies, databases, keys, logs, backups, paper
+PDFs and research datasets. Preserve `LICENSE`, `LICENSE-CODE`, `LICENSE-CONTENT` and
+`THIRD_PARTY_NOTICES.md` in every archive.

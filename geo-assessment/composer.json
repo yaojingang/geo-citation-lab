@@ -1,0 +1,48 @@
+{
+  "name": "geo-citation-lab/assessment",
+  "description": "GEO 在线能力测试",
+  "type": "project",
+  "license": "MIT",
+  "require": {
+    "bacon/bacon-qr-code": "^2.0",
+    "php": ">=7.3.5",
+    "ext-json": "*",
+    "ext-mbstring": "*",
+    "ext-openssl": "*",
+    "ext-pdo": "*",
+    "ext-pdo_sqlite": "*"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^11.5"
+  },
+  "autoload": {
+    "psr-4": {
+      "GeoAssessment\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "GeoAssessment\\Tests\\": "tests/"
+    }
+  },
+  "scripts": {
+    "lint": "find public src config templates bin tests tools -type f -name '*.php' -print0 | xargs -0 -n1 php -l",
+    "test": "phpunit --colors=always",
+    "test:php73": "bash tests/Compatibility/php73-syntax.sh",
+    "test:php73-runtime": "bash tests/Compatibility/php73-runtime.sh",
+    "test:js": "node --test tests/Js/*.test.mjs",
+    "verify": [
+      "@lint",
+      "@test",
+      "@test:js",
+      "php bin/console questions:verify",
+      "php bin/console app:health",
+      "@test:php73",
+      "@test:php73-runtime"
+    ]
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {}
+  }
+}

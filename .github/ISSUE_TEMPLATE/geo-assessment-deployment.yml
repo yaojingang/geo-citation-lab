@@ -1,0 +1,53 @@
+name: GEO Assessment 部署问题
+description: 反馈 PHP、SQLite、Nginx、Apache 或 Release 安装问题
+title: "[Assessment Deploy] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        请先运行 `php bin/console app:health`，并隐藏域名、IP、用户名、绝对路径、Cookie 和密钥。
+  - type: input
+    id: version
+    attributes:
+      label: Assessment 版本
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: 运行环境
+      description: PHP、SQLite、Web 服务器和操作系统版本
+    validations:
+      required: true
+  - type: dropdown
+    id: install
+    attributes:
+      label: 安装方式
+      options:
+        - GitHub Release ZIP
+        - Git clone 与 Composer
+        - 共享主机上传
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: 执行命令与脱敏输出
+      render: shell
+    validations:
+      required: true
+  - type: textarea
+    id: health
+    attributes:
+      label: 健康检查输出
+      render: shell
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: 安全确认
+      options:
+        - label: 我已隐藏域名、IP、用户名、绝对路径、Cookie、数据库和密钥
+          required: true

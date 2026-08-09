@@ -1,0 +1,81 @@
+name: Release GEO Assessment
+
+on:
+  push:
+    tags:
+      - "assessment-v*"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    defaults:
+      run:
+        working-directory: geo-assessment
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: "8.2"
+          extensions: json, mbstring, openssl, pdo_sqlite
+          coverage: none
+          tools: composer:v2
+
+      - name: Verify release tag
+        if: startsWith(github.ref, 'refs/tags/assessment-v')
+        env:
+          RELEASE_TAG: ${{ github.ref_name }}
+        run: test "${RELEASE_TAG}" = "assessment-v$(cat VERSION)"
+
+      - name: Run full verification
+        run: |
+          composer install --no-interaction --no-progress --prefer-dist
+          php bin/console app:install
+          composer verify
+
+      - name: Run HTTP lifecycle smoke test
+        run: |
+          php -S 127.0.0.1:8080 -t public public/router.php > storage/logs/release-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in 1 2 3 4 5; do
+            curl -fsS http://127.0.0.1:8080/ >/dev/null && break
+            sleep 1
+          done
+          bash tests/Smoke/http.sh http://127.0.0.1:8080
+
+      - name: Build and verify Release archive
+        run: |
+          bash tools/build-release.sh "assessment-v$(cat VERSION)"
+          bash tools/verify-release.sh "dist/geo-assessment-$(cat VERSION).zip"
+
+      - name: Upload workflow artifact
+        uses: actions/upload-artifact@043fb46d1a93c77aae656e7c1c64a875d1fc6a0a # v7.0.1
+        with:
+          name: geo-assessment-release-assets
+          path: |
+            geo-assessment/dist/geo-assessment-*.zip
+            geo-assessment/dist/geo-assessment-*.zip.sha256
+          if-no-files-found: error
+
+      - name: Create GitHub Release
+        if: startsWith(github.ref, 'refs/tags/assessment-v')
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          gh release create "$GITHUB_REF_NAME" \
+            "dist/geo-assessment-$(cat VERSION).zip" \
+            "dist/geo-assessment-$(cat VERSION).zip.sha256" \
+            LICENSE LICENSE-CODE LICENSE-CONTENT THIRD_PARTY_NOTICES.md \
+            --verify-tag \
+            --generate-notes \
+            --title "$GITHUB_REF_NAME"

@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: 私密安全报告
+    url: https://github.com/yaojingang/geo-citation-lab/security/advisories/new
+    about: 请通过 GitHub Security Advisory 私密提交漏洞

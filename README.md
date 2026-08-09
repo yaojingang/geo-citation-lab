@@ -4,7 +4,7 @@
 >
 > *Open empirical resources for studying how generative search selects sources, absorbs content, and surfaces entities.*
 
-GEO Citation Lab 是一个面向 AI 搜索引用机制的公开实证研究工作台。仓库围绕两条研究主线，整理跨平台引用实验与中文生成式搜索数据，并提供分析脚本、数据仓库、可视化报告和主题论文导航。
+GEO Citation Lab 是一个面向 AI 搜索引用机制的公开实证研究工作台。仓库围绕两条研究主线，整理跨平台引用实验与中文生成式搜索数据，并提供分析脚本、数据仓库、可视化报告、主题论文导航和 GEO 在线能力测试。
 
 `提问 → 搜索触发 → 信源选择 → 内容吸收 → 实体曝光 → 跨平台与跨终端差异`
 
@@ -40,8 +40,9 @@ AI 客户端会下载版本固定的 `v0.1.0` Viewer、验证 SHA-256、解压�
 | 国内 AI 平台与终端代码 | 12 个 |
 | 跨平台实验 Prompt | 602 条 |
 | GEO / AEO / AI Search 论文 PDF | 54 篇 |
+| GEO 在线能力测试 | 30 题、100 分、六维诊断 |
 
-[查看 CN-GEO 分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) · [读 3 分钟实验摘要](./01-geo-experiment-data-report/QUICK_REPORT.md) · [浏览论文导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) · [打开在线首页](https://yaojingang.github.io/geo-citation-lab/)
+[在线参加 GEO 能力测试](https://ai.laoyao.cn/geo/) · [查看 CN-GEO 分析报告](https://yaojingang.github.io/geo-citation-lab/03-cn-geo-citation-dataset/reports/final/CN-GEO_%E5%A4%9A%E7%BB%B4%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A.html) · [读 3 分钟实验摘要](./01-geo-experiment-data-report/QUICK_REPORT.md) · [浏览论文导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) · [打开在线首页](https://yaojingang.github.io/geo-citation-lab/)
 
 ## 这套研究在看什么
 
@@ -50,6 +51,7 @@ AI 搜索中的可见性包含多个环节。一条内容可能进入检索候�
 - [`01-geo-experiment-data-report/`](./01-geo-experiment-data-report/) 研究 ChatGPT、Google AI Overview / Gemini 和 Perplexity 如何触发搜索、选择信源并吸收页面内容。
 - [`03-cn-geo-citation-dataset/`](./03-cn-geo-citation-dataset/) 整理国内 AI 引用记录，并从信源生态、页面特征、实体曝光和 Web / App 差异等角度提供可查询的数据与报告。
 - [`02-geo-aeo-ai-search-papers/`](./02-geo-aeo-ai-search-papers/) 为上述问题提供文献背景，覆盖 GEO 方法、测量评估、AI 搜索实证、风险操纵、Agentic Search 和 RAG 等主题。
+- [`geo-assessment/`](./geo-assessment/) 将论文、跨平台实验和 CN-GEO 数据中的关键结论转化为 30 道场景题。题目以国内应用为主，面向刚接触 GEO 的用户，并生成六维能力报告。
 
 ## 三个研究发现
 
@@ -67,6 +69,7 @@ AI 搜索中的可见性包含多个环节。一条内容可能进入检索候�
 | 使用数据或继续分析 | [CN-GEO 数据集说明](./03-cn-geo-citation-dataset/) · [清洗后数据使用说明](./03-cn-geo-citation-dataset/data/清洗后数据使用说明.md) |
 | 阅读论文或引用研究 | [两篇实证论文](#两条实证研究主线) · [54 篇论文导航](https://yaojingang.github.io/geo-citation-lab/02-geo-aeo-ai-search-papers/) |
 | 复查实验与处理方法 | [跨平台实验管线](./01-geo-experiment-data-report/03-pipeline/) · [CN-GEO 构建脚本](./03-cn-geo-citation-dataset/scripts/) |
+| 测试 GEO 理解程度 | [在线测试](https://ai.laoyao.cn/geo/) · [系统源码与本地运行](./geo-assessment/) |
 
 只想阅读结论时，可以直接使用 GitHub Pages，无需克隆完整仓库。数据分析与复算方式分别写在两个研究目录的 README 中。
 

@@ -1,0 +1,151 @@
+name: GEO Assessment CI
+
+on:
+  pull_request:
+    paths:
+      - "geo-assessment/**"
+      - ".github/workflows/geo-assessment-ci.yml"
+      - ".github/workflows/geo-assessment-release.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "geo-assessment/**"
+      - ".github/workflows/geo-assessment-ci.yml"
+      - ".github/workflows/geo-assessment-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: "geo-assessment-ci-${{ github.ref }}"
+  cancel-in-progress: true
+
+jobs:
+  php:
+    name: PHP ${{ matrix.php }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        php: ["8.2", "8.4"]
+    defaults:
+      run:
+        working-directory: geo-assessment
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: ${{ matrix.php }}
+          extensions: json, mbstring, openssl, pdo_sqlite
+          coverage: none
+          tools: composer:v2
+
+      - name: Install development dependencies
+        run: composer install --no-interaction --no-progress --prefer-dist
+
+      - name: Validate Composer metadata
+        run: composer validate --strict
+
+      - name: Run PHP lint and tests
+        run: |
+          composer lint
+          composer test
+
+      - name: Install and verify application
+        run: |
+          php bin/console app:install
+          php bin/console questions:verify
+          php bin/console app:health
+
+  browser-contracts:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: geo-assessment
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Run JavaScript tests
+        run: node --test tests/Js/*.test.mjs
+
+  php73-compatibility:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: geo-assessment
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up build PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: "8.2"
+          coverage: none
+          tools: composer:v2
+
+      - name: Verify PHP 7.3 syntax and runtime
+        run: |
+          bash tests/Compatibility/php73-syntax.sh
+          bash tests/Compatibility/php73-runtime.sh
+
+  http-smoke:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: geo-assessment
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: "8.2"
+          extensions: json, mbstring, openssl, pdo_sqlite
+          coverage: none
+          tools: composer:v2
+
+      - name: Install application
+        run: |
+          composer install --no-interaction --no-progress --prefer-dist
+          php bin/console app:install
+
+      - name: Run HTTP lifecycle smoke test
+        run: |
+          php -S 127.0.0.1:8080 -t public public/router.php > storage/logs/ci-http.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          for attempt in 1 2 3 4 5; do
+            curl -fsS http://127.0.0.1:8080/ >/dev/null && break
+            sleep 1
+          done
+          bash tests/Smoke/http.sh http://127.0.0.1:8080
+
+  release-package:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: geo-assessment
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Set up PHP
+        uses: shivammathur/setup-php@f3e473d116dcccaddc5834248c87452386958240 # 2.37.2
+        with:
+          php-version: "8.2"
+          extensions: json, mbstring, openssl, pdo_sqlite
+          coverage: none
+          tools: composer:v2
+
+      - name: Build and verify Release archive
+        run: |
+          bash tools/build-release.sh "assessment-v$(cat VERSION)"
+          bash tools/verify-release.sh "dist/geo-assessment-$(cat VERSION).zip"
